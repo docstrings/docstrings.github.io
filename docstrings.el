@@ -2,15 +2,22 @@
 
 (defvar *all-symbols* nil)
 
-(put 'variable-documentation 'doc-name "Variable")
+(defun fn-doc (sym)
+  (and (functionp sym) (documentation sym)))
 
-(defun insert-docstring (sym kind)
-  (when (documentation-property sym kind)
-    (insert (format "<h3>%s: %s</h3>\n"
-		    (get kind 'doc-name) (symbol-name sym)))
-    (insert "<p>\n")
-    (insert (documentation-property sym 'variable-documentation))
-    (insert "</p>\n")))
+(defun var-doc (sym)
+  (documentation-property sym 'variable-documentation))
+
+(defun face-doc (sym)
+  (face-documentation sym))
+
+(defun insert-docstring (sym fn type)
+  (let ((doc (funcall fn sym)))
+    (when doc
+      (insert (format "<h3>%s: %s</h3>\n" type (symbol-name sym)))
+      (insert "<p>\n")
+      (insert doc)
+      (insert "</p>\n"))))
 
 (defun escape-filename (string)
   (let ((n 0))
@@ -22,12 +29,9 @@
 (defun insert-all-docstrings (sym)
   (insert (format "<a name=\"%s\"></a>\n" (symbol-name sym)))
   (let ((start (point)))
-    (when (and (functionp sym) (documentation sym))
-      (insert (format "<h3>Function: %s</h3>\n" (symbol-name sym)))
-      (insert "<p>\n")
-      (insert (documentation sym))
-      (insert "</p>\n"))
-    (insert-docstring sym 'variable-documentation)
+    (insert-docstring sym 'fn-doc "Function")
+    (insert-docstring sym 'var-doc "Variable")
+    (insert-docstring sym 'face-doc "Face")
     (let ((copy (buffer-substring start (point))))
       (when (plusp (length copy))
 	(with-temp-buffer
