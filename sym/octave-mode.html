@@ -1,79 +1,79 @@
 <h3>Function: octave-mode</h3>
 <p>
-Major mode for editing Octave code.</p>
-<p>
-This mode makes it easier to write Octave code by helping with
-indentation, doing some of the typing for you (with Abbrev mode) and by
-showing keywords, comments, strings, etc. in different faces (with
-Font Lock mode on terminals that support it).</p>
-<p>
-Octave itself is a high-level language, primarily intended for numerical
-computations.  It provides a convenient command line interface for
-solving linear and nonlinear problems numerically.  Function definitions
-can also be stored in files, and it can be used in a batch mode (which
-is why you need this mode!).</p>
-<p>
-The latest released version of Octave is always available via anonymous
-ftp from ftp.octave.org in the directory `/pub/octave'.  Complete
-source and binaries for several popular systems are available.</p>
-<p>
-Type M-x list-abbrevs to display the built-in abbrevs for Octave keywords.</p>
-<p>
-Keybindings
-===========</p>
-<p>
-
-Uses keymap `octave-mode-map', which is not currently defined.</p>
-<p>
-
-Variables you can use to customize Octave mode
-==============================================</p>
-<p>
-`octave-blink-matching-block'
-  Non-nil means show matching begin of block when inserting a space,
-  newline or semicolon after an else or end keyword.  Default is t.</p>
-<p>
-`octave-block-offset'
-  Extra indentation applied to statements in block structures.
-  Default is 2.</p>
-<p>
-`octave-continuation-offset'
-  Extra indentation applied to Octave continuation lines.
-  Default is 4.</p>
-<p>
-`octave-continuation-string'
-  String used for Octave continuation lines.
-  Default is a backslash.</p>
-<p>
-`octave-send-echo-input'
-  Non-nil means always display `inferior-octave-buffer' after sending a
-  command to the inferior Octave process.</p>
-<p>
-`octave-send-line-auto-forward'
-  Non-nil means always go to the next unsent line of Octave code after
-  sending a line to the inferior Octave process.</p>
-<p>
-`octave-send-echo-input'
-  Non-nil means echo input sent to the inferior Octave process.</p>
-<p>
-Turning on Octave mode runs the hook `octave-mode-hook'.</p>
-<p>
-To begin using this mode for all `.m' files that you edit, add the
-following lines to your init file:</p>
-<p>
-  (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))</p>
-<p>
-To automatically turn on the abbrev and auto-fill features,
-add the following lines to your init file as well:</p>
-<p>
-  (add-hook 'octave-mode-hook
-	    (lambda ()
-	      (abbrev-mode 1)
-	      (auto-fill-mode 1)))</p>
-<p>
+Major mode for editing Octave code.<br>
+<br>
+This mode makes it easier to write Octave code by helping with<br>
+indentation, doing some of the typing for you (with Abbrev mode) and by<br>
+showing keywords, comments, strings, etc. in different faces (with<br>
+Font Lock mode on terminals that support it).<br>
+<br>
+Octave itself is a high-level language, primarily intended for numerical<br>
+computations.  It provides a convenient command line interface for<br>
+solving linear and nonlinear problems numerically.  Function definitions<br>
+can also be stored in files, and it can be used in a batch mode (which<br>
+is why you need this mode!).<br>
+<br>
+The latest released version of Octave is always available via anonymous<br>
+ftp from ftp.octave.org in the directory `/pub/octave'.  Complete<br>
+source and binaries for several popular systems are available.<br>
+<br>
+Type M-x list-abbrevs to display the built-in abbrevs for Octave keywords.<br>
+<br>
+Keybindings<br>
+===========<br>
+<br>
+<br>
+Uses keymap `octave-mode-map', which is not currently defined.<br>
+<br>
+<br>
+Variables you can use to customize Octave mode<br>
+==============================================<br>
+<br>
+`octave-blink-matching-block'<br>
+  Non-nil means show matching begin of block when inserting a space,<br>
+  newline or semicolon after an else or end keyword.  Default is t.<br>
+<br>
+`octave-block-offset'<br>
+  Extra indentation applied to statements in block structures.<br>
+  Default is 2.<br>
+<br>
+`octave-continuation-offset'<br>
+  Extra indentation applied to Octave continuation lines.<br>
+  Default is 4.<br>
+<br>
+`octave-continuation-string'<br>
+  String used for Octave continuation lines.<br>
+  Default is a backslash.<br>
+<br>
+`octave-send-echo-input'<br>
+  Non-nil means always display `inferior-octave-buffer' after sending a<br>
+  command to the inferior Octave process.<br>
+<br>
+`octave-send-line-auto-forward'<br>
+  Non-nil means always go to the next unsent line of Octave code after<br>
+  sending a line to the inferior Octave process.<br>
+<br>
+`octave-send-echo-input'<br>
+  Non-nil means echo input sent to the inferior Octave process.<br>
+<br>
+Turning on Octave mode runs the hook `octave-mode-hook'.<br>
+<br>
+To begin using this mode for all `.m' files that you edit, add the<br>
+following lines to your init file:<br>
+<br>
+  (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))<br>
+<br>
+To automatically turn on the abbrev and auto-fill features,<br>
+add the following lines to your init file as well:<br>
+<br>
+  (add-hook 'octave-mode-hook<br>
+	    (lambda ()<br>
+	      (abbrev-mode 1)<br>
+	      (auto-fill-mode 1)))<br>
+<br>
 To submit a problem report, enter M-x octave-submit-bug-report from an Octave mode buffer.
 This automatically sets up a mail buffer with version information
 already added.  You just need to add a description of the problem,
-including a reproducible test case and send the message.</p>
-<p>
+including a reproducible test case and send the message.
+
 (fn)</p>

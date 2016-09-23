@@ -1,17 +1,17 @@
 <h3>Variable: buffer-file-coding-system</h3>
 <p>
-Coding system to be used for encoding the buffer contents on saving.
-This variable applies to saving the buffer, and also to `write-region'
-and other functions that use `write-region'.
-It does not apply to sending output to subprocesses, however.</p>
-<p>
-If this is nil, the buffer is saved without any code conversion
-unless some coding system is specified in `file-coding-system-alist'
-for the buffer file.</p>
-<p>
-If the text to be saved cannot be encoded as specified by this variable,
-an alternative encoding is selected by `select-safe-coding-system', which see.</p>
-<p>
-The variable `coding-system-for-write', if non-nil, overrides this variable.</p>
-<p>
+Coding system to be used for encoding the buffer contents on saving.<br>
+This variable applies to saving the buffer, and also to `write-region'<br>
+and other functions that use `write-region'.<br>
+It does not apply to sending output to subprocesses, however.<br>
+<br>
+If this is nil, the buffer is saved without any code conversion<br>
+unless some coding system is specified in `file-coding-system-alist'<br>
+for the buffer file.<br>
+<br>
+If the text to be saved cannot be encoded as specified by this variable,<br>
+an alternative encoding is selected by `select-safe-coding-system', which see.<br>
+<br>
+The variable `coding-system-for-write', if non-nil, overrides this variable.<br>
+<br>
 This variable is never applied to a way of decoding a file while reading it.</p>

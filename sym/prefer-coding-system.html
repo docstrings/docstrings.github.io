@@ -1,20 +1,20 @@
 <h3>Function: prefer-coding-system</h3>
 <p>
-Add CODING-SYSTEM at the front of the priority list for automatic detection.
-This also sets the following coding systems:
-  o coding system of a newly created buffer
-  o default coding system for subprocess I/O
-This also sets the following values:
-  o default value used as `file-name-coding-system' for converting file names
-  o default value for the command `set-terminal-coding-system'
-  o default value for the command `set-keyboard-coding-system'</p>
-<p>
-If CODING-SYSTEM specifies a certain type of EOL conversion, the coding
-systems set by this function will use that type of EOL conversion.</p>
-<p>
-A coding system that requires automatic detection of text+encoding
-(e.g. undecided, unix) can't be preferred.</p>
-<p>
-To prefer, for instance, utf-8, say the following:</p>
-<p>
+Add CODING-SYSTEM at the front of the priority list for automatic detection.<br>
+This also sets the following coding systems:<br>
+  o coding system of a newly created buffer<br>
+  o default coding system for subprocess I/O<br>
+This also sets the following values:<br>
+  o default value used as `file-name-coding-system' for converting file names<br>
+  o default value for the command `set-terminal-coding-system'<br>
+  o default value for the command `set-keyboard-coding-system'<br>
+<br>
+If CODING-SYSTEM specifies a certain type of EOL conversion, the coding<br>
+systems set by this function will use that type of EOL conversion.<br>
+<br>
+A coding system that requires automatic detection of text+encoding<br>
+(e.g. undecided, unix) can't be preferred.<br>
+<br>
+To prefer, for instance, utf-8, say the following:
+
   (prefer-coding-system 'utf-8)</p>

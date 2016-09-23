@@ -1,20 +1,20 @@
 <h3>Variable: font-encoding-alist</h3>
 <p>
-Alist of fontname patterns vs the corresponding encoding and repertory info.
-Each element looks like (REGEXP . (ENCODING . REPERTORY)),
-where ENCODING is a charset or a char-table,
-and REPERTORY is a charset, a char-table, or nil.</p>
-<p>
-If ENCODING and REPERTORY are the same, the element can have the form
-(REGEXP . ENCODING).</p>
-<p>
-ENCODING is for converting a character to a glyph code of the font.
-If ENCODING is a charset, encoding a character by the charset gives
-the corresponding glyph code.  If ENCODING is a char-table, looking up
-the table by a character gives the corresponding glyph code.</p>
-<p>
-REPERTORY specifies a repertory of characters supported by the font.
-If REPERTORY is a charset, all characters belonging to the charset are
-supported.  If REPERTORY is a char-table, all characters who have a
+Alist of fontname patterns vs the corresponding encoding and repertory info.<br>
+Each element looks like (REGEXP . (ENCODING . REPERTORY)),<br>
+where ENCODING is a charset or a char-table,<br>
+and REPERTORY is a charset, a char-table, or nil.<br>
+<br>
+If ENCODING and REPERTORY are the same, the element can have the form<br>
+(REGEXP . ENCODING).<br>
+<br>
+ENCODING is for converting a character to a glyph code of the font.<br>
+If ENCODING is a charset, encoding a character by the charset gives<br>
+the corresponding glyph code.  If ENCODING is a char-table, looking up<br>
+the table by a character gives the corresponding glyph code.<br>
+<br>
+REPERTORY specifies a repertory of characters supported by the font.<br>
+If REPERTORY is a charset, all characters belonging to the charset are<br>
+supported.  If REPERTORY is a char-table, all characters who have a<br>
 non-nil value in the table are supported.  If REPERTORY is nil, Emacs
 gets the repertory information by an opened font and ENCODING.</p>

@@ -1,83 +1,83 @@
 <h3>Function: type-break-mode</h3>
 <p>
-Enable or disable typing-break mode.
-This is a minor mode, but it is global to all buffers by default.</p>
-<p>
-When this mode is enabled, the user is encouraged to take typing breaks at
-appropriate intervals; either after a specified amount of time or when the
-user has exceeded a keystroke threshold.  When the time arrives, the user
-is asked to take a break.  If the user refuses at that time, Emacs will ask
-again in a short period of time.  The idea is to give the user enough time
-to find a good breaking point in his or her work, but be sufficiently
-annoying to discourage putting typing breaks off indefinitely.</p>
-<p>
-A negative prefix argument disables this mode.
-No argument or any non-negative argument enables it.</p>
-<p>
-The user may enable or disable this mode by setting the variable of the
-same name, though setting it in that way doesn't reschedule a break or
-reset the keystroke counter.</p>
-<p>
-If the mode was previously disabled and is enabled as a consequence of
-calling this function, it schedules a break with `type-break-schedule' to
-make sure one occurs (the user can call that command to reschedule the
-break at any time).  It also initializes the keystroke counter.</p>
-<p>
-The variable `type-break-interval' specifies the number of seconds to
-schedule between regular typing breaks.  This variable doesn't directly
-affect the time schedule; it simply provides a default for the
-`type-break-schedule' command.</p>
-<p>
-If set, the variable `type-break-good-rest-interval' specifies the minimum
-amount of time which is considered a reasonable typing break.  Whenever
-that time has elapsed, typing breaks are automatically rescheduled for
-later even if Emacs didn't prompt you to take one first.  Also, if a break
-is ended before this much time has elapsed, the user will be asked whether
-or not to continue.  A nil value for this variable prevents automatic
-break rescheduling, making `type-break-interval' an upper bound on the time
-between breaks.  In this case breaks will be prompted for as usual before
-the upper bound if the keystroke threshold is reached.</p>
-<p>
-If `type-break-good-rest-interval' is nil and
-`type-break-good-break-interval' is set, then confirmation is required to
-interrupt a break before `type-break-good-break-interval' seconds
-have passed.  This provides for an upper bound on the time between breaks
-together with confirmation of interruptions to these breaks.</p>
-<p>
-The variable `type-break-keystroke-threshold' is used to determine the
-thresholds at which typing breaks should be considered.  You can use
-the command `type-break-guesstimate-keystroke-threshold' to try to
-approximate good values for this.</p>
-<p>
-There are several variables that affect how or when warning messages about
-imminent typing breaks are displayed.  They include:</p>
-<p>
-        `type-break-mode-line-message-mode'
-        `type-break-time-warning-intervals'
-        `type-break-keystroke-warning-intervals'
-        `type-break-warning-repeat'
-        `type-break-warning-countdown-string'
-        `type-break-warning-countdown-string-type'</p>
-<p>
-There are several variables that affect if, how, and when queries to begin
-a typing break occur.  They include:</p>
-<p>
-        `type-break-query-mode'
-        `type-break-query-function'
-        `type-break-query-interval'</p>
-<p>
-The command `type-break-statistics' prints interesting things.</p>
-<p>
+Enable or disable typing-break mode.<br>
+This is a minor mode, but it is global to all buffers by default.<br>
+<br>
+When this mode is enabled, the user is encouraged to take typing breaks at<br>
+appropriate intervals; either after a specified amount of time or when the<br>
+user has exceeded a keystroke threshold.  When the time arrives, the user<br>
+is asked to take a break.  If the user refuses at that time, Emacs will ask<br>
+again in a short period of time.  The idea is to give the user enough time<br>
+to find a good breaking point in his or her work, but be sufficiently<br>
+annoying to discourage putting typing breaks off indefinitely.<br>
+<br>
+A negative prefix argument disables this mode.<br>
+No argument or any non-negative argument enables it.<br>
+<br>
+The user may enable or disable this mode by setting the variable of the<br>
+same name, though setting it in that way doesn't reschedule a break or<br>
+reset the keystroke counter.<br>
+<br>
+If the mode was previously disabled and is enabled as a consequence of<br>
+calling this function, it schedules a break with `type-break-schedule' to<br>
+make sure one occurs (the user can call that command to reschedule the<br>
+break at any time).  It also initializes the keystroke counter.<br>
+<br>
+The variable `type-break-interval' specifies the number of seconds to<br>
+schedule between regular typing breaks.  This variable doesn't directly<br>
+affect the time schedule; it simply provides a default for the<br>
+`type-break-schedule' command.<br>
+<br>
+If set, the variable `type-break-good-rest-interval' specifies the minimum<br>
+amount of time which is considered a reasonable typing break.  Whenever<br>
+that time has elapsed, typing breaks are automatically rescheduled for<br>
+later even if Emacs didn't prompt you to take one first.  Also, if a break<br>
+is ended before this much time has elapsed, the user will be asked whether<br>
+or not to continue.  A nil value for this variable prevents automatic<br>
+break rescheduling, making `type-break-interval' an upper bound on the time<br>
+between breaks.  In this case breaks will be prompted for as usual before<br>
+the upper bound if the keystroke threshold is reached.<br>
+<br>
+If `type-break-good-rest-interval' is nil and<br>
+`type-break-good-break-interval' is set, then confirmation is required to<br>
+interrupt a break before `type-break-good-break-interval' seconds<br>
+have passed.  This provides for an upper bound on the time between breaks<br>
+together with confirmation of interruptions to these breaks.<br>
+<br>
+The variable `type-break-keystroke-threshold' is used to determine the<br>
+thresholds at which typing breaks should be considered.  You can use<br>
+the command `type-break-guesstimate-keystroke-threshold' to try to<br>
+approximate good values for this.<br>
+<br>
+There are several variables that affect how or when warning messages about<br>
+imminent typing breaks are displayed.  They include:<br>
+<br>
+        `type-break-mode-line-message-mode'<br>
+        `type-break-time-warning-intervals'<br>
+        `type-break-keystroke-warning-intervals'<br>
+        `type-break-warning-repeat'<br>
+        `type-break-warning-countdown-string'<br>
+        `type-break-warning-countdown-string-type'<br>
+<br>
+There are several variables that affect if, how, and when queries to begin<br>
+a typing break occur.  They include:<br>
+<br>
+        `type-break-query-mode'<br>
+        `type-break-query-function'<br>
+        `type-break-query-interval'<br>
+<br>
+The command `type-break-statistics' prints interesting things.
+
 Finally, a file (named `type-break-file-name') is used to store information
 across Emacs sessions.  This provides recovery of the break status between
 sessions and after a crash.  Manual changes to the file may result in
-problems.</p>
-<p>
+problems.
+
 (fn &optional ARG)</p>
 <h3>Variable: type-break-mode</h3>
 <p>
-Non-nil if Type-Break mode is enabled.
-See the command `type-break-mode' for a description of this minor mode.
-Setting this variable directly does not take effect;
-either customize it (see the info node `Easy Customization')
+Non-nil if Type-Break mode is enabled.<br>
+See the command `type-break-mode' for a description of this minor mode.<br>
+Setting this variable directly does not take effect;<br>
+either customize it (see the info node `Easy Customization')<br>
 or call the function `type-break-mode'.</p>

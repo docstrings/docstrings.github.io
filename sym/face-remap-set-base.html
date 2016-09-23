@@ -1,16 +1,16 @@
 <h3>Function: face-remap-set-base</h3>
 <p>
-Set the base remapping of FACE in the current buffer to SPECS.
-This causes the remappings specified by `face-remap-add-relative'
-to apply on top of the face specification given by SPECS.</p>
-<p>
-The remaining arguments, SPECS, should form a list of faces.
-Each list element should be either a face name or a property list
-of face attribute/value pairs, like in a `face' text property.</p>
-<p>
-If SPECS is empty, call `face-remap-reset-base' to use the normal
-definition of FACE as the base remapping; note that this is
-different from SPECS containing a single value `nil', which means
-not to inherit from the global definition of FACE at all.</p>
-<p>
+Set the base remapping of FACE in the current buffer to SPECS.<br>
+This causes the remappings specified by `face-remap-add-relative'<br>
+to apply on top of the face specification given by SPECS.<br>
+<br>
+The remaining arguments, SPECS, should form a list of faces.<br>
+Each list element should be either a face name or a property list<br>
+of face attribute/value pairs, like in a `face' text property.<br>
+<br>
+If SPECS is empty, call `face-remap-reset-base' to use the normal<br>
+definition of FACE as the base remapping; note that this is<br>
+different from SPECS containing a single value `nil', which means<br>
+not to inherit from the global definition of FACE at all.
+
 (fn FACE &rest SPECS)</p>

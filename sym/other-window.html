@@ -1,21 +1,21 @@
 <h3>Function: other-window</h3>
 <p>
-Select another window in cyclic ordering of windows.
-COUNT specifies the number of windows to skip, starting with the
-selected window, before making the selection.  If COUNT is
-positive, skip COUNT windows forwards.  If COUNT is negative,
-skip -COUNT windows backwards.  COUNT zero means do not skip any
-window, so select the selected window.  In an interactive call,
-COUNT is the numeric prefix argument.  Return nil.</p>
-<p>
-If the `other-window' parameter of the selected window is a
-function and `ignore-window-parameters' is nil, call that
-function with the arguments COUNT and ALL-FRAMES.</p>
-<p>
-This function does not select a window whose `no-other-window'
-window parameter is non-nil.</p>
-<p>
-This function uses `next-window' for finding the window to
-select.  The argument ALL-FRAMES has the same meaning as in
+Select another window in cyclic ordering of windows.<br>
+COUNT specifies the number of windows to skip, starting with the<br>
+selected window, before making the selection.  If COUNT is<br>
+positive, skip COUNT windows forwards.  If COUNT is negative,<br>
+skip -COUNT windows backwards.  COUNT zero means do not skip any<br>
+window, so select the selected window.  In an interactive call,<br>
+COUNT is the numeric prefix argument.  Return nil.<br>
+<br>
+If the `other-window' parameter of the selected window is a<br>
+function and `ignore-window-parameters' is nil, call that<br>
+function with the arguments COUNT and ALL-FRAMES.<br>
+<br>
+This function does not select a window whose `no-other-window'<br>
+window parameter is non-nil.<br>
+<br>
+This function uses `next-window' for finding the window to<br>
+select.  The argument ALL-FRAMES has the same meaning as in<br>
 `next-window', but the MINIBUF argument of `next-window' is
 always effectively nil.</p>

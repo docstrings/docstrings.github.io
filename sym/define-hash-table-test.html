@@ -1,14 +1,14 @@
 <h3>Function: define-hash-table-test</h3>
 <p>
-Define a new hash table test with name NAME, a symbol.</p>
-<p>
-In hash tables created with NAME specified as test, use TEST to
-compare keys, and HASH for computing hash codes of keys.</p>
-<p>
-TEST must be a function taking two arguments and returning non-nil if
-both arguments are the same.  HASH must be a function taking one
-argument and return an integer that is the hash code of the argument.
-Hash code computation should use the whole value range of integers,
-including negative integers.</p>
-<p>
+Define a new hash table test with name NAME, a symbol.<br>
+<br>
+In hash tables created with NAME specified as test, use TEST to<br>
+compare keys, and HASH for computing hash codes of keys.<br>
+<br>
+TEST must be a function taking two arguments and returning non-nil if<br>
+both arguments are the same.  HASH must be a function taking one<br>
+argument and return an integer that is the hash code of the argument.<br>
+Hash code computation should use the whole value range of integers,<br>
+including negative integers.
+
 (fn NAME TEST HASH)</p>

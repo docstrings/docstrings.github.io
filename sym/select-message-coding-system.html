@@ -1,12 +1,12 @@
 <h3>Function: select-message-coding-system</h3>
 <p>
-Return a coding system to encode the outgoing message of the current buffer.
-It at first tries the first coding system found in these variables
-in this order:
-  (1) local value of `buffer-file-coding-system'
-  (2) value of `sendmail-coding-system'
-  (3) value of `default-sendmail-coding-system'
-  (4) default value of `buffer-file-coding-system'
-If the found coding system can't encode the current buffer,
-or none of them are bound to a coding system,
+Return a coding system to encode the outgoing message of the current buffer.<br>
+It at first tries the first coding system found in these variables<br>
+in this order:<br>
+  (1) local value of `buffer-file-coding-system'<br>
+  (2) value of `sendmail-coding-system'<br>
+  (3) value of `default-sendmail-coding-system'<br>
+  (4) default value of `buffer-file-coding-system'<br>
+If the found coding system can't encode the current buffer,<br>
+or none of them are bound to a coding system,<br>
 it asks the user to select a proper coding system.</p>

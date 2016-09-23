@@ -1,18 +1,18 @@
 <h3>Function: binary-overwrite-mode</h3>
 <p>
-Toggle Binary Overwrite mode.
-With a prefix argument ARG, enable Binary Overwrite mode if ARG
-is positive, and disable it otherwise.  If called from Lisp,
-enable the mode if ARG is omitted or nil.</p>
-<p>
-When Binary Overwrite mode is enabled, printing characters typed
-in replace existing text.  Newlines are not treated specially, so
-typing at the end of a line joins the line to the next, with the
-typed character between them.  Typing before a tab character
-simply replaces the tab with the character typed.
-C-q replaces the text at the cursor, just as
-ordinary typing characters do.</p>
-<p>
-Note that Binary Overwrite mode is not its own minor mode; it is
+Toggle Binary Overwrite mode.<br>
+With a prefix argument ARG, enable Binary Overwrite mode if ARG<br>
+is positive, and disable it otherwise.  If called from Lisp,<br>
+enable the mode if ARG is omitted or nil.<br>
+<br>
+When Binary Overwrite mode is enabled, printing characters typed<br>
+in replace existing text.  Newlines are not treated specially, so<br>
+typing at the end of a line joins the line to the next, with the<br>
+typed character between them.  Typing before a tab character<br>
+simply replaces the tab with the character typed.<br>
+C-q replaces the text at the cursor, just as<br>
+ordinary typing characters do.<br>
+<br>
+Note that Binary Overwrite mode is not its own minor mode; it is<br>
 a specialization of overwrite mode, entered by setting the
 `overwrite-mode' variable to `overwrite-mode-binary'.</p>

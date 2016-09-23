@@ -1,53 +1,53 @@
 <h3>Function: gnutls-boot</h3>
 <p>
-Initialize GnuTLS client for process PROC with TYPE+PROPLIST.
-Currently only client mode is supported.  Return a success/failure
-value you can check with `gnutls-errorp'.</p>
-<p>
-TYPE is a symbol, either `gnutls-anon' or `gnutls-x509pki'.
-PROPLIST is a property list with the following keys:</p>
-<p>
-:hostname is a string naming the remote host.</p>
-<p>
-:priority is a GnuTLS priority string, defaults to "NORMAL".</p>
-<p>
-:trustfiles is a list of PEM-encoded trust files for `gnutls-x509pki'.</p>
-<p>
-:crlfiles is a list of PEM-encoded CRL lists for `gnutls-x509pki'.</p>
-<p>
-:keylist is an alist of PEM-encoded key files and PEM-encoded
-certificates for `gnutls-x509pki'.</p>
-<p>
-:callbacks is an alist of callback functions, see below.</p>
-<p>
-:loglevel is the debug level requested from GnuTLS, try 4.</p>
-<p>
-:verify-flags is a bitset as per GnuTLS'
-gnutls_certificate_set_verify_flags.</p>
-<p>
-:verify-hostname-error, if non-nil, makes a hostname mismatch an
-error.  Otherwise it will be just a warning.</p>
-<p>
-:min-prime-bits is the minimum accepted number of bits the client will
-accept in Diffie-Hellman key exchange.</p>
-<p>
-The debug level will be set for this process AND globally for GnuTLS.
-So if you set it higher or lower at any point, it affects global
-debugging.</p>
-<p>
-Note that the priority is set on the client.  The server does not use
-the protocols's priority except for disabling protocols that were not
-specified.</p>
-<p>
-Processes must be initialized with this function before other GnuTLS
-functions are used.  This function allocates resources which can only
-be deallocated by calling `gnutls-deinit' or by calling it again.</p>
-<p>
-The callbacks alist can have a `verify' key, associated with a
-verification function (UNUSED).</p>
-<p>
+Initialize GnuTLS client for process PROC with TYPE+PROPLIST.<br>
+Currently only client mode is supported.  Return a success/failure<br>
+value you can check with `gnutls-errorp'.<br>
+<br>
+TYPE is a symbol, either `gnutls-anon' or `gnutls-x509pki'.<br>
+PROPLIST is a property list with the following keys:<br>
+<br>
+:hostname is a string naming the remote host.<br>
+<br>
+:priority is a GnuTLS priority string, defaults to "NORMAL".<br>
+<br>
+:trustfiles is a list of PEM-encoded trust files for `gnutls-x509pki'.<br>
+<br>
+:crlfiles is a list of PEM-encoded CRL lists for `gnutls-x509pki'.<br>
+<br>
+:keylist is an alist of PEM-encoded key files and PEM-encoded<br>
+certificates for `gnutls-x509pki'.<br>
+<br>
+:callbacks is an alist of callback functions, see below.<br>
+<br>
+:loglevel is the debug level requested from GnuTLS, try 4.<br>
+<br>
+:verify-flags is a bitset as per GnuTLS'<br>
+gnutls_certificate_set_verify_flags.<br>
+<br>
+:verify-hostname-error, if non-nil, makes a hostname mismatch an<br>
+error.  Otherwise it will be just a warning.<br>
+<br>
+:min-prime-bits is the minimum accepted number of bits the client will<br>
+accept in Diffie-Hellman key exchange.<br>
+<br>
+The debug level will be set for this process AND globally for GnuTLS.<br>
+So if you set it higher or lower at any point, it affects global<br>
+debugging.<br>
+<br>
+Note that the priority is set on the client.  The server does not use<br>
+the protocols's priority except for disabling protocols that were not<br>
+specified.<br>
+<br>
+Processes must be initialized with this function before other GnuTLS<br>
+functions are used.  This function allocates resources which can only<br>
+be deallocated by calling `gnutls-deinit' or by calling it again.<br>
+<br>
+The callbacks alist can have a `verify' key, associated with a<br>
+verification function (UNUSED).<br>
+<br>
 Each authentication type may need additional information in order to
 work.  For X.509 PKI (`gnutls-x509pki'), you probably need at least
-one trustfile (usually a CA bundle).</p>
-<p>
+one trustfile (usually a CA bundle).
+
 (fn PROC TYPE PROPLIST)</p>

@@ -1,13 +1,13 @@
 <h3>Function: mail-unquote-printable-region</h3>
 <p>
-Undo the "quoted printable" encoding in buffer from BEG to END.
-If the optional argument WRAPPER is non-nil,
-we expect to find and remove the wrapper characters =?ISO-8859-1?Q?....?=.
-On encountering malformed quoted-printable text, exits with an error,
-unless NOERROR is non-nil, in which case it continues, and returns nil
-when finished.  Returns non-nil on successful completion.
-If UNIBYTE is non-nil, insert converted characters as unibyte.
-That is useful if you are going to character code decoding afterward,
-as Rmail does.</p>
-<p>
+Undo the "quoted printable" encoding in buffer from BEG to END.<br>
+If the optional argument WRAPPER is non-nil,<br>
+we expect to find and remove the wrapper characters =?ISO-8859-1?Q?....?=.<br>
+On encountering malformed quoted-printable text, exits with an error,<br>
+unless NOERROR is non-nil, in which case it continues, and returns nil<br>
+when finished.  Returns non-nil on successful completion.<br>
+If UNIBYTE is non-nil, insert converted characters as unibyte.<br>
+That is useful if you are going to character code decoding afterward,<br>
+as Rmail does.<br>
+<br>
 (fn BEG END &optional WRAPPER NOERROR UNIBYTE)</p>

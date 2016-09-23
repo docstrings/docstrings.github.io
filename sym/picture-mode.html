@@ -1,75 +1,75 @@
 <h3>Function: picture-mode</h3>
 <p>
-Switch to Picture mode, in which a quarter-plane screen model is used.</p>
-<p>
-Uses keymap `picture-mode-map', which is not currently defined.</p>
-<p>
-Printing characters replace instead of inserting themselves with motion
-afterwards settable by these commands:</p>
-<p>
- Move left after insertion:            M-x picture-movement-left
- Move right after insertion:           M-x picture-movement-right
- Move up after insertion:              M-x picture-movement-up
- Move down after insertion:            M-x picture-movement-down</p>
-<p>
- Move northwest (nw) after insertion:  M-x picture-movement-nw
- Move northeast (ne) after insertion:  M-x picture-movement-ne
- Move southwest (sw) after insertion:  M-x picture-movement-sw
- Move southeast (se) after insertion:  M-x picture-movement-se</p>
-<p>
- Move westnorthwest (wnw) after insertion:  C-u M-x picture-movement-nw
- Move eastnortheast (ene) after insertion:  C-u M-x picture-movement-ne
- Move westsouthwest (wsw) after insertion:  C-u M-x picture-movement-sw
- Move eastsoutheast (ese) after insertion:  C-u M-x picture-movement-se</p>
-<p>
-The current direction is displayed in the mode line.  The initial
-direction is right.  Whitespace is inserted and tabs are changed to
-spaces when required by movement.  You can move around in the buffer
-with these commands:</p>
-<p>
- Move vertically to SAME column in previous line: M-x picture-move-down
- Move vertically to SAME column in next line:     M-x picture-move-up
- Move to column following last
-  non-whitespace character:                       M-x picture-end-of-line
- Move right, inserting spaces if required:        M-x picture-forward-column
- Move left changing tabs to spaces if required:   M-x picture-backward-column
- Move in direction of current picture motion:     M-x picture-motion
- Move opposite to current picture motion:         M-x picture-motion-reverse
- Move to beginning of next line:                  C-n</p>
-<p>
-You can edit tabular text with these commands:</p>
-<p>
- Move to column beneath (or at) next interesting
-  character (see variable `picture-tab-chars'):   M-x picture-tab-search
- Move to next stop in tab stop list:              M-x picture-tab
- Set tab stops according to context of this line: M-x picture-set-tab-stops
-   (With ARG, resets tab stops to default value.)
- Change the tab stop list:                        M-x edit-tab-stops</p>
-<p>
-You can manipulate text with these commands:
- Clear ARG columns after point without moving:    M-x picture-clear-column
- Delete char at point:                            M-x picture-delete-char
- Clear ARG columns backward:                      M-x picture-backward-clear-column
- Clear ARG lines, advancing over them:            M-x picture-clear-line
-  (the cleared text is saved in the kill ring)
- Open blank line(s) beneath current line:         M-x picture-open-line</p>
-<p>
-You can manipulate rectangles with these commands:
-  Clear a rectangle and save it:                  M-x picture-clear-rectangle
-  Clear a rectangle, saving in a named register:  M-x picture-clear-rectangle-to-register
-  Insert currently saved rectangle at point:      M-x picture-yank-rectangle
-  Insert rectangle from named register:           M-x picture-yank-rectangle-from-register
-  Draw a rectangular box around mark and point:   M-x picture-draw-rectangle
-  Copies a rectangle to a register:               C-x r r
-  Undo effects of rectangle overlay commands:     C-x u</p>
-<p>
-You can return to the previous mode with M-x picture-mode-exit, which
+Switch to Picture mode, in which a quarter-plane screen model is used.<br>
+<br>
+Uses keymap `picture-mode-map', which is not currently defined.<br>
+<br>
+Printing characters replace instead of inserting themselves with motion<br>
+afterwards settable by these commands:<br>
+<br>
+ Move left after insertion:            M-x picture-movement-left<br>
+ Move right after insertion:           M-x picture-movement-right<br>
+ Move up after insertion:              M-x picture-movement-up<br>
+ Move down after insertion:            M-x picture-movement-down<br>
+<br>
+ Move northwest (nw) after insertion:  M-x picture-movement-nw<br>
+ Move northeast (ne) after insertion:  M-x picture-movement-ne<br>
+ Move southwest (sw) after insertion:  M-x picture-movement-sw<br>
+ Move southeast (se) after insertion:  M-x picture-movement-se<br>
+<br>
+ Move westnorthwest (wnw) after insertion:  C-u M-x picture-movement-nw<br>
+ Move eastnortheast (ene) after insertion:  C-u M-x picture-movement-ne<br>
+ Move westsouthwest (wsw) after insertion:  C-u M-x picture-movement-sw<br>
+ Move eastsoutheast (ese) after insertion:  C-u M-x picture-movement-se<br>
+<br>
+The current direction is displayed in the mode line.  The initial<br>
+direction is right.  Whitespace is inserted and tabs are changed to<br>
+spaces when required by movement.  You can move around in the buffer<br>
+with these commands:<br>
+<br>
+ Move vertically to SAME column in previous line: M-x picture-move-down<br>
+ Move vertically to SAME column in next line:     M-x picture-move-up<br>
+ Move to column following last<br>
+  non-whitespace character:                       M-x picture-end-of-line<br>
+ Move right, inserting spaces if required:        M-x picture-forward-column<br>
+ Move left changing tabs to spaces if required:   M-x picture-backward-column<br>
+ Move in direction of current picture motion:     M-x picture-motion<br>
+ Move opposite to current picture motion:         M-x picture-motion-reverse<br>
+ Move to beginning of next line:                  C-n<br>
+<br>
+You can edit tabular text with these commands:<br>
+<br>
+ Move to column beneath (or at) next interesting<br>
+  character (see variable `picture-tab-chars'):   M-x picture-tab-search<br>
+ Move to next stop in tab stop list:              M-x picture-tab<br>
+ Set tab stops according to context of this line: M-x picture-set-tab-stops<br>
+   (With ARG, resets tab stops to default value.)<br>
+ Change the tab stop list:                        M-x edit-tab-stops<br>
+<br>
+You can manipulate text with these commands:<br>
+ Clear ARG columns after point without moving:    M-x picture-clear-column<br>
+ Delete char at point:                            M-x picture-delete-char<br>
+ Clear ARG columns backward:                      M-x picture-backward-clear-column<br>
+ Clear ARG lines, advancing over them:            M-x picture-clear-line<br>
+  (the cleared text is saved in the kill ring)<br>
+ Open blank line(s) beneath current line:         M-x picture-open-line<br>
+<br>
+You can manipulate rectangles with these commands:<br>
+  Clear a rectangle and save it:                  M-x picture-clear-rectangle<br>
+  Clear a rectangle, saving in a named register:  M-x picture-clear-rectangle-to-register<br>
+  Insert currently saved rectangle at point:      M-x picture-yank-rectangle<br>
+  Insert rectangle from named register:           M-x picture-yank-rectangle-from-register<br>
+  Draw a rectangular box around mark and point:   M-x picture-draw-rectangle<br>
+  Copies a rectangle to a register:               C-x r r<br>
+  Undo effects of rectangle overlay commands:     C-x u<br>
+<br>
+You can return to the previous mode with M-x picture-mode-exit, which<br>
 also strips trailing whitespace from every line.  Stripping is suppressed
-by supplying an argument.</p>
-<p>
-Entry to this mode calls the value of `picture-mode-hook' if non-nil.</p>
-<p>
+by supplying an argument.
+
+Entry to this mode calls the value of `picture-mode-hook' if non-nil.
+
 Note that Picture mode commands will work outside of Picture mode, but
-they are not by default assigned to keys.</p>
-<p>
+they are not by default assigned to keys.
+
 (fn)</p>

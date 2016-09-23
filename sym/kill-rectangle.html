@@ -1,17 +1,17 @@
 <h3>Function: kill-rectangle</h3>
 <p>
-Delete the region-rectangle and save it as the last killed one.</p>
-<p>
-When called from a program the rectangle's corners are START and END.
-You might prefer to use `delete-extract-rectangle' from a program.</p>
-<p>
-With a prefix (or a FILL) argument, also fill lines where nothing has to be
-deleted.</p>
-<p>
-If the buffer is read-only, Emacs will beep and refrain from deleting
-the rectangle, but put it in the kill ring anyway.  This means that
-you can use this command to copy text from a read-only buffer.
+Delete the region-rectangle and save it as the last killed one.<br>
+<br>
+When called from a program the rectangle's corners are START and END.<br>
+You might prefer to use `delete-extract-rectangle' from a program.<br>
+<br>
+With a prefix (or a FILL) argument, also fill lines where nothing has to be<br>
+deleted.<br>
+<br>
+If the buffer is read-only, Emacs will beep and refrain from deleting<br>
+the rectangle, but put it in the kill ring anyway.  This means that<br>
+you can use this command to copy text from a read-only buffer.<br>
 (If the variable `kill-read-only-ok' is non-nil, then this won't
-even beep.)</p>
-<p>
+even beep.)
+
 (fn START END &optional FILL)</p>

@@ -1,0 +1,16 @@
+<h3>Variable: sh-here-document-word</h3>
+<p>
+Word to delimit here documents.<br>
+If the first character of this string is "-", this is taken as<br>
+part of the redirection operator, rather than part of the<br>
+word (that is, "<<-" instead of "<<").  This is a feature<br>
+used by some shells (for example Bash) to indicate that leading<br>
+tabs inside the here document should be ignored.  In this case,<br>
+Emacs indents the initial body and end of the here document with<br>
+tabs, to the same level as the start (note that apart from this<br>
+there is no support for indentation of here documents).  This<br>
+will only work correctly if `sh-basic-offset' is a multiple of<br>
+`tab-width'.<br>
+<br>
+Any quote characters or leading whitespace in the word are
+removed when closing the here document.</p>

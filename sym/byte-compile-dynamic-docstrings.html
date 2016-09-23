@@ -1,15 +1,15 @@
 <h3>Variable: byte-compile-dynamic-docstrings</h3>
 <p>
-If non-nil, compile doc strings for lazy access.
-We bury the doc strings of functions and variables inside comments in
-the file, and bring them into core only when they are actually needed.</p>
-<p>
-When this option is true, if you load the compiled file and then move it,
-you won't be able to find the documentation of anything in that file.</p>
-<p>
-To disable this option for a certain file, make it a file-local variable
-in the source file.  For example, add this to the first line:
-  -*-byte-compile-dynamic-docstrings:nil;-*-
-You can also set the variable globally.</p>
-<p>
+If non-nil, compile doc strings for lazy access.<br>
+We bury the doc strings of functions and variables inside comments in<br>
+the file, and bring them into core only when they are actually needed.<br>
+<br>
+When this option is true, if you load the compiled file and then move it,<br>
+you won't be able to find the documentation of anything in that file.<br>
+<br>
+To disable this option for a certain file, make it a file-local variable<br>
+in the source file.  For example, add this to the first line:<br>
+  -*-byte-compile-dynamic-docstrings:nil;-*-<br>
+You can also set the variable globally.<br>
+<br>
 This option is enabled by default because it reduces Emacs memory usage.</p>

@@ -1,13 +1,13 @@
 <h3>Variable: yank-handled-properties</h3>
 <p>
-List of special text property handling conditions for yanking.
-Each element should have the form (PROP . FUN), where PROP is a
-property symbol and FUN is a function.  When the `yank' command
-inserts text into the buffer, it scans the inserted text for
-stretches of text that have `eq' values of the text property
-PROP; for each such stretch of text, FUN is called with three
-arguments: the property's value in that text, and the start and
-end positions of the text.</p>
-<p>
+List of special text property handling conditions for yanking.<br>
+Each element should have the form (PROP . FUN), where PROP is a<br>
+property symbol and FUN is a function.  When the `yank' command<br>
+inserts text into the buffer, it scans the inserted text for<br>
+stretches of text that have `eq' values of the text property<br>
+PROP; for each such stretch of text, FUN is called with three<br>
+arguments: the property's value in that text, and the start and<br>
+end positions of the text.<br>
+<br>
 This is done prior to removing the properties specified by
 `yank-excluded-properties'.</p>

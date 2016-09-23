@@ -1,28 +1,28 @@
 <h3>Variable: hs-special-modes-alist</h3>
 <p>
-Alist for initializing the hideshow variables for different modes.
-Each element has the form
-  (MODE START END COMMENT-START FORWARD-SEXP-FUNC ADJUST-BEG-FUNC).</p>
-<p>
-If non-nil, hideshow will use these values as regexps to define blocks
-and comments, respectively for major mode MODE.</p>
-<p>
-START, END and COMMENT-START are regular expressions.  A block is
-defined as text surrounded by START and END.</p>
-<p>
-As a special case, START may be a list of the form (COMPLEX-START
-MDATA-SELECTOR), where COMPLEX-START is a regexp w/ multiple parts and
-MDATA-SELECTOR an integer that specifies which sub-match is the proper
-place to adjust point, before calling `hs-forward-sexp-func'.  Point
-is adjusted to the beginning of the specified match.  For example,
-see the `hs-special-modes-alist' entry for `bibtex-mode'.</p>
-<p>
-For some major modes, `forward-sexp' does not work properly.  In those
-cases, FORWARD-SEXP-FUNC specifies another function to use instead.</p>
-<p>
-See the documentation for `hs-adjust-block-beginning' to see what is the
-use of ADJUST-BEG-FUNC.</p>
-<p>
-If any of the elements is left nil or omitted, hideshow tries to guess
+Alist for initializing the hideshow variables for different modes.<br>
+Each element has the form<br>
+  (MODE START END COMMENT-START FORWARD-SEXP-FUNC ADJUST-BEG-FUNC).<br>
+<br>
+If non-nil, hideshow will use these values as regexps to define blocks<br>
+and comments, respectively for major mode MODE.<br>
+<br>
+START, END and COMMENT-START are regular expressions.  A block is<br>
+defined as text surrounded by START and END.<br>
+<br>
+As a special case, START may be a list of the form (COMPLEX-START<br>
+MDATA-SELECTOR), where COMPLEX-START is a regexp w/ multiple parts and<br>
+MDATA-SELECTOR an integer that specifies which sub-match is the proper<br>
+place to adjust point, before calling `hs-forward-sexp-func'.  Point<br>
+is adjusted to the beginning of the specified match.  For example,<br>
+see the `hs-special-modes-alist' entry for `bibtex-mode'.<br>
+<br>
+For some major modes, `forward-sexp' does not work properly.  In those<br>
+cases, FORWARD-SEXP-FUNC specifies another function to use instead.<br>
+<br>
+See the documentation for `hs-adjust-block-beginning' to see what is the<br>
+use of ADJUST-BEG-FUNC.<br>
+<br>
+If any of the elements is left nil or omitted, hideshow tries to guess<br>
 appropriate values.  The regexps should not contain leading or trailing
 whitespace.  Case does not matter.</p>

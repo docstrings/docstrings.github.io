@@ -1,11 +1,11 @@
 <h3>Function: hack-local-variables-prop-line</h3>
 <p>
-Return local variables specified in the -*- line.
-Returns an alist of elements (VAR . VAL), where VAR is a variable
-and VAL is the specified value.  Ignores any specification for
-`mode:' and `coding:' (which should have already been handled
-by `set-auto-mode' and `set-auto-coding', respectively).
-Return nil if the -*- line is malformed.</p>
-<p>
-If MODE-ONLY is non-nil, just returns the symbol specifying the
+Return local variables specified in the -*- line.<br>
+Returns an alist of elements (VAR . VAL), where VAR is a variable<br>
+and VAL is the specified value.  Ignores any specification for<br>
+`mode:' and `coding:' (which should have already been handled<br>
+by `set-auto-mode' and `set-auto-coding', respectively).<br>
+Return nil if the -*- line is malformed.<br>
+<br>
+If MODE-ONLY is non-nil, just returns the symbol specifying the<br>
 mode, if there is one, otherwise nil.</p>

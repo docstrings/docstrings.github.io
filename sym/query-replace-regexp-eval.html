@@ -1,38 +1,38 @@
 <h3>Function: query-replace-regexp-eval</h3>
 <p>
-Replace some things after point matching REGEXP with the result of TO-EXPR.</p>
-<p>
-Interactive use of this function is deprecated in favor of the
-`\,' feature of `query-replace-regexp'.  For non-interactive use, a loop
-using `search-forward-regexp' and `replace-match' is preferred.</p>
-<p>
-As each match is found, the user must type a character saying
-what to do with it.  For directions, type C-h at that time.</p>
-<p>
-TO-EXPR is a Lisp expression evaluated to compute each replacement.  It may
-reference `replace-count' to get the number of replacements already made.
-If the result of TO-EXPR is not a string, it is converted to one using
-`prin1-to-string' with the NOESCAPE argument (which see).</p>
-<p>
-For convenience, when entering TO-EXPR interactively, you can use `\&' or
-`\0' to stand for whatever matched the whole of REGEXP, and `\N' (where
-N is a digit) to stand for whatever matched the Nth `\(...\)' in REGEXP.
-Use `\#&' or `\#N' if you want a number instead of a string.
-In interactive use, `\#' in itself stands for `replace-count'.</p>
-<p>
-In Transient Mark mode, if the mark is active, operate on the contents
-of the region.  Otherwise, operate from point to the end of the buffer.</p>
-<p>
-Use M-n to pull the last incremental search regexp to the minibuffer
-that reads REGEXP.</p>
-<p>
-Preserves case in each replacement if `case-replace' and `case-fold-search'
-are non-nil and REGEXP has no uppercase letters.</p>
-<p>
-If `replace-regexp-lax-whitespace' is non-nil, a space or spaces in the regexp
-to be replaced will match a sequence of whitespace chars defined by the
-regexp in `search-whitespace-regexp'.</p>
-<p>
+Replace some things after point matching REGEXP with the result of TO-EXPR.<br>
+<br>
+Interactive use of this function is deprecated in favor of the<br>
+`\,' feature of `query-replace-regexp'.  For non-interactive use, a loop<br>
+using `search-forward-regexp' and `replace-match' is preferred.<br>
+<br>
+As each match is found, the user must type a character saying<br>
+what to do with it.  For directions, type C-h at that time.<br>
+<br>
+TO-EXPR is a Lisp expression evaluated to compute each replacement.  It may<br>
+reference `replace-count' to get the number of replacements already made.<br>
+If the result of TO-EXPR is not a string, it is converted to one using<br>
+`prin1-to-string' with the NOESCAPE argument (which see).<br>
+<br>
+For convenience, when entering TO-EXPR interactively, you can use `\&' or<br>
+`\0' to stand for whatever matched the whole of REGEXP, and `\N' (where<br>
+N is a digit) to stand for whatever matched the Nth `\(...\)' in REGEXP.<br>
+Use `\#&' or `\#N' if you want a number instead of a string.<br>
+In interactive use, `\#' in itself stands for `replace-count'.<br>
+<br>
+In Transient Mark mode, if the mark is active, operate on the contents<br>
+of the region.  Otherwise, operate from point to the end of the buffer.<br>
+<br>
+Use M-n to pull the last incremental search regexp to the minibuffer<br>
+that reads REGEXP.<br>
+<br>
+Preserves case in each replacement if `case-replace' and `case-fold-search'<br>
+are non-nil and REGEXP has no uppercase letters.<br>
+<br>
+If `replace-regexp-lax-whitespace' is non-nil, a space or spaces in the regexp<br>
+to be replaced will match a sequence of whitespace chars defined by the<br>
+regexp in `search-whitespace-regexp'.<br>
+<br>
 Third arg DELIMITED (prefix arg if interactive), if non-nil, means replace
 only matches that are surrounded by word boundaries.
 Fourth and fifth arg START and END specify the region to operate on.</p>

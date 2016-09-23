@@ -1,11 +1,11 @@
 <h3>Function: eieio-generic-call-primary-only</h3>
 <p>
-Call METHOD with ARGS for methods with only :PRIMARY implementations.
-ARGS provides the context on which implementation to use.
-This should only be called from a generic function.</p>
-<p>
-This method is like `eieio-generic-call', but only
-implementations in the :PRIMARY slot are queried.  After many
-years of use, it appears that over 90% of methods in use
-have :PRIMARY implementations only.  We can therefore optimize
+Call METHOD with ARGS for methods with only :PRIMARY implementations.<br>
+ARGS provides the context on which implementation to use.<br>
+This should only be called from a generic function.<br>
+<br>
+This method is like `eieio-generic-call', but only<br>
+implementations in the :PRIMARY slot are queried.  After many<br>
+years of use, it appears that over 90% of methods in use<br>
+have :PRIMARY implementations only.  We can therefore optimize<br>
 for this common case to improve performance.</p>

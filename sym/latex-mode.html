@@ -1,45 +1,45 @@
 <h3>Function: latex-mode</h3>
 <p>
-Major mode for editing files of input for LaTeX.
-Makes $ and } display the characters they match.
-Makes " insert `` when it seems to be the beginning of a quotation,
-and '' when it appears to be the end; it inserts " only after a \.</p>
-<p>
-Use M-x tex-region to run LaTeX on the current region, plus the preamble
-copied from the top of the file (containing \documentstyle, etc.),
-running LaTeX under a special subshell.  M-x tex-buffer does the whole buffer.
-M-x tex-file saves the buffer and then processes the file.
-M-x tex-print prints the .dvi file made by any of these.
-M-x tex-view previews the .dvi file made by any of these.
-M-x tex-bibtex-file runs bibtex on the file of the current buffer.</p>
-<p>
-Use M-x tex-validate-buffer to check buffer for paragraphs containing
-mismatched $'s or braces.</p>
-<p>
-Special commands:</p>
-<p>
-Uses keymap `latex-mode-map', which is not currently defined.</p>
-<p>
-
-Mode variables:
-latex-run-command
-	Command string used by M-x tex-region or M-x tex-buffer.
-tex-directory
-	Directory in which to create temporary files for LaTeX jobs
-	run by M-x tex-region or M-x tex-buffer.
-tex-dvi-print-command
-	Command string used by M-x tex-print to print a .dvi file.
-tex-alt-dvi-print-command
-	Alternative command string used by M-x tex-print (when given a prefix
-	argument) to print a .dvi file.
-tex-dvi-view-command
-	Command string used by M-x tex-view to preview a .dvi file.
-tex-show-queue-command
-	Command string used by M-x tex-show-print-queue to show the print
-	queue that M-x tex-print put your job on.</p>
-<p>
+Major mode for editing files of input for LaTeX.<br>
+Makes $ and } display the characters they match.<br>
+Makes " insert `` when it seems to be the beginning of a quotation,<br>
+and '' when it appears to be the end; it inserts " only after a \.<br>
+<br>
+Use M-x tex-region to run LaTeX on the current region, plus the preamble<br>
+copied from the top of the file (containing \documentstyle, etc.),<br>
+running LaTeX under a special subshell.  M-x tex-buffer does the whole buffer.<br>
+M-x tex-file saves the buffer and then processes the file.<br>
+M-x tex-print prints the .dvi file made by any of these.<br>
+M-x tex-view previews the .dvi file made by any of these.<br>
+M-x tex-bibtex-file runs bibtex on the file of the current buffer.<br>
+<br>
+Use M-x tex-validate-buffer to check buffer for paragraphs containing<br>
+mismatched $'s or braces.<br>
+<br>
+Special commands:<br>
+<br>
+Uses keymap `latex-mode-map', which is not currently defined.<br>
+<br>
+<br>
+Mode variables:<br>
+latex-run-command<br>
+	Command string used by M-x tex-region or M-x tex-buffer.<br>
+tex-directory<br>
+	Directory in which to create temporary files for LaTeX jobs<br>
+	run by M-x tex-region or M-x tex-buffer.<br>
+tex-dvi-print-command<br>
+	Command string used by M-x tex-print to print a .dvi file.<br>
+tex-alt-dvi-print-command<br>
+	Alternative command string used by M-x tex-print (when given a prefix<br>
+	argument) to print a .dvi file.<br>
+tex-dvi-view-command<br>
+	Command string used by M-x tex-view to preview a .dvi file.<br>
+tex-show-queue-command<br>
+	Command string used by M-x tex-show-print-queue to show the print<br>
+	queue that M-x tex-print put your job on.<br>
+<br>
 Entering Latex mode runs the hook `text-mode-hook', then
 `tex-mode-hook', and finally `latex-mode-hook'.  When the special
-subshell is initiated, `tex-shell-hook' is run.</p>
-<p>
+subshell is initiated, `tex-shell-hook' is run.
+
 (fn)</p>

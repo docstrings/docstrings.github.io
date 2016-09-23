@@ -1,12 +1,12 @@
 <h3>Function: vc-transfer-file</h3>
 <p>
-Transfer FILE to another version control system NEW-BACKEND.
-If NEW-BACKEND has a higher precedence than FILE's current backend
-(i.e.  it comes earlier in `vc-handled-backends'), then register FILE in
-NEW-BACKEND, using the revision number from the current backend as the
-base level.  If NEW-BACKEND has a lower precedence than the current
-backend, then commit all changes that were made under the current
-backend to NEW-BACKEND, and unregister FILE from the current backend.
-(If FILE is not yet registered under NEW-BACKEND, register it.)</p>
-<p>
+Transfer FILE to another version control system NEW-BACKEND.<br>
+If NEW-BACKEND has a higher precedence than FILE's current backend<br>
+(i.e.  it comes earlier in `vc-handled-backends'), then register FILE in<br>
+NEW-BACKEND, using the revision number from the current backend as the<br>
+base level.  If NEW-BACKEND has a lower precedence than the current<br>
+backend, then commit all changes that were made under the current<br>
+backend to NEW-BACKEND, and unregister FILE from the current backend.<br>
+(If FILE is not yet registered under NEW-BACKEND, register it.)
+
 (fn FILE NEW-BACKEND)</p>

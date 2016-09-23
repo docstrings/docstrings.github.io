@@ -1,34 +1,34 @@
 <h3>Function: autoarg-mode</h3>
 <p>
-Toggle Autoarg mode, a global minor mode.
-With a prefix argument ARG, enable Autoarg mode if ARG is
-positive, and disable it otherwise.  If called from Lisp, enable
-the mode if ARG is omitted or nil.</p>
-<p>
+Toggle Autoarg mode, a global minor mode.<br>
+With a prefix argument ARG, enable Autoarg mode if ARG is<br>
+positive, and disable it otherwise.  If called from Lisp, enable<br>
+the mode if ARG is omitted or nil.<br>
+<br>
+<br>
+Uses keymap `autoarg-mode-map', which is not currently defined.<br>
+<br>
+In Autoarg mode, digits are bound to `digit-argument', i.e. they<br>
+supply prefix arguments as C-DIGIT and M-DIGIT normally do.<br>
+Furthermore, C-DIGIT inserts DIGIT.<br>
+M-x autoarg-terminate terminates the prefix sequence and inserts<br>
+the digits of the autoarg sequence into the buffer.<br>
+Without a numeric prefix arg, the normal binding of M-x autoarg-terminate<br>
+is invoked, i.e. what it would be with Autoarg mode off.<br>
+<br>
+For example:<br>
+`6 9 M-x autoarg-terminate' inserts `69' into the buffer, as does `C-6 C-9'.<br>
+`6 9 a' inserts 69 `a's into the buffer.<br>
+`6 9 M-x autoarg-terminate M-x autoarg-terminate' inserts `69' into the buffer and<br>
+then invokes the normal binding of M-x autoarg-terminate.<br>
+`C-u M-x autoarg-terminate' invokes the normal binding of M-x autoarg-terminate four times.<br>
 
-Uses keymap `autoarg-mode-map', which is not currently defined.</p>
-<p>
-In Autoarg mode, digits are bound to `digit-argument', i.e. they
-supply prefix arguments as C-DIGIT and M-DIGIT normally do.
-Furthermore, C-DIGIT inserts DIGIT.
-M-x autoarg-terminate terminates the prefix sequence and inserts
-the digits of the autoarg sequence into the buffer.
-Without a numeric prefix arg, the normal binding of M-x autoarg-terminate
-is invoked, i.e. what it would be with Autoarg mode off.</p>
-<p>
-For example:
-`6 9 M-x autoarg-terminate' inserts `69' into the buffer, as does `C-6 C-9'.
-`6 9 a' inserts 69 `a's into the buffer.
-`6 9 M-x autoarg-terminate M-x autoarg-terminate' inserts `69' into the buffer and
-then invokes the normal binding of M-x autoarg-terminate.
-`C-u M-x autoarg-terminate' invokes the normal binding of M-x autoarg-terminate four times.</p>
-<p>
 
-Uses keymap `autoarg-mode-map', which is not currently defined.</p>
-<p>
+Uses keymap `autoarg-mode-map', which is not currently defined.
+
 
 (fn &optional ARG)</p>
 <h3>Variable: autoarg-mode</h3>
 <p>
-Non-nil if Autoarg mode is enabled.
+Non-nil if Autoarg mode is enabled.<br>
 See the command `autoarg-mode' for a description of this minor mode.</p>

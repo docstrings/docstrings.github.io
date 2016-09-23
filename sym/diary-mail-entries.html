@@ -1,24 +1,24 @@
 <h3>Function: diary-mail-entries</h3>
 <p>
-Send a mail message showing diary entries for next NDAYS days.
-If no prefix argument is given, NDAYS is set to `diary-mail-days'.
-Mail is sent to the address specified by `diary-mail-addr'.</p>
-<p>
-Here is an example of a script to call `diary-mail-entries',
-suitable for regular scheduling using cron (or at).  Note that
-since `emacs -script' does not load your init file, you should
-ensure that all relevant variables are set.</p>
-<p>
-#!/usr/bin/emacs -script
-;; diary-rem.el - run the Emacs diary-reminder</p>
-<p>
-(setq diary-mail-days 3
-      diary-file "/path/to/diary.file"
-      calendar-date-style 'european
-      diary-mail-addr "user@host.name")</p>
-<p>
-(diary-mail-entries)</p>
-<p>
-# diary-rem.el ends here</p>
-<p>
+Send a mail message showing diary entries for next NDAYS days.<br>
+If no prefix argument is given, NDAYS is set to `diary-mail-days'.<br>
+Mail is sent to the address specified by `diary-mail-addr'.<br>
+<br>
+Here is an example of a script to call `diary-mail-entries',<br>
+suitable for regular scheduling using cron (or at).  Note that<br>
+since `emacs -script' does not load your init file, you should<br>
+ensure that all relevant variables are set.<br>
+<br>
+#!/usr/bin/emacs -script<br>
+;; diary-rem.el - run the Emacs diary-reminder<br>
+<br>
+(setq diary-mail-days 3<br>
+      diary-file "/path/to/diary.file"<br>
+      calendar-date-style 'european<br>
+      diary-mail-addr "user@host.name")<br>
+<br>
+(diary-mail-entries)
+
+# diary-rem.el ends here
+
 (fn &optional NDAYS)</p>

@@ -1,13 +1,13 @@
 <h3>Function: shell-quote-wildcard-pattern</h3>
 <p>
-Quote characters special to the shell in PATTERN, leave wildcards alone.</p>
-<p>
-PATTERN is assumed to represent a file-name wildcard suitable for the
-underlying filesystem.  For Unix and GNU/Linux, each character from the
-set [ \t\n;<>&|()'"#$] is quoted with a backslash; for DOS/Windows, all
-the parts of the pattern which don't include wildcard characters are
-quoted with double quotes.</p>
-<p>
-This function leaves alone existing quote characters (\ on Unix and "
-on Windows), so PATTERN can use them to quote wildcard characters that
+Quote characters special to the shell in PATTERN, leave wildcards alone.<br>
+<br>
+PATTERN is assumed to represent a file-name wildcard suitable for the<br>
+underlying filesystem.  For Unix and GNU/Linux, each character from the<br>
+set [ \t\n;<>&|()'"#$] is quoted with a backslash; for DOS/Windows, all<br>
+the parts of the pattern which don't include wildcard characters are<br>
+quoted with double quotes.<br>
+<br>
+This function leaves alone existing quote characters (\ on Unix and "<br>
+on Windows), so PATTERN can use them to quote wildcard characters that<br>
 need to be passed verbatim to shell commands.</p>

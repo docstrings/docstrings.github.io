@@ -1,39 +1,39 @@
 <h3>Variable: jka-compr-compression-info-list</h3>
 <p>
-List of vectors that describe available compression techniques.
-Each element, which describes a compression technique, is a vector of
-the form [REGEXP COMPRESS-MSG COMPRESS-PROGRAM COMPRESS-ARGS
-UNCOMPRESS-MSG UNCOMPRESS-PROGRAM UNCOMPRESS-ARGS
-APPEND-FLAG STRIP-EXTENSION-FLAG FILE-MAGIC-CHARS], where:</p>
-<p>
-   regexp                is a regexp that matches filenames that are
-                         compressed with this format</p>
-<p>
-   compress-msg          is the message to issue to the user when doing this
-                         type of compression (nil means no message)</p>
-<p>
-   compress-program      is a program that performs this compression
-                         (nil means visit file in read-only mode)</p>
-<p>
-   compress-args         is a list of args to pass to the compress program</p>
-<p>
-   uncompress-msg        is the message to issue to the user when doing this
-                         type of uncompression (nil means no message)</p>
-<p>
-   uncompress-program    is a program that performs this compression</p>
-<p>
-   uncompress-args       is a list of args to pass to the uncompress program</p>
-<p>
-   append-flag           is non-nil if this compression technique can be
-                         appended</p>
-<p>
-   strip-extension-flag  non-nil means strip the regexp from file names
-                         before attempting to set the mode.</p>
-<p>
-   file-magic-chars      is a string of characters that you would find
-			 at the beginning of a file compressed in this way.</p>
-<p>
-If you set this outside Custom while Auto Compression mode is
+List of vectors that describe available compression techniques.<br>
+Each element, which describes a compression technique, is a vector of<br>
+the form [REGEXP COMPRESS-MSG COMPRESS-PROGRAM COMPRESS-ARGS<br>
+UNCOMPRESS-MSG UNCOMPRESS-PROGRAM UNCOMPRESS-ARGS<br>
+APPEND-FLAG STRIP-EXTENSION-FLAG FILE-MAGIC-CHARS], where:<br>
+<br>
+   regexp                is a regexp that matches filenames that are<br>
+                         compressed with this format<br>
+<br>
+   compress-msg          is the message to issue to the user when doing this<br>
+                         type of compression (nil means no message)<br>
+<br>
+   compress-program      is a program that performs this compression<br>
+                         (nil means visit file in read-only mode)<br>
+<br>
+   compress-args         is a list of args to pass to the compress program<br>
+<br>
+   uncompress-msg        is the message to issue to the user when doing this<br>
+                         type of uncompression (nil means no message)<br>
+<br>
+   uncompress-program    is a program that performs this compression<br>
+<br>
+   uncompress-args       is a list of args to pass to the uncompress program<br>
+<br>
+   append-flag           is non-nil if this compression technique can be<br>
+                         appended<br>
+<br>
+   strip-extension-flag  non-nil means strip the regexp from file names<br>
+                         before attempting to set the mode.<br>
+<br>
+   file-magic-chars      is a string of characters that you would find<br>
+			 at the beginning of a file compressed in this way.<br>
+<br>
+If you set this outside Custom while Auto Compression mode is<br>
 already enabled (as it is by default), you have to call
 `jka-compr-update' after setting it to properly update other
 variables.  Setting this through Custom does that automatically.</p>

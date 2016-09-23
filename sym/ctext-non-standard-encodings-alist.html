@@ -1,27 +1,27 @@
 <h3>Variable: ctext-non-standard-encodings-alist</h3>
 <p>
-Alist of non-standard encoding names vs the corresponding usages in CTEXT.</p>
-<p>
-It controls how extended segments of a compound text are handled
-by the coding system `compound-text-with-extensions'.</p>
-<p>
-Each element has the form (ENCODING-NAME CODING-SYSTEM N-OCTET CHARSET).</p>
-<p>
-ENCODING-NAME is an encoding name of an "extended segment".</p>
-<p>
-CODING-SYSTEM is the coding-system to encode (or decode) the
-characters into (or from) the extended segment.</p>
-<p>
-N-OCTET is the number of octets (bytes) that encodes a character
-in the segment.  It can be 0 (meaning the number of octets per
-character is variable), 1, 2, 3, or 4.</p>
-<p>
-CHARSET is a character set containing characters that are encoded
-in the segment.  It can be a list of character sets.</p>
-<p>
-On decoding CTEXT, all encoding names listed here are recognized.</p>
-<p>
-On encoding CTEXT, encoding names in the variable
-`ctext-non-standard-encodings' (which see) and in the information
+Alist of non-standard encoding names vs the corresponding usages in CTEXT.<br>
+<br>
+It controls how extended segments of a compound text are handled<br>
+by the coding system `compound-text-with-extensions'.<br>
+<br>
+Each element has the form (ENCODING-NAME CODING-SYSTEM N-OCTET CHARSET).<br>
+<br>
+ENCODING-NAME is an encoding name of an "extended segment".<br>
+<br>
+CODING-SYSTEM is the coding-system to encode (or decode) the<br>
+characters into (or from) the extended segment.<br>
+<br>
+N-OCTET is the number of octets (bytes) that encodes a character<br>
+in the segment.  It can be 0 (meaning the number of octets per<br>
+character is variable), 1, 2, 3, or 4.<br>
+<br>
+CHARSET is a character set containing characters that are encoded<br>
+in the segment.  It can be a list of character sets.<br>
+<br>
+On decoding CTEXT, all encoding names listed here are recognized.<br>
+<br>
+On encoding CTEXT, encoding names in the variable<br>
+`ctext-non-standard-encodings' (which see) and in the information<br>
 listed for the current language environment under the key
 `ctext-non-standard-encodings' are used.</p>

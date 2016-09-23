@@ -1,13 +1,13 @@
 <h3>Variable: font-lock-maximum-size</h3>
 <p>
-Maximum buffer size for unsupported buffer fontification.
-When `font-lock-support-mode' is nil, only buffers smaller than
-this are fontified.  This variable has no effect if a Font Lock
-support mode (usually `jit-lock-mode') is enabled.</p>
-<p>
-If nil, means size is irrelevant.
-If a list, each element should be a cons pair of the form (MAJOR-MODE . SIZE),
-where MAJOR-MODE is a symbol or t (meaning the default).  For example:
- ((c-mode . 256000) (c++-mode . 256000) (rmail-mode . 1048576))
-means that the maximum size is 250K for buffers in C or C++ modes, one megabyte
+Maximum buffer size for unsupported buffer fontification.<br>
+When `font-lock-support-mode' is nil, only buffers smaller than<br>
+this are fontified.  This variable has no effect if a Font Lock<br>
+support mode (usually `jit-lock-mode') is enabled.<br>
+<br>
+If nil, means size is irrelevant.<br>
+If a list, each element should be a cons pair of the form (MAJOR-MODE . SIZE),<br>
+where MAJOR-MODE is a symbol or t (meaning the default).  For example:<br>
+ ((c-mode . 256000) (c++-mode . 256000) (rmail-mode . 1048576))<br>
+means that the maximum size is 250K for buffers in C or C++ modes, one megabyte<br>
 for buffers in Rmail mode, and size is irrelevant otherwise.</p>

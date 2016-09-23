@@ -1,17 +1,17 @@
 <h3>Variable: glyphless-char-display</h3>
 <p>
-Char-table defining glyphless characters.
-Each element, if non-nil, should be one of the following:
-  an ASCII acronym string: display this string in a box
-  `hex-code':   display the hexadecimal code of a character in a box
-  `empty-box':  display as an empty box
-  `thin-space': display as 1-pixel width space
-  `zero-width': don't display
-An element may also be a cons cell (GRAPHICAL . TEXT), which specifies the
-display method for graphical terminals and text terminals respectively.
-GRAPHICAL and TEXT should each have one of the values listed above.</p>
-<p>
-The char-table has one extra slot to control the display of a character for
-which no font is found.  This slot only takes effect on graphical terminals.
+Char-table defining glyphless characters.<br>
+Each element, if non-nil, should be one of the following:<br>
+  an ASCII acronym string: display this string in a box<br>
+  `hex-code':   display the hexadecimal code of a character in a box<br>
+  `empty-box':  display as an empty box<br>
+  `thin-space': display as 1-pixel width space<br>
+  `zero-width': don't display<br>
+An element may also be a cons cell (GRAPHICAL . TEXT), which specifies the<br>
+display method for graphical terminals and text terminals respectively.<br>
+GRAPHICAL and TEXT should each have one of the values listed above.<br>
+<br>
+The char-table has one extra slot to control the display of a character for<br>
+which no font is found.  This slot only takes effect on graphical terminals.<br>
 Its value should be an ASCII acronym string, `hex-code', `empty-box', or
 `thin-space'.  The default is `empty-box'.</p>

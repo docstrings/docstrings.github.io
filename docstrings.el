@@ -14,12 +14,21 @@
 (defun group-doc (sym)
   (documentation-property sym 'group-documentation))
 
+(defun fix-formatting (start end)
+  (when (< start end)
+    (save-excursion
+      (goto-char start)
+      (while (ignore-errors (re-search-forward "\n" end t))
+	(replace-match "<br>\n")))))
+
 (defun insert-docstring (sym fn type)
   (let ((doc (funcall fn sym)))
     (when doc
       (insert (format "<h3>%s: %s</h3>\n" type (symbol-name sym)))
       (insert "<p>\n")
-      (insert doc)
+      (let ((start (point)))
+	(insert doc)
+	(fix-formatting start (point)))
       (insert "</p>\n"))))
 
 (defun escape-filename (string)
@@ -40,7 +49,6 @@
       (when (plusp (length copy))
 	(with-temp-buffer
 	  (insert copy)
-	  (fix-formatting)
 	  (write-region (point-min) (point-max)
 			(format "sym/%s.html" (escape-filename (symbol-name sym))))
 	  (push sym *all-symbols*)
@@ -58,11 +66,6 @@
 (defun insert-index (sym)
   (insert (format "<a href=\"sym/%s.html\">%s</a><br>\n"
 		  (escape-filename (symbol-name sym)) (symbol-name sym))))
-
-(defun fix-formatting ()
-  (goto-char (point-min))
-  (while (re-search-forward "\n\n" nil t)
-    (replace-match "</p>\n<p>\n")))
 
 (defun write-index (syms)
   (with-temp-buffer
@@ -88,7 +91,6 @@
     (let ((*all-symbols* nil))
       (mapatoms #'insert-all-docstrings)
       (write-index (sort *all-symbols* #'string<)))
-    (fix-formatting)
     (goto-char (point-max))
     (insert "</body></html>\n")
     (save-buffer)

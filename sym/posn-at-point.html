@@ -1,14 +1,14 @@
 <h3>Function: posn-at-point</h3>
 <p>
-Return position information for buffer POS in WINDOW.
-POS defaults to point in WINDOW; WINDOW defaults to the selected window.</p>
-<p>
-Return nil if position is not visible in window.  Otherwise,
-the return value is similar to that returned by `event-start' for
-a mouse click at the upper left corner of the glyph corresponding
-to the given buffer position:
-   (WINDOW AREA-OR-POS (X . Y) TIMESTAMP OBJECT POS (COL . ROW)
-    IMAGE (DX . DY) (WIDTH . HEIGHT))
-The `posn-' functions access elements of such lists.</p>
-<p>
+Return position information for buffer POS in WINDOW.<br>
+POS defaults to point in WINDOW; WINDOW defaults to the selected window.<br>
+<br>
+Return nil if position is not visible in window.  Otherwise,<br>
+the return value is similar to that returned by `event-start' for<br>
+a mouse click at the upper left corner of the glyph corresponding<br>
+to the given buffer position:<br>
+   (WINDOW AREA-OR-POS (X . Y) TIMESTAMP OBJECT POS (COL . ROW)<br>
+    IMAGE (DX . DY) (WIDTH . HEIGHT))<br>
+The `posn-' functions access elements of such lists.
+
 (fn &optional POS WINDOW)</p>

@@ -1,16 +1,16 @@
 <h3>Variable: choose-completion-string-functions</h3>
 <p>
-Functions that may override the normal insertion of a completion choice.
-These functions are called in order with four arguments:
-CHOICE - the string to insert in the buffer,
-BUFFER - the buffer in which the choice should be inserted,
-MINI-P - non-nil if BUFFER is a minibuffer, and
-BASE-SIZE - the number of characters in BUFFER before
-the string being completed.</p>
-<p>
-If a function in the list returns non-nil, that function is supposed
-to have inserted the CHOICE in the BUFFER, and possibly exited
-the minibuffer; no further functions will be called.</p>
-<p>
-If all functions in the list return nil, that means to use
+Functions that may override the normal insertion of a completion choice.<br>
+These functions are called in order with four arguments:<br>
+CHOICE - the string to insert in the buffer,<br>
+BUFFER - the buffer in which the choice should be inserted,<br>
+MINI-P - non-nil if BUFFER is a minibuffer, and<br>
+BASE-SIZE - the number of characters in BUFFER before<br>
+the string being completed.<br>
+<br>
+If a function in the list returns non-nil, that function is supposed<br>
+to have inserted the CHOICE in the BUFFER, and possibly exited<br>
+the minibuffer; no further functions will be called.<br>
+<br>
+If all functions in the list return nil, that means to use<br>
 the default method of inserting the completion in BUFFER.</p>

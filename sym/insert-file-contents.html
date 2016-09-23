@@ -1,28 +1,28 @@
 <h3>Function: insert-file-contents</h3>
 <p>
-Insert contents of file FILENAME after point.
-Returns list of absolute file name and number of characters inserted.
-If second argument VISIT is non-nil, the buffer's visited filename and
-last save file modtime are set, and it is marked unmodified.  If
-visiting and the file does not exist, visiting is completed before the
-error is signaled.</p>
-<p>
-The optional third and fourth arguments BEG and END specify what portion
-of the file to insert.  These arguments count bytes in the file, not
-characters in the buffer.  If VISIT is non-nil, BEG and END must be nil.</p>
-<p>
-If optional fifth argument REPLACE is non-nil, replace the current
-buffer contents (in the accessible portion) with the file contents.
-This is better than simply deleting and inserting the whole thing
-because (1) it preserves some marker positions and (2) it puts less data
-in the undo list.  When REPLACE is non-nil, the second return value is
-the number of characters that replace previous buffer contents.</p>
-<p>
-This function does code conversion according to the value of
-`coding-system-for-read' or `file-coding-system-alist', and sets the
-variable `last-coding-system-used' to the coding system actually used.</p>
-<p>
+Insert contents of file FILENAME after point.<br>
+Returns list of absolute file name and number of characters inserted.<br>
+If second argument VISIT is non-nil, the buffer's visited filename and<br>
+last save file modtime are set, and it is marked unmodified.  If<br>
+visiting and the file does not exist, visiting is completed before the<br>
+error is signaled.<br>
+<br>
+The optional third and fourth arguments BEG and END specify what portion<br>
+of the file to insert.  These arguments count bytes in the file, not<br>
+characters in the buffer.  If VISIT is non-nil, BEG and END must be nil.<br>
+<br>
+If optional fifth argument REPLACE is non-nil, replace the current<br>
+buffer contents (in the accessible portion) with the file contents.<br>
+This is better than simply deleting and inserting the whole thing<br>
+because (1) it preserves some marker positions and (2) it puts less data<br>
+in the undo list.  When REPLACE is non-nil, the second return value is<br>
+the number of characters that replace previous buffer contents.<br>
+<br>
+This function does code conversion according to the value of<br>
+`coding-system-for-read' or `file-coding-system-alist', and sets the<br>
+variable `last-coding-system-used' to the coding system actually used.<br>
+<br>
 In addition, this function decodes the inserted text from known formats
-by calling `format-decode', which see.</p>
-<p>
+by calling `format-decode', which see.
+
 (fn FILENAME &optional VISIT BEG END REPLACE)</p>

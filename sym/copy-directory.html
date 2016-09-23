@@ -1,19 +1,19 @@
 <h3>Function: copy-directory</h3>
 <p>
-Copy DIRECTORY to NEWNAME.  Both args must be strings.
-This function always sets the file modes of the output files to match
-the corresponding input file.</p>
-<p>
-The third arg KEEP-TIME non-nil means give the output files the same
-last-modified time as the old ones.  (This works on only some systems.)</p>
-<p>
-A prefix arg makes KEEP-TIME non-nil.</p>
-<p>
-Noninteractively, the last argument PARENTS says whether to
-create parent directories if they don't exist.  Interactively,
-this happens by default.</p>
-<p>
-If NEWNAME names an existing directory, copy DIRECTORY as a
-subdirectory there.  However, if called from Lisp with a non-nil
+Copy DIRECTORY to NEWNAME.  Both args must be strings.<br>
+This function always sets the file modes of the output files to match<br>
+the corresponding input file.<br>
+<br>
+The third arg KEEP-TIME non-nil means give the output files the same<br>
+last-modified time as the old ones.  (This works on only some systems.)<br>
+<br>
+A prefix arg makes KEEP-TIME non-nil.<br>
+<br>
+Noninteractively, the last argument PARENTS says whether to<br>
+create parent directories if they don't exist.  Interactively,<br>
+this happens by default.<br>
+<br>
+If NEWNAME names an existing directory, copy DIRECTORY as a<br>
+subdirectory there.  However, if called from Lisp with a non-nil<br>
 optional argument COPY-CONTENTS, copy the contents of DIRECTORY
 directly into NEWNAME instead.</p>

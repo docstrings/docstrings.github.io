@@ -1,45 +1,45 @@
 <h3>Variable: special-display-buffer-names</h3>
 <p>
-List of names of buffers that should be displayed specially.
-Displaying a buffer with `display-buffer' or `pop-to-buffer', if
-its name is in this list, displays the buffer in a way specified
-by `special-display-function'.  `special-display-popup-frame'
-(the default for `special-display-function') usually displays
-the buffer in a separate frame made with the parameters specified
-by `special-display-frame-alist'.  If `special-display-function'
-has been set to some other function, that function is called with
-the buffer as first, and nil as second argument.</p>
-<p>
-Alternatively, an element of this list can be specified as
-(BUFFER-NAME FRAME-PARAMETERS), where BUFFER-NAME is a buffer
-name and FRAME-PARAMETERS an alist of (PARAMETER . VALUE) pairs.
-`special-display-popup-frame' will interpret such pairs as frame
-parameters when it creates a special frame, overriding the
-corresponding values from `special-display-frame-alist'.</p>
-<p>
-As a special case, if FRAME-PARAMETERS contains (same-window . t)
-`special-display-popup-frame' displays that buffer in the
-selected window.  If FRAME-PARAMETERS contains (same-frame . t),
-it displays that buffer in a window on the selected frame.</p>
-<p>
-If `special-display-function' specifies some other function than
-`special-display-popup-frame', that function is called with the
-buffer named BUFFER-NAME as first, and FRAME-PARAMETERS as second
-argument.</p>
-<p>
-Finally, an element of this list can be also specified as
-(BUFFER-NAME FUNCTION OTHER-ARGS).  In that case,
-`special-display-popup-frame' will call FUNCTION with the buffer
-named BUFFER-NAME as first argument, and OTHER-ARGS as the
-second.</p>
-<p>
-Any alternative function specified here is responsible for
-setting up the quit-restore parameter of the window used.</p>
-<p>
-If this variable appears "not to work", because you added a
-name to it but the corresponding buffer is displayed in the
+List of names of buffers that should be displayed specially.<br>
+Displaying a buffer with `display-buffer' or `pop-to-buffer', if<br>
+its name is in this list, displays the buffer in a way specified<br>
+by `special-display-function'.  `special-display-popup-frame'<br>
+(the default for `special-display-function') usually displays<br>
+the buffer in a separate frame made with the parameters specified<br>
+by `special-display-frame-alist'.  If `special-display-function'<br>
+has been set to some other function, that function is called with<br>
+the buffer as first, and nil as second argument.<br>
+<br>
+Alternatively, an element of this list can be specified as<br>
+(BUFFER-NAME FRAME-PARAMETERS), where BUFFER-NAME is a buffer<br>
+name and FRAME-PARAMETERS an alist of (PARAMETER . VALUE) pairs.<br>
+`special-display-popup-frame' will interpret such pairs as frame<br>
+parameters when it creates a special frame, overriding the<br>
+corresponding values from `special-display-frame-alist'.<br>
+<br>
+As a special case, if FRAME-PARAMETERS contains (same-window . t)<br>
+`special-display-popup-frame' displays that buffer in the<br>
+selected window.  If FRAME-PARAMETERS contains (same-frame . t),<br>
+it displays that buffer in a window on the selected frame.<br>
+<br>
+If `special-display-function' specifies some other function than<br>
+`special-display-popup-frame', that function is called with the<br>
+buffer named BUFFER-NAME as first, and FRAME-PARAMETERS as second<br>
+argument.<br>
+<br>
+Finally, an element of this list can be also specified as<br>
+(BUFFER-NAME FUNCTION OTHER-ARGS).  In that case,<br>
+`special-display-popup-frame' will call FUNCTION with the buffer<br>
+named BUFFER-NAME as first argument, and OTHER-ARGS as the<br>
+second.<br>
+<br>
+Any alternative function specified here is responsible for<br>
+setting up the quit-restore parameter of the window used.<br>
+<br>
+If this variable appears "not to work", because you added a<br>
+name to it but the corresponding buffer is displayed in the<br>
 selected window, look at the values of `same-window-buffer-names'
 and `same-window-regexps'.  Those variables take precedence over
-this one.</p>
-<p>
+this one.
+
 See also `special-display-regexps'.</p>

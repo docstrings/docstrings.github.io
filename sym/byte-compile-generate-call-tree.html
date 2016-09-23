@@ -1,15 +1,15 @@
 <h3>Variable: byte-compile-generate-call-tree</h3>
 <p>
-Non-nil means collect call-graph information when compiling.
-This records which functions were called and from where.
-If the value is t, compilation displays the call graph when it finishes.
-If the value is neither t nor nil, compilation asks you whether to display
-the graph.</p>
-<p>
-The call tree only lists functions called, not macros used. Those functions
-which the byte-code interpreter knows about directly (eq, cons, etc.) are
-not reported.</p>
-<p>
-The call tree also lists those functions which are not known to be called
-(that is, to which no calls have been compiled).  Functions which can be
+Non-nil means collect call-graph information when compiling.<br>
+This records which functions were called and from where.<br>
+If the value is t, compilation displays the call graph when it finishes.<br>
+If the value is neither t nor nil, compilation asks you whether to display<br>
+the graph.<br>
+<br>
+The call tree only lists functions called, not macros used. Those functions<br>
+which the byte-code interpreter knows about directly (eq, cons, etc.) are<br>
+not reported.<br>
+<br>
+The call tree also lists those functions which are not known to be called<br>
+(that is, to which no calls have been compiled).  Functions which can be<br>
 invoked interactively are excluded from this list.</p>

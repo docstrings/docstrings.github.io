@@ -1,29 +1,29 @@
 <h3>Function: replace-string</h3>
 <p>
-Replace occurrences of FROM-STRING with TO-STRING.
-Preserve case in each match if `case-replace' and `case-fold-search'
-are non-nil and FROM-STRING has no uppercase letters.
-(Preserving case means that if the string matched is all caps, or capitalized,
-then its replacement is upcased or capitalized.)</p>
-<p>
-If `replace-lax-whitespace' is non-nil, a space or spaces in the string
-to be replaced will match a sequence of whitespace chars defined by the
-regexp in `search-whitespace-regexp'.</p>
-<p>
-In Transient Mark mode, if the mark is active, operate on the contents
-of the region.  Otherwise, operate from point to the end of the buffer.</p>
-<p>
-Third arg DELIMITED (prefix arg if interactive), if non-nil, means replace
-only matches surrounded by word boundaries.
-Fourth and fifth arg START and END specify the region to operate on.</p>
-<p>
-Use M-n to pull the last incremental search string to the minibuffer
-that reads FROM-STRING.</p>
-<p>
-This function is usually the wrong thing to use in a Lisp program.
-What you probably want is a loop like this:
-  (while (search-forward FROM-STRING nil t)
-    (replace-match TO-STRING nil t))
-which will run faster and will not set the mark or print anything.
+Replace occurrences of FROM-STRING with TO-STRING.<br>
+Preserve case in each match if `case-replace' and `case-fold-search'<br>
+are non-nil and FROM-STRING has no uppercase letters.<br>
+(Preserving case means that if the string matched is all caps, or capitalized,<br>
+then its replacement is upcased or capitalized.)<br>
+<br>
+If `replace-lax-whitespace' is non-nil, a space or spaces in the string<br>
+to be replaced will match a sequence of whitespace chars defined by the<br>
+regexp in `search-whitespace-regexp'.<br>
+<br>
+In Transient Mark mode, if the mark is active, operate on the contents<br>
+of the region.  Otherwise, operate from point to the end of the buffer.<br>
+<br>
+Third arg DELIMITED (prefix arg if interactive), if non-nil, means replace<br>
+only matches surrounded by word boundaries.<br>
+Fourth and fifth arg START and END specify the region to operate on.<br>
+<br>
+Use M-n to pull the last incremental search string to the minibuffer<br>
+that reads FROM-STRING.<br>
+<br>
+This function is usually the wrong thing to use in a Lisp program.<br>
+What you probably want is a loop like this:<br>
+  (while (search-forward FROM-STRING nil t)<br>
+    (replace-match TO-STRING nil t))<br>
+which will run faster and will not set the mark or print anything.<br>
 (You may need a more complex loop if FROM-STRING can match the null string
 and TO-STRING is also null.)</p>

@@ -1,27 +1,27 @@
 <h3>Function: sc-cite-original</h3>
 <p>
-Workhorse citing function which performs the initial citation.
-This is callable from the various mail and news readers' reply
-function according to the agreed upon standard.  See the associated
-info node `(SC)Top' for more details.
-`sc-cite-original' does not do any yanking of the
-original message but it does require a few things:</p>
-<p>
-     1) The reply buffer is the current buffer.</p>
-<p>
-     2) The original message has been yanked and inserted into the
-        reply buffer.</p>
-<p>
-     3) Verbose mail headers from the original message have been
-        inserted into the reply buffer directly before the text of the
-        original message.</p>
-<p>
-     4) Point is at the beginning of the verbose headers.</p>
-<p>
-     5) Mark is at the end of the body of text to be cited.</p>
-<p>
-The region need not be active (and typically isn't when this
+Workhorse citing function which performs the initial citation.<br>
+This is callable from the various mail and news readers' reply<br>
+function according to the agreed upon standard.  See the associated<br>
+info node `(SC)Top' for more details.<br>
+`sc-cite-original' does not do any yanking of the<br>
+original message but it does require a few things:<br>
+<br>
+     1) The reply buffer is the current buffer.<br>
+<br>
+     2) The original message has been yanked and inserted into the<br>
+        reply buffer.<br>
+<br>
+     3) Verbose mail headers from the original message have been<br>
+        inserted into the reply buffer directly before the text of the<br>
+        original message.<br>
+<br>
+     4) Point is at the beginning of the verbose headers.<br>
+<br>
+     5) Mark is at the end of the body of text to be cited.<br>
+<br>
+The region need not be active (and typically isn't when this<br>
 function is called).  Also, the hook `sc-pre-hook' is run before,
-and `sc-post-hook' is run after the guts of this function.</p>
-<p>
+and `sc-post-hook' is run after the guts of this function.
+
 (fn)</p>

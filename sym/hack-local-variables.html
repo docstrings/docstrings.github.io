@@ -1,14 +1,14 @@
 <h3>Function: hack-local-variables</h3>
 <p>
-Parse and put into effect this buffer's local variables spec.
-Uses `hack-local-variables-apply' to apply the variables.</p>
-<p>
-If MODE-ONLY is non-nil, all we do is check whether a "mode:"
-is specified, and return the corresponding mode symbol, or nil.
-In this case, we try to ignore minor-modes, and only return a
-major-mode.</p>
-<p>
-If `enable-local-variables' or `local-enable-local-variables' is nil,
-this function does nothing.  If `inhibit-local-variables-regexps'
-applies to the file in question, the file is not scanned for
+Parse and put into effect this buffer's local variables spec.<br>
+Uses `hack-local-variables-apply' to apply the variables.<br>
+<br>
+If MODE-ONLY is non-nil, all we do is check whether a "mode:"<br>
+is specified, and return the corresponding mode symbol, or nil.<br>
+In this case, we try to ignore minor-modes, and only return a<br>
+major-mode.<br>
+<br>
+If `enable-local-variables' or `local-enable-local-variables' is nil,<br>
+this function does nothing.  If `inhibit-local-variables-regexps'<br>
+applies to the file in question, the file is not scanned for<br>
 local variables, but directory-local variables may still be applied.</p>

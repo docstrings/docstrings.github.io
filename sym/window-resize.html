@@ -1,28 +1,28 @@
 <h3>Function: window-resize</h3>
 <p>
-Resize WINDOW vertically by DELTA lines.
-WINDOW can be an arbitrary window and defaults to the selected
-one.  An attempt to resize the root window of a frame will raise
-an error though.</p>
-<p>
-DELTA a positive number means WINDOW shall be enlarged by DELTA
-lines.  DELTA negative means WINDOW shall be shrunk by -DELTA
-lines.</p>
-<p>
-Optional argument HORIZONTAL non-nil means resize WINDOW
-horizontally by DELTA columns.  In this case a positive DELTA
-means enlarge WINDOW by DELTA columns.  DELTA negative means
-WINDOW shall be shrunk by -DELTA columns.</p>
-<p>
-Optional argument IGNORE non-nil means ignore restrictions
-imposed by fixed size windows, `window-min-height' or
-`window-min-width' settings.  If IGNORE is a window, ignore
-restrictions for that window only.  If IGNORE equals `safe',
-live windows may get as small as `window-safe-min-height' lines
-and `window-safe-min-width' columns.  Any other non-nil value
-means ignore all of the above restrictions for all windows.</p>
-<p>
-This function resizes other windows proportionally and never
+Resize WINDOW vertically by DELTA lines.<br>
+WINDOW can be an arbitrary window and defaults to the selected<br>
+one.  An attempt to resize the root window of a frame will raise<br>
+an error though.<br>
+<br>
+DELTA a positive number means WINDOW shall be enlarged by DELTA<br>
+lines.  DELTA negative means WINDOW shall be shrunk by -DELTA<br>
+lines.<br>
+<br>
+Optional argument HORIZONTAL non-nil means resize WINDOW<br>
+horizontally by DELTA columns.  In this case a positive DELTA<br>
+means enlarge WINDOW by DELTA columns.  DELTA negative means<br>
+WINDOW shall be shrunk by -DELTA columns.<br>
+<br>
+Optional argument IGNORE non-nil means ignore restrictions<br>
+imposed by fixed size windows, `window-min-height' or<br>
+`window-min-width' settings.  If IGNORE is a window, ignore<br>
+restrictions for that window only.  If IGNORE equals `safe',<br>
+live windows may get as small as `window-safe-min-height' lines<br>
+and `window-safe-min-width' columns.  Any other non-nil value<br>
+means ignore all of the above restrictions for all windows.<br>
+<br>
+This function resizes other windows proportionally and never<br>
 deletes any windows.  If you want to move only the low (right)
 edge of WINDOW consider using `adjust-window-trailing-edge'
 instead.</p>

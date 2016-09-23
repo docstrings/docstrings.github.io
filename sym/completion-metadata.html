@@ -1,17 +1,17 @@
 <h3>Function: completion-metadata</h3>
 <p>
-Return the metadata of elements to complete at the end of STRING.
-This metadata is an alist.  Currently understood keys are:
-- `category': the kind of objects returned by `all-completions'.
-   Used by `completion-category-overrides'.
-- `annotation-function': function to add annotations in *Completions*.
-   Takes one argument (STRING), which is a possible completion and
-   returns a string to append to STRING.
-- `display-sort-function': function to sort entries in *Completions*.
-   Takes one argument (COMPLETIONS) and should return a new list
-   of completions.  Can operate destructively.
-- `cycle-sort-function': function to sort entries when cycling.
-   Works like `display-sort-function'.
-The metadata of a completion table should be constant between two boundaries.</p>
-<p>
+Return the metadata of elements to complete at the end of STRING.<br>
+This metadata is an alist.  Currently understood keys are:<br>
+- `category': the kind of objects returned by `all-completions'.<br>
+   Used by `completion-category-overrides'.<br>
+- `annotation-function': function to add annotations in *Completions*.<br>
+   Takes one argument (STRING), which is a possible completion and<br>
+   returns a string to append to STRING.<br>
+- `display-sort-function': function to sort entries in *Completions*.<br>
+   Takes one argument (COMPLETIONS) and should return a new list<br>
+   of completions.  Can operate destructively.<br>
+- `cycle-sort-function': function to sort entries when cycling.<br>
+   Works like `display-sort-function'.<br>
+The metadata of a completion table should be constant between two boundaries.
+
 (fn STRING TABLE PRED)</p>

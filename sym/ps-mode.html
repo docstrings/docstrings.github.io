@@ -1,47 +1,47 @@
 <h3>Function: ps-mode</h3>
 <p>
-Major mode for editing PostScript with GNU Emacs.</p>
-<p>
-Entry to this mode calls `ps-mode-hook'.</p>
-<p>
-The following variables hold user options, and can
-be set through the `customize' command:</p>
-<p>
-  `ps-mode-auto-indent'
-  `ps-mode-tab'
-  `ps-mode-paper-size'
-  `ps-mode-print-function'
-  `ps-run-prompt'
-  `ps-run-font-lock-keywords-2'
-  `ps-run-x'
-  `ps-run-dumb'
-  `ps-run-init'
-  `ps-run-error-line-numbers'
-  `ps-run-tmp-dir'</p>
-<p>
-Type C-h v for documentation on these options.</p>
-<p>
-</p>
-<p>
-Uses keymap `ps-mode-map', which is not currently defined.</p>
-<p>
-</p>
-<p>
-When starting an interactive PostScript process with M-x ps-run-start,
-a second window will be displayed, and `ps-run-mode-hook' will be called.
-The keymap for this second window is:</p>
-<p>
-
-Uses keymap `ps-run-mode-map', which is not currently defined.</p>
-<p>
-</p>
-<p>
-When Ghostscript encounters an error it displays an error message
-with a file position. Clicking mouse-2 on this number will bring
-point to the corresponding spot in the PostScript window, if input
+Major mode for editing PostScript with GNU Emacs.<br>
+<br>
+Entry to this mode calls `ps-mode-hook'.<br>
+<br>
+The following variables hold user options, and can<br>
+be set through the `customize' command:<br>
+<br>
+  `ps-mode-auto-indent'<br>
+  `ps-mode-tab'<br>
+  `ps-mode-paper-size'<br>
+  `ps-mode-print-function'<br>
+  `ps-run-prompt'<br>
+  `ps-run-font-lock-keywords-2'<br>
+  `ps-run-x'<br>
+  `ps-run-dumb'<br>
+  `ps-run-init'<br>
+  `ps-run-error-line-numbers'<br>
+  `ps-run-tmp-dir'<br>
+<br>
+Type C-h v for documentation on these options.<br>
+<br>
+<br>
+<br>
+Uses keymap `ps-mode-map', which is not currently defined.<br>
+<br>
+<br>
+<br>
+When starting an interactive PostScript process with M-x ps-run-start,<br>
+a second window will be displayed, and `ps-run-mode-hook' will be called.<br>
+The keymap for this second window is:<br>
+<br>
+<br>
+Uses keymap `ps-run-mode-map', which is not currently defined.<br>
+<br>
+<br>
+<br>
+When Ghostscript encounters an error it displays an error message<br>
+with a file position. Clicking mouse-2 on this number will bring<br>
+point to the corresponding spot in the PostScript window, if input<br>
 to the interpreter was sent from that window.
 Typing 
 Uses keymap `ps-run-mode-map', which is not currently defined.
-M-x ps-run-goto-error when the cursor is at the number has the same effect.</p>
-<p>
+M-x ps-run-goto-error when the cursor is at the number has the same effect.
+
 (fn)</p>

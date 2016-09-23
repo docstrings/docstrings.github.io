@@ -1,42 +1,42 @@
 <h3>Function: whitespace-cleanup-region</h3>
 <p>
-Cleanup some blank problems at region.</p>
-<p>
-The problems cleaned up are:</p>
-<p>
-1. 8 or more SPACEs at beginning of line.
-   If `whitespace-style' includes the value `indentation':
-   replace 8 or more SPACEs at beginning of line by TABs, if
-   `indent-tabs-mode' is non-nil; otherwise, replace TABs by
-   SPACEs.
-   If `whitespace-style' includes the value `indentation::tab',
-   replace 8 or more SPACEs at beginning of line by TABs.
-   If `whitespace-style' includes the value `indentation::space',
-   replace TABs by SPACEs.</p>
-<p>
-2. SPACEs before TAB.
-   If `whitespace-style' includes the value `space-before-tab':
-   replace SPACEs by TABs, if `indent-tabs-mode' is non-nil;
-   otherwise, replace TABs by SPACEs.
-   If `whitespace-style' includes the value
-   `space-before-tab::tab', replace SPACEs by TABs.
-   If `whitespace-style' includes the value
-   `space-before-tab::space', replace TABs by SPACEs.</p>
-<p>
-3. SPACEs or TABs at end of line.
-   If `whitespace-style' includes the value `trailing', remove
-   all SPACEs or TABs at end of line.</p>
-<p>
-4. 8 or more SPACEs after TAB.
-   If `whitespace-style' includes the value `space-after-tab':
-   replace SPACEs by TABs, if `indent-tabs-mode' is non-nil;
-   otherwise, replace TABs by SPACEs.
-   If `whitespace-style' includes the value
-   `space-after-tab::tab', replace SPACEs by TABs.
-   If `whitespace-style' includes the value
-   `space-after-tab::space', replace TABs by SPACEs.</p>
-<p>
+Cleanup some blank problems at region.<br>
+<br>
+The problems cleaned up are:<br>
+<br>
+1. 8 or more SPACEs at beginning of line.<br>
+   If `whitespace-style' includes the value `indentation':<br>
+   replace 8 or more SPACEs at beginning of line by TABs, if<br>
+   `indent-tabs-mode' is non-nil; otherwise, replace TABs by<br>
+   SPACEs.<br>
+   If `whitespace-style' includes the value `indentation::tab',<br>
+   replace 8 or more SPACEs at beginning of line by TABs.<br>
+   If `whitespace-style' includes the value `indentation::space',<br>
+   replace TABs by SPACEs.<br>
+<br>
+2. SPACEs before TAB.<br>
+   If `whitespace-style' includes the value `space-before-tab':<br>
+   replace SPACEs by TABs, if `indent-tabs-mode' is non-nil;<br>
+   otherwise, replace TABs by SPACEs.<br>
+   If `whitespace-style' includes the value<br>
+   `space-before-tab::tab', replace SPACEs by TABs.<br>
+   If `whitespace-style' includes the value<br>
+   `space-before-tab::space', replace TABs by SPACEs.<br>
+<br>
+3. SPACEs or TABs at end of line.<br>
+   If `whitespace-style' includes the value `trailing', remove<br>
+   all SPACEs or TABs at end of line.<br>
+<br>
+4. 8 or more SPACEs after TAB.<br>
+   If `whitespace-style' includes the value `space-after-tab':<br>
+   replace SPACEs by TABs, if `indent-tabs-mode' is non-nil;<br>
+   otherwise, replace TABs by SPACEs.<br>
+   If `whitespace-style' includes the value<br>
+   `space-after-tab::tab', replace SPACEs by TABs.<br>
+   If `whitespace-style' includes the value<br>
+   `space-after-tab::space', replace TABs by SPACEs.
+
 See `whitespace-style', `indent-tabs-mode' and `tab-width' for
-documentation.</p>
-<p>
+documentation.
+
 (fn START END)</p>

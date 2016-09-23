@@ -1,71 +1,71 @@
 <h3>Function: texinfo-mode</h3>
 <p>
-Major mode for editing Texinfo files.</p>
-<p>
-  It has these extra commands:</p>
-<p>
-Uses keymap `texinfo-mode-map', which is not currently defined.</p>
-<p>
+Major mode for editing Texinfo files.<br>
+<br>
+  It has these extra commands:<br>
+<br>
+Uses keymap `texinfo-mode-map', which is not currently defined.<br>
+<br>
+<br>
+  These are files that are used as input for TeX to make printed manuals<br>
+and also to be turned into Info files with M-x makeinfo-buffer or<br>
+the `makeinfo' program.  These files must be written in a very restricted and<br>
+modified version of TeX input format.<br>
+<br>
+  Editing commands are like text-mode except that the syntax table is<br>
+set up so expression commands skip Texinfo bracket groups.  To see<br>
+what the Info version of a region of the Texinfo file will look like,<br>
+use M-x makeinfo-region, which runs `makeinfo' on the current region.<br>
+<br>
+  You can show the structure of a Texinfo file with M-x texinfo-show-structure.<br>
+This command shows the structure of a Texinfo file by listing the<br>
+lines with the @-sign commands for @chapter, @section, and the like.<br>
+These lines are displayed in another window called the *Occur* window.<br>
+In that window, you can position the cursor over one of the lines and<br>
+use M-x occur-mode-goto-occurrence, to jump to the corresponding spot<br>
+in the Texinfo file.<br>
+<br>
+  In addition, Texinfo mode provides commands that insert various<br>
+frequently used @-sign commands into the buffer.  You can use these<br>
+commands to save keystrokes.  And you can insert balanced braces with<br>
+M-x texinfo-insert-braces and later use the command M-x up-list to<br>
+move forward past the closing brace.<br>
+<br>
+Also, Texinfo mode provides functions for automatically creating or<br>
+updating menus and node pointers.  These functions<br>
+<br>
+  * insert the `Next', `Previous' and `Up' pointers of a node,<br>
+  * insert or update the menu for a section, and<br>
+  * create a master menu for a Texinfo source file.<br>
+<br>
+Here are the functions:<br>
+<br>
+    texinfo-update-node                M-x texinfo-update-node<br>
+    texinfo-every-node-update          M-x texinfo-every-node-update<br>
+    texinfo-sequential-node-update<br>
+<br>
+    texinfo-make-menu                  M-x texinfo-make-menu<br>
+    texinfo-all-menus-update           M-x texinfo-all-menus-update<br>
+    texinfo-master-menu<br>
+<br>
+    texinfo-indent-menu-description (column &optional region-p)<br>
+<br>
+The `texinfo-column-for-description' variable specifies the column to<br>
+which menu descriptions are indented.<br>
+<br>
+Passed an argument (a prefix argument, if interactive), the<br>
+`texinfo-update-node' and `texinfo-make-menu' functions do their jobs<br>
+in the region.<br>
+<br>
+To use the updating commands, you must structure your Texinfo file<br>
+hierarchically, such that each `@node' line, with the exception of the<br>
+Top node, is accompanied by some kind of section line, such as an<br>
+`@chapter' or `@section' line.
 
-  These are files that are used as input for TeX to make printed manuals
-and also to be turned into Info files with M-x makeinfo-buffer or
-the `makeinfo' program.  These files must be written in a very restricted and
-modified version of TeX input format.</p>
-<p>
-  Editing commands are like text-mode except that the syntax table is
-set up so expression commands skip Texinfo bracket groups.  To see
-what the Info version of a region of the Texinfo file will look like,
-use M-x makeinfo-region, which runs `makeinfo' on the current region.</p>
-<p>
-  You can show the structure of a Texinfo file with M-x texinfo-show-structure.
-This command shows the structure of a Texinfo file by listing the
-lines with the @-sign commands for @chapter, @section, and the like.
-These lines are displayed in another window called the *Occur* window.
-In that window, you can position the cursor over one of the lines and
-use M-x occur-mode-goto-occurrence, to jump to the corresponding spot
-in the Texinfo file.</p>
-<p>
-  In addition, Texinfo mode provides commands that insert various
-frequently used @-sign commands into the buffer.  You can use these
-commands to save keystrokes.  And you can insert balanced braces with
-M-x texinfo-insert-braces and later use the command M-x up-list to
-move forward past the closing brace.</p>
-<p>
-Also, Texinfo mode provides functions for automatically creating or
-updating menus and node pointers.  These functions</p>
-<p>
-  * insert the `Next', `Previous' and `Up' pointers of a node,
-  * insert or update the menu for a section, and
-  * create a master menu for a Texinfo source file.</p>
-<p>
-Here are the functions:</p>
-<p>
-    texinfo-update-node                M-x texinfo-update-node
-    texinfo-every-node-update          M-x texinfo-every-node-update
-    texinfo-sequential-node-update</p>
-<p>
-    texinfo-make-menu                  M-x texinfo-make-menu
-    texinfo-all-menus-update           M-x texinfo-all-menus-update
-    texinfo-master-menu</p>
-<p>
-    texinfo-indent-menu-description (column &optional region-p)</p>
-<p>
-The `texinfo-column-for-description' variable specifies the column to
-which menu descriptions are indented.</p>
-<p>
-Passed an argument (a prefix argument, if interactive), the
-`texinfo-update-node' and `texinfo-make-menu' functions do their jobs
-in the region.</p>
-<p>
-To use the updating commands, you must structure your Texinfo file
-hierarchically, such that each `@node' line, with the exception of the
-Top node, is accompanied by some kind of section line, such as an
-`@chapter' or `@section' line.</p>
-<p>
 If the file has a `top' node, it must be called `top' or `Top' and
-be the first node in the file.</p>
-<p>
+be the first node in the file.
+
 Entering Texinfo mode calls the value of `text-mode-hook', and then the
-value of `texinfo-mode-hook'.</p>
-<p>
+value of `texinfo-mode-hook'.
+
 (fn)</p>

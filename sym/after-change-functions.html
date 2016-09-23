@@ -1,17 +1,17 @@
 <h3>Variable: after-change-functions</h3>
 <p>
-List of functions to call after each text change.
-Three arguments are passed to each function: the positions of
-the beginning and end of the range of changed text,
-and the length in bytes of the pre-change text replaced by that range.
-(For an insertion, the pre-change length is zero;
-for a deletion, that length is the number of bytes deleted,
-and the post-change beginning and end are at the same place.)</p>
-<p>
-Buffer changes made while executing the `after-change-functions'
-don't call any before-change or after-change functions.
-That's because `inhibit-modification-hooks' is temporarily set non-nil.</p>
-<p>
-If an unhandled error happens in running these functions,
-the variable's value remains nil.  That prevents the error
+List of functions to call after each text change.<br>
+Three arguments are passed to each function: the positions of<br>
+the beginning and end of the range of changed text,<br>
+and the length in bytes of the pre-change text replaced by that range.<br>
+(For an insertion, the pre-change length is zero;<br>
+for a deletion, that length is the number of bytes deleted,<br>
+and the post-change beginning and end are at the same place.)<br>
+<br>
+Buffer changes made while executing the `after-change-functions'<br>
+don't call any before-change or after-change functions.<br>
+That's because `inhibit-modification-hooks' is temporarily set non-nil.<br>
+<br>
+If an unhandled error happens in running these functions,<br>
+the variable's value remains nil.  That prevents the error<br>
 from happening repeatedly and making Emacs nonfunctional.</p>

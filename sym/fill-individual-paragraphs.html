@@ -1,24 +1,24 @@
 <h3>Function: fill-individual-paragraphs</h3>
 <p>
-Fill paragraphs of uniform indentation within the region.
-This command divides the region into "paragraphs",
-treating every change in indentation level or prefix as a paragraph boundary,
-then fills each paragraph using its indentation level as the fill prefix.</p>
-<p>
-There is one special case where a change in indentation does not start
-a new paragraph.  This is for text of this form:</p>
-<p>
-   foo>    This line with extra indentation starts
-   foo> a paragraph that continues on more lines.</p>
-<p>
-These lines are filled together.</p>
-<p>
-When calling from a program, pass the range to fill
-as the first two arguments.</p>
-<p>
-Optional third and fourth arguments JUSTIFY and CITATION-REGEXP:
-JUSTIFY to justify paragraphs (prefix arg).
-When filling a mail message, pass a regexp for CITATION-REGEXP
-which will match the prefix of a line which is a citation marker
+Fill paragraphs of uniform indentation within the region.<br>
+This command divides the region into "paragraphs",<br>
+treating every change in indentation level or prefix as a paragraph boundary,<br>
+then fills each paragraph using its indentation level as the fill prefix.<br>
+<br>
+There is one special case where a change in indentation does not start<br>
+a new paragraph.  This is for text of this form:<br>
+<br>
+   foo>    This line with extra indentation starts<br>
+   foo> a paragraph that continues on more lines.<br>
+<br>
+These lines are filled together.<br>
+<br>
+When calling from a program, pass the range to fill<br>
+as the first two arguments.<br>
+<br>
+Optional third and fourth arguments JUSTIFY and CITATION-REGEXP:<br>
+JUSTIFY to justify paragraphs (prefix arg).<br>
+When filling a mail message, pass a regexp for CITATION-REGEXP<br>
+which will match the prefix of a line which is a citation marker<br>
 plus whitespace, but no other kind of prefix.
 Also, if CITATION-REGEXP is non-nil, don't fill header lines.</p>

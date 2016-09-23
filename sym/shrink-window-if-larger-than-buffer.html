@@ -1,14 +1,14 @@
 <h3>Function: shrink-window-if-larger-than-buffer</h3>
 <p>
-Shrink height of WINDOW if its buffer doesn't need so many lines.
-More precisely, shrink WINDOW vertically to be as small as
-possible, while still showing the full contents of its buffer.
-WINDOW must be a live window and defaults to the selected one.</p>
-<p>
-Do not shrink WINDOW to less than `window-min-height' lines.  Do
-nothing if the buffer contains more lines than the present window
-height, or if some of the window's contents are scrolled out of
-view, or if shrinking this window would also shrink another
-window, or if the window is the only window of its frame.</p>
-<p>
+Shrink height of WINDOW if its buffer doesn't need so many lines.<br>
+More precisely, shrink WINDOW vertically to be as small as<br>
+possible, while still showing the full contents of its buffer.<br>
+WINDOW must be a live window and defaults to the selected one.<br>
+<br>
+Do not shrink WINDOW to less than `window-min-height' lines.  Do<br>
+nothing if the buffer contains more lines than the present window<br>
+height, or if some of the window's contents are scrolled out of<br>
+view, or if shrinking this window would also shrink another<br>
+window, or if the window is the only window of its frame.<br>
+<br>
 Return non-nil if the window was shrunk, nil otherwise.</p>

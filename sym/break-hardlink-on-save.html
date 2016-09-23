@@ -1,15 +1,15 @@
 <h3>Variable: break-hardlink-on-save</h3>
 <p>
-Non-nil means when saving a file that exists under several names
-(i.e., has multiple hardlinks), break the hardlink associated with
-`buffer-file-name' and write to a new file, so that the other
-instances of the file are not affected by the save.</p>
-<p>
-If `buffer-file-name' refers to a symlink, do not break the symlink.</p>
-<p>
-Unlike `file-precious-flag', `break-hardlink-on-save' is not advisory.
-For example, if the directory in which a file is being saved is not
-itself writable, then error instead of saving in some
-hardlink-nonbreaking way.</p>
-<p>
+Non-nil means when saving a file that exists under several names<br>
+(i.e., has multiple hardlinks), break the hardlink associated with<br>
+`buffer-file-name' and write to a new file, so that the other<br>
+instances of the file are not affected by the save.<br>
+<br>
+If `buffer-file-name' refers to a symlink, do not break the symlink.<br>
+<br>
+Unlike `file-precious-flag', `break-hardlink-on-save' is not advisory.<br>
+For example, if the directory in which a file is being saved is not<br>
+itself writable, then error instead of saving in some<br>
+hardlink-nonbreaking way.<br>
+<br>
 See also `backup-by-copying' and `backup-by-copying-when-linked'.</p>

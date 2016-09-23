@@ -1,15 +1,15 @@
 <h3>Function: file-name-completion</h3>
 <p>
-Complete file name FILE in directory DIRECTORY.
-Returns the longest string
-common to all file names in DIRECTORY that start with FILE.
-If there is only one and FILE matches it exactly, returns t.
-Returns nil if DIRECTORY contains no name starting with FILE.</p>
-<p>
-If PREDICATE is non-nil, call PREDICATE with each possible
-completion (in absolute form) and ignore it if PREDICATE returns nil.</p>
-<p>
-This function ignores some of the possible completions as
-determined by the variable `completion-ignored-extensions', which see.</p>
-<p>
+Complete file name FILE in directory DIRECTORY.<br>
+Returns the longest string<br>
+common to all file names in DIRECTORY that start with FILE.<br>
+If there is only one and FILE matches it exactly, returns t.<br>
+Returns nil if DIRECTORY contains no name starting with FILE.<br>
+<br>
+If PREDICATE is non-nil, call PREDICATE with each possible<br>
+completion (in absolute form) and ignore it if PREDICATE returns nil.<br>
+<br>
+This function ignores some of the possible completions as<br>
+determined by the variable `completion-ignored-extensions', which see.<br>
+
 (fn FILE DIRECTORY &optional PREDICATE)</p>

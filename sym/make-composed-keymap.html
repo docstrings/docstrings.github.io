@@ -1,11 +1,11 @@
 <h3>Function: make-composed-keymap</h3>
 <p>
-Construct a new keymap composed of MAPS and inheriting from PARENT.
-When looking up a key in the returned map, the key is looked in each
-keymap of MAPS in turn until a binding is found.
-If no binding is found in MAPS, the lookup continues in PARENT, if non-nil.
-As always with keymap inheritance, a nil binding in MAPS overrides
-any corresponding binding in PARENT, but it does not override corresponding
-bindings in other keymaps of MAPS.
-MAPS can be a list of keymaps or a single keymap.
+Construct a new keymap composed of MAPS and inheriting from PARENT.<br>
+When looking up a key in the returned map, the key is looked in each<br>
+keymap of MAPS in turn until a binding is found.<br>
+If no binding is found in MAPS, the lookup continues in PARENT, if non-nil.<br>
+As always with keymap inheritance, a nil binding in MAPS overrides<br>
+any corresponding binding in PARENT, but it does not override corresponding<br>
+bindings in other keymaps of MAPS.<br>
+MAPS can be a list of keymaps or a single keymap.<br>
 PARENT if non-nil should be a keymap.</p>

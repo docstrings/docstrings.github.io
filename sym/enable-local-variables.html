@@ -1,25 +1,25 @@
 <h3>Variable: enable-local-variables</h3>
 <p>
-Control use of local variables in files you visit.
-The value can be t, nil, :safe, :all, or something else.</p>
-<p>
-A value of t means file local variables specifications are obeyed
-if all the specified variable values are safe; if any values are
-not safe, Emacs queries you, once, whether to set them all.
-(When you say yes to certain values, they are remembered as safe.)</p>
-<p>
-:safe means set the safe variables, and ignore the rest.
-:all means set all variables, whether safe or not.
- (Don't set it permanently to :all.)
-A value of nil means always ignore the file local variables.</p>
-<p>
-Any other value means always query you once whether to set them all.
-(When you say yes to certain values, they are remembered as safe, but
-this has no effect when `enable-local-variables' is "something else".)</p>
-<p>
-This variable also controls use of major modes specified in
-a -*- line.</p>
-<p>
-The command M-x normal-mode, when used interactively,
+Control use of local variables in files you visit.<br>
+The value can be t, nil, :safe, :all, or something else.<br>
+<br>
+A value of t means file local variables specifications are obeyed<br>
+if all the specified variable values are safe; if any values are<br>
+not safe, Emacs queries you, once, whether to set them all.<br>
+(When you say yes to certain values, they are remembered as safe.)<br>
+<br>
+:safe means set the safe variables, and ignore the rest.<br>
+:all means set all variables, whether safe or not.<br>
+ (Don't set it permanently to :all.)<br>
+A value of nil means always ignore the file local variables.<br>
+<br>
+Any other value means always query you once whether to set them all.<br>
+(When you say yes to certain values, they are remembered as safe, but<br>
+this has no effect when `enable-local-variables' is "something else".)<br>
+<br>
+This variable also controls use of major modes specified in<br>
+a -*- line.<br>
+<br>
+The command M-x normal-mode, when used interactively,<br>
 always obeys file local variable specifications and the -*- line,
 and ignores this variable.</p>

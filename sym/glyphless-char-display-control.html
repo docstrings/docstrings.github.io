@@ -1,28 +1,28 @@
 <h3>Variable: glyphless-char-display-control</h3>
 <p>
-List of directives to control display of glyphless characters.</p>
-<p>
-Each element has the form (GROUP . METHOD), where GROUP is a
-symbol specifying the character group, and METHOD is a symbol
-specifying the method of displaying characters belonging to that
-group.</p>
-<p>
-GROUP must be one of these symbols:
-  `c0-control':     U+0000..U+001F, but excluding newline and TAB.
-  `c1-control':     U+0080..U+009F.
-  `format-control': Characters of Unicode General Category `Cf',
-                    such as U+200C (ZWNJ), U+200E (LRM), but
-                    excluding characters that have graphic images,
-                    such as U+00AD (SHY).
-  `no-font':        characters for which no suitable font is found.
-                    For character terminals, characters that cannot
-                    be encoded by `terminal-coding-system'.</p>
-<p>
-METHOD must be one of these symbols:
-  `zero-width': don't display.
-  `thin-space': display a thin (1-pixel width) space.  On character
-                terminals, display as 1-character space.
-  `empty-box':  display an empty box.
-  `acronym':    display an acronym of the character in a box.  The
+List of directives to control display of glyphless characters.<br>
+<br>
+Each element has the form (GROUP . METHOD), where GROUP is a<br>
+symbol specifying the character group, and METHOD is a symbol<br>
+specifying the method of displaying characters belonging to that<br>
+group.<br>
+<br>
+GROUP must be one of these symbols:<br>
+  `c0-control':     U+0000..U+001F, but excluding newline and TAB.<br>
+  `c1-control':     U+0080..U+009F.<br>
+  `format-control': Characters of Unicode General Category `Cf',<br>
+                    such as U+200C (ZWNJ), U+200E (LRM), but<br>
+                    excluding characters that have graphic images,<br>
+                    such as U+00AD (SHY).<br>
+  `no-font':        characters for which no suitable font is found.<br>
+                    For character terminals, characters that cannot<br>
+                    be encoded by `terminal-coding-system'.<br>
+<br>
+METHOD must be one of these symbols:<br>
+  `zero-width': don't display.<br>
+  `thin-space': display a thin (1-pixel width) space.  On character<br>
+                terminals, display as 1-character space.<br>
+  `empty-box':  display an empty box.<br>
+  `acronym':    display an acronym of the character in a box.  The<br>
                 acronym is taken from `char-acronym-table', which see.
   `hex-code':   display the hexadecimal character code in a box.</p>

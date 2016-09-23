@@ -1,15 +1,15 @@
 <h3>Function: tool-bar-add-item</h3>
 <p>
-Add an item to the tool bar.
-ICON names the image, DEF is the key definition and KEY is a symbol
-for the fake function key in the menu keymap.  Remaining arguments
-PROPS are additional items to add to the menu item specification.  See
-Info node `(elisp)Tool Bar'.  Items are added from left to right.</p>
-<p>
-ICON is the base name of a file containing the image to use.  The
-function will first try to use low-color/ICON.xpm if `display-color-cells'
-is less or equal to 256, then ICON.xpm, then ICON.pbm, and finally
-ICON.xbm, using `find-image'.</p>
-<p>
-Use this function only to make bindings in the global value of `tool-bar-map'.
+Add an item to the tool bar.<br>
+ICON names the image, DEF is the key definition and KEY is a symbol<br>
+for the fake function key in the menu keymap.  Remaining arguments<br>
+PROPS are additional items to add to the menu item specification.  See<br>
+Info node `(elisp)Tool Bar'.  Items are added from left to right.<br>
+<br>
+ICON is the base name of a file containing the image to use.  The<br>
+function will first try to use low-color/ICON.xpm if `display-color-cells'<br>
+is less or equal to 256, then ICON.xpm, then ICON.pbm, and finally<br>
+ICON.xbm, using `find-image'.<br>
+<br>
+Use this function only to make bindings in the global value of `tool-bar-map'.<br>
 To define items in any other map, use `tool-bar-local-item'.</p>

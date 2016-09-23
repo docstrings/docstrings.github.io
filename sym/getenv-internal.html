@@ -1,13 +1,13 @@
 <h3>Function: getenv-internal</h3>
 <p>
-Get the value of environment variable VARIABLE.
-VARIABLE should be a string.  Value is nil if VARIABLE is undefined in
-the environment.  Otherwise, value is a string.</p>
-<p>
-This function searches `process-environment' for VARIABLE.</p>
-<p>
-If optional parameter ENV is a list, then search this list instead of
-`process-environment', and return t when encountering a negative entry
-(an entry for a variable with no value).</p>
-<p>
+Get the value of environment variable VARIABLE.<br>
+VARIABLE should be a string.  Value is nil if VARIABLE is undefined in<br>
+the environment.  Otherwise, value is a string.<br>
+<br>
+This function searches `process-environment' for VARIABLE.<br>
+<br>
+If optional parameter ENV is a list, then search this list instead of<br>
+`process-environment', and return t when encountering a negative entry<br>
+(an entry for a variable with no value).
+
 (fn VARIABLE &optional ENV)</p>

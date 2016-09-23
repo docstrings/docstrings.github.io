@@ -1,17 +1,17 @@
 <h3>Function: x-get-selection-internal</h3>
 <p>
-Return text selected from some X window.
-SELECTION-SYMBOL is typically `PRIMARY', `SECONDARY', or `CLIPBOARD'.
-(Those are literal upper-case symbol names, since that's what X expects.)
-TARGET-TYPE is the type of data desired, typically `STRING'.</p>
-<p>
-TIME-STAMP is the time to use in the XConvertSelection call for foreign
-selections.  If omitted, defaults to the time for the last event.</p>
-<p>
-TERMINAL should be a terminal object or a frame specifying the X
-server to query.  If omitted or nil, that stands for the selected
-frame's display, or the first available X display.</p>
-<p>
-On Nextstep, TIME-STAMP and TERMINAL are unused.</p>
-<p>
+Return text selected from some X window.<br>
+SELECTION-SYMBOL is typically `PRIMARY', `SECONDARY', or `CLIPBOARD'.<br>
+(Those are literal upper-case symbol names, since that's what X expects.)<br>
+TARGET-TYPE is the type of data desired, typically `STRING'.<br>
+<br>
+TIME-STAMP is the time to use in the XConvertSelection call for foreign<br>
+selections.  If omitted, defaults to the time for the last event.<br>
+<br>
+TERMINAL should be a terminal object or a frame specifying the X<br>
+server to query.  If omitted or nil, that stands for the selected<br>
+frame's display, or the first available X display.<br>
+<br>
+On Nextstep, TIME-STAMP and TERMINAL are unused.<br>
+<br>
 (fn SELECTION-SYMBOL TARGET-TYPE &optional TIME-STAMP TERMINAL)</p>

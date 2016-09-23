@@ -1,34 +1,34 @@
 <h3>Function: revert-buffer</h3>
 <p>
-Replace current buffer text with the text of the visited file on disk.
-This undoes all changes since the file was visited or saved.
-With a prefix argument, offer to revert from latest auto-save file, if
-that is more recent than the visited file.</p>
-<p>
-This command also implements an interface for special buffers
-that contain text which doesn't come from a file, but reflects
-some other data instead (e.g. Dired buffers, `buffer-list'
-buffers).  This is done via the variable `revert-buffer-function'.
-In these cases, it should reconstruct the buffer contents from the
-appropriate data.</p>
-<p>
-When called from Lisp, the first argument is IGNORE-AUTO; only offer
-to revert from the auto-save file when this is nil.  Note that the
-sense of this argument is the reverse of the prefix argument, for the
-sake of backward compatibility.  IGNORE-AUTO is optional, defaulting
-to nil.</p>
-<p>
-Optional second argument NOCONFIRM means don't ask for confirmation
-at all.  (The variable `revert-without-query' offers another way to
-revert buffers without querying for confirmation.)</p>
-<p>
-Optional third argument PRESERVE-MODES non-nil means don't alter
-the files modes.  Normally we reinitialize them using `normal-mode'.</p>
-<p>
-This function binds `revert-buffer-in-progress-p' non-nil while it operates.</p>
-<p>
-If the value of `revert-buffer-function' is non-nil, it is called to
-do all the work for this command.  Otherwise, the hooks
-`before-revert-hook' and `after-revert-hook' are run at the beginning
+Replace current buffer text with the text of the visited file on disk.<br>
+This undoes all changes since the file was visited or saved.<br>
+With a prefix argument, offer to revert from latest auto-save file, if<br>
+that is more recent than the visited file.<br>
+<br>
+This command also implements an interface for special buffers<br>
+that contain text which doesn't come from a file, but reflects<br>
+some other data instead (e.g. Dired buffers, `buffer-list'<br>
+buffers).  This is done via the variable `revert-buffer-function'.<br>
+In these cases, it should reconstruct the buffer contents from the<br>
+appropriate data.<br>
+<br>
+When called from Lisp, the first argument is IGNORE-AUTO; only offer<br>
+to revert from the auto-save file when this is nil.  Note that the<br>
+sense of this argument is the reverse of the prefix argument, for the<br>
+sake of backward compatibility.  IGNORE-AUTO is optional, defaulting<br>
+to nil.<br>
+<br>
+Optional second argument NOCONFIRM means don't ask for confirmation<br>
+at all.  (The variable `revert-without-query' offers another way to<br>
+revert buffers without querying for confirmation.)<br>
+<br>
+Optional third argument PRESERVE-MODES non-nil means don't alter<br>
+the files modes.  Normally we reinitialize them using `normal-mode'.<br>
+<br>
+This function binds `revert-buffer-in-progress-p' non-nil while it operates.<br>
+<br>
+If the value of `revert-buffer-function' is non-nil, it is called to<br>
+do all the work for this command.  Otherwise, the hooks<br>
+`before-revert-hook' and `after-revert-hook' are run at the beginning<br>
 and the end, and if `revert-buffer-insert-file-contents-function' is
 non-nil, it is called instead of rereading visited file contents.</p>

@@ -1,12 +1,12 @@
 <h3>Function: substitute-key-definition</h3>
 <p>
-Replace OLDDEF with NEWDEF for any keys in KEYMAP now defined as OLDDEF.
-In other words, OLDDEF is replaced with NEWDEF where ever it appears.
-Alternatively, if optional fourth argument OLDMAP is specified, we redefine
-in KEYMAP as NEWDEF those keys which are defined as OLDDEF in OLDMAP.</p>
-<p>
-If you don't specify OLDMAP, you can usually get the same results
-in a cleaner way with command remapping, like this:
-  (define-key KEYMAP [remap OLDDEF] NEWDEF)</p>
-<p>
+Replace OLDDEF with NEWDEF for any keys in KEYMAP now defined as OLDDEF.<br>
+In other words, OLDDEF is replaced with NEWDEF where ever it appears.<br>
+Alternatively, if optional fourth argument OLDMAP is specified, we redefine<br>
+in KEYMAP as NEWDEF those keys which are defined as OLDDEF in OLDMAP.<br>
+<br>
+If you don't specify OLDMAP, you can usually get the same results<br>
+in a cleaner way with command remapping, like this:<br>
+  (define-key KEYMAP [remap OLDDEF] NEWDEF)<br>
+<br>
 (fn OLDDEF NEWDEF KEYMAP &optional OLDMAP)</p>

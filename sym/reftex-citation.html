@@ -1,24 +1,24 @@
 <h3>Function: reftex-citation</h3>
 <p>
-Make a citation using BibTeX database files.
-After prompting for a regular expression, scans the buffers with
-bibtex entries (taken from the \bibliography command) and offers the
-matching entries for selection.  The selected entry is formatted according
-to `reftex-cite-format' and inserted into the buffer.</p>
-<p>
-If NO-INSERT is non-nil, nothing is inserted, only the selected key returned.</p>
-<p>
-FORMAT-KEY can be used to pre-select a citation format.</p>
-<p>
-When called with a `C-u' prefix, prompt for optional arguments in
-cite macros.  When called with a numeric prefix, make that many
-citations.  When called with point inside the braces of a `\cite'
-command, it will add another key, ignoring the value of
-`reftex-cite-format'.</p>
-<p>
-The regular expression uses an expanded syntax: && is interpreted as `and'.
-Thus, `aaaa&&bbb' matches entries which contain both `aaaa' and `bbb'.
-While entering the regexp, completion on knows citation keys is possible.
-`=' is a good regular expression to match all entries in all files.</p>
-<p>
+Make a citation using BibTeX database files.<br>
+After prompting for a regular expression, scans the buffers with<br>
+bibtex entries (taken from the \bibliography command) and offers the<br>
+matching entries for selection.  The selected entry is formatted according<br>
+to `reftex-cite-format' and inserted into the buffer.<br>
+<br>
+If NO-INSERT is non-nil, nothing is inserted, only the selected key returned.<br>
+<br>
+FORMAT-KEY can be used to pre-select a citation format.<br>
+<br>
+When called with a `C-u' prefix, prompt for optional arguments in<br>
+cite macros.  When called with a numeric prefix, make that many<br>
+citations.  When called with point inside the braces of a `\cite'<br>
+command, it will add another key, ignoring the value of<br>
+`reftex-cite-format'.<br>
+<br>
+The regular expression uses an expanded syntax: && is interpreted as `and'.<br>
+Thus, `aaaa&&bbb' matches entries which contain both `aaaa' and `bbb'.<br>
+While entering the regexp, completion on knows citation keys is possible.<br>
+`=' is a good regular expression to match all entries in all files.
+
 (fn &optional NO-INSERT FORMAT-KEY)</p>

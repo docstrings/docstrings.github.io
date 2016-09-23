@@ -1,43 +1,43 @@
 <h3>Function: whitespace-report</h3>
 <p>
-Report some whitespace problems in buffer.</p>
-<p>
-Return nil if there is no whitespace problem; otherwise, return
-non-nil.</p>
-<p>
-If FORCE is non-nil or C-u was pressed just
-before calling `whitespace-report' interactively, it forces
-`whitespace-style' to have:</p>
-<p>
-   empty
-   trailing
-   indentation
-   space-before-tab
-   space-after-tab</p>
-<p>
-If REPORT-IF-BOGUS is non-nil, it reports only when there are any
-whitespace problems in buffer.</p>
-<p>
-Report if some of the following whitespace problems exist:</p>
-<p>
-* If `indent-tabs-mode' is non-nil:
-   empty		1. empty lines at beginning of buffer.
-   empty		2. empty lines at end of buffer.
-   trailing		3. SPACEs or TABs at end of line.
-   indentation		4. 8 or more SPACEs at beginning of line.
-   space-before-tab	5. SPACEs before TAB.
-   space-after-tab	6. 8 or more SPACEs after TAB.</p>
-<p>
-* If `indent-tabs-mode' is nil:
-   empty		1. empty lines at beginning of buffer.
-   empty		2. empty lines at end of buffer.
-   trailing		3. SPACEs or TABs at end of line.
-   indentation		4. TABS at beginning of line.
-   space-before-tab	5. SPACEs before TAB.
-   space-after-tab	6. 8 or more SPACEs after TAB.</p>
-<p>
+Report some whitespace problems in buffer.<br>
+<br>
+Return nil if there is no whitespace problem; otherwise, return<br>
+non-nil.<br>
+<br>
+If FORCE is non-nil or C-u was pressed just<br>
+before calling `whitespace-report' interactively, it forces<br>
+`whitespace-style' to have:<br>
+<br>
+   empty<br>
+   trailing<br>
+   indentation<br>
+   space-before-tab<br>
+   space-after-tab<br>
+<br>
+If REPORT-IF-BOGUS is non-nil, it reports only when there are any<br>
+whitespace problems in buffer.<br>
+<br>
+Report if some of the following whitespace problems exist:<br>
+<br>
+* If `indent-tabs-mode' is non-nil:<br>
+   empty		1. empty lines at beginning of buffer.<br>
+   empty		2. empty lines at end of buffer.<br>
+   trailing		3. SPACEs or TABs at end of line.<br>
+   indentation		4. 8 or more SPACEs at beginning of line.<br>
+   space-before-tab	5. SPACEs before TAB.<br>
+   space-after-tab	6. 8 or more SPACEs after TAB.<br>
+<br>
+* If `indent-tabs-mode' is nil:<br>
+   empty		1. empty lines at beginning of buffer.<br>
+   empty		2. empty lines at end of buffer.<br>
+   trailing		3. SPACEs or TABs at end of line.<br>
+   indentation		4. TABS at beginning of line.<br>
+   space-before-tab	5. SPACEs before TAB.<br>
+   space-after-tab	6. 8 or more SPACEs after TAB.<br>
+<br>
 See `whitespace-style' for documentation.
 See also `whitespace-cleanup' and `whitespace-cleanup-region' for
-cleaning up these problems.</p>
-<p>
+cleaning up these problems.
+
 (fn &optional FORCE REPORT-IF-BOGUS)</p>

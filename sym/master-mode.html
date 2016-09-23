@@ -1,19 +1,19 @@
 <h3>Function: master-mode</h3>
 <p>
-Toggle Master mode.
-With a prefix argument ARG, enable Master mode if ARG is
-positive, and disable it otherwise.  If called from Lisp, enable
-the mode if ARG is omitted or nil.</p>
-<p>
-When Master mode is enabled, you can scroll the slave buffer
-using the following commands:</p>
-<p>
+Toggle Master mode.<br>
+With a prefix argument ARG, enable Master mode if ARG is<br>
+positive, and disable it otherwise.  If called from Lisp, enable<br>
+the mode if ARG is omitted or nil.<br>
+<br>
+When Master mode is enabled, you can scroll the slave buffer<br>
+using the following commands:<br>
+<br>
+<br>
+Uses keymap `master-mode-map', which is not currently defined.<br>
+<br>
+<br>
+The slave buffer is stored in the buffer-local variable `master-of'.<br>
+You can set this variable using `master-set-slave'.  You can show<br>
+yourself the value of `master-of' by calling `master-show-slave'.
 
-Uses keymap `master-mode-map', which is not currently defined.</p>
-<p>
-
-The slave buffer is stored in the buffer-local variable `master-of'.
-You can set this variable using `master-set-slave'.  You can show
-yourself the value of `master-of' by calling `master-show-slave'.</p>
-<p>
 (fn &optional ARG)</p>

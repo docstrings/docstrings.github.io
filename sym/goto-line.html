@@ -1,21 +1,21 @@
 <h3>Function: goto-line</h3>
 <p>
-Go to LINE, counting from line 1 at beginning of buffer.
-If called interactively, a numeric prefix argument specifies
-LINE; without a numeric prefix argument, read LINE from the
-minibuffer.</p>
-<p>
-If optional argument BUFFER is non-nil, switch to that buffer and
-move to line LINE there.  If called interactively with C-u
-as argument, BUFFER is the most recently selected other buffer.</p>
-<p>
-Prior to moving point, this function sets the mark (without
-activating it), unless Transient Mark mode is enabled and the
-mark is already active.</p>
-<p>
-This function is usually the wrong thing to use in a Lisp program.
-What you probably want instead is something like:
-  (goto-char (point-min))
-  (forward-line (1- N))
+Go to LINE, counting from line 1 at beginning of buffer.<br>
+If called interactively, a numeric prefix argument specifies<br>
+LINE; without a numeric prefix argument, read LINE from the<br>
+minibuffer.<br>
+<br>
+If optional argument BUFFER is non-nil, switch to that buffer and<br>
+move to line LINE there.  If called interactively with C-u<br>
+as argument, BUFFER is the most recently selected other buffer.<br>
+<br>
+Prior to moving point, this function sets the mark (without<br>
+activating it), unless Transient Mark mode is enabled and the<br>
+mark is already active.<br>
+<br>
+This function is usually the wrong thing to use in a Lisp program.<br>
+What you probably want instead is something like:<br>
+  (goto-char (point-min))<br>
+  (forward-line (1- N))<br>
 If at all possible, an even better solution is to use char counts
 rather than line counts.</p>

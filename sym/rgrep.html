@@ -1,24 +1,24 @@
 <h3>Function: rgrep</h3>
 <p>
-Recursively grep for REGEXP in FILES in directory tree rooted at DIR.
-The search is limited to file names matching shell pattern FILES.
-FILES may use abbreviations defined in `grep-files-aliases', e.g.
-entering `ch' is equivalent to `*.[ch]'.</p>
-<p>
-With C-u prefix, you can edit the constructed shell command line
-before it is executed.
-With two C-u prefixes, directly edit and run `grep-find-command'.</p>
-<p>
-Collect output in a buffer.  While the recursive grep is running,
-you can use C-x ` (M-x next-error), or 
-Uses keymap `grep-mode-map', which is not currently defined.
-M-x compile-goto-error in the grep output buffer,
-to visit the lines where matches were found.  To kill the job
-before it finishes, type M-x kill-compilation.</p>
-<p>
-This command shares argument histories with M-x lgrep and M-x grep-find.</p>
-<p>
+Recursively grep for REGEXP in FILES in directory tree rooted at DIR.<br>
+The search is limited to file names matching shell pattern FILES.<br>
+FILES may use abbreviations defined in `grep-files-aliases', e.g.<br>
+entering `ch' is equivalent to `*.[ch]'.<br>
+<br>
+With C-u prefix, you can edit the constructed shell command line<br>
+before it is executed.<br>
+With two C-u prefixes, directly edit and run `grep-find-command'.<br>
+<br>
+Collect output in a buffer.  While the recursive grep is running,<br>
+you can use C-x ` (M-x next-error), or <br>
+Uses keymap `grep-mode-map', which is not currently defined.<br>
+M-x compile-goto-error in the grep output buffer,<br>
+to visit the lines where matches were found.  To kill the job<br>
+before it finishes, type M-x kill-compilation.<br>
+<br>
+This command shares argument histories with M-x lgrep and M-x grep-find.<br>
+<br>
 When called programmatically and FILES is nil, REGEXP is expected
-to specify a command to run.</p>
-<p>
+to specify a command to run.
+
 (fn REGEXP &optional FILES DIR CONFIRM)</p>

@@ -1,16 +1,16 @@
 <h3>Function: select-window</h3>
 <p>
-Select WINDOW which must be a live window.
-Also make WINDOW's frame the selected frame and WINDOW that frame's
-selected window.  In addition, make WINDOW's buffer current and set that
-buffer's value of `point' to the value of WINDOW's `window-point'.
-Return WINDOW.</p>
-<p>
-Optional second arg NORECORD non-nil means do not put this buffer at the
-front of the buffer list and do not make this window the most recently
-selected one.</p>
-<p>
-Note that the main editor command loop sets the current buffer to the
-buffer of the selected window before each command.</p>
-<p>
+Select WINDOW which must be a live window.<br>
+Also make WINDOW's frame the selected frame and WINDOW that frame's<br>
+selected window.  In addition, make WINDOW's buffer current and set that<br>
+buffer's value of `point' to the value of WINDOW's `window-point'.<br>
+Return WINDOW.<br>
+<br>
+Optional second arg NORECORD non-nil means do not put this buffer at the<br>
+front of the buffer list and do not make this window the most recently<br>
+selected one.<br>
+<br>
+Note that the main editor command loop sets the current buffer to the<br>
+buffer of the selected window before each command.
+
 (fn WINDOW &optional NORECORD)</p>

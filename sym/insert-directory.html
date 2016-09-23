@@ -1,24 +1,24 @@
 <h3>Function: insert-directory</h3>
 <p>
-Insert directory listing for FILE, formatted according to SWITCHES.
-Leaves point after the inserted text.
-SWITCHES may be a string of options, or a list of strings.
-Optional third arg WILDCARD means treat FILE as shell wildcard.
-Optional fourth arg FULL-DIRECTORY-P means file is a directory and
-switches do not contain `d', so that a full listing is expected.</p>
-<p>
-This version of the function comes from `ls-lisp.el'.
-If the value of `ls-lisp-use-insert-directory-program' is non-nil then
-it works exactly like the version from `files.el' and runs a directory
-listing program whose name is in the variable
-`insert-directory-program'; if also WILDCARD is non-nil then it runs
-the shell specified by `shell-file-name'.  If the value of
-`ls-lisp-use-insert-directory-program' is nil then it runs a Lisp
-emulation.</p>
-<p>
-The Lisp emulation does not run any external programs or shells.  It
-supports ordinary shell wildcards if `ls-lisp-support-shell-wildcards'
-is non-nil; otherwise, it interprets wildcards as regular expressions
-to match file names.  It does not support all `ls' switches -- those
+Insert directory listing for FILE, formatted according to SWITCHES.<br>
+Leaves point after the inserted text.<br>
+SWITCHES may be a string of options, or a list of strings.<br>
+Optional third arg WILDCARD means treat FILE as shell wildcard.<br>
+Optional fourth arg FULL-DIRECTORY-P means file is a directory and<br>
+switches do not contain `d', so that a full listing is expected.<br>
+<br>
+This version of the function comes from `ls-lisp.el'.<br>
+If the value of `ls-lisp-use-insert-directory-program' is non-nil then<br>
+it works exactly like the version from `files.el' and runs a directory<br>
+listing program whose name is in the variable<br>
+`insert-directory-program'; if also WILDCARD is non-nil then it runs<br>
+the shell specified by `shell-file-name'.  If the value of<br>
+`ls-lisp-use-insert-directory-program' is nil then it runs a Lisp<br>
+emulation.<br>
+<br>
+The Lisp emulation does not run any external programs or shells.  It<br>
+supports ordinary shell wildcards if `ls-lisp-support-shell-wildcards'<br>
+is non-nil; otherwise, it interprets wildcards as regular expressions<br>
+to match file names.  It does not support all `ls' switches -- those<br>
 that work are: A a B C c F G g h i n R r S s t U u X.  The l switch
 is assumed to be always present and cannot be turned off.</p>

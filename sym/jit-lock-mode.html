@@ -1,33 +1,33 @@
 <h3>Function: jit-lock-mode</h3>
 <p>
-Toggle Just-in-time Lock mode.
-Turn Just-in-time Lock mode on if and only if ARG is non-nil.
-Enable it automatically by customizing group `font-lock'.</p>
-<p>
-When Just-in-time Lock mode is enabled, fontification is different in the
-following ways:</p>
-<p>
-- Demand-driven buffer fontification triggered by Emacs C code.
-  This means initial fontification of the whole buffer does not occur.
-  Instead, fontification occurs when necessary, such as when scrolling
-  through the buffer would otherwise reveal unfontified areas.  This is
-  useful if buffer fontification is too slow for large buffers.</p>
-<p>
-- Stealthy buffer fontification if `jit-lock-stealth-time' is non-nil.
-  This means remaining unfontified areas of buffers are fontified if Emacs has
-  been idle for `jit-lock-stealth-time' seconds, while Emacs remains idle.
-  This is useful if any buffer has any deferred fontification.</p>
-<p>
-- Deferred context fontification if `jit-lock-contextually' is
-  non-nil.  This means fontification updates the buffer corresponding to
-  true syntactic context, after `jit-lock-context-time' seconds of Emacs
-  idle time, while Emacs remains idle.  Otherwise, fontification occurs
-  on modified lines only, and subsequent lines can remain fontified
-  corresponding to previous syntactic contexts.  This is useful where
-  strings or comments span lines.</p>
-<p>
-Stealth fontification only occurs while the system remains unloaded.
-If the system load rises above `jit-lock-stealth-load' percent, stealth
+Toggle Just-in-time Lock mode.<br>
+Turn Just-in-time Lock mode on if and only if ARG is non-nil.<br>
+Enable it automatically by customizing group `font-lock'.<br>
+<br>
+When Just-in-time Lock mode is enabled, fontification is different in the<br>
+following ways:<br>
+<br>
+- Demand-driven buffer fontification triggered by Emacs C code.<br>
+  This means initial fontification of the whole buffer does not occur.<br>
+  Instead, fontification occurs when necessary, such as when scrolling<br>
+  through the buffer would otherwise reveal unfontified areas.  This is<br>
+  useful if buffer fontification is too slow for large buffers.<br>
+<br>
+- Stealthy buffer fontification if `jit-lock-stealth-time' is non-nil.<br>
+  This means remaining unfontified areas of buffers are fontified if Emacs has<br>
+  been idle for `jit-lock-stealth-time' seconds, while Emacs remains idle.<br>
+  This is useful if any buffer has any deferred fontification.<br>
+<br>
+- Deferred context fontification if `jit-lock-contextually' is<br>
+  non-nil.  This means fontification updates the buffer corresponding to<br>
+  true syntactic context, after `jit-lock-context-time' seconds of Emacs<br>
+  idle time, while Emacs remains idle.  Otherwise, fontification occurs<br>
+  on modified lines only, and subsequent lines can remain fontified<br>
+  corresponding to previous syntactic contexts.  This is useful where<br>
+  strings or comments span lines.<br>
+<br>
+Stealth fontification only occurs while the system remains unloaded.<br>
+If the system load rises above `jit-lock-stealth-load' percent, stealth<br>
 fontification is suspended.  Stealth fontification intensity is controlled via
 the variable `jit-lock-stealth-nice'.</p>
 <h3>Variable: jit-lock-mode</h3>

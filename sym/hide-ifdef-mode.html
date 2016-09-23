@@ -1,40 +1,40 @@
 <h3>Function: hide-ifdef-mode</h3>
 <p>
-Toggle features to hide/show #ifdef blocks (Hide-Ifdef mode).
-With a prefix argument ARG, enable Hide-Ifdef mode if ARG is
-positive, and disable it otherwise.  If called from Lisp, enable
-the mode if ARG is omitted or nil.</p>
-<p>
-Hide-Ifdef mode is a buffer-local minor mode for use with C and
-C-like major modes.  When enabled, code within #ifdef constructs
-that the C preprocessor would eliminate may be hidden from view.
-Several variables affect how the hiding is done:</p>
-<p>
-`hide-ifdef-env'
-	An association list of defined and undefined symbols for the
-	current buffer.  Initially, the global value of `hide-ifdef-env'
-	is used.</p>
-<p>
-`hide-ifdef-define-alist'
-	An association list of defined symbol lists.
-        Use `hide-ifdef-set-define-alist' to save the current `hide-ifdef-env'
-        and `hide-ifdef-use-define-alist' to set the current `hide-ifdef-env'
-        from one of the lists in `hide-ifdef-define-alist'.</p>
-<p>
-`hide-ifdef-lines'
-	Set to non-nil to not show #if, #ifdef, #ifndef, #else, and
-	#endif lines when hiding.</p>
-<p>
-`hide-ifdef-initially'
-	Indicates whether `hide-ifdefs' should be called when Hide-Ifdef mode
-	is activated.</p>
-<p>
-`hide-ifdef-read-only'
-	Set to non-nil if you want to make buffers read only while hiding.
-	After `show-ifdefs', read-only status is restored to previous value.</p>
-<p>
+Toggle features to hide/show #ifdef blocks (Hide-Ifdef mode).<br>
+With a prefix argument ARG, enable Hide-Ifdef mode if ARG is<br>
+positive, and disable it otherwise.  If called from Lisp, enable<br>
+the mode if ARG is omitted or nil.<br>
+<br>
+Hide-Ifdef mode is a buffer-local minor mode for use with C and<br>
+C-like major modes.  When enabled, code within #ifdef constructs<br>
+that the C preprocessor would eliminate may be hidden from view.<br>
+Several variables affect how the hiding is done:<br>
+<br>
+`hide-ifdef-env'<br>
+	An association list of defined and undefined symbols for the<br>
+	current buffer.  Initially, the global value of `hide-ifdef-env'<br>
+	is used.<br>
+<br>
+`hide-ifdef-define-alist'<br>
+	An association list of defined symbol lists.<br>
+        Use `hide-ifdef-set-define-alist' to save the current `hide-ifdef-env'<br>
+        and `hide-ifdef-use-define-alist' to set the current `hide-ifdef-env'<br>
+        from one of the lists in `hide-ifdef-define-alist'.<br>
+<br>
+`hide-ifdef-lines'<br>
+	Set to non-nil to not show #if, #ifdef, #ifndef, #else, and<br>
+	#endif lines when hiding.<br>
+<br>
+`hide-ifdef-initially'<br>
+	Indicates whether `hide-ifdefs' should be called when Hide-Ifdef mode<br>
+	is activated.<br>
+<br>
+`hide-ifdef-read-only'<br>
+	Set to non-nil if you want to make buffers read only while hiding.<br>
+	After `show-ifdefs', read-only status is restored to previous value.
 
-Uses keymap `hide-ifdef-mode-map', which is not currently defined.</p>
-<p>
+
+Uses keymap `hide-ifdef-mode-map', which is not currently defined.
+
 
 (fn &optional ARG)</p>

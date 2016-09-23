@@ -1,22 +1,22 @@
 <h3>Function: ebnf-eps-buffer</h3>
 <p>
-Generate a PostScript syntactic chart image of the buffer in an EPS file.</p>
-<p>
-Generate an EPS file for each production in the buffer.
-The EPS file name has the following form:</p>
-<p>
-   <PREFIX><PRODUCTION>.eps</p>
-<p>
-<PREFIX>     is given by variable `ebnf-eps-prefix'.
-	     The default value is "ebnf--".</p>
-<p>
-<PRODUCTION> is the production name.
-	     Some characters in the production file name are replaced to
-	     produce a valid file name.  For example, the production name
-	     "A/B + C" is modified to produce "A_B_+_C", and the EPS
-	     file name used in this case will be "ebnf--A_B_+_C.eps".</p>
-<p>
+Generate a PostScript syntactic chart image of the buffer in an EPS file.<br>
+<br>
+Generate an EPS file for each production in the buffer.<br>
+The EPS file name has the following form:<br>
+<br>
+   <PREFIX><PRODUCTION>.eps<br>
+<br>
+<PREFIX>     is given by variable `ebnf-eps-prefix'.<br>
+	     The default value is "ebnf--".<br>
+<br>
+<PRODUCTION> is the production name.<br>
+	     Some characters in the production file name are replaced to<br>
+	     produce a valid file name.  For example, the production name<br>
+	     "A/B + C" is modified to produce "A_B_+_C", and the EPS<br>
+	     file name used in this case will be "ebnf--A_B_+_C.eps".<br>
+<br>
 WARNING: This function does *NOT* ask any confirmation to override existing
-	 files.</p>
-<p>
+	 files.
+
 (fn)</p>

@@ -1,14 +1,14 @@
 <h3>Function: scan-sexps</h3>
 <p>
-Scan from character number FROM by COUNT balanced expressions.
-If COUNT is negative, scan backwards.
-Returns the character number of the position thus found.</p>
-<p>
-Comments are ignored if `parse-sexp-ignore-comments' is non-nil.</p>
-<p>
-If the beginning or end of (the accessible part of) the buffer is reached
-in the middle of a parenthetical grouping, an error is signaled.
-If the beginning or end is reached between groupings
-but before count is used up, nil is returned.</p>
-<p>
+Scan from character number FROM by COUNT balanced expressions.<br>
+If COUNT is negative, scan backwards.<br>
+Returns the character number of the position thus found.<br>
+<br>
+Comments are ignored if `parse-sexp-ignore-comments' is non-nil.<br>
+<br>
+If the beginning or end of (the accessible part of) the buffer is reached<br>
+in the middle of a parenthetical grouping, an error is signaled.<br>
+If the beginning or end is reached between groupings<br>
+but before count is used up, nil is returned.
+
 (fn FROM COUNT)</p>

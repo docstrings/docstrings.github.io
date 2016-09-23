@@ -1,15 +1,15 @@
 <h3>Variable: network-coding-system-alist</h3>
 <p>
-Alist to decide a coding system to use for a network I/O operation.
-The format is ((PATTERN . VAL) ...),
-where PATTERN is a regular expression matching a network service name
-or is a port number to connect to,
-VAL is a coding system, a cons of coding systems, or a function symbol.
-If VAL is a coding system, it is used for both decoding what received
-from the network stream and encoding what sent to the network stream.
-If VAL is a cons of coding systems, the car part is used for decoding,
-and the cdr part is used for encoding.
-If VAL is a function symbol, the function must return a coding system
-or a cons of coding systems which are used as above.</p>
-<p>
+Alist to decide a coding system to use for a network I/O operation.<br>
+The format is ((PATTERN . VAL) ...),<br>
+where PATTERN is a regular expression matching a network service name<br>
+or is a port number to connect to,<br>
+VAL is a coding system, a cons of coding systems, or a function symbol.<br>
+If VAL is a coding system, it is used for both decoding what received<br>
+from the network stream and encoding what sent to the network stream.<br>
+If VAL is a cons of coding systems, the car part is used for decoding,<br>
+and the cdr part is used for encoding.<br>
+If VAL is a function symbol, the function must return a coding system<br>
+or a cons of coding systems which are used as above.<br>
+<br>
 See also the function `find-operation-coding-system'.</p>

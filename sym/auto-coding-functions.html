@@ -1,16 +1,16 @@
 <h3>Variable: auto-coding-functions</h3>
 <p>
-A list of functions which attempt to determine a coding system.</p>
-<p>
-Each function in this list should be written to operate on the
-current buffer, but should not modify it in any way.  The buffer
-will contain undecoded text of parts of the file.  Each function
-should take one argument, SIZE, which says how many characters
-(starting from point) it should look at.</p>
-<p>
-If one of these functions succeeds in determining a coding
-system, it should return that coding system.  Otherwise, it
-should return nil.</p>
-<p>
+A list of functions which attempt to determine a coding system.<br>
+<br>
+Each function in this list should be written to operate on the<br>
+current buffer, but should not modify it in any way.  The buffer<br>
+will contain undecoded text of parts of the file.  Each function<br>
+should take one argument, SIZE, which says how many characters<br>
+(starting from point) it should look at.<br>
+<br>
+If one of these functions succeeds in determining a coding<br>
+system, it should return that coding system.  Otherwise, it<br>
+should return nil.<br>
+<br>
 If a file has a `coding:' tag, that takes precedence over these
 functions, so they won't be called at all.</p>

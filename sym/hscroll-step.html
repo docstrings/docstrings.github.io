@@ -1,17 +1,17 @@
 <h3>Variable: hscroll-step</h3>
 <p>
-How many columns to scroll the window when point gets too close to the edge.
-When point is less than `hscroll-margin' columns from the window
-edge, automatic hscrolling will scroll the window by the amount of columns
-determined by this variable.  If its value is a positive integer, scroll that
-many columns.  If it's a positive floating-point number, it specifies the
-fraction of the window's width to scroll.  If it's nil or zero, point will be
-centered horizontally after the scroll.  Any other value, including negative
-numbers, are treated as if the value were zero.</p>
-<p>
-Automatic hscrolling always moves point outside the scroll margin, so if
-point was more than scroll step columns inside the margin, the window will
-scroll more than the value given by the scroll step.</p>
-<p>
-Note that the lower bound for automatic hscrolling specified by `scroll-left'
+How many columns to scroll the window when point gets too close to the edge.<br>
+When point is less than `hscroll-margin' columns from the window<br>
+edge, automatic hscrolling will scroll the window by the amount of columns<br>
+determined by this variable.  If its value is a positive integer, scroll that<br>
+many columns.  If it's a positive floating-point number, it specifies the<br>
+fraction of the window's width to scroll.  If it's nil or zero, point will be<br>
+centered horizontally after the scroll.  Any other value, including negative<br>
+numbers, are treated as if the value were zero.<br>
+<br>
+Automatic hscrolling always moves point outside the scroll margin, so if<br>
+point was more than scroll step columns inside the margin, the window will<br>
+scroll more than the value given by the scroll step.<br>
+<br>
+Note that the lower bound for automatic hscrolling specified by `scroll-left'<br>
 and `scroll-right' overrides this variable's effect.</p>

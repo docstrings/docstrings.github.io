@@ -1,13 +1,13 @@
 <h3>Function: make-keymap</h3>
 <p>
-Construct and return a new keymap, of the form (keymap CHARTABLE . ALIST).
-CHARTABLE is a char-table that holds the bindings for all characters
-without modifiers.  All entries in it are initially nil, meaning
-"command undefined".  ALIST is an assoc-list which holds bindings for
-function keys, mouse events, and any other things that appear in the
-input stream.  Initially, ALIST is nil.</p>
-<p>
-The optional arg STRING supplies a menu name for the keymap
-in case you use it as a menu with `x-popup-menu'.</p>
-<p>
+Construct and return a new keymap, of the form (keymap CHARTABLE . ALIST).<br>
+CHARTABLE is a char-table that holds the bindings for all characters<br>
+without modifiers.  All entries in it are initially nil, meaning<br>
+"command undefined".  ALIST is an assoc-list which holds bindings for<br>
+function keys, mouse events, and any other things that appear in the<br>
+input stream.  Initially, ALIST is nil.<br>
+<br>
+The optional arg STRING supplies a menu name for the keymap<br>
+in case you use it as a menu with `x-popup-menu'.
+
 (fn &optional STRING)</p>

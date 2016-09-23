@@ -1,22 +1,22 @@
 <h3>Function: mouse-save-then-kill</h3>
 <p>
-Set the region according to CLICK; the second time, kill it.
-CLICK should be a mouse click event.</p>
-<p>
-If the region is inactive, activate it temporarily.  Set mark at
-the original point, and move point to the position of CLICK.</p>
-<p>
-If the region is already active, adjust it.  Normally, do this by
-moving point or mark, whichever is closer, to CLICK.  But if you
-have selected whole words or lines, move point or mark to the
-word or line boundary closest to CLICK instead.</p>
-<p>
-If `mouse-drag-copy-region' is non-nil, this command also saves the
-new region to the kill ring (replacing the previous kill if the
-previous region was just saved to the kill ring).</p>
-<p>
-If this command is called a second consecutive time with the same
+Set the region according to CLICK; the second time, kill it.<br>
+CLICK should be a mouse click event.<br>
+<br>
+If the region is inactive, activate it temporarily.  Set mark at<br>
+the original point, and move point to the position of CLICK.<br>
+<br>
+If the region is already active, adjust it.  Normally, do this by<br>
+moving point or mark, whichever is closer, to CLICK.  But if you<br>
+have selected whole words or lines, move point or mark to the<br>
+word or line boundary closest to CLICK instead.<br>
+<br>
+If `mouse-drag-copy-region' is non-nil, this command also saves the<br>
+new region to the kill ring (replacing the previous kill if the<br>
+previous region was just saved to the kill ring).<br>
+<br>
+If this command is called a second consecutive time with the same<br>
 CLICK position, kill the region (or delete it
-if `mouse-drag-copy-region' is non-nil)</p>
-<p>
+if `mouse-drag-copy-region' is non-nil)
+
 (fn CLICK)</p>

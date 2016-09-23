@@ -1,14 +1,14 @@
 <h3>Function: package-compute-transaction</h3>
 <p>
-Return a list of packages to be installed, including PACKAGE-LIST.
-PACKAGE-LIST should be a list of package names (symbols).</p>
-<p>
-REQUIREMENTS should be a list of additional requirements; each
-element in this list should have the form (PACKAGE VERSION-LIST),
-where PACKAGE is a package name and VERSION-LIST is the required
-version of that package.</p>
-<p>
-This function recursively computes the requirements of the
-packages in REQUIREMENTS, and returns a list of all the packages
+Return a list of packages to be installed, including PACKAGE-LIST.<br>
+PACKAGE-LIST should be a list of package names (symbols).<br>
+<br>
+REQUIREMENTS should be a list of additional requirements; each<br>
+element in this list should have the form (PACKAGE VERSION-LIST),<br>
+where PACKAGE is a package name and VERSION-LIST is the required<br>
+version of that package.<br>
+<br>
+This function recursively computes the requirements of the<br>
+packages in REQUIREMENTS, and returns a list of all the packages<br>
 that must be installed.  Packages that are already installed are
 not included in this list.</p>

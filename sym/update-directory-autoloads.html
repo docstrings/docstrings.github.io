@@ -1,18 +1,18 @@
 <h3>Function: update-directory-autoloads</h3>
 <p>
-Update autoload definitions for Lisp files in the directories DIRS.
-In an interactive call, you must give one argument, the name of a
-single directory.  In a call from Lisp, you can supply multiple
-directories as separate arguments, but this usage is discouraged.</p>
-<p>
-The function does NOT recursively descend into subdirectories of the
-directory or directories specified.</p>
-<p>
-In an interactive call, prompt for a default output file for the
-autoload definitions, and temporarily bind the variable
-`generated-autoload-file' to this value.  When called from Lisp,
-use the existing value of `generated-autoload-file'.  If any Lisp
-file binds `generated-autoload-file' as a file-local variable,
-write its autoloads into the specified file instead.</p>
-<p>
+Update autoload definitions for Lisp files in the directories DIRS.<br>
+In an interactive call, you must give one argument, the name of a<br>
+single directory.  In a call from Lisp, you can supply multiple<br>
+directories as separate arguments, but this usage is discouraged.<br>
+<br>
+The function does NOT recursively descend into subdirectories of the<br>
+directory or directories specified.<br>
+<br>
+In an interactive call, prompt for a default output file for the<br>
+autoload definitions, and temporarily bind the variable<br>
+`generated-autoload-file' to this value.  When called from Lisp,<br>
+use the existing value of `generated-autoload-file'.  If any Lisp<br>
+file binds `generated-autoload-file' as a file-local variable,<br>
+write its autoloads into the specified file instead.
+
 (fn &rest DIRS)</p>

@@ -1,54 +1,54 @@
 <h3>Function: rmail-mode</h3>
 <p>
-Rmail Mode is used by 
-Uses keymap `rmail-mode-map', which is not currently defined.
-M-x rmail for editing Rmail files.
-All normal editing commands are turned off.
-Instead, these commands are available:</p>
-<p>
-M-x rmail-beginning-of-message	Move point to front of this message.
-M-x rmail-end-of-message	Move point to bottom of this message.
-M-x scroll-up	Scroll to next screen of this message.
-M-x scroll-down	Scroll to previous screen of this message.
-M-x rmail-next-undeleted-message	Move to Next non-deleted message.
-M-x rmail-previous-undeleted-message	Move to Previous non-deleted message.
-M-x rmail-next-message	Move to Next message whether deleted or not.
-M-x rmail-previous-message	Move to Previous message whether deleted or not.
-M-x rmail-first-message	Move to the first message in Rmail file.
-M-x rmail-last-message	Move to the last message in Rmail file.
-M-x rmail-show-message	Jump to message specified by numeric position in file.
-M-x rmail-search	Search for string and show message it is found in.
-M-x rmail-delete-forward	Delete this message, move to next nondeleted.
-M-x rmail-delete-backward	Delete this message, move to previous nondeleted.
-M-x rmail-undelete-previous-message	Undelete message.  Tries current message, then earlier messages
-	till a deleted message is found.
-M-x rmail-edit-current-message	Edit the current message.  M-x rmail-cease-edit to return to Rmail.
-M-x rmail-expunge	Expunge deleted messages.
-M-x rmail-expunge-and-save	Expunge and save the file.
-M-x rmail-quit       Quit Rmail: expunge, save, then switch to another buffer.
-C-x C-s Save without expunging.
-M-x rmail-get-new-mail	Move new mail from system spool directory into this file.
-M-x rmail-mail	Mail a message (same as M-x mail-other-window).
-M-x rmail-continue	Continue composing outgoing message started before.
-M-x rmail-reply	Reply to this message.  Like M-x rmail-mail but initializes some fields.
-M-x rmail-retry-failure	Send this message again.  Used on a mailer failure message.
-M-x rmail-forward	Forward this message to another user.
-M-x rmail-output	Output (append) this message to another mail file.
-M-x rmail-output-as-seen	Output (append) this message to file as it's displayed.
-M-x rmail-output-body-to-file	Save message body to a file.  Default filename comes from Subject line.
-M-x rmail-input	Input Rmail file.  Run Rmail on that file.
-M-x rmail-add-label	Add label to message.  It will be displayed in the mode line.
-M-x rmail-kill-label	Kill label.  Remove a label from current message.
-M-x rmail-next-labeled-message   Move to Next message with specified label
-          (label defaults to last one specified).
-          Standard labels: filed, unseen, answered, forwarded, deleted.
-          Any other label is present only if you add it with M-x rmail-add-label.
-M-x rmail-previous-labeled-message   Move to Previous message with specified label
-M-x rmail-summary	Show headers buffer, with a one line summary of each message.
-M-x rmail-summary-by-labels	Summarize only messages with particular label(s).
-M-x rmail-summary-by-recipients   Summarize only messages with particular recipient(s).
+Rmail Mode is used by <br>
+Uses keymap `rmail-mode-map', which is not currently defined.<br>
+M-x rmail for editing Rmail files.<br>
+All normal editing commands are turned off.<br>
+Instead, these commands are available:<br>
+<br>
+M-x rmail-beginning-of-message	Move point to front of this message.<br>
+M-x rmail-end-of-message	Move point to bottom of this message.<br>
+M-x scroll-up	Scroll to next screen of this message.<br>
+M-x scroll-down	Scroll to previous screen of this message.<br>
+M-x rmail-next-undeleted-message	Move to Next non-deleted message.<br>
+M-x rmail-previous-undeleted-message	Move to Previous non-deleted message.<br>
+M-x rmail-next-message	Move to Next message whether deleted or not.<br>
+M-x rmail-previous-message	Move to Previous message whether deleted or not.<br>
+M-x rmail-first-message	Move to the first message in Rmail file.<br>
+M-x rmail-last-message	Move to the last message in Rmail file.<br>
+M-x rmail-show-message	Jump to message specified by numeric position in file.<br>
+M-x rmail-search	Search for string and show message it is found in.<br>
+M-x rmail-delete-forward	Delete this message, move to next nondeleted.<br>
+M-x rmail-delete-backward	Delete this message, move to previous nondeleted.<br>
+M-x rmail-undelete-previous-message	Undelete message.  Tries current message, then earlier messages<br>
+	till a deleted message is found.<br>
+M-x rmail-edit-current-message	Edit the current message.  M-x rmail-cease-edit to return to Rmail.<br>
+M-x rmail-expunge	Expunge deleted messages.<br>
+M-x rmail-expunge-and-save	Expunge and save the file.<br>
+M-x rmail-quit       Quit Rmail: expunge, save, then switch to another buffer.<br>
+C-x C-s Save without expunging.<br>
+M-x rmail-get-new-mail	Move new mail from system spool directory into this file.<br>
+M-x rmail-mail	Mail a message (same as M-x mail-other-window).<br>
+M-x rmail-continue	Continue composing outgoing message started before.<br>
+M-x rmail-reply	Reply to this message.  Like M-x rmail-mail but initializes some fields.<br>
+M-x rmail-retry-failure	Send this message again.  Used on a mailer failure message.<br>
+M-x rmail-forward	Forward this message to another user.<br>
+M-x rmail-output	Output (append) this message to another mail file.<br>
+M-x rmail-output-as-seen	Output (append) this message to file as it's displayed.<br>
+M-x rmail-output-body-to-file	Save message body to a file.  Default filename comes from Subject line.<br>
+M-x rmail-input	Input Rmail file.  Run Rmail on that file.<br>
+M-x rmail-add-label	Add label to message.  It will be displayed in the mode line.<br>
+M-x rmail-kill-label	Kill label.  Remove a label from current message.<br>
+M-x rmail-next-labeled-message   Move to Next message with specified label<br>
+          (label defaults to last one specified).<br>
+          Standard labels: filed, unseen, answered, forwarded, deleted.<br>
+          Any other label is present only if you add it with M-x rmail-add-label.<br>
+M-x rmail-previous-labeled-message   Move to Previous message with specified label<br>
+M-x rmail-summary	Show headers buffer, with a one line summary of each message.<br>
+M-x rmail-summary-by-labels	Summarize only messages with particular label(s).<br>
+M-x rmail-summary-by-recipients   Summarize only messages with particular recipient(s).<br>
 M-x rmail-summary-by-regexp   Summarize only messages with particular regexp(s).
 M-x rmail-summary-by-topic   Summarize only messages with subject line regexp(s).
-M-x rmail-toggle-header	Toggle display of complete header.</p>
-<p>
+M-x rmail-toggle-header	Toggle display of complete header.
+
 (fn)</p>

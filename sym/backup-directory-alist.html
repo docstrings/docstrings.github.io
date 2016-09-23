@@ -1,20 +1,20 @@
 <h3>Variable: backup-directory-alist</h3>
 <p>
-Alist of filename patterns and backup directory names.
-Each element looks like (REGEXP . DIRECTORY).  Backups of files with
-names matching REGEXP will be made in DIRECTORY.  DIRECTORY may be
-relative or absolute.  If it is absolute, so that all matching files
-are backed up into the same directory, the file names in this
-directory will be the full name of the file backed up with all
-directory separators changed to `!' to prevent clashes.  This will not
-work correctly if your filesystem truncates the resulting name.</p>
-<p>
-For the common case of all backups going into one directory, the alist
-should contain a single element pairing "." with the appropriate
-directory name.</p>
-<p>
-If this variable is nil, or it fails to match a filename, the backup
-is made in the original file's directory.</p>
-<p>
+Alist of filename patterns and backup directory names.<br>
+Each element looks like (REGEXP . DIRECTORY).  Backups of files with<br>
+names matching REGEXP will be made in DIRECTORY.  DIRECTORY may be<br>
+relative or absolute.  If it is absolute, so that all matching files<br>
+are backed up into the same directory, the file names in this<br>
+directory will be the full name of the file backed up with all<br>
+directory separators changed to `!' to prevent clashes.  This will not<br>
+work correctly if your filesystem truncates the resulting name.<br>
+<br>
+For the common case of all backups going into one directory, the alist<br>
+should contain a single element pairing "." with the appropriate<br>
+directory name.<br>
+<br>
+If this variable is nil, or it fails to match a filename, the backup<br>
+is made in the original file's directory.<br>
+<br>
 On MS-DOS filesystems without long names this variable is always
 ignored.</p>

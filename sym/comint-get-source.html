@@ -1,19 +1,19 @@
 <h3>Function: comint-get-source</h3>
 <p>
-Prompt for filenames in commands that process source files,
-e.g. loading or compiling a file.
-Provides a default, if there is one, and returns the result filename.</p>
-<p>
-See `comint-source-default' for more on determining defaults.</p>
-<p>
-PROMPT is the prompt string.  PREV-DIR/FILE is the (DIRECTORY . FILE) pair
-from the last source processing command.  SOURCE-MODES is a list of major
-modes used to determine what file buffers contain source files.  (These
-two arguments are used for determining defaults.)  If MUSTMATCH-P is true,
-then the filename reader will only accept a file that exists.</p>
-<p>
-A typical use:
- (interactive (comint-get-source "Compile file: " prev-lisp-dir/file
-                                 '(lisp-mode) t))</p>
-<p>
+Prompt for filenames in commands that process source files,<br>
+e.g. loading or compiling a file.<br>
+Provides a default, if there is one, and returns the result filename.<br>
+<br>
+See `comint-source-default' for more on determining defaults.<br>
+<br>
+PROMPT is the prompt string.  PREV-DIR/FILE is the (DIRECTORY . FILE) pair<br>
+from the last source processing command.  SOURCE-MODES is a list of major<br>
+modes used to determine what file buffers contain source files.  (These<br>
+two arguments are used for determining defaults.)  If MUSTMATCH-P is true,<br>
+then the filename reader will only accept a file that exists.<br>
+<br>
+A typical use:<br>
+ (interactive (comint-get-source "Compile file: " prev-lisp-dir/file<br>
+                                 '(lisp-mode) t))
+
 (fn PROMPT PREV-DIR/FILE SOURCE-MODES MUSTMATCH-P)</p>

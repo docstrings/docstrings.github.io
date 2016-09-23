@@ -1,17 +1,17 @@
 <h3>Function: delete</h3>
 <p>
-Delete members of SEQ which are `equal' to ELT, and return the result.
-SEQ must be a sequence (i.e. a list, a vector, or a string).
-The return value is a sequence of the same type.</p>
-<p>
-If SEQ is a list, this behaves like `delq', except that it compares
-with `equal' instead of `eq'.  In particular, it may remove elements
-by altering the list structure.</p>
-<p>
-If SEQ is not a list, deletion is never performed destructively;
-instead this function creates and returns a new vector or string.</p>
-<p>
-Write `(setq foo (delete element foo))' to be sure of correctly
-changing the value of a sequence `foo'.</p>
-<p>
+Delete members of SEQ which are `equal' to ELT, and return the result.<br>
+SEQ must be a sequence (i.e. a list, a vector, or a string).<br>
+The return value is a sequence of the same type.<br>
+<br>
+If SEQ is a list, this behaves like `delq', except that it compares<br>
+with `equal' instead of `eq'.  In particular, it may remove elements<br>
+by altering the list structure.<br>
+<br>
+If SEQ is not a list, deletion is never performed destructively;<br>
+instead this function creates and returns a new vector or string.<br>
+<br>
+Write `(setq foo (delete element foo))' to be sure of correctly<br>
+changing the value of a sequence `foo'.
+
 (fn ELT SEQ)</p>

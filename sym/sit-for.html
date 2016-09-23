@@ -1,17 +1,17 @@
 <h3>Function: sit-for</h3>
 <p>
-Perform redisplay, then wait for SECONDS seconds or until input is available.
-SECONDS may be a floating-point value.
-(On operating systems that do not support waiting for fractions of a
-second, floating-point values are rounded down to the nearest integer.)</p>
-<p>
-If optional arg NODISP is t, don't redisplay, just wait for input.
-Redisplay does not happen if input is available before it starts.</p>
-<p>
-Value is t if waited the full time with no input arriving, and nil otherwise.</p>
-<p>
-An obsolete, but still supported form is
-(sit-for SECONDS &optional MILLISECONDS NODISP)
-where the optional arg MILLISECONDS specifies an additional wait period,
+Perform redisplay, then wait for SECONDS seconds or until input is available.<br>
+SECONDS may be a floating-point value.<br>
+(On operating systems that do not support waiting for fractions of a<br>
+second, floating-point values are rounded down to the nearest integer.)<br>
+<br>
+If optional arg NODISP is t, don't redisplay, just wait for input.<br>
+Redisplay does not happen if input is available before it starts.<br>
+<br>
+Value is t if waited the full time with no input arriving, and nil otherwise.<br>
+<br>
+An obsolete, but still supported form is<br>
+(sit-for SECONDS &optional MILLISECONDS NODISP)<br>
+where the optional arg MILLISECONDS specifies an additional wait period,<br>
 in milliseconds; this was useful when Emacs was built without
 floating point support.</p>

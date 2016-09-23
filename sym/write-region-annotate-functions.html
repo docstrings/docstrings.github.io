@@ -1,24 +1,24 @@
 <h3>Variable: write-region-annotate-functions</h3>
 <p>
-A list of functions to be called at the start of `write-region'.
-Each is passed two arguments, START and END as for `write-region'.
-These are usually two numbers but not always; see the documentation
-for `write-region'.  The function should return a list of pairs
-of the form (POSITION . STRING), consisting of strings to be effectively
-inserted at the specified positions of the file being written (1 means to
-insert before the first byte written).  The POSITIONs must be sorted into
-increasing order.</p>
-<p>
-If there are several annotation functions, the lists returned by these
-functions are merged destructively.  As each annotation function runs,
-the variable `write-region-annotations-so-far' contains a list of all
-annotations returned by previous annotation functions.</p>
-<p>
-An annotation function can return with a different buffer current.
-Doing so removes the annotations returned by previous functions, and
-resets START and END to `point-min' and `point-max' of the new buffer.</p>
-<p>
-After `write-region' completes, Emacs calls the function stored in
-`write-region-post-annotation-function', once for each buffer that was
+A list of functions to be called at the start of `write-region'.<br>
+Each is passed two arguments, START and END as for `write-region'.<br>
+These are usually two numbers but not always; see the documentation<br>
+for `write-region'.  The function should return a list of pairs<br>
+of the form (POSITION . STRING), consisting of strings to be effectively<br>
+inserted at the specified positions of the file being written (1 means to<br>
+insert before the first byte written).  The POSITIONs must be sorted into<br>
+increasing order.<br>
+<br>
+If there are several annotation functions, the lists returned by these<br>
+functions are merged destructively.  As each annotation function runs,<br>
+the variable `write-region-annotations-so-far' contains a list of all<br>
+annotations returned by previous annotation functions.<br>
+<br>
+An annotation function can return with a different buffer current.<br>
+Doing so removes the annotations returned by previous functions, and<br>
+resets START and END to `point-min' and `point-max' of the new buffer.<br>
+<br>
+After `write-region' completes, Emacs calls the function stored in<br>
+`write-region-post-annotation-function', once for each buffer that was<br>
 current when building the annotations (i.e., at least once), with that
 buffer current.</p>

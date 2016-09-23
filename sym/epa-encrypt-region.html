@@ -1,20 +1,20 @@
 <h3>Function: epa-encrypt-region</h3>
 <p>
-Encrypt the current region between START and END for RECIPIENTS.</p>
-<p>
-Don't use this command in Lisp programs!
-Since this function operates on regions, it does some tricks such
-as coding-system detection and unibyte/multibyte conversion.  If
-you are sure how the data should be treated, you should consider
-using the string based counterpart `epg-encrypt-string', or the
-file based counterpart `epg-encrypt-file' instead.</p>
-<p>
-For example:</p>
-<p>
-(let ((context (epg-make-context 'OpenPGP)))
-  (epg-encrypt-string
-    context
+Encrypt the current region between START and END for RECIPIENTS.<br>
+<br>
+Don't use this command in Lisp programs!<br>
+Since this function operates on regions, it does some tricks such<br>
+as coding-system detection and unibyte/multibyte conversion.  If<br>
+you are sure how the data should be treated, you should consider<br>
+using the string based counterpart `epg-encrypt-string', or the<br>
+file based counterpart `epg-encrypt-file' instead.<br>
+<br>
+For example:<br>
+<br>
+(let ((context (epg-make-context 'OpenPGP)))<br>
+  (epg-encrypt-string<br>
+    context<br>
     (encode-coding-string (buffer-substring start end) 'utf-8)
-    nil))</p>
-<p>
+    nil))
+
 (fn START END RECIPIENTS SIGN SIGNERS)</p>

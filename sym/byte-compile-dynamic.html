@@ -1,13 +1,13 @@
 <h3>Variable: byte-compile-dynamic</h3>
 <p>
-If non-nil, compile function bodies so they load lazily.
-They are hidden in comments in the compiled file,
-and each one is brought into core when the
-function is called.</p>
-<p>
-To enable this option, make it a file-local variable
-in the source file you want it to apply to.
-For example, add  -*-byte-compile-dynamic: t;-*- on the first line.</p>
-<p>
-When this option is true, if you load the compiled file and then move it,
+If non-nil, compile function bodies so they load lazily.<br>
+They are hidden in comments in the compiled file,<br>
+and each one is brought into core when the<br>
+function is called.<br>
+<br>
+To enable this option, make it a file-local variable<br>
+in the source file you want it to apply to.<br>
+For example, add  -*-byte-compile-dynamic: t;-*- on the first line.<br>
+<br>
+When this option is true, if you load the compiled file and then move it,<br>
 the functions you loaded will not be able to run.</p>

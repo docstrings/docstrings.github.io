@@ -1,12 +1,12 @@
 <h3>Function: find-definition-noselect</h3>
 <p>
-Return a pair `(BUFFER . POINT)' pointing to the definition of SYMBOL.
-If the definition can't be found in the buffer, return (BUFFER).
-TYPE says what type of definition: nil for a function, `defvar' for a
-variable, `defface' for a face.  This function does not switch to the
-buffer nor display it.</p>
-<p>
-The library where SYMBOL is defined is searched for in FILE or
-`find-function-source-path', if non-nil, otherwise in `load-path'.</p>
-<p>
+Return a pair `(BUFFER . POINT)' pointing to the definition of SYMBOL.<br>
+If the definition can't be found in the buffer, return (BUFFER).<br>
+TYPE says what type of definition: nil for a function, `defvar' for a<br>
+variable, `defface' for a face.  This function does not switch to the<br>
+buffer nor display it.<br>
+<br>
+The library where SYMBOL is defined is searched for in FILE or<br>
+`find-function-source-path', if non-nil, otherwise in `load-path'.<br>
+
 (fn SYMBOL TYPE &optional FILE)</p>

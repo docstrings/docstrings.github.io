@@ -1,17 +1,17 @@
 <h3>Function: color-values</h3>
 <p>
-Return a description of the color named COLOR on frame FRAME.
-COLOR should be a string naming a color (e.g. "white"), or a
-string specifying a color's RGB components (e.g. "#ff12ec").</p>
-<p>
-Return a list of three integers, (RED GREEN BLUE), each between 0
-and either 65280 or 65535 (the maximum depends on the system).
-Use `color-name-to-rgb' if you want RGB floating-point values
-normalized to 1.0.</p>
-<p>
-If FRAME is omitted or nil, use the selected frame.
-If FRAME cannot display COLOR, the value is nil.</p>
-<p>
-COLOR can also be the symbol `unspecified' or one of the strings
+Return a description of the color named COLOR on frame FRAME.<br>
+COLOR should be a string naming a color (e.g. "white"), or a<br>
+string specifying a color's RGB components (e.g. "#ff12ec").<br>
+<br>
+Return a list of three integers, (RED GREEN BLUE), each between 0<br>
+and either 65280 or 65535 (the maximum depends on the system).<br>
+Use `color-name-to-rgb' if you want RGB floating-point values<br>
+normalized to 1.0.<br>
+<br>
+If FRAME is omitted or nil, use the selected frame.<br>
+If FRAME cannot display COLOR, the value is nil.<br>
+<br>
+COLOR can also be the symbol `unspecified' or one of the strings<br>
 "unspecified-fg" or "unspecified-bg", in which case the
 return value is nil.</p>

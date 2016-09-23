@@ -1,32 +1,32 @@
 <h3>Function: ps-extend-face</h3>
 <p>
-Extend face in ALIST-SYM.</p>
-<p>
-If optional MERGE-P is non-nil, extensions in FACE-EXTENSION list are merged
-with face extensions in ALIST-SYM; otherwise, overrides.</p>
-<p>
-If optional ALIST-SYM is nil, `ps-print-face-extension-alist' is used;
-otherwise, it should be an alist symbol.</p>
-<p>
-The elements of FACE-EXTENSION list have the form:</p>
-<p>
-   (FACE-NAME FOREGROUND BACKGROUND EXTENSION...)</p>
-<p>
-FACE-NAME is a face name symbol.</p>
-<p>
-FOREGROUND and BACKGROUND may be nil or a string that denotes the
-foreground and background colors respectively.</p>
-<p>
-EXTENSION is one of the following symbols:
-   bold      - use bold font.
-   italic    - use italic font.
-   underline - put a line under text.
-   strikeout - like underline, but the line is in middle of text.
-   overline  - like underline, but the line is over the text.
-   shadow    - text will have a shadow.
-   box       - text will be surrounded by a box.
-   outline   - print characters as hollow outlines.</p>
-<p>
-If EXTENSION is any other symbol, it is ignored.</p>
-<p>
+Extend face in ALIST-SYM.<br>
+<br>
+If optional MERGE-P is non-nil, extensions in FACE-EXTENSION list are merged<br>
+with face extensions in ALIST-SYM; otherwise, overrides.<br>
+<br>
+If optional ALIST-SYM is nil, `ps-print-face-extension-alist' is used;<br>
+otherwise, it should be an alist symbol.<br>
+<br>
+The elements of FACE-EXTENSION list have the form:<br>
+<br>
+   (FACE-NAME FOREGROUND BACKGROUND EXTENSION...)<br>
+<br>
+FACE-NAME is a face name symbol.<br>
+<br>
+FOREGROUND and BACKGROUND may be nil or a string that denotes the<br>
+foreground and background colors respectively.<br>
+<br>
+EXTENSION is one of the following symbols:<br>
+   bold      - use bold font.<br>
+   italic    - use italic font.<br>
+   underline - put a line under text.<br>
+   strikeout - like underline, but the line is in middle of text.<br>
+   overline  - like underline, but the line is over the text.<br>
+   shadow    - text will have a shadow.<br>
+   box       - text will be surrounded by a box.<br>
+   outline   - print characters as hollow outlines.
+
+If EXTENSION is any other symbol, it is ignored.
+
 (fn FACE-EXTENSION &optional MERGE-P ALIST-SYM)</p>

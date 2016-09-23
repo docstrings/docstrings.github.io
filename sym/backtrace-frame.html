@@ -1,13 +1,13 @@
 <h3>Function: backtrace-frame</h3>
 <p>
-Return the function and arguments NFRAMES up from current execution point.
-If that frame has not evaluated the arguments yet (or is a special form),
-the value is (nil FUNCTION ARG-FORMS...).
-If that frame has evaluated its arguments and called its function already,
-the value is (t FUNCTION ARG-VALUES...).
-A &rest arg is represented as the tail of the list ARG-VALUES.
-FUNCTION is whatever was supplied as car of evaluated list,
-or a lambda expression for macro calls.
-If NFRAMES is more than the number of frames, the value is nil.</p>
-<p>
+Return the function and arguments NFRAMES up from current execution point.<br>
+If that frame has not evaluated the arguments yet (or is a special form),<br>
+the value is (nil FUNCTION ARG-FORMS...).<br>
+If that frame has evaluated its arguments and called its function already,<br>
+the value is (t FUNCTION ARG-VALUES...).<br>
+A &rest arg is represented as the tail of the list ARG-VALUES.<br>
+FUNCTION is whatever was supplied as car of evaluated list,<br>
+or a lambda expression for macro calls.<br>
+If NFRAMES is more than the number of frames, the value is nil.
+
 (fn NFRAMES)</p>

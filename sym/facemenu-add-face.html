@@ -1,13 +1,13 @@
 <h3>Function: facemenu-add-face</h3>
 <p>
-Add FACE to text between START and END.
-If START is nil or START to END is empty, add FACE to next typed character
-instead.  For each section of that region that has a different face property,
-FACE will be consed onto it, and other faces that are completely hidden by
-that will be removed from the list.
-If `facemenu-add-face-function' and maybe `facemenu-end-add-face' are non-nil,
-they are used to set the face information.</p>
-<p>
-As a special case, if FACE is `default', then the region is left with NO face
-text property.  Otherwise, selecting the default face would not have any
+Add FACE to text between START and END.<br>
+If START is nil or START to END is empty, add FACE to next typed character<br>
+instead.  For each section of that region that has a different face property,<br>
+FACE will be consed onto it, and other faces that are completely hidden by<br>
+that will be removed from the list.<br>
+If `facemenu-add-face-function' and maybe `facemenu-end-add-face' are non-nil,<br>
+they are used to set the face information.<br>
+<br>
+As a special case, if FACE is `default', then the region is left with NO face<br>
+text property.  Otherwise, selecting the default face would not have any<br>
 effect.  See `facemenu-remove-face-function'.</p>

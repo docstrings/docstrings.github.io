@@ -1,38 +1,38 @@
 <h3>Function: calendar</h3>
 <p>
-Display a three-month Gregorian calendar.
-The three months appear side by side, with the current month in
-the middle surrounded by the previous and next months.  The
-cursor is put on today's date.  If optional prefix argument ARG
-is non-nil, prompts for the central month and year.</p>
-<p>
-Once in the calendar window, future or past months can be moved
-into view.  Arbitrary months can be displayed, or the calendar
-can be scrolled forward or backward.  The cursor can be moved
-forward or backward by one day, one week, one month, or one year.
-All of these commands take prefix arguments which, when negative,
-cause movement in the opposite direction.  For convenience, the
-digit keys and the minus sign are automatically prefixes.  Use
-C-h m for details of the key bindings in the calendar
-window.</p>
-<p>
-Displays the calendar in a separate window, or optionally in a
-separate frame, depending on the value of `calendar-setup'.</p>
-<p>
-If `calendar-view-diary-initially-flag' is non-nil, also displays the
-diary entries for the current date (or however many days
-`diary-number-of-entries' specifies).  This variable can be
-overridden by `calendar-setup'.  As well as being displayed,
-diary entries can also be marked on the calendar (see
-`calendar-mark-diary-entries-flag').</p>
-<p>
-Runs the following hooks:</p>
-<p>
-`calendar-load-hook' - after loading calendar.el
-`calendar-today-visible-hook', `calendar-today-invisible-hook' - after
-   generating a calendar, if today's date is visible or not, respectively
-`calendar-initial-window-hook' - after first creating a calendar</p>
-<p>
-This function is suitable for execution in an init file.</p>
-<p>
+Display a three-month Gregorian calendar.<br>
+The three months appear side by side, with the current month in<br>
+the middle surrounded by the previous and next months.  The<br>
+cursor is put on today's date.  If optional prefix argument ARG<br>
+is non-nil, prompts for the central month and year.<br>
+<br>
+Once in the calendar window, future or past months can be moved<br>
+into view.  Arbitrary months can be displayed, or the calendar<br>
+can be scrolled forward or backward.  The cursor can be moved<br>
+forward or backward by one day, one week, one month, or one year.<br>
+All of these commands take prefix arguments which, when negative,<br>
+cause movement in the opposite direction.  For convenience, the<br>
+digit keys and the minus sign are automatically prefixes.  Use<br>
+C-h m for details of the key bindings in the calendar<br>
+window.<br>
+<br>
+Displays the calendar in a separate window, or optionally in a<br>
+separate frame, depending on the value of `calendar-setup'.<br>
+<br>
+If `calendar-view-diary-initially-flag' is non-nil, also displays the<br>
+diary entries for the current date (or however many days<br>
+`diary-number-of-entries' specifies).  This variable can be<br>
+overridden by `calendar-setup'.  As well as being displayed,<br>
+diary entries can also be marked on the calendar (see<br>
+`calendar-mark-diary-entries-flag').<br>
+<br>
+Runs the following hooks:<br>
+<br>
+`calendar-load-hook' - after loading calendar.el<br>
+`calendar-today-visible-hook', `calendar-today-invisible-hook' - after<br>
+   generating a calendar, if today's date is visible or not, respectively<br>
+`calendar-initial-window-hook' - after first creating a calendar
+
+This function is suitable for execution in an init file.
+
 (fn &optional ARG)</p>

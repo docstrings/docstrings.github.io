@@ -1,15 +1,15 @@
 <h3>Function: eudc-expand-inline</h3>
 <p>
-Query the directory server, and expand the query string before point.
-The query string consists of the buffer substring from the point back to
-the preceding comma, colon or beginning of line.
-The variable `eudc-inline-query-format' controls how to associate the
-individual inline query words with directory attribute names.
-After querying the server for the given string, the expansion specified by
-`eudc-inline-expansion-format' is inserted in the buffer at point.
-If REPLACE is non-nil, then this expansion replaces the name in the buffer.
-`eudc-expansion-overwrites-query' being non-nil inverts the meaning of REPLACE.
-Multiple servers can be tried with the same query until one finds a match,
-see `eudc-inline-expansion-servers'</p>
-<p>
+Query the directory server, and expand the query string before point.<br>
+The query string consists of the buffer substring from the point back to<br>
+the preceding comma, colon or beginning of line.<br>
+The variable `eudc-inline-query-format' controls how to associate the<br>
+individual inline query words with directory attribute names.<br>
+After querying the server for the given string, the expansion specified by<br>
+`eudc-inline-expansion-format' is inserted in the buffer at point.<br>
+If REPLACE is non-nil, then this expansion replaces the name in the buffer.<br>
+`eudc-expansion-overwrites-query' being non-nil inverts the meaning of REPLACE.<br>
+Multiple servers can be tried with the same query until one finds a match,<br>
+see `eudc-inline-expansion-servers'
+
 (fn &optional REPLACE)</p>

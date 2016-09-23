@@ -1,24 +1,24 @@
 <h3>Function: latin1-display</h3>
 <p>
-Set up Latin-1/ASCII display for the arguments character SETS.
-See option `latin1-display' for the method.  The members of the list
-must be in `latin1-display-sets'.  With no arguments, reset the
-display for all of `latin1-display-sets'. See also
-`latin1-display-setup'.</p>
-<p>
+Set up Latin-1/ASCII display for the arguments character SETS.<br>
+See option `latin1-display' for the method.  The members of the list<br>
+must be in `latin1-display-sets'.  With no arguments, reset the<br>
+display for all of `latin1-display-sets'. See also<br>
+`latin1-display-setup'.<br>
+
 (fn &rest SETS)</p>
 <h3>Variable: latin1-display</h3>
 <p>
-Set up Latin-1/ASCII display for ISO8859 character sets.
-This is done for each character set in the list `latin1-display-sets',
-if no font is available to display it.  Characters are displayed using
-the corresponding Latin-1 characters where they match.  Otherwise
-ASCII sequences are used, mostly following the Latin prefix input
-methods.  Some different ASCII sequences are used if
-`latin1-display-mnemonic' is non-nil.</p>
-<p>
-This option also treats some characters in the `mule-unicode-...'
-charsets if you don't have a Unicode font with which to display them.</p>
-<p>
-Setting this variable directly does not take effect;
+Set up Latin-1/ASCII display for ISO8859 character sets.<br>
+This is done for each character set in the list `latin1-display-sets',<br>
+if no font is available to display it.  Characters are displayed using<br>
+the corresponding Latin-1 characters where they match.  Otherwise<br>
+ASCII sequences are used, mostly following the Latin prefix input<br>
+methods.  Some different ASCII sequences are used if<br>
+`latin1-display-mnemonic' is non-nil.<br>
+<br>
+This option also treats some characters in the `mule-unicode-...'<br>
+charsets if you don't have a Unicode font with which to display them.<br>
+<br>
+Setting this variable directly does not take effect;<br>
 use either M-x customize or the function `latin1-display'.</p>

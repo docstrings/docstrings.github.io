@@ -1,10 +1,10 @@
 <h3>Function: custom-make-theme-feature</h3>
 <p>
-Given a symbol THEME, create a new symbol by appending "-theme".
-Store this symbol in the `theme-feature' property of THEME.
-Calling `provide-theme' to provide THEME actually puts `THEME-theme'
-into `features'.</p>
-<p>
-This allows for a file-name convention for autoloading themes:
-Every theme X has a property `provide-theme' whose value is "X-theme".
+Given a symbol THEME, create a new symbol by appending "-theme".<br>
+Store this symbol in the `theme-feature' property of THEME.<br>
+Calling `provide-theme' to provide THEME actually puts `THEME-theme'<br>
+into `features'.<br>
+<br>
+This allows for a file-name convention for autoloading themes:<br>
+Every theme X has a property `provide-theme' whose value is "X-theme".<br>
 (load-theme X) then attempts to load the file `X-theme.el'.</p>

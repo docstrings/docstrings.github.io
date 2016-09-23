@@ -1,21 +1,21 @@
 <h3>Function: create-fontset-from-fontset-spec</h3>
 <p>
-Create a fontset from fontset specification string FONTSET-SPEC.
-FONTSET-SPEC is a string of the format:
-	FONTSET-NAME,SCRIPT-NAME0:FONT-NAME0,SCRIPT-NAME1:FONT-NAME1, ...
-Any number of SPACE, TAB, and NEWLINE can be put before and after commas.</p>
-<p>
-When a frame uses the fontset as the `font' parameter, the frame's
-default font name is derived from FONTSET-NAME by substituting
-"iso8859-1" for the tail part "fontset-XXX".  But, if SCRIPT-NAMEn
-is "ascii", use the corresponding FONT-NAMEn as the default font
-name.</p>
-<p>
-Optional 2nd and 3rd arguments exist just for backward compatibility,
-and are ignored.</p>
-<p>
-It returns a name of the created fontset.</p>
-<p>
-For backward compatibility, SCRIPT-NAME may be a charset name, in
+Create a fontset from fontset specification string FONTSET-SPEC.<br>
+FONTSET-SPEC is a string of the format:<br>
+	FONTSET-NAME,SCRIPT-NAME0:FONT-NAME0,SCRIPT-NAME1:FONT-NAME1, ...<br>
+Any number of SPACE, TAB, and NEWLINE can be put before and after commas.<br>
+<br>
+When a frame uses the fontset as the `font' parameter, the frame's<br>
+default font name is derived from FONTSET-NAME by substituting<br>
+"iso8859-1" for the tail part "fontset-XXX".  But, if SCRIPT-NAMEn<br>
+is "ascii", use the corresponding FONT-NAMEn as the default font<br>
+name.<br>
+<br>
+Optional 2nd and 3rd arguments exist just for backward compatibility,<br>
+and are ignored.<br>
+<br>
+It returns a name of the created fontset.<br>
+<br>
+For backward compatibility, SCRIPT-NAME may be a charset name, in<br>
 which case, the corresponding script is decided by the variable
 `charset-script-alist' (which see).</p>

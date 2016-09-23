@@ -1,26 +1,26 @@
 <h3>Function: display-buffer-in-atom-window</h3>
 <p>
-Display BUFFER in an atomic window.
-This function displays BUFFER in a new window that will be
-combined with an existing window to form an atomic window.  If
-the existing window is already part of an atomic window, add the
-new window to that atomic window.  Operations like `split-window'
-or `delete-window', when applied to a constituent of an atomic
-window, are applied atomically to the root of that atomic window.</p>
-<p>
-ALIST is an association list of symbols and values.  The
-following symbols can be used.</p>
-<p>
-`window' specifies the existing window the new window shall be
-  combined with.  Use `window-atom-root' to make the new window a
-  sibling of an atomic window's root.  If an internal window is
-  specified here, all children of that window become part of the
-  atomic window too.  If no window is specified, the new window
-  becomes a sibling of the selected window.</p>
-<p>
-`side' denotes the side of the existing window where the new
-  window shall be located.  Valid values are `below', `right',
-  `above' and `left'.  The default is `below'.</p>
-<p>
+Display BUFFER in an atomic window.<br>
+This function displays BUFFER in a new window that will be<br>
+combined with an existing window to form an atomic window.  If<br>
+the existing window is already part of an atomic window, add the<br>
+new window to that atomic window.  Operations like `split-window'<br>
+or `delete-window', when applied to a constituent of an atomic<br>
+window, are applied atomically to the root of that atomic window.<br>
+<br>
+ALIST is an association list of symbols and values.  The<br>
+following symbols can be used.<br>
+<br>
+`window' specifies the existing window the new window shall be<br>
+  combined with.  Use `window-atom-root' to make the new window a<br>
+  sibling of an atomic window's root.  If an internal window is<br>
+  specified here, all children of that window become part of the<br>
+  atomic window too.  If no window is specified, the new window<br>
+  becomes a sibling of the selected window.<br>
+<br>
+`side' denotes the side of the existing window where the new<br>
+  window shall be located.  Valid values are `below', `right',<br>
+  `above' and `left'.  The default is `below'.
+
 The return value is the new window, nil when creating that window
 failed.</p>

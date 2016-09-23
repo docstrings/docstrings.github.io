@@ -1,25 +1,25 @@
 <h3>Function: window-resizable</h3>
 <p>
-Return DELTA if WINDOW can be resized vertically by DELTA lines.
-WINDOW must be a valid window and defaults to the selected one.
-Optional argument HORIZONTAL non-nil means return DELTA if WINDOW
-can be resized horizontally by DELTA columns.  A return value of
-zero means that WINDOW is not resizable.</p>
-<p>
-DELTA positive means WINDOW shall be enlarged by DELTA lines or
-columns.  If WINDOW cannot be enlarged by DELTA lines or columns
-return the maximum value in the range 0..DELTA by which WINDOW
-can be enlarged.</p>
-<p>
-DELTA negative means WINDOW shall be shrunk by -DELTA lines or
-columns.  If WINDOW cannot be shrunk by -DELTA lines or columns,
-return the minimum value in the range DELTA..0 that can be used
-for shrinking WINDOW.</p>
-<p>
-Optional argument IGNORE non-nil means ignore restrictions
-imposed by fixed size windows, `window-min-height' or
-`window-min-width' settings.  If IGNORE is a window, ignore
-restrictions for that window only.  If IGNORE equals `safe',
-live windows may get as small as `window-safe-min-height' lines
+Return DELTA if WINDOW can be resized vertically by DELTA lines.<br>
+WINDOW must be a valid window and defaults to the selected one.<br>
+Optional argument HORIZONTAL non-nil means return DELTA if WINDOW<br>
+can be resized horizontally by DELTA columns.  A return value of<br>
+zero means that WINDOW is not resizable.<br>
+<br>
+DELTA positive means WINDOW shall be enlarged by DELTA lines or<br>
+columns.  If WINDOW cannot be enlarged by DELTA lines or columns<br>
+return the maximum value in the range 0..DELTA by which WINDOW<br>
+can be enlarged.<br>
+<br>
+DELTA negative means WINDOW shall be shrunk by -DELTA lines or<br>
+columns.  If WINDOW cannot be shrunk by -DELTA lines or columns,<br>
+return the minimum value in the range DELTA..0 that can be used<br>
+for shrinking WINDOW.<br>
+<br>
+Optional argument IGNORE non-nil means ignore restrictions<br>
+imposed by fixed size windows, `window-min-height' or<br>
+`window-min-width' settings.  If IGNORE is a window, ignore<br>
+restrictions for that window only.  If IGNORE equals `safe',<br>
+live windows may get as small as `window-safe-min-height' lines<br>
 and `window-safe-min-width' columns.  Any other non-nil value
 means ignore all of the above restrictions for all windows.</p>

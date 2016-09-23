@@ -1,20 +1,20 @@
 <h3>Function: resume-tty</h3>
 <p>
-Resume the previously suspended terminal device TTY.
-The terminal is opened and reinitialized.  Frames that are on the
-suspended terminal are revived.</p>
-<p>
-It is an error to resume a terminal while another terminal is active
-on the same device.</p>
-<p>
-This function runs `resume-tty-functions' after resuming the terminal.
-The functions are run with one arg, the id of the resumed terminal
-device.</p>
-<p>
-`resume-tty' does nothing if it is called on a device that is not
-suspended.</p>
-<p>
+Resume the previously suspended terminal device TTY.<br>
+The terminal is opened and reinitialized.  Frames that are on the<br>
+suspended terminal are revived.<br>
+<br>
+It is an error to resume a terminal while another terminal is active<br>
+on the same device.<br>
+<br>
+This function runs `resume-tty-functions' after resuming the terminal.<br>
+The functions are run with one arg, the id of the resumed terminal<br>
+device.<br>
+<br>
+`resume-tty' does nothing if it is called on a device that is not<br>
+suspended.<br>
+<br>
 TTY may be a terminal object, a frame, or nil (meaning the selected
-frame's terminal).</p>
-<p>
+frame's terminal).
+
 (fn &optional TTY)</p>

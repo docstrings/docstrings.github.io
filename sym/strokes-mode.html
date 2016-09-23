@@ -1,32 +1,32 @@
 <h3>Function: strokes-mode</h3>
 <p>
-Toggle Strokes mode, a global minor mode.
-With a prefix argument ARG, enable Strokes mode if ARG is
-positive, and disable it otherwise.  If called from Lisp, enable
-the mode if ARG is omitted or nil.</p>
-<p>
+Toggle Strokes mode, a global minor mode.<br>
+With a prefix argument ARG, enable Strokes mode if ARG is<br>
+positive, and disable it otherwise.  If called from Lisp, enable<br>
+the mode if ARG is omitted or nil.<br>
+<br>
+<br>
+Uses keymap `strokes-mode-map', which is not currently defined.<br>
+<br>
+Strokes are pictographic mouse gestures which invoke commands.<br>
+Strokes are invoked with M-x strokes-do-stroke.  You can define<br>
+new strokes with M-x strokes-global-set-stroke.  See also<br>
+M-x strokes-do-complex-stroke for `complex' strokes.<br>
+<br>
+To use strokes for pictographic editing, such as Chinese/Japanese, use<br>
+M-x strokes-compose-complex-stroke, which draws strokes and inserts them.<br>
+Encode/decode your strokes with M-x strokes-encode-buffer,<br>
+M-x strokes-decode-buffer.<br>
+<br>
+<br>
+Uses keymap `strokes-mode-map', which is not currently defined.
 
-Uses keymap `strokes-mode-map', which is not currently defined.</p>
-<p>
-Strokes are pictographic mouse gestures which invoke commands.
-Strokes are invoked with M-x strokes-do-stroke.  You can define
-new strokes with M-x strokes-global-set-stroke.  See also
-M-x strokes-do-complex-stroke for `complex' strokes.</p>
-<p>
-To use strokes for pictographic editing, such as Chinese/Japanese, use
-M-x strokes-compose-complex-stroke, which draws strokes and inserts them.
-Encode/decode your strokes with M-x strokes-encode-buffer,
-M-x strokes-decode-buffer.</p>
-<p>
-
-Uses keymap `strokes-mode-map', which is not currently defined.</p>
-<p>
 
 (fn &optional ARG)</p>
 <h3>Variable: strokes-mode</h3>
 <p>
-Non-nil if Strokes mode is enabled.
-See the command `strokes-mode' for a description of this minor mode.
-Setting this variable directly does not take effect;
-either customize it (see the info node `Easy Customization')
+Non-nil if Strokes mode is enabled.<br>
+See the command `strokes-mode' for a description of this minor mode.<br>
+Setting this variable directly does not take effect;<br>
+either customize it (see the info node `Easy Customization')<br>
 or call the function `strokes-mode'.</p>

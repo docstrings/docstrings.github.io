@@ -1,18 +1,18 @@
 <h3>Function: mouse-secondary-save-then-kill</h3>
 <p>
-Set the secondary selection and save it to the kill ring.
-The second time, kill it.  CLICK should be a mouse click event.</p>
-<p>
-If you have not called `mouse-start-secondary' in the clicked
-buffer, activate the secondary selection and set it between point
-and the click position CLICK.</p>
-<p>
-Otherwise, adjust the bounds of the secondary selection.
-Normally, do this by moving its beginning or end, whichever is
-closer, to CLICK.  But if you have selected whole words or lines,
-adjust to the word or line boundary closest to CLICK instead.</p>
-<p>
-If this command is called a second consecutive time with the same
-CLICK position, kill the secondary selection.</p>
-<p>
+Set the secondary selection and save it to the kill ring.<br>
+The second time, kill it.  CLICK should be a mouse click event.<br>
+<br>
+If you have not called `mouse-start-secondary' in the clicked<br>
+buffer, activate the secondary selection and set it between point<br>
+and the click position CLICK.<br>
+<br>
+Otherwise, adjust the bounds of the secondary selection.<br>
+Normally, do this by moving its beginning or end, whichever is<br>
+closer, to CLICK.  But if you have selected whole words or lines,<br>
+adjust to the word or line boundary closest to CLICK instead.<br>
+<br>
+If this command is called a second consecutive time with the same<br>
+CLICK position, kill the secondary selection.
+
 (fn CLICK)</p>

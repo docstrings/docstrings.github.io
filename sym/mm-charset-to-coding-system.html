@@ -1,13 +1,13 @@
 <h3>Function: mm-charset-to-coding-system</h3>
 <p>
-Return coding-system corresponding to CHARSET.
-CHARSET is a symbol naming a MIME charset.
-If optional argument LBT (`unix', `dos' or `mac') is specified, it is
-used as the line break code type of the coding system.</p>
-<p>
-If ALLOW-OVERRIDE is given, use `mm-charset-override-alist' to
-map undesired charset names to their replacement.  This should
-only be used for decoding, not for encoding.</p>
-<p>
+Return coding-system corresponding to CHARSET.<br>
+CHARSET is a symbol naming a MIME charset.<br>
+If optional argument LBT (`unix', `dos' or `mac') is specified, it is<br>
+used as the line break code type of the coding system.<br>
+<br>
+If ALLOW-OVERRIDE is given, use `mm-charset-override-alist' to<br>
+map undesired charset names to their replacement.  This should<br>
+only be used for decoding, not for encoding.<br>
+<br>
 A non-nil value of SILENT means don't issue a warning even if CHARSET
 is not available.</p>

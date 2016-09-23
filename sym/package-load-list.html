@@ -1,15 +1,15 @@
 <h3>Variable: package-load-list</h3>
 <p>
-List of packages for `package-initialize' to load.
-Each element in this list should be a list (NAME VERSION), or the
-symbol `all'.  The symbol `all' says to load the latest installed
-versions of all packages not specified by other elements.</p>
-<p>
-For an element (NAME VERSION), NAME is a package name (a symbol).
-VERSION should be t, a string, or nil.
-If VERSION is t, all versions are loaded, though obsolete ones
- will be put in `package-obsolete-alist' and not activated.
-If VERSION is a string, only that version is ever loaded.
- Any other version, even if newer, is silently ignored.
- Hence, the package is "held" at that version.
+List of packages for `package-initialize' to load.<br>
+Each element in this list should be a list (NAME VERSION), or the<br>
+symbol `all'.  The symbol `all' says to load the latest installed<br>
+versions of all packages not specified by other elements.<br>
+<br>
+For an element (NAME VERSION), NAME is a package name (a symbol).<br>
+VERSION should be t, a string, or nil.<br>
+If VERSION is t, all versions are loaded, though obsolete ones<br>
+ will be put in `package-obsolete-alist' and not activated.<br>
+If VERSION is a string, only that version is ever loaded.<br>
+ Any other version, even if newer, is silently ignored.<br>
+ Hence, the package is "held" at that version.<br>
 If VERSION is nil, the package is not loaded (it is "disabled").</p>

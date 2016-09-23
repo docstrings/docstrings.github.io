@@ -1,24 +1,24 @@
 <h3>Variable: mail-user-agent</h3>
 <p>
-Your preference for a mail composition package.
-Various Emacs Lisp packages (e.g. Reporter) require you to compose an
-outgoing email message.  This variable lets you specify which
-mail-sending package you prefer.</p>
-<p>
-Valid values include:</p>
-<p>
-  `message-user-agent'  -- use the Message package.
-                           See Info node `(message)'.
-  `sendmail-user-agent' -- use the Mail package.
-                           See Info node `(emacs)Sending Mail'.
-  `mh-e-user-agent'     -- use the Emacs interface to the MH mail system.
-                           See Info node `(mh-e)'.
-  `gnus-user-agent'     -- like `message-user-agent', but with Gnus
-                           paraphernalia if Gnus is running, particularly
-                           the Gcc: header for archiving.</p>
-<p>
-Additional valid symbols may be available; check with the author of
+Your preference for a mail composition package.<br>
+Various Emacs Lisp packages (e.g. Reporter) require you to compose an<br>
+outgoing email message.  This variable lets you specify which<br>
+mail-sending package you prefer.<br>
+<br>
+Valid values include:<br>
+<br>
+  `message-user-agent'  -- use the Message package.<br>
+                           See Info node `(message)'.<br>
+  `sendmail-user-agent' -- use the Mail package.<br>
+                           See Info node `(emacs)Sending Mail'.<br>
+  `mh-e-user-agent'     -- use the Emacs interface to the MH mail system.<br>
+                           See Info node `(mh-e)'.<br>
+  `gnus-user-agent'     -- like `message-user-agent', but with Gnus<br>
+                           paraphernalia if Gnus is running, particularly<br>
+                           the Gcc: header for archiving.<br>
+<br>
+Additional valid symbols may be available; check with the author of<br>
 your package for details.  The function should return non-nil if it
-succeeds.</p>
-<p>
+succeeds.
+
 See also `read-mail-command' concerning reading mail.</p>

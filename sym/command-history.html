@@ -1,26 +1,26 @@
 <h3>Function: command-history</h3>
 <p>
-Examine commands from `command-history' in a buffer.
-The number of commands listed is controlled by `list-command-history-max'.
-The command history is filtered by `list-command-history-filter' if non-nil.
-Use 
-Uses keymap `command-history-map', which is not currently defined.
-M-x command-history-repeat to repeat the command on the current line.</p>
-<p>
-Otherwise much like Emacs-Lisp Mode except that there is no self-insertion
-and digits provide prefix arguments.  Tab does not indent.</p>
-<p>
-Uses keymap `command-history-map', which is not currently defined.</p>
-<p>
+Examine commands from `command-history' in a buffer.<br>
+The number of commands listed is controlled by `list-command-history-max'.<br>
+The command history is filtered by `list-command-history-filter' if non-nil.<br>
+Use <br>
+Uses keymap `command-history-map', which is not currently defined.<br>
+M-x command-history-repeat to repeat the command on the current line.<br>
+<br>
+Otherwise much like Emacs-Lisp Mode except that there is no self-insertion<br>
+and digits provide prefix arguments.  Tab does not indent.<br>
+<br>
+Uses keymap `command-history-map', which is not currently defined.<br>
+<br>
+<br>
+This command always recompiles the Command History listing<br>
+and runs the normal hook `command-history-hook'.
 
-This command always recompiles the Command History listing
-and runs the normal hook `command-history-hook'.</p>
-<p>
 (fn)</p>
 <h3>Variable: command-history</h3>
 <p>
-List of recent commands that read arguments from terminal.
-Each command is represented as a form to evaluate.</p>
-<p>
-Maximum length of the history list is determined by the value
+List of recent commands that read arguments from terminal.<br>
+Each command is represented as a form to evaluate.<br>
+<br>
+Maximum length of the history list is determined by the value<br>
 of `history-length', which see.</p>

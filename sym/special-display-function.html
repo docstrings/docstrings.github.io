@@ -1,17 +1,17 @@
 <h3>Variable: special-display-function</h3>
 <p>
-Function to call for displaying special buffers.
-This function is called with two arguments - the buffer and,
-optionally, a list - and should return a window displaying that
-buffer.  The default value usually makes a separate frame for the
-buffer using `special-display-frame-alist' to specify the frame
-parameters.  See the definition of `special-display-popup-frame'
-for how to specify such a function.</p>
-<p>
-A buffer is special when its name is either listed in
-`special-display-buffer-names' or matches a regexp in
-`special-display-regexps'.</p>
-<p>
-The specified function should call `display-buffer-record-window'
+Function to call for displaying special buffers.<br>
+This function is called with two arguments - the buffer and,<br>
+optionally, a list - and should return a window displaying that<br>
+buffer.  The default value usually makes a separate frame for the<br>
+buffer using `special-display-frame-alist' to specify the frame<br>
+parameters.  See the definition of `special-display-popup-frame'<br>
+for how to specify such a function.<br>
+<br>
+A buffer is special when its name is either listed in<br>
+`special-display-buffer-names' or matches a regexp in<br>
+`special-display-regexps'.<br>
+<br>
+The specified function should call `display-buffer-record-window'<br>
 with corresponding arguments to set up the quit-restore parameter
 of the window used.</p>

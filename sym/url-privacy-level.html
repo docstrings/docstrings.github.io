@@ -1,32 +1,32 @@
 <h3>Variable: url-privacy-level</h3>
 <p>
-How private you want your requests to be.
-HTTP has header fields for various information about the user, including
-operating system information, email addresses, the last page you visited, etc.
-This variable controls how much of this information is sent.</p>
-<p>
-This should a symbol or a list.
-Valid values if a symbol are:
-none     -- send all information
-low      -- don't send the last location
-high     -- don't send the email address or last location
-paranoid -- don't send anything</p>
-<p>
-If a list, this should be a list of symbols of what NOT to send.
-Valid symbols are:
-email    -- the email address
-os       -- the operating system info
-lastloc  -- the last location
-agent    -- do not send the User-Agent string
-cookies  -- never accept HTTP cookies</p>
-<p>
-Samples:</p>
-<p>
- (setq url-privacy-level 'high)
- (setq url-privacy-level '(email lastloc))    ;; equivalent to 'high
- (setq url-privacy-level '(os))</p>
-<p>
-::NOTE::
+How private you want your requests to be.<br>
+HTTP has header fields for various information about the user, including<br>
+operating system information, email addresses, the last page you visited, etc.<br>
+This variable controls how much of this information is sent.<br>
+<br>
+This should a symbol or a list.<br>
+Valid values if a symbol are:<br>
+none     -- send all information<br>
+low      -- don't send the last location<br>
+high     -- don't send the email address or last location<br>
+paranoid -- don't send anything<br>
+<br>
+If a list, this should be a list of symbols of what NOT to send.<br>
+Valid symbols are:<br>
+email    -- the email address<br>
+os       -- the operating system info<br>
+lastloc  -- the last location<br>
+agent    -- do not send the User-Agent string<br>
+cookies  -- never accept HTTP cookies<br>
+<br>
+Samples:<br>
+<br>
+ (setq url-privacy-level 'high)<br>
+ (setq url-privacy-level '(email lastloc))    ;; equivalent to 'high<br>
+ (setq url-privacy-level '(os))<br>
+<br>
+::NOTE::<br>
 This variable controls several other variables and is _NOT_ automatically
 updated.  Call the function `url-setup-privacy-info' after modifying this
 variable.</p>

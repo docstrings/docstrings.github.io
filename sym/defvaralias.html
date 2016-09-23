@@ -1,12 +1,12 @@
 <h3>Function: defvaralias</h3>
 <p>
-Make NEW-ALIAS a variable alias for symbol BASE-VARIABLE.
-Aliased variables always have the same value; setting one sets the other.
-Third arg DOCSTRING, if non-nil, is documentation for NEW-ALIAS.  If it is
-omitted or nil, NEW-ALIAS gets the documentation string of BASE-VARIABLE,
-or of the variable at the end of the chain of aliases, if BASE-VARIABLE is
-itself an alias.  If NEW-ALIAS is bound, and BASE-VARIABLE is not,
-then the value of BASE-VARIABLE is set to that of NEW-ALIAS.
-The return value is BASE-VARIABLE.</p>
-<p>
+Make NEW-ALIAS a variable alias for symbol BASE-VARIABLE.<br>
+Aliased variables always have the same value; setting one sets the other.<br>
+Third arg DOCSTRING, if non-nil, is documentation for NEW-ALIAS.  If it is<br>
+omitted or nil, NEW-ALIAS gets the documentation string of BASE-VARIABLE,<br>
+or of the variable at the end of the chain of aliases, if BASE-VARIABLE is<br>
+itself an alias.  If NEW-ALIAS is bound, and BASE-VARIABLE is not,<br>
+then the value of BASE-VARIABLE is set to that of NEW-ALIAS.<br>
+The return value is BASE-VARIABLE.<br>
+<br>
 (fn NEW-ALIAS BASE-VARIABLE &optional DOCSTRING)</p>

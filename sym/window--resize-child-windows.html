@@ -1,28 +1,28 @@
 <h3>Function: window--resize-child-windows</h3>
 <p>
-Resize child windows of window PARENT vertically by DELTA lines.
-PARENT must be a vertically combined internal window.</p>
-<p>
-Optional argument HORIZONTAL non-nil means resize child windows of
-PARENT horizontally by DELTA columns.  In this case PARENT must
-be a horizontally combined internal window.</p>
-<p>
-WINDOW, if specified, must denote a child window of PARENT that
-is resized by DELTA lines.</p>
-<p>
-Optional argument IGNORE non-nil means ignore restrictions
-imposed by fixed size windows, `window-min-height' or
-`window-min-width' settings.  If IGNORE equals `safe', live
-windows may get as small as `window-safe-min-height' lines and
-`window-safe-min-width' columns.  If IGNORE is a window, ignore
-restrictions for that window only.  Any other non-nil value means
-ignore all of the above restrictions for all windows.</p>
-<p>
-Optional arguments TRAIL and EDGE, when non-nil, restrict the set
-of windows that shall be resized.  If TRAIL equals `before',
-resize only windows on the left or above EDGE.  If TRAIL equals
-`after', resize only windows on the right or below EDGE.  Also,
-preferably only resize windows adjacent to EDGE.</p>
-<p>
+Resize child windows of window PARENT vertically by DELTA lines.<br>
+PARENT must be a vertically combined internal window.<br>
+<br>
+Optional argument HORIZONTAL non-nil means resize child windows of<br>
+PARENT horizontally by DELTA columns.  In this case PARENT must<br>
+be a horizontally combined internal window.<br>
+<br>
+WINDOW, if specified, must denote a child window of PARENT that<br>
+is resized by DELTA lines.<br>
+<br>
+Optional argument IGNORE non-nil means ignore restrictions<br>
+imposed by fixed size windows, `window-min-height' or<br>
+`window-min-width' settings.  If IGNORE equals `safe', live<br>
+windows may get as small as `window-safe-min-height' lines and<br>
+`window-safe-min-width' columns.  If IGNORE is a window, ignore<br>
+restrictions for that window only.  Any other non-nil value means<br>
+ignore all of the above restrictions for all windows.<br>
+<br>
+Optional arguments TRAIL and EDGE, when non-nil, restrict the set<br>
+of windows that shall be resized.  If TRAIL equals `before',<br>
+resize only windows on the left or above EDGE.  If TRAIL equals<br>
+`after', resize only windows on the right or below EDGE.  Also,<br>
+preferably only resize windows adjacent to EDGE.<br>
+
 Return the symbol `normalized' if new normal sizes have been
 already set by this routine.</p>

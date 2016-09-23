@@ -1,25 +1,25 @@
 <h3>Function: x-list-fonts</h3>
 <p>
-Return a list of the names of available fonts matching PATTERN.
-If optional arguments FACE and FRAME are specified, return only fonts
-the same size as FACE on FRAME.</p>
-<p>
-PATTERN should be a string containing a font name in the XLFD,
-Fontconfig, or GTK format.  A font name given in the XLFD format may
-contain wildcard characters:
-  the * character matches any substring, and
-  the ? character matches any single character.
-  PATTERN is case-insensitive.</p>
-<p>
-The return value is a list of strings, suitable as arguments to
-`set-face-font'.</p>
-<p>
-Fonts Emacs can't use may or may not be excluded
-even if they match PATTERN and FACE.
-The optional fourth argument MAXIMUM sets a limit on how many
-fonts to match.  The first MAXIMUM fonts are reported.
-The optional fifth argument WIDTH, if specified, is a number of columns
-occupied by a character of a font.  In that case, return only fonts
-the WIDTH times as wide as FACE on FRAME.</p>
-<p>
+Return a list of the names of available fonts matching PATTERN.<br>
+If optional arguments FACE and FRAME are specified, return only fonts<br>
+the same size as FACE on FRAME.<br>
+<br>
+PATTERN should be a string containing a font name in the XLFD,<br>
+Fontconfig, or GTK format.  A font name given in the XLFD format may<br>
+contain wildcard characters:<br>
+  the * character matches any substring, and<br>
+  the ? character matches any single character.<br>
+  PATTERN is case-insensitive.<br>
+<br>
+The return value is a list of strings, suitable as arguments to<br>
+`set-face-font'.<br>
+<br>
+Fonts Emacs can't use may or may not be excluded<br>
+even if they match PATTERN and FACE.<br>
+The optional fourth argument MAXIMUM sets a limit on how many<br>
+fonts to match.  The first MAXIMUM fonts are reported.<br>
+The optional fifth argument WIDTH, if specified, is a number of columns<br>
+occupied by a character of a font.  In that case, return only fonts<br>
+the WIDTH times as wide as FACE on FRAME.
+
 (fn PATTERN &optional FACE FRAME MAXIMUM WIDTH)</p>

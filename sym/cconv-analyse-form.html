@@ -1,12 +1,12 @@
 <h3>Function: cconv-analyse-form</h3>
 <p>
-Find mutated variables and variables captured by closure.
-Analyze lambdas if they are suitable for lambda lifting.
-- FORM is a piece of Elisp code after macroexpansion.
-- ENV is an alist mapping each enclosing lexical variable to its info.
-   I.e. each element has the form (VAR . (READ MUTATED CAPTURED CALLED)).
-This function does not return anything but instead fills the
-`cconv-captured+mutated' and `cconv-lambda-candidates' variables
-and updates the data stored in ENV.</p>
-<p>
+Find mutated variables and variables captured by closure.<br>
+Analyze lambdas if they are suitable for lambda lifting.<br>
+- FORM is a piece of Elisp code after macroexpansion.<br>
+- ENV is an alist mapping each enclosing lexical variable to its info.<br>
+   I.e. each element has the form (VAR . (READ MUTATED CAPTURED CALLED)).<br>
+This function does not return anything but instead fills the<br>
+`cconv-captured+mutated' and `cconv-lambda-candidates' variables<br>
+and updates the data stored in ENV.
+
 (fn FORM ENV)</p>

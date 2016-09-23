@@ -1,15 +1,15 @@
 <h3>Function: interrupt-process</h3>
 <p>
-Interrupt process PROCESS.
-PROCESS may be a process, a buffer, or the name of a process or buffer.
-No arg or nil means current buffer's process.
-Second arg CURRENT-GROUP non-nil means send signal to
-the current process-group of the process's controlling terminal
-rather than to the process's own process group.
-If the process is a shell, this means interrupt current subjob
-rather than the shell.</p>
-<p>
-If CURRENT-GROUP is `lambda', and if the shell owns the terminal,
-don't send the signal.</p>
-<p>
+Interrupt process PROCESS.<br>
+PROCESS may be a process, a buffer, or the name of a process or buffer.<br>
+No arg or nil means current buffer's process.<br>
+Second arg CURRENT-GROUP non-nil means send signal to<br>
+the current process-group of the process's controlling terminal<br>
+rather than to the process's own process group.<br>
+If the process is a shell, this means interrupt current subjob<br>
+rather than the shell.<br>
+<br>
+If CURRENT-GROUP is `lambda', and if the shell owns the terminal,<br>
+don't send the signal.
+
 (fn &optional PROCESS CURRENT-GROUP)</p>

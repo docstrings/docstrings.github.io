@@ -1,18 +1,18 @@
 <h3>Function: face-foreground</h3>
 <p>
-Return the foreground color name of FACE, or nil if unspecified.
-If the optional argument FRAME is given, report on face FACE in that frame.
-If FRAME is t, report on the defaults for face FACE (for new frames).
-If FRAME is omitted or nil, use the selected frame.</p>
-<p>
-If INHERIT is nil, only a foreground color directly defined by FACE is
-  considered, so the return value may be nil.
-If INHERIT is t, and FACE doesn't define a foreground color, then any
-  foreground color that FACE inherits through its `:inherit' attribute
-  is considered as well; however the return value may still be nil.
-If INHERIT is a face or a list of faces, then it is used to try to
-  resolve an unspecified foreground color.</p>
-<p>
-To ensure that a valid color is always returned, use a value of
-`default' for INHERIT; this will resolve any unspecified values by
+Return the foreground color name of FACE, or nil if unspecified.<br>
+If the optional argument FRAME is given, report on face FACE in that frame.<br>
+If FRAME is t, report on the defaults for face FACE (for new frames).<br>
+If FRAME is omitted or nil, use the selected frame.<br>
+<br>
+If INHERIT is nil, only a foreground color directly defined by FACE is<br>
+  considered, so the return value may be nil.<br>
+If INHERIT is t, and FACE doesn't define a foreground color, then any<br>
+  foreground color that FACE inherits through its `:inherit' attribute<br>
+  is considered as well; however the return value may still be nil.<br>
+If INHERIT is a face or a list of faces, then it is used to try to<br>
+  resolve an unspecified foreground color.<br>
+<br>
+To ensure that a valid color is always returned, use a value of<br>
+`default' for INHERIT; this will resolve any unspecified values by<br>
 merging with the `default' face (which is always completely specified).</p>

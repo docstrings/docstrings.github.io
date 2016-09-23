@@ -1,36 +1,36 @@
 <h3>Function: switch-to-buffer</h3>
 <p>
-Display buffer BUFFER-OR-NAME in the selected window.</p>
-<p>
-WARNING: This is NOT the way to work on another buffer temporarily
-within a Lisp program!  Use `set-buffer' instead.  That avoids
-messing with the window-buffer correspondences.</p>
-<p>
-If the selected window cannot display the specified
-buffer (e.g. if it is a minibuffer window or strongly dedicated
-to another buffer), call `pop-to-buffer' to select the buffer in
-another window.</p>
-<p>
-If called interactively, read the buffer name using the
-minibuffer.  The variable `confirm-nonexistent-file-or-buffer'
-determines whether to request confirmation before creating a new
-buffer.</p>
-<p>
-BUFFER-OR-NAME may be a buffer, a string (a buffer name), or nil.
-If BUFFER-OR-NAME is a string that does not identify an existing
-buffer, create a buffer with that name.  If BUFFER-OR-NAME is
-nil, switch to the buffer returned by `other-buffer'.</p>
-<p>
-If optional argument NORECORD is non-nil, do not put the buffer
-at the front of the buffer list, and do not make the window
-displaying it the most recently selected one.</p>
-<p>
-If optional argument FORCE-SAME-WINDOW is non-nil, the buffer
-must be displayed in the selected window; if that is impossible,
-signal an error rather than calling `pop-to-buffer'.</p>
-<p>
+Display buffer BUFFER-OR-NAME in the selected window.<br>
+<br>
+WARNING: This is NOT the way to work on another buffer temporarily<br>
+within a Lisp program!  Use `set-buffer' instead.  That avoids<br>
+messing with the window-buffer correspondences.<br>
+<br>
+If the selected window cannot display the specified<br>
+buffer (e.g. if it is a minibuffer window or strongly dedicated<br>
+to another buffer), call `pop-to-buffer' to select the buffer in<br>
+another window.<br>
+<br>
+If called interactively, read the buffer name using the<br>
+minibuffer.  The variable `confirm-nonexistent-file-or-buffer'<br>
+determines whether to request confirmation before creating a new<br>
+buffer.<br>
+<br>
+BUFFER-OR-NAME may be a buffer, a string (a buffer name), or nil.<br>
+If BUFFER-OR-NAME is a string that does not identify an existing<br>
+buffer, create a buffer with that name.  If BUFFER-OR-NAME is<br>
+nil, switch to the buffer returned by `other-buffer'.<br>
+<br>
+If optional argument NORECORD is non-nil, do not put the buffer<br>
+at the front of the buffer list, and do not make the window<br>
+displaying it the most recently selected one.<br>
+<br>
+If optional argument FORCE-SAME-WINDOW is non-nil, the buffer<br>
+must be displayed in the selected window; if that is impossible,<br>
+signal an error rather than calling `pop-to-buffer'.<br>
+<br>
 The option `switch-to-buffer-preserve-window-point' can be used
 to make the buffer appear at its last position in the selected
-window.</p>
-<p>
+window.
+
 Return the buffer switched to.</p>

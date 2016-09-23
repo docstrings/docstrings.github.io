@@ -1,22 +1,22 @@
 <h3>Function: make-local-variable</h3>
 <p>
-Make VARIABLE have a separate value in the current buffer.
-Other buffers will continue to share a common default value.
-(The buffer-local value of VARIABLE starts out as the same value
-VARIABLE previously had.  If VARIABLE was void, it remains void.)
-Return VARIABLE.</p>
-<p>
-If the variable is already arranged to become local when set,
-this function causes a local value to exist for this buffer,
-just as setting the variable would do.</p>
-<p>
-This function returns VARIABLE, and therefore
-  (set (make-local-variable 'VARIABLE) VALUE-EXP)
-works.</p>
-<p>
-See also `make-variable-buffer-local'.</p>
-<p>
-Do not use `make-local-variable' to make a hook variable buffer-local.
-Instead, use `add-hook' and specify t for the LOCAL argument.</p>
-<p>
+Make VARIABLE have a separate value in the current buffer.<br>
+Other buffers will continue to share a common default value.<br>
+(The buffer-local value of VARIABLE starts out as the same value<br>
+VARIABLE previously had.  If VARIABLE was void, it remains void.)<br>
+Return VARIABLE.<br>
+<br>
+If the variable is already arranged to become local when set,<br>
+this function causes a local value to exist for this buffer,<br>
+just as setting the variable would do.<br>
+<br>
+This function returns VARIABLE, and therefore<br>
+  (set (make-local-variable 'VARIABLE) VALUE-EXP)<br>
+works.<br>
+<br>
+See also `make-variable-buffer-local'.<br>
+<br>
+Do not use `make-local-variable' to make a hook variable buffer-local.<br>
+Instead, use `add-hook' and specify t for the LOCAL argument.
+
 (fn VARIABLE)</p>

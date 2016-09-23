@@ -1,14 +1,14 @@
 <h3>Variable: comint-redirect-filter-functions</h3>
 <p>
-List of functions to call before inserting redirected process output.
-Each function gets one argument, a string containing the text received
-from the subprocess.  It should return the string to insert, perhaps
-the same string that was received, or perhaps a modified or transformed
-string.</p>
-<p>
-The functions on the list are called sequentially, and each one is given
-the string returned by the previous one.  The string returned by the
-last function is the text that is actually inserted in the redirection buffer.</p>
-<p>
+List of functions to call before inserting redirected process output.<br>
+Each function gets one argument, a string containing the text received<br>
+from the subprocess.  It should return the string to insert, perhaps<br>
+the same string that was received, or perhaps a modified or transformed<br>
+string.<br>
+<br>
+The functions on the list are called sequentially, and each one is given<br>
+the string returned by the previous one.  The string returned by the<br>
+last function is the text that is actually inserted in the redirection buffer.<br>
+<br>
 You can use `add-hook' to add functions to this list
 either globally or locally.</p>

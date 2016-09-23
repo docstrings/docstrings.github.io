@@ -1,0 +1,16 @@
+<h3>Function: sh-make-vars-local</h3>
+<p>
+Make the indentation variables local to this buffer.<br>
+Normally they already are local.  This command is provided in case<br>
+variable `sh-make-vars-local' has been set to nil.<br>
+<br>
+To revert all these variables to the global values, use<br>
+command `sh-reset-indent-vars-to-global-values'.</p>
+<h3>Variable: sh-make-vars-local</h3>
+<p>
+Controls whether indentation variables are local to the buffer.<br>
+If non-nil, indentation variables are made local initially.<br>
+If nil, you can later make the variables local by invoking<br>
+command `sh-make-vars-local'.<br>
+The default is t because I assume that in one Emacs session one is<br>
+frequently editing existing scripts with different styles.</p>

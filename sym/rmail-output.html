@@ -1,31 +1,31 @@
 <h3>Function: rmail-output</h3>
 <p>
-Append this message to mail file FILE-NAME.
-Writes mbox format, unless FILE-NAME exists and is Babyl format, in which
-case it writes Babyl.</p>
-<p>
-Interactively, the default file name comes from `rmail-default-file',
-which is updated to the name you use in this command.  In all uses, if
-FILE-NAME is not absolute, it is expanded with the directory part of
-`rmail-default-file'.</p>
-<p>
-If a buffer is visiting FILE-NAME, adds the text to that buffer
-rather than saving the file directly.  If the buffer is an Rmail
-buffer, updates it accordingly.</p>
-<p>
-This command always outputs the complete message header, even if
-the header display is currently pruned.</p>
-<p>
-Optional prefix argument COUNT (default 1) says to output that
-many consecutive messages, starting with the current one (ignoring
-deleted messages).  If `rmail-delete-after-output' is non-nil, deletes
-messages after output.</p>
-<p>
-The optional third argument NOATTRIBUTE, if non-nil, says not to
-set the `filed' attribute, and not to display a "Wrote file"
-message (if writing a file directly).</p>
-<p>
-Set the optional fourth argument NOT-RMAIL non-nil if you call this
-from a non-Rmail buffer.  In this case, COUNT is ignored.</p>
-<p>
+Append this message to mail file FILE-NAME.<br>
+Writes mbox format, unless FILE-NAME exists and is Babyl format, in which<br>
+case it writes Babyl.<br>
+<br>
+Interactively, the default file name comes from `rmail-default-file',<br>
+which is updated to the name you use in this command.  In all uses, if<br>
+FILE-NAME is not absolute, it is expanded with the directory part of<br>
+`rmail-default-file'.<br>
+<br>
+If a buffer is visiting FILE-NAME, adds the text to that buffer<br>
+rather than saving the file directly.  If the buffer is an Rmail<br>
+buffer, updates it accordingly.<br>
+<br>
+This command always outputs the complete message header, even if<br>
+the header display is currently pruned.<br>
+<br>
+Optional prefix argument COUNT (default 1) says to output that<br>
+many consecutive messages, starting with the current one (ignoring<br>
+deleted messages).  If `rmail-delete-after-output' is non-nil, deletes<br>
+messages after output.<br>
+<br>
+The optional third argument NOATTRIBUTE, if non-nil, says not to<br>
+set the `filed' attribute, and not to display a "Wrote file"<br>
+message (if writing a file directly).<br>
+<br>
+Set the optional fourth argument NOT-RMAIL non-nil if you call this<br>
+from a non-Rmail buffer.  In this case, COUNT is ignored.
+
 (fn FILE-NAME &optional COUNT NOATTRIBUTE NOT-RMAIL)</p>

@@ -1,57 +1,57 @@
 <h3>Function: sh-mode</h3>
 <p>
-Major mode for editing shell scripts.
-This mode works for many shells, since they all have roughly the same syntax,
-as far as commands, arguments, variables, pipes, comments etc. are concerned.
-Unless the file's magic number indicates the shell, your usual shell is
-assumed.  Since filenames rarely give a clue, they are not further analyzed.</p>
-<p>
-This mode adapts to the variations between shells (see `sh-set-shell') by
-means of an inheritance based feature lookup (see `sh-feature').  This
-mechanism applies to all variables (including skeletons) that pertain to
-shell-specific features.</p>
-<p>
-The default style of this mode is that of Rosenblatt's Korn shell book.
-The syntax of the statements varies with the shell being used.  The
-following commands are available, based on the current shell's syntax:</p>
-<p>
-Uses keymap `sh-mode-map', which is not currently defined.</p>
-<p>
-M-x sh-case	 case statement
-M-x sh-for	 for loop
-M-x sh-function	 function definition
-M-x sh-if	 if statement
-M-x sh-indexed-loop	 indexed loop from 1 to n
-M-x sh-while-getopts	 while getopts loop
-M-x sh-repeat	 repeat loop
-M-x sh-select	 select loop
-M-x sh-until	 until loop
-M-x sh-while	 while loop</p>
-<p>
-For sh and rc shells indentation commands are:
-M-x sh-show-indent	Show the variable controlling this line's indentation.
-M-x sh-set-indent	Set then variable controlling this line's indentation.
-M-x sh-learn-line-indent	Change the indentation variable so this line
-would indent to the way it currently is.
-M-x sh-learn-buffer-indent  Set the indentation variables so the
-buffer indents as it currently is indented.</p>
-<p>
+Major mode for editing shell scripts.<br>
+This mode works for many shells, since they all have roughly the same syntax,<br>
+as far as commands, arguments, variables, pipes, comments etc. are concerned.<br>
+Unless the file's magic number indicates the shell, your usual shell is<br>
+assumed.  Since filenames rarely give a clue, they are not further analyzed.<br>
+<br>
+This mode adapts to the variations between shells (see `sh-set-shell') by<br>
+means of an inheritance based feature lookup (see `sh-feature').  This<br>
+mechanism applies to all variables (including skeletons) that pertain to<br>
+shell-specific features.<br>
+<br>
+The default style of this mode is that of Rosenblatt's Korn shell book.<br>
+The syntax of the statements varies with the shell being used.  The<br>
+following commands are available, based on the current shell's syntax:<br>
+<br>
+C-c C-c	 case statement<br>
+C-c C-f	 for loop<br>
+C-c (	 function definition<br>
+C-c TAB	 if statement<br>
+C-c C-l	 indexed loop from 1 to n<br>
+C-c C-o	 while getopts loop<br>
+C-c C-r	 repeat loop<br>
+C-c C-s	 select loop<br>
+C-c C-u	 until loop<br>
+C-c C-w	 while loop<br>
+<br>
+For sh and rc shells indentation commands are:<br>
+C-c ?	Show the variable controlling this line's indentation.<br>
+C-c =	Set then variable controlling this line's indentation.<br>
+C-c <	Change the indentation variable so this line<br>
+would indent to the way it currently is.<br>
+C-c >  Set the indentation variables so the<br>
+buffer indents as it currently is indented.<br>
+<br>
+<br>
+DEL	 Delete backward one position, even if it was a tab.<br>
+C-j	 Delete unquoted space and indent new line same as this one.<br>
+M-e	 Go to end of successive commands.<br>
+M-a	 Go to beginning of successive commands.<br>
+C-c :	 Set this buffer's shell, and maybe its magic number.<br>
+C-M-x	 Have optional header and region be executed in a subshell.<br>
+<br>
+`sh-electric-here-document-mode' controls whether insertion of two<br>
+unquoted < insert a here document.<br>
+<br>
+If you generally program a shell different from your login shell you can<br>
+set `sh-shell-file' accordingly.  If your shell's file name doesn't correctly<br>
+indicate what shell it is use `sh-alias-alist' to translate.<br>
+<br>
+If your shell gives error messages with line numbers, you can use C-c C-x<br>
+with your script for an edit-interpret-debug cycle.
 
-M-x backward-delete-char-untabify	 Delete backward one position, even if it was a tab.
-C-j	 Delete unquoted space and indent new line same as this one.
-M-x sh-end-of-command	 Go to end of successive commands.
-M-x sh-beginning-of-command	 Go to beginning of successive commands.
-M-x sh-set-shell	 Set this buffer's shell, and maybe its magic number.
-M-x sh-execute-region	 Have optional header and region be executed in a subshell.</p>
-<p>
-`sh-electric-here-document-mode' controls whether insertion of two
-unquoted < insert a here document.</p>
-<p>
-If you generally program a shell different from your login shell you can
-set `sh-shell-file' accordingly.  If your shell's file name doesn't correctly
-indicate what shell it is use `sh-alias-alist' to translate.</p>
-<p>
-If your shell gives error messages with line numbers, you can use M-x executable-interpret
-with your script for an edit-interpret-debug cycle.</p>
-<p>
-(fn)</p>
+In addition to any hooks its parent mode `prog-mode' might have run,
+this mode runs the hook `sh-mode-hook', as the final step
+during initialization.</p>

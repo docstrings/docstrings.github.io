@@ -1,11 +1,11 @@
 <h3>Variable: display-buffer-function</h3>
 <p>
-If non-nil, function to call to handle `display-buffer'.
-It will receive two args, the buffer and a flag which if non-nil
-means that the currently selected window is not acceptable.  It
-should choose or create a window, display the specified buffer in
-it, and return the window.</p>
-<p>
-The specified function should call `display-buffer-record-window'
+If non-nil, function to call to handle `display-buffer'.<br>
+It will receive two args, the buffer and a flag which if non-nil<br>
+means that the currently selected window is not acceptable.  It<br>
+should choose or create a window, display the specified buffer in<br>
+it, and return the window.<br>
+<br>
+The specified function should call `display-buffer-record-window'<br>
 with corresponding arguments to set up the quit-restore parameter
 of the window used.</p>

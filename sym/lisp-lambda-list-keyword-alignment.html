@@ -1,16 +1,16 @@
 <h3>Variable: lisp-lambda-list-keyword-alignment</h3>
 <p>
-Whether to vertically align lambda-list keywords together.
-If nil (the default), keyworded lambda-list parts are aligned
-with the initial mandatory arguments, like this:</p>
-<p>
-(defun foo (arg1 arg2 &rest rest
-            &key key1 key2)
-  #|...|#)</p>
-<p>
-If non-nil, alignment is done with the first keyword
-(or falls back to the previous case), as in:</p>
-<p>
-(defun foo (arg1 arg2 &rest rest
+Whether to vertically align lambda-list keywords together.<br>
+If nil (the default), keyworded lambda-list parts are aligned<br>
+with the initial mandatory arguments, like this:<br>
+<br>
+(defun foo (arg1 arg2 &rest rest<br>
+            &key key1 key2)<br>
+  #|...|#)<br>
+<br>
+If non-nil, alignment is done with the first keyword<br>
+(or falls back to the previous case), as in:<br>
+<br>
+(defun foo (arg1 arg2 &rest rest<br>
                       &key key1 key2)
   #|...|#)</p>

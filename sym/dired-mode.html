@@ -1,67 +1,67 @@
 <h3>Function: dired-mode</h3>
 <p>
-Mode for "editing" directory listings.
-In Dired, you are "editing" a list of the files in a directory and
-  (optionally) its subdirectories, in the format of `ls -lR'.
-  Each directory is a page: use C-x [ and C-x ] to move pagewise.
-"Editing" means that you can run shell commands on files, visit,
-  compress, load or byte-compile them, change their file attributes
-  and insert subdirectories into the same buffer.  You can "mark"
-  files for later commands or "flag" them for deletion, either file
-  by file or all files matching certain criteria.
-You can move using the usual cursor motion commands.
-Uses keymap `dired-mode-map', which is not currently defined.</p>
-<p>
-The buffer is read-only.  Digits are prefix arguments.
-Type M-x dired-flag-file-deletion to flag a file `D' for deletion.
-Type M-x dired-mark to Mark a file or subdirectory for later commands.
-  Most commands operate on the marked files and use the current file
-  if no files are marked.  Use a numeric prefix argument to operate on
-  the next ARG (or previous -ARG if ARG<0) files, or just `1'
-  to operate on the current file only.  Prefix arguments override marks.
-  Mark-using commands display a list of failures afterwards.  Type M-x dired-summary
-  to see why something went wrong.
-Type M-x dired-unmark to Unmark a file or all files of an inserted subdirectory.
-Type M-x dired-unmark-backward to back up one line and unmark or unflag.
-Type M-x dired-do-flagged-delete to delete (eXecute) the files flagged `D'.
-Type M-x dired-find-file to Find the current line's file
-  (or dired it in another buffer, if it is a directory).
-Type M-x dired-find-file-other-window to find file or dired directory in Other window.
-Type M-x dired-maybe-insert-subdir to Insert a subdirectory in this buffer.
-Type M-x dired-do-rename to Rename a file or move the marked files to another directory.
-Type M-x dired-do-copy to Copy files.
-Type M-x dired-sort-toggle-or-edit to toggle Sorting by name/date or change the `ls' switches.
-Type M-x revert-buffer to read all currently expanded directories aGain.
-  This retains all marks and hides subdirs again that were hidden before.
-Use `SPC' and `DEL' to move down and up by lines.</p>
-<p>
-If Dired ever gets confused, you can either type M-x revert-buffer to read the
-directories again, type M-x dired-do-redisplay to relist the file at point or the marked files or a
-subdirectory, or type M-x dired-build-subdir-alist to parse the buffer
-again for the directory tree.</p>
-<p>
-Customization variables (rename this buffer and type C-h v on each line
-for more info):</p>
-<p>
-  `dired-listing-switches'
-  `dired-trivial-filenames'
-  `dired-marker-char'
-  `dired-del-marker'
-  `dired-keep-marker-rename'
-  `dired-keep-marker-copy'
-  `dired-keep-marker-hardlink'
-  `dired-keep-marker-symlink'</p>
-<p>
-Hooks (use C-h v to see their documentation):</p>
-<p>
+Mode for "editing" directory listings.<br>
+In Dired, you are "editing" a list of the files in a directory and<br>
+  (optionally) its subdirectories, in the format of `ls -lR'.<br>
+  Each directory is a page: use C-x [ and C-x ] to move pagewise.<br>
+"Editing" means that you can run shell commands on files, visit,<br>
+  compress, load or byte-compile them, change their file attributes<br>
+  and insert subdirectories into the same buffer.  You can "mark"<br>
+  files for later commands or "flag" them for deletion, either file<br>
+  by file or all files matching certain criteria.<br>
+You can move using the usual cursor motion commands.<br>
+Uses keymap `dired-mode-map', which is not currently defined.<br>
+<br>
+The buffer is read-only.  Digits are prefix arguments.<br>
+Type M-x dired-flag-file-deletion to flag a file `D' for deletion.<br>
+Type M-x dired-mark to Mark a file or subdirectory for later commands.<br>
+  Most commands operate on the marked files and use the current file<br>
+  if no files are marked.  Use a numeric prefix argument to operate on<br>
+  the next ARG (or previous -ARG if ARG<0) files, or just `1'<br>
+  to operate on the current file only.  Prefix arguments override marks.<br>
+  Mark-using commands display a list of failures afterwards.  Type M-x dired-summary<br>
+  to see why something went wrong.<br>
+Type M-x dired-unmark to Unmark a file or all files of an inserted subdirectory.<br>
+Type M-x dired-unmark-backward to back up one line and unmark or unflag.<br>
+Type M-x dired-do-flagged-delete to delete (eXecute) the files flagged `D'.<br>
+Type M-x dired-find-file to Find the current line's file<br>
+  (or dired it in another buffer, if it is a directory).<br>
+Type M-x dired-find-file-other-window to find file or dired directory in Other window.<br>
+Type M-x dired-maybe-insert-subdir to Insert a subdirectory in this buffer.<br>
+Type M-x dired-do-rename to Rename a file or move the marked files to another directory.<br>
+Type M-x dired-do-copy to Copy files.<br>
+Type M-x dired-sort-toggle-or-edit to toggle Sorting by name/date or change the `ls' switches.<br>
+Type M-x revert-buffer to read all currently expanded directories aGain.<br>
+  This retains all marks and hides subdirs again that were hidden before.<br>
+Use `SPC' and `DEL' to move down and up by lines.<br>
+<br>
+If Dired ever gets confused, you can either type M-x revert-buffer to read the<br>
+directories again, type M-x dired-do-redisplay to relist the file at point or the marked files or a<br>
+subdirectory, or type M-x dired-build-subdir-alist to parse the buffer<br>
+again for the directory tree.<br>
+<br>
+Customization variables (rename this buffer and type C-h v on each line<br>
+for more info):<br>
+<br>
+  `dired-listing-switches'<br>
+  `dired-trivial-filenames'<br>
+  `dired-marker-char'<br>
+  `dired-del-marker'<br>
+  `dired-keep-marker-rename'<br>
+  `dired-keep-marker-copy'<br>
+  `dired-keep-marker-hardlink'<br>
+  `dired-keep-marker-symlink'<br>
+<br>
+Hooks (use C-h v to see their documentation):<br>
+
   `dired-before-readin-hook'
   `dired-after-readin-hook'
   `dired-mode-hook'
-  `dired-load-hook'</p>
-<p>
-Keybindings:</p>
-<p>
-Uses keymap `dired-mode-map', which is not currently defined.</p>
-<p>
+  `dired-load-hook'
+
+Keybindings:
+
+Uses keymap `dired-mode-map', which is not currently defined.
+
 
 (fn &optional DIRNAME SWITCHES)</p>

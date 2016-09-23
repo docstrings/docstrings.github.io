@@ -1,25 +1,25 @@
 <h3>Function: princ</h3>
 <p>
-Output the printed representation of OBJECT, any Lisp object.
-No quoting characters are used; no delimiters are printed around
-the contents of strings.</p>
-<p>
-OBJECT is any of the Lisp data types: a number, a string, a symbol,
-a list, a buffer, a window, a frame, etc.</p>
-<p>
-A printed representation of an object is text which describes that object.</p>
-<p>
-Optional argument PRINTCHARFUN is the output stream, which can be one
-of these:</p>
-<p>
-   - a buffer, in which case output is inserted into that buffer at point;
-   - a marker, in which case output is inserted at marker's position;
-   - a function, in which case that function is called once for each
-     character of OBJECT's printed representation;
-   - a symbol, in which case that symbol's function definition is called; or
-   - t, in which case the output is displayed in the echo area.</p>
-<p>
+Output the printed representation of OBJECT, any Lisp object.<br>
+No quoting characters are used; no delimiters are printed around<br>
+the contents of strings.<br>
+<br>
+OBJECT is any of the Lisp data types: a number, a string, a symbol,<br>
+a list, a buffer, a window, a frame, etc.<br>
+<br>
+A printed representation of an object is text which describes that object.<br>
+<br>
+Optional argument PRINTCHARFUN is the output stream, which can be one<br>
+of these:<br>
+<br>
+   - a buffer, in which case output is inserted into that buffer at point;<br>
+   - a marker, in which case output is inserted at marker's position;<br>
+   - a function, in which case that function is called once for each<br>
+     character of OBJECT's printed representation;<br>
+   - a symbol, in which case that symbol's function definition is called; or<br>
+   - t, in which case the output is displayed in the echo area.<br>
+<br>
 If PRINTCHARFUN is omitted, the value of `standard-output' (which see)
-is used instead.</p>
-<p>
+is used instead.
+
 (fn OBJECT &optional PRINTCHARFUN)</p>

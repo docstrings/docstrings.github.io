@@ -1,17 +1,17 @@
 <h3>Function: vc-checkout-model</h3>
 <p>
-Indicate how FILES are checked out.</p>
-<p>
-If FILES are not registered, this function always returns nil.
-For registered files, the possible values are:</p>
-<p>
-  'implicit   FILES are always writable, and checked out `implicitly'
-              when the user saves the first changes to the file.</p>
-<p>
-  'locking    FILES are read-only if up-to-date; user must type
-              C-x v v before editing.  Strict locking
-              is assumed.</p>
-<p>
-  'announce   FILES are read-only if up-to-date; user must type
+Indicate how FILES are checked out.<br>
+<br>
+If FILES are not registered, this function always returns nil.<br>
+For registered files, the possible values are:<br>
+<br>
+  'implicit   FILES are always writable, and checked out `implicitly'<br>
+              when the user saves the first changes to the file.<br>
+<br>
+  'locking    FILES are read-only if up-to-date; user must type<br>
+              C-x v v before editing.  Strict locking<br>
+              is assumed.<br>
+<br>
+  'announce   FILES are read-only if up-to-date; user must type<br>
               C-x v v before editing.  But other users
               may be editing at the same time.</p>

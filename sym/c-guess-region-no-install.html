@@ -1,25 +1,25 @@
 <h3>Function: c-guess-region-no-install</h3>
 <p>
-Guess the style on the region; don't install it.</p>
-<p>
-Every line of code in the region is examined and values for the following two
-variables are guessed:</p>
-<p>
-* `c-basic-offset', and
-* the indentation values of the various syntactic symbols in
-  `c-offsets-alist'.</p>
-<p>
-The guessed values are put into `c-guess-guessed-basic-offset' and
-`c-guess-guessed-offsets-alist'.</p>
-<p>
-Frequencies of use are taken into account when guessing, so minor
-inconsistencies in the indentation style shouldn't produce wrong guesses.</p>
-<p>
-If given a prefix argument (or if the optional argument ACCUMULATE is
-non-nil) then the previous examination is extended, otherwise a new
-guess is made from scratch.</p>
-<p>
-Note that the larger the region to guess in, the slower the guessing.
-So you can limit the region with `c-guess-region-max'.</p>
-<p>
+Guess the style on the region; don't install it.<br>
+<br>
+Every line of code in the region is examined and values for the following two<br>
+variables are guessed:<br>
+<br>
+* `c-basic-offset', and<br>
+* the indentation values of the various syntactic symbols in<br>
+  `c-offsets-alist'.<br>
+<br>
+The guessed values are put into `c-guess-guessed-basic-offset' and<br>
+`c-guess-guessed-offsets-alist'.<br>
+<br>
+Frequencies of use are taken into account when guessing, so minor<br>
+inconsistencies in the indentation style shouldn't produce wrong guesses.<br>
+<br>
+If given a prefix argument (or if the optional argument ACCUMULATE is<br>
+non-nil) then the previous examination is extended, otherwise a new<br>
+guess is made from scratch.<br>
+<br>
+Note that the larger the region to guess in, the slower the guessing.<br>
+So you can limit the region with `c-guess-region-max'.
+
 (fn START END &optional ACCUMULATE)</p>

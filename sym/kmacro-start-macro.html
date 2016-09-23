@@ -1,24 +1,24 @@
 <h3>Function: kmacro-start-macro</h3>
 <p>
-Record subsequent keyboard input, defining a keyboard macro.
-The commands are recorded even as they are executed.
-Use C-x ) to finish recording and make the macro available.
-Use C-x e to execute the macro.</p>
-<p>
-Non-nil arg (prefix arg) means append to last macro defined.</p>
-<p>
-With C-u prefix, append to last keyboard macro
-defined.  Depending on `kmacro-execute-before-append', this may begin
-by re-executing the last macro as if you typed it again.</p>
-<p>
-Otherwise, it sets `kmacro-counter' to ARG or 0 if missing before
-defining the macro.</p>
-<p>
-Use M-x kmacro-insert-counter to insert (and increment) the macro counter.
-The counter value can be set or modified via M-x kmacro-set-counter and M-x kmacro-add-counter.
-The format of the counter can be modified via M-x kmacro-set-format.</p>
-<p>
+Record subsequent keyboard input, defining a keyboard macro.<br>
+The commands are recorded even as they are executed.<br>
+Use C-x ) to finish recording and make the macro available.<br>
+Use C-x e to execute the macro.<br>
+<br>
+Non-nil arg (prefix arg) means append to last macro defined.<br>
+<br>
+With C-u prefix, append to last keyboard macro<br>
+defined.  Depending on `kmacro-execute-before-append', this may begin<br>
+by re-executing the last macro as if you typed it again.<br>
+<br>
+Otherwise, it sets `kmacro-counter' to ARG or 0 if missing before<br>
+defining the macro.<br>
+<br>
+Use M-x kmacro-insert-counter to insert (and increment) the macro counter.<br>
+The counter value can be set or modified via M-x kmacro-set-counter and M-x kmacro-add-counter.<br>
+The format of the counter can be modified via M-x kmacro-set-format.<br>
+<br>
 Use M-x kmacro-name-last-macro to give it a permanent name.
-Use M-x kmacro-bind-to-key to bind it to a key sequence.</p>
-<p>
+Use M-x kmacro-bind-to-key to bind it to a key sequence.
+
 (fn ARG)</p>

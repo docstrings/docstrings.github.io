@@ -1,22 +1,22 @@
 <h3>Function: find-tag-other-window</h3>
 <p>
-Find tag (in current tags table) whose name contains TAGNAME.
-Select the buffer containing the tag's definition in another window, and
-move point there.  The default for TAGNAME is the expression in the buffer
-around or before point.</p>
-<p>
-If second arg NEXT-P is t (interactively, with prefix arg), search for
-another tag that matches the last tagname or regexp used.  When there are
-multiple matches for a tag, more exact matches are found first.  If NEXT-P
-is negative (interactively, with prefix arg that is a negative number or
-just M--), pop back to the previous tag gone to.</p>
-<p>
-If third arg REGEXP-P is non-nil, treat TAGNAME as a regexp.</p>
-<p>
-A marker representing the point when this command is invoked is pushed
-onto a ring and may be popped back to with M-*.
-Contrast this with the ring of marks gone to by the command.</p>
-<p>
-See documentation of variable `tags-file-name'.</p>
-<p>
+Find tag (in current tags table) whose name contains TAGNAME.<br>
+Select the buffer containing the tag's definition in another window, and<br>
+move point there.  The default for TAGNAME is the expression in the buffer<br>
+around or before point.<br>
+<br>
+If second arg NEXT-P is t (interactively, with prefix arg), search for<br>
+another tag that matches the last tagname or regexp used.  When there are<br>
+multiple matches for a tag, more exact matches are found first.  If NEXT-P<br>
+is negative (interactively, with prefix arg that is a negative number or<br>
+just M--), pop back to the previous tag gone to.<br>
+<br>
+If third arg REGEXP-P is non-nil, treat TAGNAME as a regexp.<br>
+<br>
+A marker representing the point when this command is invoked is pushed<br>
+onto a ring and may be popped back to with M-*.<br>
+Contrast this with the ring of marks gone to by the command.<br>
+<br>
+See documentation of variable `tags-file-name'.
+
 (fn TAGNAME &optional NEXT-P REGEXP-P)</p>

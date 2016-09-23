@@ -1,25 +1,25 @@
 <h3>Function: dbus-message-internal</h3>
 <p>
-Send a D-Bus message.
-This is an internal function, it shall not be used outside dbus.el.</p>
-<p>
-The following usages are expected:</p>
-<p>
-`dbus-call-method', `dbus-call-method-asynchronously':
+Send a D-Bus message.<br>
+This is an internal function, it shall not be used outside dbus.el.<br>
+<br>
+The following usages are expected:<br>
+<br>
+`dbus-call-method', `dbus-call-method-asynchronously':<br>
+  (dbus-message-internal<br>
+    dbus-message-type-method-call BUS SERVICE PATH INTERFACE METHOD HANDLER<br>
+    &optional :timeout TIMEOUT &rest ARGS)<br>
+<br>
+`dbus-send-signal':<br>
+  (dbus-message-internal<br>
+    dbus-message-type-signal BUS SERVICE PATH INTERFACE SIGNAL &rest ARGS)<br>
+<br>
+`dbus-method-return-internal':<br>
+  (dbus-message-internal<br>
+    dbus-message-type-method-return BUS SERVICE SERIAL &rest ARGS)<br>
+<br>
+`dbus-method-error-internal':<br>
   (dbus-message-internal
-    dbus-message-type-method-call BUS SERVICE PATH INTERFACE METHOD HANDLER
-    &optional :timeout TIMEOUT &rest ARGS)</p>
-<p>
-`dbus-send-signal':
-  (dbus-message-internal
-    dbus-message-type-signal BUS SERVICE PATH INTERFACE SIGNAL &rest ARGS)</p>
-<p>
-`dbus-method-return-internal':
-  (dbus-message-internal
-    dbus-message-type-method-return BUS SERVICE SERIAL &rest ARGS)</p>
-<p>
-`dbus-method-error-internal':
-  (dbus-message-internal
-    dbus-message-type-error BUS SERVICE SERIAL &rest ARGS)</p>
-<p>
+    dbus-message-type-error BUS SERVICE SERIAL &rest ARGS)
+
 (fn &rest REST)</p>

@@ -1,20 +1,20 @@
 <h3>Function: count-screen-lines</h3>
 <p>
-Return the number of screen lines in the region.
-The number of screen lines may be different from the number of actual lines,
-due to line breaking, display table, etc.</p>
-<p>
-Optional arguments BEG and END default to `point-min' and `point-max'
-respectively.</p>
-<p>
-If region ends with a newline, ignore it unless optional third argument
-COUNT-FINAL-NEWLINE is non-nil.</p>
-<p>
-The optional fourth argument WINDOW specifies the window used for obtaining
-parameters such as width, horizontal scrolling, and so on.  The default is
-to use the selected window's parameters.</p>
-<p>
-Like `vertical-motion', `count-screen-lines' always uses the current buffer,
-regardless of which buffer is displayed in WINDOW.  This makes possible to use
+Return the number of screen lines in the region.<br>
+The number of screen lines may be different from the number of actual lines,<br>
+due to line breaking, display table, etc.<br>
+<br>
+Optional arguments BEG and END default to `point-min' and `point-max'<br>
+respectively.<br>
+<br>
+If region ends with a newline, ignore it unless optional third argument<br>
+COUNT-FINAL-NEWLINE is non-nil.<br>
+<br>
+The optional fourth argument WINDOW specifies the window used for obtaining<br>
+parameters such as width, horizontal scrolling, and so on.  The default is<br>
+to use the selected window's parameters.<br>
+<br>
+Like `vertical-motion', `count-screen-lines' always uses the current buffer,<br>
+regardless of which buffer is displayed in WINDOW.  This makes possible to use<br>
 `count-screen-lines' in any buffer, whether or not it is currently displayed
 in some window.</p>

@@ -1,21 +1,21 @@
 <h3>Function: bookmark-jump</h3>
 <p>
-Jump to bookmark BOOKMARK (a point in some file).
-You may have a problem using this function if the value of variable
-`bookmark-alist' is nil.  If that happens, you need to load in some
-bookmarks.  See help on function `bookmark-load' for more about
-this.</p>
-<p>
-If the file pointed to by BOOKMARK no longer exists, you will be asked
-if you wish to give the bookmark a new location, and `bookmark-jump'
-will then jump to the new location, as well as recording it in place
-of the old one in the permanent bookmark record.</p>
-<p>
-BOOKMARK is usually a bookmark name (a string).  It can also be a
-bookmark record, but this is usually only done by programmatic callers.</p>
-<p>
-If DISPLAY-FUNC is non-nil, it is a function to invoke to display the
-bookmark.  It defaults to `switch-to-buffer'.  A typical value for
-DISPLAY-FUNC would be `switch-to-buffer-other-window'.</p>
-<p>
+Jump to bookmark BOOKMARK (a point in some file).<br>
+You may have a problem using this function if the value of variable<br>
+`bookmark-alist' is nil.  If that happens, you need to load in some<br>
+bookmarks.  See help on function `bookmark-load' for more about<br>
+this.<br>
+<br>
+If the file pointed to by BOOKMARK no longer exists, you will be asked<br>
+if you wish to give the bookmark a new location, and `bookmark-jump'<br>
+will then jump to the new location, as well as recording it in place<br>
+of the old one in the permanent bookmark record.<br>
+<br>
+BOOKMARK is usually a bookmark name (a string).  It can also be a<br>
+bookmark record, but this is usually only done by programmatic callers.<br>
+<br>
+If DISPLAY-FUNC is non-nil, it is a function to invoke to display the<br>
+bookmark.  It defaults to `switch-to-buffer'.  A typical value for<br>
+DISPLAY-FUNC would be `switch-to-buffer-other-window'.
+
 (fn BOOKMARK &optional DISPLAY-FUNC)</p>

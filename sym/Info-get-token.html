@@ -1,14 +1,14 @@
 <h3>Function: Info-get-token</h3>
 <p>
-Return the token around POS.
-POS must be somewhere inside the token.
-START is a regular expression which will match the
-    beginning of the tokens delimited string.
-ALL is a regular expression with a single
-    parenthesized subpattern which is the token to be
-    returned.  E.g. '{(.*)}' would return any string
-    enclosed in braces around POS.
-ERRORSTRING optional fourth argument, controls action on no match:
-    nil: return nil
-    t: beep
+Return the token around POS.<br>
+POS must be somewhere inside the token.<br>
+START is a regular expression which will match the<br>
+    beginning of the tokens delimited string.<br>
+ALL is a regular expression with a single<br>
+    parenthesized subpattern which is the token to be<br>
+    returned.  E.g. '{(.*)}' would return any string<br>
+    enclosed in braces around POS.<br>
+ERRORSTRING optional fourth argument, controls action on no match:<br>
+    nil: return nil<br>
+    t: beep<br>
     a string: signal an error, using that string.</p>

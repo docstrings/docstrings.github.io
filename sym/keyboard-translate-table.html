@@ -1,16 +1,16 @@
 <h3>Variable: keyboard-translate-table</h3>
 <p>
-Translate table for local keyboard input, or nil.
-If non-nil, the value should be a char-table.  Each character read
-from the keyboard is looked up in this char-table.  If the value found
-there is non-nil, then it is used instead of the actual input character.</p>
-<p>
-The value can also be a string or vector, but this is considered obsolete.
-If it is a string or vector of length N, character codes N and up are left
-untranslated.  In a vector, an element which is nil means "no translation".</p>
-<p>
-This is applied to the characters supplied to input methods, not their
-output.  See also `translation-table-for-input'.</p>
-<p>
+Translate table for local keyboard input, or nil.<br>
+If non-nil, the value should be a char-table.  Each character read<br>
+from the keyboard is looked up in this char-table.  If the value found<br>
+there is non-nil, then it is used instead of the actual input character.<br>
+<br>
+The value can also be a string or vector, but this is considered obsolete.<br>
+If it is a string or vector of length N, character codes N and up are left<br>
+untranslated.  In a vector, an element which is nil means "no translation".<br>
+<br>
+This is applied to the characters supplied to input methods, not their<br>
+output.  See also `translation-table-for-input'.<br>
+<br>
 This variable has a separate binding for each terminal.
 See Info node `(elisp)Multiple Terminals'.</p>

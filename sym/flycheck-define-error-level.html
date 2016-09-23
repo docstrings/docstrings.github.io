@@ -1,50 +1,50 @@
 <h3>Function: flycheck-define-error-level</h3>
 <p>
-Define a new error LEVEL with PROPERTIES.</p>
-<p>
-The following PROPERTIES constitute an error level:</p>
-<p>
-`:severity SEVERITY'
-     A number denoting the severity of this level.  The higher
-     the number, the more severe is this level compared to other
-     levels.  Defaults to 0.</p>
-<p>
-     The severity is used by `flycheck-error-level-<' to
-     determine the ordering of errors according to their levels.</p>
-<p>
-`:compilation-level LEVEL'</p>
-<p>
-     A number indicating the broad class of messages that errors
-     at this level belong to: one of 0 (info), 1 (warning), or
-     2 or nil (error).  Defaults to nil.</p>
-<p>
-     This is used by `flycheck-checker-pattern-to-error-regexp'
-     to map error levels into `compilation-mode''s hierarchy and
-     to get proper highlighting of errors in `compilation-mode'.</p>
-<p>
-`:overlay-category CATEGORY'
-     A symbol denoting the overlay category to use for error
-     highlight overlays for this level.  See Info
-     node `(elisp)Overlay Properties' for more information about
-     overlay categories.</p>
-<p>
-     A category for an error level overlay should at least define
-     the `face' property, for error highlighting.  Another useful
-     property for error level categories is `priority', to
-     influence the stacking of multiple error level overlays.</p>
-<p>
-`:fringe-bitmap BITMAP'
-     A fringe bitmap symbol denoting the bitmap to use for fringe
-     indicators for this level.  See Info node `(elisp)Fringe
-     Bitmaps' for more information about fringe bitmaps,
-     including a list of built-in fringe bitmaps.</p>
-<p>
-`:fringe-face FACE'
-     A face symbol denoting the face to use for fringe indicators
-     for this level.</p>
-<p>
+Define a new error LEVEL with PROPERTIES.<br>
+<br>
+The following PROPERTIES constitute an error level:<br>
+<br>
+`:severity SEVERITY'<br>
+     A number denoting the severity of this level.  The higher<br>
+     the number, the more severe is this level compared to other<br>
+     levels.  Defaults to 0.<br>
+<br>
+     The severity is used by `flycheck-error-level-<' to<br>
+     determine the ordering of errors according to their levels.<br>
+<br>
+`:compilation-level LEVEL'<br>
+<br>
+     A number indicating the broad class of messages that errors<br>
+     at this level belong to: one of 0 (info), 1 (warning), or<br>
+     2 or nil (error).  Defaults to nil.<br>
+<br>
+     This is used by `flycheck-checker-pattern-to-error-regexp'<br>
+     to map error levels into `compilation-mode''s hierarchy and<br>
+     to get proper highlighting of errors in `compilation-mode'.<br>
+<br>
+`:overlay-category CATEGORY'<br>
+     A symbol denoting the overlay category to use for error<br>
+     highlight overlays for this level.  See Info<br>
+     node `(elisp)Overlay Properties' for more information about<br>
+     overlay categories.<br>
+<br>
+     A category for an error level overlay should at least define<br>
+     the `face' property, for error highlighting.  Another useful<br>
+     property for error level categories is `priority', to<br>
+     influence the stacking of multiple error level overlays.<br>
+<br>
+`:fringe-bitmap BITMAP'<br>
+     A fringe bitmap symbol denoting the bitmap to use for fringe<br>
+     indicators for this level.  See Info node `(elisp)Fringe<br>
+     Bitmaps' for more information about fringe bitmaps,<br>
+     including a list of built-in fringe bitmaps.<br>
+<br>
+`:fringe-face FACE'<br>
+     A face symbol denoting the face to use for fringe indicators<br>
+     for this level.<br>
+<br>
 `:error-list-face FACE'
      A face symbol denoting the face to use for messages of this
-     level in the error list.  See `flycheck-list-errors'.</p>
-<p>
+     level in the error list.  See `flycheck-list-errors'.
+
 (fn LEVEL &rest PROPERTIES)</p>

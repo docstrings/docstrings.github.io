@@ -1,18 +1,18 @@
 <h3>Function: message</h3>
 <p>
-Display a message at the bottom of the screen.
-The message also goes into the `*Messages*' buffer, if `message-log-max'
-is non-nil.  (In keyboard macros, that's all it does.)
-Return the message.</p>
-<p>
-The first argument is a format control string, and the rest are data
-to be formatted under control of the string.  See `format' for details.</p>
-<p>
-Note: Use (message "%s" VALUE) to print the value of expressions and
-variables to avoid accidentally interpreting `%' as format specifiers.</p>
-<p>
-If the first argument is nil or the empty string, the function clears
-any existing message; this lets the minibuffer contents show.  See
-also `current-message'.</p>
-<p>
+Display a message at the bottom of the screen.<br>
+The message also goes into the `*Messages*' buffer, if `message-log-max'<br>
+is non-nil.  (In keyboard macros, that's all it does.)<br>
+Return the message.<br>
+<br>
+The first argument is a format control string, and the rest are data<br>
+to be formatted under control of the string.  See `format' for details.<br>
+<br>
+Note: Use (message "%s" VALUE) to print the value of expressions and<br>
+variables to avoid accidentally interpreting `%' as format specifiers.<br>
+<br>
+If the first argument is nil or the empty string, the function clears<br>
+any existing message; this lets the minibuffer contents show.  See<br>
+also `current-message'.
+
 (fn FORMAT-STRING &rest ARGS)</p>

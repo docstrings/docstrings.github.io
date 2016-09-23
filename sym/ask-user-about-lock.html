@@ -1,10 +1,10 @@
 <h3>Function: ask-user-about-lock</h3>
 <p>
-Ask user what to do when he wants to edit FILE but it is locked by OPPONENT.
-This function has a choice of three things to do:
-  do (signal 'file-locked (list FILE OPPONENT))
-    to refrain from editing the file
-  return t (grab the lock on the file)
-  return nil (edit the file even though it is locked).
+Ask user what to do when he wants to edit FILE but it is locked by OPPONENT.<br>
+This function has a choice of three things to do:<br>
+  do (signal 'file-locked (list FILE OPPONENT))<br>
+    to refrain from editing the file<br>
+  return t (grab the lock on the file)<br>
+  return nil (edit the file even though it is locked).<br>
 You can redefine this function to choose among those three alternatives
 in any way you like.</p>

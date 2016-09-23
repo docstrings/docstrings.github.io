@@ -1,30 +1,30 @@
 <h3>Function: window-system</h3>
 <p>
-The name of the window system that FRAME is displaying through.
-The value is a symbol:
- nil for a termcap frame (a character-only terminal),
- 'x' for an Emacs frame that is really an X window,
- 'w32' for an Emacs frame that is a window on MS-Windows display,
- 'ns' for an Emacs frame on a GNUstep or Macintosh Cocoa display,
- 'pc' for a direct-write MS-DOS frame.</p>
-<p>
-FRAME defaults to the currently selected frame.</p>
-<p>
-Use of this function as a predicate is deprecated.  Instead,
-use `display-graphic-p' or any of the other `display-*-p'
-predicates which report frame's specific UI-related capabilities.</p>
-<p>
+The name of the window system that FRAME is displaying through.<br>
+The value is a symbol:<br>
+ nil for a termcap frame (a character-only terminal),<br>
+ 'x' for an Emacs frame that is really an X window,<br>
+ 'w32' for an Emacs frame that is a window on MS-Windows display,<br>
+ 'ns' for an Emacs frame on a GNUstep or Macintosh Cocoa display,<br>
+ 'pc' for a direct-write MS-DOS frame.<br>
+<br>
+FRAME defaults to the currently selected frame.<br>
+<br>
+Use of this function as a predicate is deprecated.  Instead,<br>
+use `display-graphic-p' or any of the other `display-*-p'<br>
+predicates which report frame's specific UI-related capabilities.
+
 (fn &optional FRAME)</p>
 <h3>Variable: window-system</h3>
 <p>
-Name of window system through which the selected frame is displayed.
-The value is a symbol:
- nil for a termcap frame (a character-only terminal),
- 'x' for an Emacs frame that is really an X window,
- 'w32' for an Emacs frame that is a window on MS-Windows display,
- 'ns' for an Emacs frame on a GNUstep or Macintosh Cocoa display,
- 'pc' for a direct-write MS-DOS frame.</p>
-<p>
-Use of this variable as a boolean is deprecated.  Instead,
-use `display-graphic-p' or any of the other `display-*-p'
+Name of window system through which the selected frame is displayed.<br>
+The value is a symbol:<br>
+ nil for a termcap frame (a character-only terminal),<br>
+ 'x' for an Emacs frame that is really an X window,<br>
+ 'w32' for an Emacs frame that is a window on MS-Windows display,<br>
+ 'ns' for an Emacs frame on a GNUstep or Macintosh Cocoa display,<br>
+ 'pc' for a direct-write MS-DOS frame.<br>
+<br>
+Use of this variable as a boolean is deprecated.  Instead,<br>
+use `display-graphic-p' or any of the other `display-*-p'<br>
 predicates which report frame's specific UI-related capabilities.</p>

@@ -1,16 +1,16 @@
 <h3>Function: handle-shift-selection</h3>
 <p>
-Activate/deactivate mark depending on invocation thru shift translation.
-This function is called by `call-interactively' when a command
-with a `^' character in its `interactive' spec is invoked, before
-running the command itself.</p>
-<p>
-If `shift-select-mode' is enabled and the command was invoked
-through shift translation, set the mark and activate the region
-temporarily, unless it was already set in this way.  See
-`this-command-keys-shift-translated' for the meaning of shift
-translation.</p>
-<p>
-Otherwise, if the region has been activated temporarily,
+Activate/deactivate mark depending on invocation thru shift translation.<br>
+This function is called by `call-interactively' when a command<br>
+with a `^' character in its `interactive' spec is invoked, before<br>
+running the command itself.<br>
+<br>
+If `shift-select-mode' is enabled and the command was invoked<br>
+through shift translation, set the mark and activate the region<br>
+temporarily, unless it was already set in this way.  See<br>
+`this-command-keys-shift-translated' for the meaning of shift<br>
+translation.<br>
+<br>
+Otherwise, if the region has been activated temporarily,<br>
 deactivate it, and restore the variable `transient-mark-mode' to
 its earlier value.</p>

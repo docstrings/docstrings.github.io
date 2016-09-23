@@ -1,11 +1,11 @@
 <h3>Variable: set-auto-coding-function</h3>
 <p>
-If non-nil, a function to call to decide a coding system of file.
-Two arguments are passed to this function: the file name
-and the length of a file contents following the point.
-This function should return a coding system to decode the file contents.
-It should check the file name against `auto-coding-alist'.
-If no coding system is decided, it should check a coding system
-specified in the heading lines with the format:
-	-*- ... coding: CODING-SYSTEM; ... -*-
+If non-nil, a function to call to decide a coding system of file.<br>
+Two arguments are passed to this function: the file name<br>
+and the length of a file contents following the point.<br>
+This function should return a coding system to decode the file contents.<br>
+It should check the file name against `auto-coding-alist'.<br>
+If no coding system is decided, it should check a coding system<br>
+specified in the heading lines with the format:<br>
+	-*- ... coding: CODING-SYSTEM; ... -*-<br>
 or local variable spec of the tailing lines with `coding:' tag.</p>

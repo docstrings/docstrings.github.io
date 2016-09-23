@@ -1,0 +1,11 @@
+<h3>Function: executable-chmod</h3>
+<p>
+This gets called after saving a file to assure that it be executable.<br>
+You can set the absolute or relative mode in variable `executable-chmod' for<br>
+non-executable files.</p>
+<h3>Variable: executable-chmod</h3>
+<p>
+After saving, if the file is not executable, set this mode.<br>
+This mode passed to `set-file-modes' is taken absolutely when negative, or<br>
+relative to the files existing modes.  Do nothing if this is nil.<br>
+Typical values are 73 (+x) or -493 (rwxr-xr-x).</p>

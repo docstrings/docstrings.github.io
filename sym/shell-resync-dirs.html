@@ -1,13 +1,13 @@
 <h3>Function: shell-resync-dirs</h3>
 <p>
-Resync the buffer's idea of the current directory stack.
-This command queries the shell with the command bound to
-`shell-dirstack-query' (default "dirs"), reads the next
-line output and parses it to form the new directory stack.
-DON'T issue this command unless the buffer is at a shell prompt.
-Also, note that if some other subprocess decides to do output
-immediately after the query, its output will be taken as the
+Resync the buffer's idea of the current directory stack.<br>
+This command queries the shell with the command bound to<br>
+`shell-dirstack-query' (default "dirs"), reads the next<br>
+line output and parses it to form the new directory stack.<br>
+DON'T issue this command unless the buffer is at a shell prompt.<br>
+Also, note that if some other subprocess decides to do output<br>
+immediately after the query, its output will be taken as the<br>
 new directory stack -- you lose.  If this happens, just do the
-command again.</p>
-<p>
+command again.
+
 (fn)</p>

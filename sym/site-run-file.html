@@ -1,20 +1,20 @@
 <h3>Variable: site-run-file</h3>
 <p>
-File containing site-wide run-time initializations.
-This file is loaded at run-time before `~/.emacs'.  It contains inits
-that need to be in place for the entire site, but which, due to their
-higher incidence of change, don't make sense to load into Emacs's
-dumped image.  Thus, the run-time load order is: 1. file described in
-this variable, if non-nil; 2. `~/.emacs'; 3. `default.el'.</p>
-<p>
-Don't use the `site-start.el' file for things some users may not like.
-Put them in `default.el' instead, so that users can more easily
-override them.  Users can prevent loading `default.el' with the `-q'
-option or by setting `inhibit-default-init' in their own init files,
-but inhibiting `site-start.el' requires `--no-site-file', which
-is less convenient.</p>
-<p>
-This variable is defined for customization so as to make
-it visible in the relevant context.  However, actually customizing it
-is not allowed, since it would not work anyway.  The only way to set
+File containing site-wide run-time initializations.<br>
+This file is loaded at run-time before `~/.emacs'.  It contains inits<br>
+that need to be in place for the entire site, but which, due to their<br>
+higher incidence of change, don't make sense to load into Emacs's<br>
+dumped image.  Thus, the run-time load order is: 1. file described in<br>
+this variable, if non-nil; 2. `~/.emacs'; 3. `default.el'.<br>
+<br>
+Don't use the `site-start.el' file for things some users may not like.<br>
+Put them in `default.el' instead, so that users can more easily<br>
+override them.  Users can prevent loading `default.el' with the `-q'<br>
+option or by setting `inhibit-default-init' in their own init files,<br>
+but inhibiting `site-start.el' requires `--no-site-file', which<br>
+is less convenient.<br>
+<br>
+This variable is defined for customization so as to make<br>
+it visible in the relevant context.  However, actually customizing it<br>
+is not allowed, since it would not work anyway.  The only way to set<br>
 this variable usefully is to set it while building and dumping Emacs.</p>

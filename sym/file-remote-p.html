@@ -1,38 +1,38 @@
 <h3>Function: file-remote-p</h3>
 <p>
-Test whether FILE specifies a location on a remote system.
-A file is considered remote if accessing it is likely to
-be slower or less reliable than accessing local files.</p>
-<p>
-`file-remote-p' never opens a new remote connection.  It can
-only reuse a connection that is already open.</p>
-<p>
-Return nil or a string identifying the remote connection
-(ideally a prefix of FILE).  Return nil if FILE is a relative
-file name.</p>
-<p>
-When IDENTIFICATION is nil, the returned string is a complete
-remote identifier: with components method, user, and host.  The
-components are those present in FILE, with defaults filled in for
-any that are missing.</p>
-<p>
-IDENTIFICATION can specify which part of the identification to
-return.  IDENTIFICATION can be the symbol `method', `user',
-`host', or `localname'.  Any other value is handled like nil and
-means to return the complete identification.  The string returned
-for IDENTIFICATION `localname' can differ depending on whether
-there is an existing connection.</p>
-<p>
-If CONNECTED is non-nil, return an identification only if FILE is
-located on a remote system and a connection is established to
-that remote system.</p>
-<p>
-Tip: You can use this expansion of remote identifier components
-     to derive a new remote file name from an existing one.  For
-     example, if FILE is "/sudo::/path/to/file" then</p>
-<p>
-       (concat (file-remote-p FILE) "/bin/sh")</p>
-<p>
+Test whether FILE specifies a location on a remote system.<br>
+A file is considered remote if accessing it is likely to<br>
+be slower or less reliable than accessing local files.<br>
+<br>
+`file-remote-p' never opens a new remote connection.  It can<br>
+only reuse a connection that is already open.<br>
+<br>
+Return nil or a string identifying the remote connection<br>
+(ideally a prefix of FILE).  Return nil if FILE is a relative<br>
+file name.<br>
+<br>
+When IDENTIFICATION is nil, the returned string is a complete<br>
+remote identifier: with components method, user, and host.  The<br>
+components are those present in FILE, with defaults filled in for<br>
+any that are missing.<br>
+<br>
+IDENTIFICATION can specify which part of the identification to<br>
+return.  IDENTIFICATION can be the symbol `method', `user',<br>
+`host', or `localname'.  Any other value is handled like nil and<br>
+means to return the complete identification.  The string returned<br>
+for IDENTIFICATION `localname' can differ depending on whether<br>
+there is an existing connection.<br>
+<br>
+If CONNECTED is non-nil, return an identification only if FILE is<br>
+located on a remote system and a connection is established to<br>
+that remote system.<br>
+<br>
+Tip: You can use this expansion of remote identifier components<br>
+     to derive a new remote file name from an existing one.  For<br>
+     example, if FILE is "/sudo::/path/to/file" then<br>
+<br>
+       (concat (file-remote-p FILE) "/bin/sh")<br>
+<br>
      returns a remote file name for file "/bin/sh" that has the
      same remote identifier as FILE but expanded; a name such as
      "/sudo:root@myhost:/bin/sh".</p>

@@ -1,21 +1,21 @@
 <h3>Function: grep</h3>
 <p>
-Run grep, with user-specified args, and collect output in a buffer.
-While grep runs asynchronously, you can use C-x ` (M-x next-error),
-or 
-Uses keymap `grep-mode-map', which is not currently defined.
-M-x compile-goto-error in the *grep* buffer, to go to the lines where grep found
-matches.  To kill the grep job before it finishes, type M-x kill-compilation.</p>
-<p>
-For doing a recursive `grep', see the `rgrep' command.  For running
-`grep' in a specific directory, see `lgrep'.</p>
-<p>
-This command uses a special history list for its COMMAND-ARGS, so you
-can easily repeat a grep command.</p>
-<p>
-A prefix argument says to default the argument based upon the current
-tag the cursor is over, substituting it into the last grep command
+Run grep, with user-specified args, and collect output in a buffer.<br>
+While grep runs asynchronously, you can use C-x ` (M-x next-error),<br>
+or <br>
+Uses keymap `grep-mode-map', which is not currently defined.<br>
+M-x compile-goto-error in the *grep* buffer, to go to the lines where grep found<br>
+matches.  To kill the grep job before it finishes, type M-x kill-compilation.<br>
+<br>
+For doing a recursive `grep', see the `rgrep' command.  For running<br>
+`grep' in a specific directory, see `lgrep'.<br>
+<br>
+This command uses a special history list for its COMMAND-ARGS, so you<br>
+can easily repeat a grep command.<br>
+<br>
+A prefix argument says to default the argument based upon the current<br>
+tag the cursor is over, substituting it into the last grep command<br>
 in the grep command history (or into `grep-command' if that history
-list is empty).</p>
-<p>
+list is empty).
+
 (fn COMMAND-ARGS)</p>

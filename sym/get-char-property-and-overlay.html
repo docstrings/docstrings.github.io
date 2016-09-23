@@ -1,16 +1,16 @@
 <h3>Function: get-char-property-and-overlay</h3>
 <p>
-Like `get-char-property', but with extra overlay information.
-The value is a cons cell.  Its car is the return value of `get-char-property'
-with the same arguments--that is, the value of POSITION's property
-PROP in OBJECT.  Its cdr is the overlay in which the property was
-found, or nil, if it was found as a text property or not found at all.</p>
-<p>
-OBJECT is optional and defaults to the current buffer.  OBJECT may be
-a string, a buffer or a window.  For strings, the cdr of the return
-value is always nil, since strings do not have overlays.  If OBJECT is
-a window, then that window's buffer is used, but window-specific
-overlays are considered only if they are associated with OBJECT.  If
-POSITION is at the end of OBJECT, both car and cdr are nil.</p>
-<p>
+Like `get-char-property', but with extra overlay information.<br>
+The value is a cons cell.  Its car is the return value of `get-char-property'<br>
+with the same arguments--that is, the value of POSITION's property<br>
+PROP in OBJECT.  Its cdr is the overlay in which the property was<br>
+found, or nil, if it was found as a text property or not found at all.<br>
+<br>
+OBJECT is optional and defaults to the current buffer.  OBJECT may be<br>
+a string, a buffer or a window.  For strings, the cdr of the return<br>
+value is always nil, since strings do not have overlays.  If OBJECT is<br>
+a window, then that window's buffer is used, but window-specific<br>
+overlays are considered only if they are associated with OBJECT.  If<br>
+POSITION is at the end of OBJECT, both car and cdr are nil.
+
 (fn POSITION PROP &optional OBJECT)</p>

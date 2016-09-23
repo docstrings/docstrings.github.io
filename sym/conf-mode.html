@@ -1,35 +1,35 @@
 <h3>Function: conf-mode</h3>
 <p>
-Mode for Unix and Windows Conf files and Java properties.
-Most conf files know only three kinds of constructs: parameter
-assignments optionally grouped into sections and comments.  Yet
-there is a great range of variation in the exact syntax of conf
-files.  See below for various wrapper commands that set up the
-details for some of the most widespread variants.</p>
-<p>
-This mode sets up font locking, outline, imenu and it provides
-alignment support through `conf-align-assignments'.  If strings
-come out wrong, try `conf-quote-normal'.</p>
-<p>
-Some files allow continuation lines, either with a backslash at
-the end of line, or by indenting the next line (further).  These
-constructs cannot currently be recognized.</p>
-<p>
-Because of this great variety of nuances, which are often not
-even clearly specified, please don't expect it to get every file
-quite right.  Patches that clearly identify some special case,
-without breaking the general ones, are welcome.</p>
-<p>
-If instead you start this mode with the generic `conf-mode'
-command, it will parse the buffer.  It will generally well
-identify the first four cases listed below.  If the buffer
-doesn't have enough contents to decide, this is identical to
-`conf-windows-mode' on Windows, elsewhere to `conf-unix-mode'.
-See also `conf-space-mode', `conf-colon-mode', `conf-javaprop-mode',
-`conf-ppd-mode' and `conf-xdefaults-mode'.</p>
-<p>
+Mode for Unix and Windows Conf files and Java properties.<br>
+Most conf files know only three kinds of constructs: parameter<br>
+assignments optionally grouped into sections and comments.  Yet<br>
+there is a great range of variation in the exact syntax of conf<br>
+files.  See below for various wrapper commands that set up the<br>
+details for some of the most widespread variants.<br>
+<br>
+This mode sets up font locking, outline, imenu and it provides<br>
+alignment support through `conf-align-assignments'.  If strings<br>
+come out wrong, try `conf-quote-normal'.<br>
+<br>
+Some files allow continuation lines, either with a backslash at<br>
+the end of line, or by indenting the next line (further).  These<br>
+constructs cannot currently be recognized.<br>
+<br>
+Because of this great variety of nuances, which are often not<br>
+even clearly specified, please don't expect it to get every file<br>
+quite right.  Patches that clearly identify some special case,<br>
+without breaking the general ones, are welcome.<br>
+<br>
+If instead you start this mode with the generic `conf-mode'<br>
+command, it will parse the buffer.  It will generally well<br>
+identify the first four cases listed below.  If the buffer<br>
+doesn't have enough contents to decide, this is identical to<br>
+`conf-windows-mode' on Windows, elsewhere to `conf-unix-mode'.<br>
+See also `conf-space-mode', `conf-colon-mode', `conf-javaprop-mode',<br>
+`conf-ppd-mode' and `conf-xdefaults-mode'.
 
-Uses keymap `conf-mode-map', which is not currently defined.</p>
-<p>
+
+Uses keymap `conf-mode-map', which is not currently defined.
+
 
 (fn)</p>

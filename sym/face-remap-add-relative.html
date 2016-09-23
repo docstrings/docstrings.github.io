@@ -1,24 +1,24 @@
 <h3>Function: face-remap-add-relative</h3>
 <p>
-Add a face remapping entry of FACE to SPECS in the current buffer.
-Return a cookie which can be used to delete this remapping with
-`face-remap-remove-relative'.</p>
-<p>
-The remaining arguments, SPECS, should form a list of faces.
-Each list element should be either a face name or a property list
-of face attribute/value pairs.  If more than one face is listed,
-that specifies an aggregate face, in the same way as in a `face'
-text property, except for possible priority changes noted below.</p>
-<p>
-The face remapping specified by SPECS takes effect alongside the
-remappings from other calls to `face-remap-add-relative' for the
-same FACE, as well as the normal definition of FACE (at lowest
-priority).  This function tries to sort multiple remappings for
-the same face, so that remappings specifying relative face
-attributes are applied after remappings specifying absolute face
-attributes.</p>
-<p>
-The base (lowest priority) remapping may be set to something
-other than the normal definition of FACE via `face-remap-set-base'.</p>
-<p>
+Add a face remapping entry of FACE to SPECS in the current buffer.<br>
+Return a cookie which can be used to delete this remapping with<br>
+`face-remap-remove-relative'.<br>
+<br>
+The remaining arguments, SPECS, should form a list of faces.<br>
+Each list element should be either a face name or a property list<br>
+of face attribute/value pairs.  If more than one face is listed,<br>
+that specifies an aggregate face, in the same way as in a `face'<br>
+text property, except for possible priority changes noted below.<br>
+<br>
+The face remapping specified by SPECS takes effect alongside the<br>
+remappings from other calls to `face-remap-add-relative' for the<br>
+same FACE, as well as the normal definition of FACE (at lowest<br>
+priority).  This function tries to sort multiple remappings for<br>
+the same face, so that remappings specifying relative face<br>
+attributes are applied after remappings specifying absolute face<br>
+attributes.<br>
+<br>
+The base (lowest priority) remapping may be set to something<br>
+other than the normal definition of FACE via `face-remap-set-base'.
+
 (fn FACE &rest SPECS)</p>

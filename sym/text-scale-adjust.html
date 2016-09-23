@@ -1,31 +1,31 @@
 <h3>Function: text-scale-adjust</h3>
 <p>
-Adjust the height of the default face by INC.</p>
-<p>
-INC may be passed as a numeric prefix argument.</p>
-<p>
-The actual adjustment made depends on the final component of the
-key-binding used to invoke the command, with all modifiers removed:</p>
-<p>
-   +, =   Increase the default face height by one step
-   -      Decrease the default face height by one step
-   0      Reset the default face height to the global default</p>
-<p>
-When adjusting with `+' or `-', continue to read input events and
-further adjust the face height as long as the input event read
-(with all modifiers removed) is `+' or `-'.</p>
-<p>
-When adjusting with `0', immediately finish.</p>
-<p>
-Each step scales the height of the default face by the variable
-`text-scale-mode-step' (a negative number of steps decreases the
-height by the same amount).  As a special case, an argument of 0
-will remove any scaling currently active.</p>
-<p>
-This command is a special-purpose wrapper around the
-`text-scale-increase' command which makes repetition convenient
-even when it is bound in a non-top-level keymap.  For binding in
+Adjust the height of the default face by INC.<br>
+<br>
+INC may be passed as a numeric prefix argument.<br>
+<br>
+The actual adjustment made depends on the final component of the<br>
+key-binding used to invoke the command, with all modifiers removed:<br>
+<br>
+   +, =   Increase the default face height by one step<br>
+   -      Decrease the default face height by one step<br>
+   0      Reset the default face height to the global default<br>
+<br>
+When adjusting with `+' or `-', continue to read input events and<br>
+further adjust the face height as long as the input event read<br>
+(with all modifiers removed) is `+' or `-'.<br>
+<br>
+When adjusting with `0', immediately finish.<br>
+<br>
+Each step scales the height of the default face by the variable<br>
+`text-scale-mode-step' (a negative number of steps decreases the<br>
+height by the same amount).  As a special case, an argument of 0<br>
+will remove any scaling currently active.<br>
+<br>
+This command is a special-purpose wrapper around the<br>
+`text-scale-increase' command which makes repetition convenient<br>
+even when it is bound in a non-top-level keymap.  For binding in<br>
 a top-level keymap, `text-scale-increase' or
-`text-scale-decrease' may be more appropriate.</p>
-<p>
+`text-scale-decrease' may be more appropriate.
+
 (fn INC)</p>

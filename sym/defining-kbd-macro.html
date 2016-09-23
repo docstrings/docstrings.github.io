@@ -1,17 +1,17 @@
 <h3>Function: defining-kbd-macro</h3>
 <p>
-Record subsequent keyboard input, defining a keyboard macro.
-The commands are recorded even as they are executed.
-Use M-x end-kbd-macro to finish recording and make the macro available.
-Use M-x name-last-kbd-macro to give it a permanent name.
-Non-nil arg (prefix arg) means append to last macro defined;
-this begins by re-executing that macro as if you typed it again.
-If optional second arg, NO-EXEC, is non-nil, do not re-execute last
-macro before appending to it.</p>
-<p>
+Record subsequent keyboard input, defining a keyboard macro.<br>
+The commands are recorded even as they are executed.<br>
+Use M-x end-kbd-macro to finish recording and make the macro available.<br>
+Use M-x name-last-kbd-macro to give it a permanent name.<br>
+Non-nil arg (prefix arg) means append to last macro defined;<br>
+this begins by re-executing that macro as if you typed it again.<br>
+If optional second arg, NO-EXEC, is non-nil, do not re-execute last<br>
+macro before appending to it.<br>
+
 (fn APPEND &optional NO-EXEC)</p>
 <h3>Variable: defining-kbd-macro</h3>
 <p>
-Non-nil while a keyboard macro is being defined.  Don't set this!
-The value is the symbol `append' while appending to the definition of
+Non-nil while a keyboard macro is being defined.  Don't set this!<br>
+The value is the symbol `append' while appending to the definition of<br>
 an existing macro.</p>

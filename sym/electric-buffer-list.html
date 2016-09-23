@@ -1,29 +1,29 @@
 <h3>Function: electric-buffer-list</h3>
 <p>
-Pop up the Buffer Menu in an "electric" window.
-If you type SPC or RET (`Electric-buffer-menu-select'), that
-selects the buffer at point and quits the "electric" window.
-Otherwise, you can move around in the Buffer Menu, marking
-buffers to be selected, saved or deleted; these other commands
-are much like those of `Buffer-menu-mode'.</p>
-<p>
-Run hooks in `electric-buffer-menu-mode-hook' on entry.</p>
-<p>
-
-Uses keymap `electric-buffer-menu-mode-map', which is not currently defined.</p>
-<p>
-C-g or M-x Electric-buffer-menu-quit -- exit buffer menu, returning to previous window and buffer
-  configuration.  If the very first character typed is a space, it
-  also has this effect.
-M-x Electric-buffer-menu-select -- select buffer of line point is on.
-  Also show buffers marked with m in other windows,
-  deletes buffers marked with "D", and saves those marked with "S".
-M-x Buffer-menu-mark -- mark buffer to be displayed.
-M-x Buffer-menu-not-modified -- clear modified-flag on that buffer.
-M-x Buffer-menu-save -- mark that buffer to be saved.
-M-x Buffer-menu-delete or M-x Buffer-menu-delete-backwards -- mark that buffer to be deleted.
-M-x Buffer-menu-unmark -- remove all kinds of marks from current line.
+Pop up the Buffer Menu in an "electric" window.<br>
+If you type SPC or RET (`Electric-buffer-menu-select'), that<br>
+selects the buffer at point and quits the "electric" window.<br>
+Otherwise, you can move around in the Buffer Menu, marking<br>
+buffers to be selected, saved or deleted; these other commands<br>
+are much like those of `Buffer-menu-mode'.<br>
+<br>
+Run hooks in `electric-buffer-menu-mode-hook' on entry.<br>
+<br>
+<br>
+Uses keymap `electric-buffer-menu-mode-map', which is not currently defined.<br>
+<br>
+C-g or M-x Electric-buffer-menu-quit -- exit buffer menu, returning to previous window and buffer<br>
+  configuration.  If the very first character typed is a space, it<br>
+  also has this effect.<br>
+M-x Electric-buffer-menu-select -- select buffer of line point is on.<br>
+  Also show buffers marked with m in other windows,<br>
+  deletes buffers marked with "D", and saves those marked with "S".<br>
+M-x Buffer-menu-mark -- mark buffer to be displayed.<br>
+M-x Buffer-menu-not-modified -- clear modified-flag on that buffer.<br>
+M-x Buffer-menu-save -- mark that buffer to be saved.<br>
+M-x Buffer-menu-delete or M-x Buffer-menu-delete-backwards -- mark that buffer to be deleted.<br>
+M-x Buffer-menu-unmark -- remove all kinds of marks from current line.<br>
 M-x Electric-buffer-menu-mode-view-buffer -- view buffer, returning when done.
-M-x Buffer-menu-backup-unmark -- back up a line and remove marks.</p>
-<p>
+M-x Buffer-menu-backup-unmark -- back up a line and remove marks.
+
 (fn ARG)</p>

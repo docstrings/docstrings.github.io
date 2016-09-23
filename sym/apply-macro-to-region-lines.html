@@ -1,43 +1,43 @@
 <h3>Function: apply-macro-to-region-lines</h3>
 <p>
-Apply last keyboard macro to all lines in the region.
-For each line that begins in the region, move to the beginning of
-the line, and run the last keyboard macro.</p>
-<p>
-When called from lisp, this function takes two arguments TOP and
-BOTTOM, describing the current region.  TOP must be before BOTTOM.
-The optional third argument MACRO specifies a keyboard macro to
-execute.</p>
-<p>
-This is useful for quoting or unquoting included text, adding and
-removing comments, or producing tables where the entries are regular.</p>
-<p>
-For example, in Usenet articles, sections of text quoted from another
-author are indented, or have each line start with `>'.  To quote a
-section of text, define a keyboard macro which inserts `>', put point
-and mark at opposite ends of the quoted section, and use
-`M-x apply-macro-to-region-lines' to mark the entire section.</p>
-<p>
-Suppose you wanted to build a keyword table in C where each entry
-looked like this:</p>
-<p>
-    { "foo", foo_data, foo_function },
-    { "bar", bar_data, bar_function },
-    { "baz", baz_data, baz_function },</p>
-<p>
-You could enter the names in this format:</p>
-<p>
-    foo
-    bar
-    baz</p>
-<p>
-and write a macro to massage a word into a table entry:</p>
-<p>
-    \C-x (
-       \M-d { "\C-y", \C-y_data, \C-y_function },
-    \C-x )</p>
-<p>
+Apply last keyboard macro to all lines in the region.<br>
+For each line that begins in the region, move to the beginning of<br>
+the line, and run the last keyboard macro.<br>
+<br>
+When called from lisp, this function takes two arguments TOP and<br>
+BOTTOM, describing the current region.  TOP must be before BOTTOM.<br>
+The optional third argument MACRO specifies a keyboard macro to<br>
+execute.<br>
+<br>
+This is useful for quoting or unquoting included text, adding and<br>
+removing comments, or producing tables where the entries are regular.<br>
+<br>
+For example, in Usenet articles, sections of text quoted from another<br>
+author are indented, or have each line start with `>'.  To quote a<br>
+section of text, define a keyboard macro which inserts `>', put point<br>
+and mark at opposite ends of the quoted section, and use<br>
+`M-x apply-macro-to-region-lines' to mark the entire section.<br>
+<br>
+Suppose you wanted to build a keyword table in C where each entry<br>
+looked like this:<br>
+<br>
+    { "foo", foo_data, foo_function },<br>
+    { "bar", bar_data, bar_function },<br>
+    { "baz", baz_data, baz_function },<br>
+<br>
+You could enter the names in this format:<br>
+<br>
+    foo<br>
+    bar<br>
+    baz<br>
+<br>
+and write a macro to massage a word into a table entry:<br>
+<br>
+    \C-x (<br>
+       \M-d { "\C-y", \C-y_data, \C-y_function },<br>
+    \C-x )<br>
+<br>
 and then select the region of un-tablified names and use
-`M-x apply-macro-to-region-lines' to build the table from the names.</p>
-<p>
+`M-x apply-macro-to-region-lines' to build the table from the names.
+
 (fn TOP BOTTOM &optional MACRO)</p>

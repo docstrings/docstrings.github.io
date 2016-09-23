@@ -1,17 +1,17 @@
 <h3>Function: pkg-info-defining-library-version</h3>
 <p>
-Get the version of the library defining FUNCTION.</p>
-<p>
-If SHOW is non-nil, show the version in mini-buffer.</p>
-<p>
-This function is mainly intended to find the version of a major
-or minor mode, i.e.</p>
-<p>
-   (pkg-info-defining-library-version 'flycheck-mode)</p>
-<p>
-Return the version of the library defining FUNCTION.  Signal an
-error if FUNCTION is not a valid function, if its defining
+Get the version of the library defining FUNCTION.<br>
+<br>
+If SHOW is non-nil, show the version in mini-buffer.<br>
+<br>
+This function is mainly intended to find the version of a major<br>
+or minor mode, i.e.<br>
+<br>
+   (pkg-info-defining-library-version 'flycheck-mode)<br>
+<br>
+Return the version of the library defining FUNCTION.  Signal an<br>
+error if FUNCTION is not a valid function, if its defining<br>
 library was not found, or if the library had no proper version
-header.</p>
-<p>
+header.
+
 (fn FUNCTION &optional SHOW)</p>

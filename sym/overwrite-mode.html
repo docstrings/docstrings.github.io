@@ -1,23 +1,23 @@
 <h3>Function: overwrite-mode</h3>
 <p>
-Toggle Overwrite mode.
-With a prefix argument ARG, enable Overwrite mode if ARG is
-positive, and disable it otherwise.  If called from Lisp, enable
-the mode if ARG is omitted or nil.</p>
-<p>
-When Overwrite mode is enabled, printing characters typed in
-replace existing text on a one-for-one basis, rather than pushing
-it to the right.  At the end of a line, such characters extend
-the line.  Before a tab, such characters insert until the tab is
-filled in.  C-q still inserts characters in
+Toggle Overwrite mode.<br>
+With a prefix argument ARG, enable Overwrite mode if ARG is<br>
+positive, and disable it otherwise.  If called from Lisp, enable<br>
+the mode if ARG is omitted or nil.<br>
+<br>
+When Overwrite mode is enabled, printing characters typed in<br>
+replace existing text on a one-for-one basis, rather than pushing<br>
+it to the right.  At the end of a line, such characters extend<br>
+the line.  Before a tab, such characters insert until the tab is<br>
+filled in.  C-q still inserts characters in<br>
 overwrite mode; this is supposed to make it easier to insert
 characters when necessary.</p>
 <h3>Variable: overwrite-mode</h3>
 <p>
-Non-nil if self-insertion should replace existing text.
-The value should be one of `overwrite-mode-textual',
-`overwrite-mode-binary', or nil.
-If it is `overwrite-mode-textual', self-insertion still
-inserts at the end of a line, and inserts when point is before a tab,
-until the tab is filled in.
+Non-nil if self-insertion should replace existing text.<br>
+The value should be one of `overwrite-mode-textual',<br>
+`overwrite-mode-binary', or nil.<br>
+If it is `overwrite-mode-textual', self-insertion still<br>
+inserts at the end of a line, and inserts when point is before a tab,<br>
+until the tab is filled in.<br>
 If `overwrite-mode-binary', self-insertion replaces newlines and tabs too.</p>

@@ -1,19 +1,19 @@
 <h3>Function: add-to-ordered-list</h3>
 <p>
-Add ELEMENT to the value of LIST-VAR if it isn't there yet.
-The test for presence of ELEMENT is done with `eq'.</p>
-<p>
-The resulting list is reordered so that the elements are in the
-order given by each element's numeric list order.  Elements
-without a numeric list order are placed at the end of the list.</p>
-<p>
-If the third optional argument ORDER is a number (integer or
-float), set the element's list order to the given value.  If
-ORDER is nil or omitted, do not change the numeric order of
-ELEMENT.  If ORDER has any other value, remove the numeric order
-of ELEMENT if it has one.</p>
-<p>
-The list order for each element is stored in LIST-VAR's
-`list-order' property.</p>
-<p>
+Add ELEMENT to the value of LIST-VAR if it isn't there yet.<br>
+The test for presence of ELEMENT is done with `eq'.<br>
+<br>
+The resulting list is reordered so that the elements are in the<br>
+order given by each element's numeric list order.  Elements<br>
+without a numeric list order are placed at the end of the list.<br>
+<br>
+If the third optional argument ORDER is a number (integer or<br>
+float), set the element's list order to the given value.  If<br>
+ORDER is nil or omitted, do not change the numeric order of<br>
+ELEMENT.  If ORDER has any other value, remove the numeric order<br>
+of ELEMENT if it has one.<br>
+<br>
+The list order for each element is stored in LIST-VAR's<br>
+`list-order' property.
+
 The return value is the new value of LIST-VAR.</p>

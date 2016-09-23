@@ -1,12 +1,12 @@
 <h3>Function: sgml-get-context</h3>
 <p>
-Determine the context of the current position.
-By default, parse until we find a start-tag as the first thing on a line.
-If UNTIL is `empty', return even if the context is empty (i.e.
-we just skipped over some element and got to a beginning of line).</p>
-<p>
-The context is a list of tag-info structures.  The last one is the tag
-immediately enclosing the current position.</p>
-<p>
-Point is assumed to be outside of any tag.  If we discover that it's
+Determine the context of the current position.<br>
+By default, parse until we find a start-tag as the first thing on a line.<br>
+If UNTIL is `empty', return even if the context is empty (i.e.<br>
+we just skipped over some element and got to a beginning of line).<br>
+<br>
+The context is a list of tag-info structures.  The last one is the tag<br>
+immediately enclosing the current position.<br>
+<br>
+Point is assumed to be outside of any tag.  If we discover that it's<br>
 not the case, the first tag returned is the one inside which we are.</p>

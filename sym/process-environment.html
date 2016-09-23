@@ -1,22 +1,22 @@
 <h3>Variable: process-environment</h3>
 <p>
-List of overridden environment variables for subprocesses to inherit.
-Each element should be a string of the form ENVVARNAME=VALUE.</p>
-<p>
-Entries in this list take precedence to those in the frame-local
-environments.  Therefore, let-binding `process-environment' is an easy
-way to temporarily change the value of an environment variable,
-irrespective of where it comes from.  To use `process-environment' to
-remove an environment variable, include only its name in the list,
-without "=VALUE".</p>
-<p>
-This variable is set to nil when Emacs starts.</p>
-<p>
-If multiple entries define the same variable, the first one always
-takes precedence.</p>
-<p>
-Non-ASCII characters are encoded according to the initial value of
+List of overridden environment variables for subprocesses to inherit.<br>
+Each element should be a string of the form ENVVARNAME=VALUE.<br>
+<br>
+Entries in this list take precedence to those in the frame-local<br>
+environments.  Therefore, let-binding `process-environment' is an easy<br>
+way to temporarily change the value of an environment variable,<br>
+irrespective of where it comes from.  To use `process-environment' to<br>
+remove an environment variable, include only its name in the list,<br>
+without "=VALUE".<br>
+<br>
+This variable is set to nil when Emacs starts.<br>
+<br>
+If multiple entries define the same variable, the first one always<br>
+takes precedence.<br>
+<br>
+Non-ASCII characters are encoded according to the initial value of<br>
 `locale-coding-system', i.e. the elements must normally be decoded for
-use.</p>
-<p>
+use.
+
 See `setenv' and `getenv'.</p>

@@ -1,15 +1,15 @@
 <h3>Function: tty-color-alist</h3>
 <p>
-Return an alist of colors supported by FRAME's terminal.
-FRAME defaults to the selected frame.
-Each element of the returned alist is of the form:
- (NAME INDEX R G B)
-where NAME is the name of the color, a string;
-INDEX is the index of this color to be sent to the terminal driver
-when the color should be displayed; it is typically a small integer;
-R, G, and B are the intensities of, accordingly, red, green, and blue
-components of the color, represented as numbers between 0 and 65535.
-The file `etc/rgb.txt' in the Emacs distribution lists the standard
-RGB values of the X colors.  If RGB is nil, this color will not be
+Return an alist of colors supported by FRAME's terminal.<br>
+FRAME defaults to the selected frame.<br>
+Each element of the returned alist is of the form:<br>
+ (NAME INDEX R G B)<br>
+where NAME is the name of the color, a string;<br>
+INDEX is the index of this color to be sent to the terminal driver<br>
+when the color should be displayed; it is typically a small integer;<br>
+R, G, and B are the intensities of, accordingly, red, green, and blue<br>
+components of the color, represented as numbers between 0 and 65535.<br>
+The file `etc/rgb.txt' in the Emacs distribution lists the standard<br>
+RGB values of the X colors.  If RGB is nil, this color will not be<br>
 considered by `tty-color-translate' as an approximation to another
 color.</p>

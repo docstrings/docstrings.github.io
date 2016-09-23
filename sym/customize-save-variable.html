@@ -1,17 +1,17 @@
 <h3>Function: customize-save-variable</h3>
 <p>
-Set the default for VARIABLE to VALUE, and save it for future sessions.
-Return VALUE.</p>
-<p>
-If VARIABLE has a `custom-set' property, that is used for setting
-VARIABLE, otherwise `set-default' is used.</p>
-<p>
-If VARIABLE has a `variable-interactive' property, that is used as if
-it were the arg to `interactive' (which see) to interactively read the value.</p>
-<p>
-If VARIABLE has a `custom-type' property, it must be a widget and the
-`:prompt-value' property of that widget will be used for reading the value.</p>
-<p>
-If given a prefix (or a COMMENT argument), also prompt for a comment.</p>
-<p>
+Set the default for VARIABLE to VALUE, and save it for future sessions.<br>
+Return VALUE.<br>
+<br>
+If VARIABLE has a `custom-set' property, that is used for setting<br>
+VARIABLE, otherwise `set-default' is used.<br>
+<br>
+If VARIABLE has a `variable-interactive' property, that is used as if<br>
+it were the arg to `interactive' (which see) to interactively read the value.<br>
+<br>
+If VARIABLE has a `custom-type' property, it must be a widget and the<br>
+`:prompt-value' property of that widget will be used for reading the value.<br>
+<br>
+If given a prefix (or a COMMENT argument), also prompt for a comment.
+
 (fn VARIABLE VALUE &optional COMMENT)</p>

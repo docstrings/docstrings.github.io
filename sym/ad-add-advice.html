@@ -1,27 +1,27 @@
 <h3>Function: ad-add-advice</h3>
 <p>
-Add a piece of ADVICE to FUNCTION's list of advices in CLASS.</p>
-<p>
-ADVICE has the form (NAME PROTECTED ENABLED DEFINITION), where
-NAME is the advice name; PROTECTED is a flag specifying whether
-to protect against non-local exits; ENABLED is a flag specifying
-whether to initially enable the advice; and DEFINITION has the
-form (advice . LAMBDA), where LAMBDA is a lambda expression.</p>
-<p>
-If FUNCTION already has a piece of advice with the same name,
-then POSITION is ignored, and the old advice is overwritten with
-the new one.</p>
-<p>
-If FUNCTION already has one or more pieces of advice of the
-specified CLASS, then POSITION determines where the new piece
-goes.  POSITION can either be `first', `last' or a number (where
-0 corresponds to `first', and numbers outside the valid range are
-mapped to the closest extremal position).</p>
-<p>
-If FUNCTION was not advised already, its advice info will be
-initialized.  Redefining a piece of advice whose name is part of
-the cache-id will clear the cache.</p>
-<p>
-See Info node `(elisp)Computed Advice' for detailed documentation.</p>
-<p>
+Add a piece of ADVICE to FUNCTION's list of advices in CLASS.<br>
+<br>
+ADVICE has the form (NAME PROTECTED ENABLED DEFINITION), where<br>
+NAME is the advice name; PROTECTED is a flag specifying whether<br>
+to protect against non-local exits; ENABLED is a flag specifying<br>
+whether to initially enable the advice; and DEFINITION has the<br>
+form (advice . LAMBDA), where LAMBDA is a lambda expression.<br>
+<br>
+If FUNCTION already has a piece of advice with the same name,<br>
+then POSITION is ignored, and the old advice is overwritten with<br>
+the new one.<br>
+<br>
+If FUNCTION already has one or more pieces of advice of the<br>
+specified CLASS, then POSITION determines where the new piece<br>
+goes.  POSITION can either be `first', `last' or a number (where<br>
+0 corresponds to `first', and numbers outside the valid range are<br>
+mapped to the closest extremal position).<br>
+<br>
+If FUNCTION was not advised already, its advice info will be<br>
+initialized.  Redefining a piece of advice whose name is part of<br>
+the cache-id will clear the cache.<br>
+<br>
+See Info node `(elisp)Computed Advice' for detailed documentation.
+
 (fn FUNCTION ADVICE CLASS POSITION)</p>

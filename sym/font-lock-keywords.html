@@ -1,117 +1,117 @@
 <h3>Variable: font-lock-keywords</h3>
 <p>
-A list of the keywords to highlight.
-There are two kinds of values: user-level, and compiled.</p>
-<p>
-A user-level keywords list is what a major mode or the user would
-set up.  Normally the list would come from `font-lock-defaults'.
-through selection of a fontification level and evaluation of any
-contained expressions.  You can also alter it by calling
-`font-lock-add-keywords' or `font-lock-remove-keywords' with MODE = nil.</p>
-<p>
-Each element in a user-level keywords list should have one of these forms:</p>
-<p>
- MATCHER
- (MATCHER . SUBEXP)
- (MATCHER . FACENAME)
- (MATCHER . HIGHLIGHT)
- (MATCHER HIGHLIGHT ...)
- (eval . FORM)</p>
-<p>
-where MATCHER can be either the regexp to search for, or the function name to
-call to make the search (called with one argument, the limit of the search;
-it should return non-nil, move point, and set `match-data' appropriately if
-it succeeds; like `re-search-forward' would).
-MATCHER regexps can be generated via the function `regexp-opt'.</p>
-<p>
-FORM is an expression, whose value should be a keyword element, evaluated when
-the keyword is (first) used in a buffer.  This feature can be used to provide a
-keyword that can only be generated when Font Lock mode is actually turned on.</p>
-<p>
-HIGHLIGHT should be either MATCH-HIGHLIGHT or MATCH-ANCHORED.</p>
-<p>
-For highlighting single items, for example each instance of the word "foo",
-typically only MATCH-HIGHLIGHT is required.
-However, if an item or (typically) items are to be highlighted following the
-instance of another item (the anchor), for example each instance of the
-word "bar" following the word "anchor" then MATCH-ANCHORED may be required.</p>
-<p>
-MATCH-HIGHLIGHT should be of the form:</p>
-<p>
- (SUBEXP FACENAME [OVERRIDE [LAXMATCH]])</p>
-<p>
-SUBEXP is the number of the subexpression of MATCHER to be highlighted.</p>
-<p>
-FACENAME is an expression whose value is the face name to use.
-Instead of a face, FACENAME can evaluate to a property list
-of the form (face FACE PROP1 VAL1 PROP2 VAL2 ...)
-in which case all the listed text-properties will be set rather than
-just FACE.  In such a case, you will most likely want to put those
-properties in `font-lock-extra-managed-props' or to override
-`font-lock-unfontify-region-function'.</p>
-<p>
-OVERRIDE and LAXMATCH are flags.  If OVERRIDE is t, existing fontification can
-be overwritten.  If `keep', only parts not already fontified are highlighted.
-If `prepend' or `append', existing fontification is merged with the new, in
-which the new or existing fontification, respectively, takes precedence.
-If LAXMATCH is non-nil, that means don't signal an error if there is
-no match for SUBEXP in MATCHER.</p>
-<p>
-For example, an element of the form highlights (if not already highlighted):</p>
-<p>
- "\\<foo\\>"		discrete occurrences of "foo" in the value of the
-			variable `font-lock-keyword-face'.
- ("fu\\(bar\\)" . 1)	substring "bar" within all occurrences of "fubar" in
-			the value of `font-lock-keyword-face'.
- ("fubar" . fubar-face)	Occurrences of "fubar" in the value of `fubar-face'.
- ("foo\\|bar" 0 foo-bar-face t)
-			occurrences of either "foo" or "bar" in the value
-			of `foo-bar-face', even if already highlighted.
- (fubar-match 1 fubar-face)
-			the first subexpression within all occurrences of
-			whatever the function `fubar-match' finds and matches
-			in the value of `fubar-face'.</p>
-<p>
-MATCH-ANCHORED should be of the form:</p>
-<p>
- (MATCHER PRE-MATCH-FORM POST-MATCH-FORM MATCH-HIGHLIGHT ...)</p>
-<p>
-where MATCHER is a regexp to search for or the function name to call to make
-the search, as for MATCH-HIGHLIGHT above, but with one exception; see below.
-PRE-MATCH-FORM and POST-MATCH-FORM are evaluated before the first, and after
-the last, instance MATCH-ANCHORED's MATCHER is used.  Therefore they can be
-used to initialize before, and cleanup after, MATCHER is used.  Typically,
-PRE-MATCH-FORM is used to move to some position relative to the original
-MATCHER, before starting with MATCH-ANCHORED's MATCHER.  POST-MATCH-FORM might
-be used to move back, before resuming with MATCH-ANCHORED's parent's MATCHER.</p>
-<p>
-For example, an element of the form highlights (if not already highlighted):</p>
-<p>
- ("\\<anchor\\>" (0 anchor-face) ("\\<item\\>" nil nil (0 item-face)))</p>
-<p>
- discrete occurrences of "anchor" in the value of `anchor-face', and subsequent
- discrete occurrences of "item" (on the same line) in the value of `item-face'.
- (Here PRE-MATCH-FORM and POST-MATCH-FORM are nil.  Therefore "item" is
- initially searched for starting from the end of the match of "anchor", and
- searching for subsequent instances of "anchor" resumes from where searching
- for "item" concluded.)</p>
-<p>
-The above-mentioned exception is as follows.  The limit of the MATCHER search
-defaults to the end of the line after PRE-MATCH-FORM is evaluated.
-However, if PRE-MATCH-FORM returns a position greater than the position after
-PRE-MATCH-FORM is evaluated, that position is used as the limit of the search.
-It is generally a bad idea to return a position greater than the end of the
-line, i.e., cause the MATCHER search to span lines.</p>
-<p>
-These regular expressions can match text which spans lines, although
-it is better to avoid it if possible since updating them while editing
-text is slower, and it is not guaranteed to be always correct when using
-support modes like jit-lock or lazy-lock.</p>
-<p>
+A list of the keywords to highlight.<br>
+There are two kinds of values: user-level, and compiled.<br>
+<br>
+A user-level keywords list is what a major mode or the user would<br>
+set up.  Normally the list would come from `font-lock-defaults'.<br>
+through selection of a fontification level and evaluation of any<br>
+contained expressions.  You can also alter it by calling<br>
+`font-lock-add-keywords' or `font-lock-remove-keywords' with MODE = nil.<br>
+<br>
+Each element in a user-level keywords list should have one of these forms:<br>
+<br>
+ MATCHER<br>
+ (MATCHER . SUBEXP)<br>
+ (MATCHER . FACENAME)<br>
+ (MATCHER . HIGHLIGHT)<br>
+ (MATCHER HIGHLIGHT ...)<br>
+ (eval . FORM)<br>
+<br>
+where MATCHER can be either the regexp to search for, or the function name to<br>
+call to make the search (called with one argument, the limit of the search;<br>
+it should return non-nil, move point, and set `match-data' appropriately if<br>
+it succeeds; like `re-search-forward' would).<br>
+MATCHER regexps can be generated via the function `regexp-opt'.<br>
+<br>
+FORM is an expression, whose value should be a keyword element, evaluated when<br>
+the keyword is (first) used in a buffer.  This feature can be used to provide a<br>
+keyword that can only be generated when Font Lock mode is actually turned on.<br>
+<br>
+HIGHLIGHT should be either MATCH-HIGHLIGHT or MATCH-ANCHORED.<br>
+<br>
+For highlighting single items, for example each instance of the word "foo",<br>
+typically only MATCH-HIGHLIGHT is required.<br>
+However, if an item or (typically) items are to be highlighted following the<br>
+instance of another item (the anchor), for example each instance of the<br>
+word "bar" following the word "anchor" then MATCH-ANCHORED may be required.<br>
+<br>
+MATCH-HIGHLIGHT should be of the form:<br>
+<br>
+ (SUBEXP FACENAME [OVERRIDE [LAXMATCH]])<br>
+<br>
+SUBEXP is the number of the subexpression of MATCHER to be highlighted.<br>
+<br>
+FACENAME is an expression whose value is the face name to use.<br>
+Instead of a face, FACENAME can evaluate to a property list<br>
+of the form (face FACE PROP1 VAL1 PROP2 VAL2 ...)<br>
+in which case all the listed text-properties will be set rather than<br>
+just FACE.  In such a case, you will most likely want to put those<br>
+properties in `font-lock-extra-managed-props' or to override<br>
+`font-lock-unfontify-region-function'.<br>
+<br>
+OVERRIDE and LAXMATCH are flags.  If OVERRIDE is t, existing fontification can<br>
+be overwritten.  If `keep', only parts not already fontified are highlighted.<br>
+If `prepend' or `append', existing fontification is merged with the new, in<br>
+which the new or existing fontification, respectively, takes precedence.<br>
+If LAXMATCH is non-nil, that means don't signal an error if there is<br>
+no match for SUBEXP in MATCHER.<br>
+<br>
+For example, an element of the form highlights (if not already highlighted):<br>
+<br>
+ "\\<foo\\>"		discrete occurrences of "foo" in the value of the<br>
+			variable `font-lock-keyword-face'.<br>
+ ("fu\\(bar\\)" . 1)	substring "bar" within all occurrences of "fubar" in<br>
+			the value of `font-lock-keyword-face'.<br>
+ ("fubar" . fubar-face)	Occurrences of "fubar" in the value of `fubar-face'.<br>
+ ("foo\\|bar" 0 foo-bar-face t)<br>
+			occurrences of either "foo" or "bar" in the value<br>
+			of `foo-bar-face', even if already highlighted.<br>
+ (fubar-match 1 fubar-face)<br>
+			the first subexpression within all occurrences of<br>
+			whatever the function `fubar-match' finds and matches<br>
+			in the value of `fubar-face'.<br>
+<br>
+MATCH-ANCHORED should be of the form:<br>
+<br>
+ (MATCHER PRE-MATCH-FORM POST-MATCH-FORM MATCH-HIGHLIGHT ...)<br>
+<br>
+where MATCHER is a regexp to search for or the function name to call to make<br>
+the search, as for MATCH-HIGHLIGHT above, but with one exception; see below.<br>
+PRE-MATCH-FORM and POST-MATCH-FORM are evaluated before the first, and after<br>
+the last, instance MATCH-ANCHORED's MATCHER is used.  Therefore they can be<br>
+used to initialize before, and cleanup after, MATCHER is used.  Typically,<br>
+PRE-MATCH-FORM is used to move to some position relative to the original<br>
+MATCHER, before starting with MATCH-ANCHORED's MATCHER.  POST-MATCH-FORM might<br>
+be used to move back, before resuming with MATCH-ANCHORED's parent's MATCHER.<br>
+<br>
+For example, an element of the form highlights (if not already highlighted):<br>
+<br>
+ ("\\<anchor\\>" (0 anchor-face) ("\\<item\\>" nil nil (0 item-face)))<br>
+<br>
+ discrete occurrences of "anchor" in the value of `anchor-face', and subsequent<br>
+ discrete occurrences of "item" (on the same line) in the value of `item-face'.<br>
+ (Here PRE-MATCH-FORM and POST-MATCH-FORM are nil.  Therefore "item" is<br>
+ initially searched for starting from the end of the match of "anchor", and<br>
+ searching for subsequent instances of "anchor" resumes from where searching<br>
+ for "item" concluded.)<br>
+<br>
+The above-mentioned exception is as follows.  The limit of the MATCHER search<br>
+defaults to the end of the line after PRE-MATCH-FORM is evaluated.<br>
+However, if PRE-MATCH-FORM returns a position greater than the position after<br>
+PRE-MATCH-FORM is evaluated, that position is used as the limit of the search.<br>
+It is generally a bad idea to return a position greater than the end of the<br>
+line, i.e., cause the MATCHER search to span lines.<br>
+<br>
+These regular expressions can match text which spans lines, although<br>
+it is better to avoid it if possible since updating them while editing<br>
+text is slower, and it is not guaranteed to be always correct when using<br>
+support modes like jit-lock or lazy-lock.<br>
+<br>
 This variable is set by major modes via the variable `font-lock-defaults'.
 Be careful when composing regexps for this list; a poorly written pattern can
-dramatically slow things down!</p>
-<p>
+dramatically slow things down!
+
 A compiled keywords list starts with t.  It is produced internal
 by `font-lock-compile-keywords' from a user-level keywords list.
 Its second element is the user-level keywords list that was

@@ -1,29 +1,29 @@
 <h3>Function: global-auto-revert-mode</h3>
 <p>
-Toggle Global Auto Revert mode.
-With a prefix argument ARG, enable Global Auto Revert mode if ARG
-is positive, and disable it otherwise.  If called from Lisp,
-enable the mode if ARG is omitted or nil.</p>
-<p>
-Global Auto Revert mode is a global minor mode that reverts any
-buffer associated with a file when the file changes on disk.  Use
-`auto-revert-mode' to revert a particular buffer.</p>
-<p>
-If `global-auto-revert-non-file-buffers' is non-nil, this mode
-may also revert some non-file buffers, as described in the
-documentation of that variable.  It ignores buffers with modes
-matching `global-auto-revert-ignore-modes', and buffers with a
-non-nil vale of `global-auto-revert-ignore-buffer'.</p>
-<p>
-This function calls the hook `global-auto-revert-mode-hook'.
+Toggle Global Auto Revert mode.<br>
+With a prefix argument ARG, enable Global Auto Revert mode if ARG<br>
+is positive, and disable it otherwise.  If called from Lisp,<br>
+enable the mode if ARG is omitted or nil.<br>
+<br>
+Global Auto Revert mode is a global minor mode that reverts any<br>
+buffer associated with a file when the file changes on disk.  Use<br>
+`auto-revert-mode' to revert a particular buffer.<br>
+<br>
+If `global-auto-revert-non-file-buffers' is non-nil, this mode<br>
+may also revert some non-file buffers, as described in the<br>
+documentation of that variable.  It ignores buffers with modes<br>
+matching `global-auto-revert-ignore-modes', and buffers with a<br>
+non-nil vale of `global-auto-revert-ignore-buffer'.<br>
+<br>
+This function calls the hook `global-auto-revert-mode-hook'.<br>
 It displays the text that `global-auto-revert-mode-text'
-specifies in the mode line.</p>
-<p>
+specifies in the mode line.
+
 (fn &optional ARG)</p>
 <h3>Variable: global-auto-revert-mode</h3>
 <p>
-Non-nil if Global-Auto-Revert mode is enabled.
-See the command `global-auto-revert-mode' for a description of this minor mode.
-Setting this variable directly does not take effect;
-either customize it (see the info node `Easy Customization')
+Non-nil if Global-Auto-Revert mode is enabled.<br>
+See the command `global-auto-revert-mode' for a description of this minor mode.<br>
+Setting this variable directly does not take effect;<br>
+either customize it (see the info node `Easy Customization')<br>
 or call the function `global-auto-revert-mode'.</p>

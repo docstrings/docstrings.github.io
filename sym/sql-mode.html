@@ -1,32 +1,32 @@
 <h3>Function: sql-mode</h3>
 <p>
-Major mode to edit SQL.</p>
-<p>
-You can send SQL statements to the SQLi buffer using
-M-x sql-send-region.  Such a buffer must exist before you can do this.
-See `sql-help' on how to create SQLi buffers.</p>
-<p>
-
-Uses keymap `sql-mode-map', which is not currently defined.</p>
-<p>
-Customization: Entry to this mode runs the `sql-mode-hook'.</p>
-<p>
-When you put a buffer in SQL mode, the buffer stores the last SQLi
-buffer created as its destination in the variable `sql-buffer'.  This
-will be the buffer M-x sql-send-region sends the region to.  If this
-SQLi buffer is killed, M-x sql-send-region is no longer able to
-determine where the strings should be sent to.  You can set the
-value of `sql-buffer' using M-x sql-set-sqli-buffer.</p>
-<p>
-For information on how to create multiple SQLi buffers, see
-`sql-interactive-mode'.</p>
-<p>
-Note that SQL doesn't have an escape character unless you specify
-one.  If you specify backslash as escape character in SQL, you
-must tell Emacs.  Here's how to do that in your init file:</p>
-<p>
+Major mode to edit SQL.<br>
+<br>
+You can send SQL statements to the SQLi buffer using<br>
+M-x sql-send-region.  Such a buffer must exist before you can do this.<br>
+See `sql-help' on how to create SQLi buffers.<br>
+<br>
+<br>
+Uses keymap `sql-mode-map', which is not currently defined.<br>
+<br>
+Customization: Entry to this mode runs the `sql-mode-hook'.<br>
+<br>
+When you put a buffer in SQL mode, the buffer stores the last SQLi<br>
+buffer created as its destination in the variable `sql-buffer'.  This<br>
+will be the buffer M-x sql-send-region sends the region to.  If this<br>
+SQLi buffer is killed, M-x sql-send-region is no longer able to<br>
+determine where the strings should be sent to.  You can set the<br>
+value of `sql-buffer' using M-x sql-set-sqli-buffer.<br>
+<br>
+For information on how to create multiple SQLi buffers, see<br>
+`sql-interactive-mode'.<br>
+<br>
+Note that SQL doesn't have an escape character unless you specify<br>
+one.  If you specify backslash as escape character in SQL, you<br>
+must tell Emacs.  Here's how to do that in your init file:<br>
+<br>
 (add-hook 'sql-mode-hook
           (lambda ()
-	    (modify-syntax-entry ?\\ "." sql-mode-syntax-table)))</p>
-<p>
+	    (modify-syntax-entry ?\\ "." sql-mode-syntax-table)))
+
 (fn)</p>

@@ -1,13 +1,13 @@
 <h3>Function: make-backup-file-name</h3>
 <p>
-Create the non-numeric backup file name for FILE.
-Normally this will just be the file's name with `~' appended.
-Customization hooks are provided as follows.</p>
-<p>
-If the variable `make-backup-file-name-function' is non-nil, its value
-should be a function which will be called with FILE as its argument;
-the resulting name is used.</p>
-<p>
-Otherwise a match for FILE is sought in `backup-directory-alist'; see
+Create the non-numeric backup file name for FILE.<br>
+Normally this will just be the file's name with `~' appended.<br>
+Customization hooks are provided as follows.<br>
+<br>
+If the variable `make-backup-file-name-function' is non-nil, its value<br>
+should be a function which will be called with FILE as its argument;<br>
+the resulting name is used.<br>
+<br>
+Otherwise a match for FILE is sought in `backup-directory-alist'; see<br>
 the documentation of that variable.  If the directory for the backup
 doesn't exist, it is created.</p>

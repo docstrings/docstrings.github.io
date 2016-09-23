@@ -1,16 +1,16 @@
 <h3>Function: auto-compose-chars</h3>
 <p>
-Compose the characters at FROM by FUNC.
-FUNC is called with one argument GSTRING which is built for characters
-in the region FROM (inclusive) and TO (exclusive).</p>
-<p>
-If the character are composed on a graphic display, FONT-OBJECT
-is a font to use.  Otherwise, FONT-OBJECT is nil, and the function
-`compose-gstring-for-terminal' is used instead of FUNC.</p>
-<p>
-If STRING is non-nil, it is a string, and FROM and TO are indices
-into the string.  In that case, compose characters in the string.</p>
-<p>
-The value is a gstring containing information for shaping the characters.</p>
-<p>
+Compose the characters at FROM by FUNC.<br>
+FUNC is called with one argument GSTRING which is built for characters<br>
+in the region FROM (inclusive) and TO (exclusive).<br>
+<br>
+If the character are composed on a graphic display, FONT-OBJECT<br>
+is a font to use.  Otherwise, FONT-OBJECT is nil, and the function<br>
+`compose-gstring-for-terminal' is used instead of FUNC.<br>
+<br>
+If STRING is non-nil, it is a string, and FROM and TO are indices<br>
+into the string.  In that case, compose characters in the string.<br>
+<br>
+The value is a gstring containing information for shaping the characters.<br>
+<br>
 This function is the default value of `auto-composition-function' (which see).</p>

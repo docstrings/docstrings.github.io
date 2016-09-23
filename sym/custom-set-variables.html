@@ -1,15 +1,15 @@
 <h3>Function: custom-set-variables</h3>
 <p>
-Install user customizations of variable values specified in ARGS.
-These settings are registered as theme `user'.
-The arguments should each be a list of the form:</p>
-<p>
-  (SYMBOL EXP [NOW [REQUEST [COMMENT]]])</p>
-<p>
-This stores EXP (without evaluating it) as the saved value for SYMBOL.
-If NOW is present and non-nil, then also evaluate EXP and set
-the default value for the SYMBOL to the value of EXP.</p>
-<p>
-REQUEST is a list of features we must require in order to
+Install user customizations of variable values specified in ARGS.<br>
+These settings are registered as theme `user'.<br>
+The arguments should each be a list of the form:<br>
+<br>
+  (SYMBOL EXP [NOW [REQUEST [COMMENT]]])<br>
+<br>
+This stores EXP (without evaluating it) as the saved value for SYMBOL.<br>
+If NOW is present and non-nil, then also evaluate EXP and set<br>
+the default value for the SYMBOL to the value of EXP.<br>
+<br>
+REQUEST is a list of features we must require in order to<br>
 handle SYMBOL properly.
 COMMENT is a comment string about SYMBOL.</p>

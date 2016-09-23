@@ -1,17 +1,17 @@
 <h3>Function: locate-library</h3>
 <p>
-Show the precise file name of Emacs library LIBRARY.
-LIBRARY should be a relative file name of the library, a string.
-It can omit the suffix (a.k.a. file-name extension) if NOSUFFIX is
-nil (which is the default, see below).
-This command searches the directories in `load-path' like `M-x load-library'
-to find the file that `M-x load-library RET LIBRARY RET' would load.
-Optional second arg NOSUFFIX non-nil means don't add suffixes `load-suffixes'
-to the specified name LIBRARY.</p>
-<p>
-If the optional third arg PATH is specified, that list of directories
-is used instead of `load-path'.</p>
-<p>
-When called from a program, the file name is normally returned as a
+Show the precise file name of Emacs library LIBRARY.<br>
+LIBRARY should be a relative file name of the library, a string.<br>
+It can omit the suffix (a.k.a. file-name extension) if NOSUFFIX is<br>
+nil (which is the default, see below).<br>
+This command searches the directories in `load-path' like `M-x load-library'<br>
+to find the file that `M-x load-library RET LIBRARY RET' would load.<br>
+Optional second arg NOSUFFIX non-nil means don't add suffixes `load-suffixes'<br>
+to the specified name LIBRARY.<br>
+<br>
+If the optional third arg PATH is specified, that list of directories<br>
+is used instead of `load-path'.<br>
+<br>
+When called from a program, the file name is normally returned as a<br>
 string.  When run interactively, the argument INTERACTIVE-CALL is t,
 and the file name is displayed in the echo area.</p>

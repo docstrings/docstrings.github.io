@@ -1,9 +1,9 @@
 <h3>Function: font-lock-extend-jit-lock-region-after-change</h3>
 <p>
-Function meant for `jit-lock-after-change-extend-region-functions'.
-This function does 2 things:
-- extend the region so that it not only includes the part that was modified
-  but also the surrounding text whose highlighting may change as a consequence.
-- anticipate (part of) the region extension that will happen later in
-  `font-lock-default-fontify-region', in order to avoid the need for
+Function meant for `jit-lock-after-change-extend-region-functions'.<br>
+This function does 2 things:<br>
+- extend the region so that it not only includes the part that was modified<br>
+  but also the surrounding text whose highlighting may change as a consequence.<br>
+- anticipate (part of) the region extension that will happen later in<br>
+  `font-lock-default-fontify-region', in order to avoid the need for<br>
   double-redisplay in `jit-lock-fontify-now'.</p>

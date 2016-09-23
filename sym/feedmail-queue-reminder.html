@@ -1,21 +1,21 @@
 <h3>Function: feedmail-queue-reminder</h3>
 <p>
-Perform some kind of reminder activity about queued and draft messages.
-Called with an optional symbol argument which says what kind of event
-is triggering the reminder activity.  The default is 'on-demand, which
-is what you typically would use if you were putting this in your Emacs start-up
-or mail hook code.  Other recognized values for WHAT-EVENT (these are passed
-internally by feedmail):</p>
-<p>
-   after-immediate      (a message has just been sent in immediate mode)
-   after-queue          (a message has just been queued)
-   after-draft          (a message has just been placed in the draft directory)
-   after-run            (the queue has just been run, possibly sending messages)</p>
-<p>
-WHAT-EVENT is used as a key into the table `feedmail-queue-reminder-alist'.  If
-the associated value is a function, it is called without arguments and is expected
-to perform the reminder activity.  You can supply your own reminder functions
-by redefining `feedmail-queue-reminder-alist'.  If you don't want any reminders,
-you can set `feedmail-queue-reminder-alist' to nil.</p>
-<p>
+Perform some kind of reminder activity about queued and draft messages.<br>
+Called with an optional symbol argument which says what kind of event<br>
+is triggering the reminder activity.  The default is 'on-demand, which<br>
+is what you typically would use if you were putting this in your Emacs start-up<br>
+or mail hook code.  Other recognized values for WHAT-EVENT (these are passed<br>
+internally by feedmail):<br>
+<br>
+   after-immediate      (a message has just been sent in immediate mode)<br>
+   after-queue          (a message has just been queued)<br>
+   after-draft          (a message has just been placed in the draft directory)<br>
+   after-run            (the queue has just been run, possibly sending messages)<br>
+<br>
+WHAT-EVENT is used as a key into the table `feedmail-queue-reminder-alist'.  If<br>
+the associated value is a function, it is called without arguments and is expected<br>
+to perform the reminder activity.  You can supply your own reminder functions<br>
+by redefining `feedmail-queue-reminder-alist'.  If you don't want any reminders,<br>
+you can set `feedmail-queue-reminder-alist' to nil.
+
 (fn &optional WHAT-EVENT)</p>

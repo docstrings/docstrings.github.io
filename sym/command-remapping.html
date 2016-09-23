@@ -1,17 +1,17 @@
 <h3>Function: command-remapping</h3>
 <p>
-Return the remapping for command COMMAND.
-Returns nil if COMMAND is not remapped (or not a symbol).</p>
-<p>
-If the optional argument POSITION is non-nil, it specifies a mouse
-position as returned by `event-start' and `event-end', and the
-remapping occurs in the keymaps associated with it.  It can also be a
-number or marker, in which case the keymap properties at the specified
-buffer position instead of point are used.  The KEYMAPS argument is
-ignored if POSITION is non-nil.</p>
-<p>
-If the optional argument KEYMAPS is non-nil, it should be a list of
-keymaps to search for command remapping.  Otherwise, search for the
-remapping in all currently active keymaps.</p>
-<p>
+Return the remapping for command COMMAND.<br>
+Returns nil if COMMAND is not remapped (or not a symbol).<br>
+<br>
+If the optional argument POSITION is non-nil, it specifies a mouse<br>
+position as returned by `event-start' and `event-end', and the<br>
+remapping occurs in the keymaps associated with it.  It can also be a<br>
+number or marker, in which case the keymap properties at the specified<br>
+buffer position instead of point are used.  The KEYMAPS argument is<br>
+ignored if POSITION is non-nil.<br>
+<br>
+If the optional argument KEYMAPS is non-nil, it should be a list of<br>
+keymaps to search for command remapping.  Otherwise, search for the<br>
+remapping in all currently active keymaps.
+
 (fn COMMAND &optional POSITION KEYMAPS)</p>

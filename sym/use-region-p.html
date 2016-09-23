@@ -1,12 +1,12 @@
 <h3>Function: use-region-p</h3>
 <p>
-Return t if the region is active and it is appropriate to act on it.
-This is used by commands that act specially on the region under
-Transient Mark mode.</p>
-<p>
-The return value is t if Transient Mark mode is enabled and the
-mark is active; furthermore, if `use-empty-active-region' is nil,
-the region must not be empty.  Otherwise, the return value is nil.</p>
-<p>
-For some commands, it may be appropriate to ignore the value of
+Return t if the region is active and it is appropriate to act on it.<br>
+This is used by commands that act specially on the region under<br>
+Transient Mark mode.<br>
+<br>
+The return value is t if Transient Mark mode is enabled and the<br>
+mark is active; furthermore, if `use-empty-active-region' is nil,<br>
+the region must not be empty.  Otherwise, the return value is nil.<br>
+<br>
+For some commands, it may be appropriate to ignore the value of<br>
 `use-empty-active-region'; in that case, use `region-active-p'.</p>

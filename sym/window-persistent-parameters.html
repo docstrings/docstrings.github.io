@@ -1,24 +1,24 @@
 <h3>Variable: window-persistent-parameters</h3>
 <p>
-Alist of persistent window parameters.
-This alist specifies which window parameters shall get saved by
-`current-window-configuration' and `window-state-get' and subsequently
-restored to their previous values by `set-window-configuration' and
-`window-state-put'.</p>
-<p>
-The car of each entry of this alist is the symbol specifying the
-parameter.  The cdr is one of the following:</p>
-<p>
-nil means the parameter is neither saved by `window-state-get' nor by
-`current-window-configuration'.</p>
-<p>
-t means the parameter is saved by `current-window-configuration' and,
-provided its WRITABLE argument is nil, by `window-state-get'.</p>
-<p>
-The symbol `writable' means the parameter is saved unconditionally by
-both `current-window-configuration' and `window-state-get'.  Do not use
-this value for parameters without read syntax (like windows or frames).</p>
-<p>
-Parameters not saved by `current-window-configuration' or
+Alist of persistent window parameters.<br>
+This alist specifies which window parameters shall get saved by<br>
+`current-window-configuration' and `window-state-get' and subsequently<br>
+restored to their previous values by `set-window-configuration' and<br>
+`window-state-put'.<br>
+<br>
+The car of each entry of this alist is the symbol specifying the<br>
+parameter.  The cdr is one of the following:<br>
+<br>
+nil means the parameter is neither saved by `window-state-get' nor by<br>
+`current-window-configuration'.<br>
+<br>
+t means the parameter is saved by `current-window-configuration' and,<br>
+provided its WRITABLE argument is nil, by `window-state-get'.<br>
+<br>
+The symbol `writable' means the parameter is saved unconditionally by<br>
+both `current-window-configuration' and `window-state-get'.  Do not use<br>
+this value for parameters without read syntax (like windows or frames).<br>
+<br>
+Parameters not saved by `current-window-configuration' or<br>
 `window-state-get' are left alone by `set-window-configuration'
 respectively are not installed by `window-state-put'.</p>

@@ -1,16 +1,16 @@
 <h3>Function: highlight-changes-rotate-faces</h3>
 <p>
-Rotate the faces if in Highlight Changes mode and the changes are visible.</p>
-<p>
-Current changes are displayed in the face described by the first element
-of `highlight-changes-face-list', one level older changes are shown in
-face described by the second element, and so on.  Very old changes remain
-shown in the last face in the list.</p>
-<p>
-You can automatically rotate colors when the buffer is saved by adding
-this function to `write-file-functions' as a buffer-local value.  To do
-this, eval the following in the buffer to be saved:</p>
-<p>
-  (add-hook 'write-file-functions 'highlight-changes-rotate-faces nil t)</p>
-<p>
+Rotate the faces if in Highlight Changes mode and the changes are visible.<br>
+<br>
+Current changes are displayed in the face described by the first element<br>
+of `highlight-changes-face-list', one level older changes are shown in<br>
+face described by the second element, and so on.  Very old changes remain<br>
+shown in the last face in the list.<br>
+<br>
+You can automatically rotate colors when the buffer is saved by adding<br>
+this function to `write-file-functions' as a buffer-local value.  To do<br>
+this, eval the following in the buffer to be saved:<br>
+<br>
+  (add-hook 'write-file-functions 'highlight-changes-rotate-faces nil t)
+
 (fn)</p>

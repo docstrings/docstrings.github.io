@@ -1,28 +1,28 @@
 <h3>Function: vertical-motion</h3>
 <p>
-Move point to start of the screen line LINES lines down.
-If LINES is negative, this means moving up.</p>
-<p>
-This function is an ordinary cursor motion function
-which calculates the new position based on how text would be displayed.
-The new position may be the start of a line,
-or just the start of a continuation line.
-The function returns number of screen lines moved over;
-that usually equals LINES, but may be closer to zero
-if beginning or end of buffer was reached.</p>
-<p>
-The optional second argument WINDOW specifies the window to use for
-parameters such as width, horizontal scrolling, and so on.
-The default is to use the selected window's parameters.</p>
-<p>
-LINES can optionally take the form (COLS . LINES), in which case
-the motion will not stop at the start of a screen line but on
-its column COLS (if such exists on that line, that is).</p>
-<p>
-`vertical-motion' always uses the current buffer,
-regardless of which buffer is displayed in WINDOW.
-This is consistent with other cursor motion functions
+Move point to start of the screen line LINES lines down.<br>
+If LINES is negative, this means moving up.<br>
+<br>
+This function is an ordinary cursor motion function<br>
+which calculates the new position based on how text would be displayed.<br>
+The new position may be the start of a line,<br>
+or just the start of a continuation line.<br>
+The function returns number of screen lines moved over;<br>
+that usually equals LINES, but may be closer to zero<br>
+if beginning or end of buffer was reached.<br>
+<br>
+The optional second argument WINDOW specifies the window to use for<br>
+parameters such as width, horizontal scrolling, and so on.<br>
+The default is to use the selected window's parameters.<br>
+<br>
+LINES can optionally take the form (COLS . LINES), in which case<br>
+the motion will not stop at the start of a screen line but on<br>
+its column COLS (if such exists on that line, that is).<br>
+<br>
+`vertical-motion' always uses the current buffer,<br>
+regardless of which buffer is displayed in WINDOW.<br>
+This is consistent with other cursor motion functions<br>
 and makes it possible to use `vertical-motion' in any buffer,
-whether or not it is currently displayed in some window.</p>
-<p>
+whether or not it is currently displayed in some window.
+
 (fn LINES &optional WINDOW)</p>

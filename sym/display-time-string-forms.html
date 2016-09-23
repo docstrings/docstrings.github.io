@@ -1,19 +1,19 @@
 <h3>Variable: display-time-string-forms</h3>
 <p>
-List of expressions governing display of the time in the mode line.
-For most purposes, you can control the time format using `display-time-format'
-which is a more standard interface.</p>
-<p>
-This expression is a list of expressions that can involve the keywords
-`load', `day', `month', and `year', `12-hours', `24-hours', `minutes',
-`seconds', all numbers in string form, and `monthname', `dayname', `am-pm',
-and `time-zone' all alphabetic strings, and `mail' a true/nil value.</p>
-<p>
-For example, the form</p>
-<p>
-  '((substring year -2) "/" month "/" day
-    " " 24-hours ":" minutes ":" seconds
-    (if time-zone " (") time-zone (if time-zone ")")
-    (if mail " Mail" ""))</p>
-<p>
+List of expressions governing display of the time in the mode line.<br>
+For most purposes, you can control the time format using `display-time-format'<br>
+which is a more standard interface.<br>
+<br>
+This expression is a list of expressions that can involve the keywords<br>
+`load', `day', `month', and `year', `12-hours', `24-hours', `minutes',<br>
+`seconds', all numbers in string form, and `monthname', `dayname', `am-pm',<br>
+and `time-zone' all alphabetic strings, and `mail' a true/nil value.<br>
+<br>
+For example, the form<br>
+<br>
+  '((substring year -2) "/" month "/" day<br>
+    " " 24-hours ":" minutes ":" seconds<br>
+    (if time-zone " (") time-zone (if time-zone ")")<br>
+    (if mail " Mail" ""))<br>
+
 would give mode line times like `94/12/30 21:07:48 (UTC)'.</p>
