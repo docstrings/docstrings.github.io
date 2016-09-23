@@ -1,0 +1,17 @@
+<h3>Function: customize-set-variable</h3>
+<p>
+Set the default for VARIABLE to VALUE, and return VALUE.
+VALUE is a Lisp object.</p>
+<p>
+If VARIABLE has a `custom-set' property, that is used for setting
+VARIABLE, otherwise `set-default' is used.</p>
+<p>
+If VARIABLE has a `variable-interactive' property, that is used as if
+it were the arg to `interactive' (which see) to interactively read the value.</p>
+<p>
+If VARIABLE has a `custom-type' property, it must be a widget and the
+`:prompt-value' property of that widget will be used for reading the value.</p>
+<p>
+If given a prefix (or a COMMENT argument), also prompt for a comment.</p>
+<p>
+(fn VARIABLE VALUE &optional COMMENT)</p>

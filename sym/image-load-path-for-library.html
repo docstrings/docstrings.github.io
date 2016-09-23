@@ -1,0 +1,31 @@
+<h3>Function: image-load-path-for-library</h3>
+<p>
+Return a suitable search path for images used by LIBRARY.</p>
+<p>
+It searches for IMAGE in `image-load-path' (excluding
+"`data-directory'/images") and `load-path', followed by a path
+suitable for LIBRARY, which includes "../../etc/images" and
+"../etc/images" relative to the library file itself, and then
+in "`data-directory'/images".</p>
+<p>
+Then this function returns a list of directories which contains
+first the directory in which IMAGE was found, followed by the
+value of `load-path'.  If PATH is given, it is used instead of
+`load-path'.</p>
+<p>
+If NO-ERROR is non-nil and a suitable path can't be found, don't
+signal an error.  Instead, return a list of directories as before,
+except that nil appears in place of the image directory.</p>
+<p>
+Here is an example that uses a common idiom to provide
+compatibility with versions of Emacs that lack the variable
+`image-load-path':</p>
+<p>
+    ;; Shush compiler.
+    (defvar image-load-path)</p>
+<p>
+    (let* ((load-path (image-load-path-for-library "mh-e" "mh-logo.xpm"))
+           (image-load-path (cons (car load-path)
+                                  (when (boundp 'image-load-path)
+                                    image-load-path))))
+      (mh-tool-bar-folder-buttons-init))</p>

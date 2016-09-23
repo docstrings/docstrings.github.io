@@ -1,0 +1,10 @@
+<h3>Function: select-safe-coding-system-interactively</h3>
+<p>
+Select interactively a coding system for the region FROM ... TO.
+FROM can be a string, as in `write-region'.
+CODINGS is the list of base coding systems known to be safe for this region,
+  typically obtained with `find-coding-systems-region'.
+UNSAFE is a list of coding systems known to be unsafe for this region.
+REJECTED is a list of coding systems which were safe but for some reason
+  were not recommended in the particular context.
+DEFAULT is the coding system to use by default in the query.</p>

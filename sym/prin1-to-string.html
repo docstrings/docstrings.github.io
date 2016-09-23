@@ -1,0 +1,14 @@
+<h3>Function: prin1-to-string</h3>
+<p>
+Return a string containing the printed representation of OBJECT.
+OBJECT can be any Lisp object.  This function outputs quoting characters
+when necessary to make output that `read' can handle, whenever possible,
+unless the optional second argument NOESCAPE is non-nil.  For complex objects,
+the behavior is controlled by `print-level' and `print-length', which see.</p>
+<p>
+OBJECT is any of the Lisp data types: a number, a string, a symbol,
+a list, a buffer, a window, a frame, etc.</p>
+<p>
+A printed representation of an object is text which describes that object.</p>
+<p>
+(fn OBJECT &optional NOESCAPE)</p>

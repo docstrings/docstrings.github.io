@@ -1,0 +1,50 @@
+<h3>Variable: language-info-alist</h3>
+<p>
+Alist of language environment definitions.
+Each element looks like:
+	(LANGUAGE-NAME . ((KEY . INFO) ...))
+where LANGUAGE-NAME is a string, the name of the language environment,
+KEY is a symbol denoting the kind of information, and
+INFO is the data associated with KEY.
+Meaningful values for KEY include</p>
+<p>
+  documentation      value is documentation of what this language environment
+			is meant for, and how to use it.
+  charset	     value is a list of the character sets mainly used
+			by this language environment.
+  sample-text	     value is an expression which is evalled to generate
+                        a line of text written using characters appropriate
+                        for this language environment.
+  setup-function     value is a function to call to switch to this
+			language environment.
+  exit-function      value is a function to call to leave this
+		        language environment.
+  coding-system      value is a list of coding systems that are good for
+			saving text written in this language environment.
+			This list serves as suggestions to the user;
+			in effect, as a kind of documentation.
+  coding-priority    value is a list of coding systems for this language
+			environment, in order of decreasing priority.
+			This is used to set up the coding system priority
+			list when you switch to this language environment.
+  nonascii-translation
+		     value is a charset of dimension one to use for
+			converting a unibyte character to multibyte
+			and vice versa.
+  input-method       value is a default input method for this language
+			environment.
+  features           value is a list of features requested in this
+			language environment.
+  ctext-non-standard-encodings
+		     value is a list of non-standard encoding names used
+			in extended segments of CTEXT.  See the variable
+			`ctext-non-standard-encodings' for more detail.</p>
+<p>
+The following key takes effect only when multibyte characters are
+globally disabled, i.e. the default value of `enable-multibyte-characters'
+is nil (which is an obsolete and deprecated use):</p>
+<p>
+  unibyte-display    value is a coding system to encode characters for
+			the terminal.  Characters in the range of 160 to
+			255 display not as octal escapes, but as non-ASCII
+			characters in this language environment.</p>

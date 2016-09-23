@@ -1,0 +1,14 @@
+<h3>Function: posn-at-x-y</h3>
+<p>
+Return position information for pixel coordinates X and Y.
+By default, X and Y are relative to text area of the selected window.
+Optional third arg FRAME-OR-WINDOW non-nil specifies frame or window.
+If optional fourth arg WHOLE is non-nil, X is relative to the left
+edge of the window.</p>
+<p>
+The return value is similar to a mouse click position:
+   (WINDOW AREA-OR-POS (X . Y) TIMESTAMP OBJECT POS (COL . ROW)
+    IMAGE (DX . DY) (WIDTH . HEIGHT))
+The `posn-' functions access elements of such lists.</p>
+<p>
+(fn X Y &optional FRAME-OR-WINDOW WHOLE)</p>

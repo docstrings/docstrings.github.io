@@ -1,0 +1,11 @@
+<h3>Function: delete-file</h3>
+<p>
+Delete file named FILENAME.  If it is a symlink, remove the symlink.
+If file has multiple names, it continues to exist with the other names.
+TRASH non-nil means to trash the file instead of deleting, provided
+`delete-by-moving-to-trash' is non-nil.</p>
+<p>
+When called interactively, TRASH is t if no prefix argument is given.
+With a prefix argument, TRASH is nil.</p>
+<p>
+(fn FILENAME &optional TRASH)</p>

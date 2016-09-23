@@ -1,0 +1,22 @@
+<h3>Function: xterm-mouse-mode</h3>
+<p>
+Toggle XTerm mouse mode.
+With a prefix argument ARG, enable XTerm mouse mode if ARG is
+positive, and disable it otherwise.  If called from Lisp, enable
+the mode if ARG is omitted or nil.</p>
+<p>
+Turn it on to use Emacs mouse commands, and off to use xterm mouse commands.
+This works in terminal emulators compatible with xterm.  It only
+works for simple uses of the mouse.  Basically, only non-modified
+single clicks are supported.  When turned on, the normal xterm
+mouse functionality for such clicks is still available by holding
+down the SHIFT key while pressing the mouse button.</p>
+<p>
+(fn &optional ARG)</p>
+<h3>Variable: xterm-mouse-mode</h3>
+<p>
+Non-nil if Xterm-Mouse mode is enabled.
+See the command `xterm-mouse-mode' for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `xterm-mouse-mode'.</p>

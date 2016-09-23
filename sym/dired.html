@@ -1,0 +1,18 @@
+<h3>Function: dired</h3>
+<p>
+"Edit" directory DIRNAME--delete, rename, print, etc. some files in it.
+Optional second argument SWITCHES specifies the `ls' options used.
+(Interactively, use a prefix argument to be able to specify SWITCHES.)
+Dired displays a list of files in DIRNAME (which may also have
+shell wildcards appended to select certain files).  If DIRNAME is a cons,
+its first element is taken as the directory name and the rest as an explicit
+list of files to make directory entries for.</p>
+<p>
+Uses keymap `dired-mode-map', which is not currently defined.
+You can flag files for deletion with M-x dired-flag-file-deletion and then
+delete them by typing M-x dired-do-flagged-delete.
+Type C-h m after entering Dired for more info.</p>
+<p>
+If DIRNAME is already in a dired buffer, that buffer is used without refresh.</p>
+<p>
+(fn DIRNAME &optional SWITCHES)</p>

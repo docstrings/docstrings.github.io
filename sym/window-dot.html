@@ -1,0 +1,14 @@
+<h3>Function: window-dot</h3>
+<p>
+Return current value of point in WINDOW.
+WINDOW must be a live window and defaults to the selected one.</p>
+<p>
+For a nonselected window, this is the value point would have if that
+window were selected.</p>
+<p>
+Note that, when WINDOW is selected, the value returned is the same as
+that returned by `point' for WINDOW's buffer.  It would be more strictly
+correct to return the `top-level' value of `point', outside of any
+`save-excursion' forms.  But that is hard to define.</p>
+<p>
+(fn &optional WINDOW)</p>

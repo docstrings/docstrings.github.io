@@ -1,0 +1,43 @@
+<h3>Function: whitespace-report-region</h3>
+<p>
+Report some whitespace problems in a region.</p>
+<p>
+Return nil if there is no whitespace problem; otherwise, return
+non-nil.</p>
+<p>
+If FORCE is non-nil or C-u was pressed just
+before calling `whitespace-report-region' interactively, it
+forces `whitespace-style' to have:</p>
+<p>
+   empty
+   indentation
+   space-before-tab
+   trailing
+   space-after-tab</p>
+<p>
+If REPORT-IF-BOGUS is non-nil, it reports only when there are any
+whitespace problems in buffer.</p>
+<p>
+Report if some of the following whitespace problems exist:</p>
+<p>
+* If `indent-tabs-mode' is non-nil:
+   empty		1. empty lines at beginning of buffer.
+   empty		2. empty lines at end of buffer.
+   trailing		3. SPACEs or TABs at end of line.
+   indentation		4. 8 or more SPACEs at beginning of line.
+   space-before-tab	5. SPACEs before TAB.
+   space-after-tab	6. 8 or more SPACEs after TAB.</p>
+<p>
+* If `indent-tabs-mode' is nil:
+   empty		1. empty lines at beginning of buffer.
+   empty		2. empty lines at end of buffer.
+   trailing		3. SPACEs or TABs at end of line.
+   indentation		4. TABS at beginning of line.
+   space-before-tab	5. SPACEs before TAB.
+   space-after-tab	6. 8 or more SPACEs after TAB.</p>
+<p>
+See `whitespace-style' for documentation.
+See also `whitespace-cleanup' and `whitespace-cleanup-region' for
+cleaning up these problems.</p>
+<p>
+(fn START END &optional FORCE REPORT-IF-BOGUS)</p>

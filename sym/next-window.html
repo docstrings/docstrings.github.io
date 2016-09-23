@@ -1,0 +1,36 @@
+<h3>Function: next-window</h3>
+<p>
+Return live window after WINDOW in the cyclic ordering of windows.
+WINDOW must be a live window and defaults to the selected one.  The
+optional arguments MINIBUF and ALL-FRAMES specify the set of windows to
+consider.</p>
+<p>
+MINIBUF nil or omitted means consider the minibuffer window only if the
+minibuffer is active.  MINIBUF t means consider the minibuffer window
+even if the minibuffer is not active.  Any other value means do not
+consider the minibuffer window even if the minibuffer is active.</p>
+<p>
+ALL-FRAMES nil or omitted means consider all windows on WINDOW's frame,
+plus the minibuffer window if specified by the MINIBUF argument.  If the
+minibuffer counts, consider all windows on all frames that share that
+minibuffer too.  The following non-nil values of ALL-FRAMES have special
+meanings:</p>
+<p>
+- t means consider all windows on all existing frames.</p>
+<p>
+- `visible' means consider all windows on all visible frames.</p>
+<p>
+- 0 (the number zero) means consider all windows on all visible and
+  iconified frames.</p>
+<p>
+- A frame means consider all windows on that frame only.</p>
+<p>
+Anything else means consider all windows on WINDOW's frame and no
+others.</p>
+<p>
+If you use consistent values for MINIBUF and ALL-FRAMES, you can use
+`next-window' to iterate through the entire cycle of acceptable
+windows, eventually ending up back at the window you started with.
+`previous-window' traverses the same cycle, in the reverse order.</p>
+<p>
+(fn &optional WINDOW MINIBUF ALL-FRAMES)</p>

@@ -1,0 +1,9 @@
+<h3>Function: auth-source-delete</h3>
+<p>
+Delete entries from the authentication backends according to SPEC.
+Calls `auth-source-search' with the :delete property in SPEC set to t.
+The backend may not actually delete the entries.</p>
+<p>
+Returns the deleted entries.</p>
+<p>
+(fn &rest SPEC &key DELETE &allow-other-keys)</p>

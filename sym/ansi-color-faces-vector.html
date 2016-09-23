@@ -1,0 +1,21 @@
+<h3>Variable: ansi-color-faces-vector</h3>
+<p>
+Faces used for SGR control sequences determining a face.
+This vector holds the faces used for SGR control sequence parameters 0
+to 7.</p>
+<p>
+Parameter  Description        Face used by default
+  0        default            default
+  1        bold               bold
+  2        faint              default
+  3        italic             italic
+  4        underlined         underline
+  5        slowly blinking    success
+  6        rapidly blinking   warning
+  7        negative image     error</p>
+<p>
+Note that the symbol `default' is special: It will not be combined
+with the current face.</p>
+<p>
+This vector is used by `ansi-color-make-color-map' to create a color
+map.  This color map is stored in the variable `ansi-color-map'.</p>

@@ -1,0 +1,54 @@
+<h3>Function: mail</h3>
+<p>
+Edit a message to be sent.  Prefix arg means resume editing (don't erase).
+When this function returns, the buffer `*mail*' is selected.
+The value is t if the message was newly initialized; otherwise, nil.</p>
+<p>
+Optionally, the signature file `mail-signature-file' can be inserted at the
+end; see the variable `mail-signature'.</p>
+<p>
+
+Uses keymap `mail-mode-map', which is not currently defined.</p>
+<p>
+While editing message, type M-x mail-send-and-exit to send the message and exit.</p>
+<p>
+Various special commands starting with C-c are available in sendmail mode
+to move to message header fields:</p>
+<p>
+Uses keymap `mail-mode-map', which is not currently defined.</p>
+<p>
+
+If `mail-self-blind' is non-nil, a BCC to yourself is inserted
+when the message is initialized.</p>
+<p>
+If `mail-default-reply-to' is non-nil, it should be an address (a string);
+a Reply-to: field with that address is inserted.</p>
+<p>
+If `mail-archive-file-name' is non-nil, an FCC field with that file name
+is inserted.</p>
+<p>
+The normal hook `mail-setup-hook' is run after the message is
+initialized.  It can add more default fields to the message.</p>
+<p>
+The first argument, NOERASE, determines what to do when there is
+an existing modified `*mail*' buffer.  If NOERASE is nil, the
+existing mail buffer is used, and the user is prompted whether to
+keep the old contents or to erase them.  If NOERASE has the value
+`new', a new mail buffer will be created instead of using the old
+one.  Any other non-nil value means to always select the old
+buffer without erasing the contents.</p>
+<p>
+The second through fifth arguments,
+ TO, SUBJECT, IN-REPLY-TO and CC, specify if non-nil
+ the initial contents of those header fields.
+ These arguments should not have final newlines.
+The sixth argument REPLYBUFFER is a buffer which contains an
+ original message being replied to, or else an action
+ of the form (FUNCTION . ARGS) which says how to insert the original.
+ Or it can be nil, if not replying to anything.
+The seventh argument ACTIONS is a list of actions to take
+ if/when the message is sent.  Each action looks like (FUNCTION . ARGS);
+ when the message is sent, we apply FUNCTION to ARGS.
+ This is how Rmail arranges to mark messages `answered'.</p>
+<p>
+(fn &optional NOERASE TO SUBJECT IN-REPLY-TO CC REPLYBUFFER ACTIONS RETURN-ACTION)</p>

@@ -1,0 +1,22 @@
+<h3>Function: list-holidays</h3>
+<p>
+Display holidays for years Y1 to Y2 (inclusive).
+Y2 defaults to Y1.  The optional list of holidays L defaults to
+`calendar-holidays'.  If you want to control what holidays are
+displayed, use a different list.  For example,</p>
+<p>
+  (list-holidays 2006 2006
+    (append holiday-general-holidays holiday-local-holidays))</p>
+<p>
+will display holidays for the year 2006 defined in the two
+mentioned lists, and nothing else.</p>
+<p>
+When called interactively, this command offers a choice of
+holidays, based on the variables `holiday-solar-holidays' etc.  See the
+documentation of `calendar-holidays' for a list of the variables
+that control the choices, as well as a description of the format
+of a holiday list.</p>
+<p>
+The optional LABEL is used to label the buffer created.</p>
+<p>
+(fn Y1 &optional Y2 L LABEL)</p>

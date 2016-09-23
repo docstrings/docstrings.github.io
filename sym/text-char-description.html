@@ -1,0 +1,10 @@
+<h3>Function: text-char-description</h3>
+<p>
+Return a pretty description of file-character CHARACTER.
+Control characters turn into "^char", etc.  This differs from
+`single-key-description' which turns them into "C-char".
+Also, this function recognizes the 2**7 bit as the Meta character,
+whereas `single-key-description' uses the 2**27 bit for Meta.
+See Info node `(elisp)Describing Characters' for examples.</p>
+<p>
+(fn CHARACTER)</p>

@@ -1,0 +1,9 @@
+<h3>Function: byte-compile-format-warn</h3>
+<p>
+Warn if FORM is `format'-like with inconsistent args.
+Applies if head of FORM is a symbol with non-nil property
+`byte-compile-format-like' and first arg is a constant string.
+Then check the number of format fields matches the number of
+extra args.</p>
+<p>
+(fn FORM)</p>

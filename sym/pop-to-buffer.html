@@ -1,0 +1,20 @@
+<h3>Function: pop-to-buffer</h3>
+<p>
+Select buffer BUFFER in some window, preferably a different one.
+BUFFER may be a buffer, a string (a buffer name), or nil.  If it
+is a string not naming an existent buffer, create a buffer with
+that name.  If BUFFER is nil, choose some other buffer.  Return
+the buffer.</p>
+<p>
+This uses `display-buffer' as a subroutine.  The optional ACTION
+argument is passed to `display-buffer' as its ACTION argument.
+See `display-buffer' for more information.  ACTION is t if called
+interactively with a prefix argument, which means to pop to a
+window other than the selected one even if the buffer is already
+displayed in the selected window.</p>
+<p>
+If the window to show BUFFER is not on the selected
+frame, raise that window's frame and give it input focus.</p>
+<p>
+Optional third arg NORECORD non-nil means do not put this buffer
+at the front of the list of recently selected ones.</p>

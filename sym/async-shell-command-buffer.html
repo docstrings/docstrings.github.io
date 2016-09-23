@@ -1,0 +1,15 @@
+<h3>Variable: async-shell-command-buffer</h3>
+<p>
+What to do when the output buffer is used by another shell command.
+This option specifies how to resolve the conflict where a new command
+wants to direct its output to the buffer `*Async Shell Command*',
+but this buffer is already taken by another running shell command.</p>
+<p>
+The value `confirm-kill-process' is used to ask for confirmation before
+killing the already running process and running a new process
+in the same buffer, `confirm-new-buffer' for confirmation before running
+the command in a new buffer with a name other than the default buffer name,
+`new-buffer' for doing the same without confirmation,
+`confirm-rename-buffer' for confirmation before renaming the existing
+output buffer and running a new command in the default buffer,
+`rename-buffer' for doing the same without confirmation.</p>

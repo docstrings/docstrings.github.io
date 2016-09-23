@@ -1,0 +1,64 @@
+<h3>Function: f90-mode</h3>
+<p>
+Major mode for editing Fortran 90,95 code in free format.
+For fixed format code, use `fortran-mode'.</p>
+<p>
+M-x f90-indent-line indents the current line.
+M-x f90-indent-new-line indents current line and creates a new indented line.
+M-x f90-indent-subprogram indents the current subprogram.</p>
+<p>
+Type `? or `C-h to display a list of built-in abbrevs for F90 keywords.</p>
+<p>
+Key definitions:</p>
+<p>
+Uses keymap `f90-mode-map', which is not currently defined.</p>
+<p>
+
+Variables controlling indentation style and extra features:</p>
+<p>
+`f90-do-indent'
+  Extra indentation within do blocks (default 3).
+`f90-if-indent'
+  Extra indentation within if/select/where/forall blocks (default 3).
+`f90-type-indent'
+  Extra indentation within type/enum/interface/block-data blocks (default 3).
+`f90-program-indent'
+  Extra indentation within program/module/subroutine/function blocks
+  (default 2).
+`f90-associate-indent'
+  Extra indentation within associate blocks (default 2).
+`f90-critical-indent'
+  Extra indentation within critical/block blocks (default 2).
+`f90-continuation-indent'
+  Extra indentation applied to continuation lines (default 5).
+`f90-comment-region'
+  String inserted by function M-x f90-comment-region at start of each
+  line in region (default "!!!$").
+`f90-indented-comment-re'
+  Regexp determining the type of comment to be intended like code
+  (default "!").
+`f90-directive-comment-re'
+  Regexp of comment-like directive like "!HPF\\$", not to be indented
+  (default "!hpf\\$").
+`f90-break-delimiters'
+  Regexp holding list of delimiters at which lines may be broken
+  (default "[-+*/><=,% \t]").
+`f90-break-before-delimiters'
+  Non-nil causes `f90-do-auto-fill' to break lines before delimiters
+  (default t).
+`f90-beginning-ampersand'
+  Automatic insertion of & at beginning of continuation lines (default t).
+`f90-smart-end'
+  From an END statement, check and fill the end using matching block start.
+  Allowed values are 'blink, 'no-blink, and nil, which determine
+  whether to blink the matching beginning (default 'blink).
+`f90-auto-keyword-case'
+  Automatic change of case of keywords (default nil).
+  The possibilities are 'downcase-word, 'upcase-word, 'capitalize-word.
+`f90-leave-line-no'
+  Do not left-justify line numbers (default nil).</p>
+<p>
+Turning on F90 mode calls the value of the variable `f90-mode-hook'
+with no args, if that value is non-nil.</p>
+<p>
+(fn)</p>

@@ -1,0 +1,47 @@
+<h3>Function: vi-mode</h3>
+<p>
+Major mode that acts like the `vi' editor.
+The purpose of this mode is to provide you the combined power of vi (namely,
+the "cross product" effect of commands and repeat last changes) and Emacs.</p>
+<p>
+This command redefines nearly all keys to look like vi commands.
+It records the previous major mode, and any vi command for input
+(`i', `a', `s', etc.) switches back to that mode.
+Thus, ordinary Emacs (in whatever major mode you had been using)
+is "input" mode as far as vi is concerned.</p>
+<p>
+To get back into vi from "input" mode, you must issue this command again.
+Therefore, it is recommended that you assign it to a key.</p>
+<p>
+Major differences between this mode and real vi :</p>
+<p>
+* Limitations and unsupported features
+  - Search patterns with line offset (e.g. /pat/+3 or /pat/z.) are
+    not supported.
+  - Ex commands are not implemented; try ':' to get some hints.
+  - No line undo (i.e. the 'U' command), but multi-undo is a standard feature.</p>
+<p>
+* Modifications
+  - The stopping positions for some point motion commands (word boundary,
+    pattern search) are slightly different from standard 'vi'.
+    Also, no automatic wrap around at end of buffer for pattern searching.
+  - Since changes are done in two steps (deletion then insertion), you need
+    to undo twice to completely undo a change command.  But this is not needed
+    for undoing a repeated change command.
+  - No need to set/unset 'magic', to search for a string with regular expr
+    in it just put a prefix arg for the search commands.  Replace cmds too.
+  - ^R is bound to incremental backward search, so use ^L to redraw screen.</p>
+<p>
+* Extensions
+  - Some standard (or modified) Emacs commands were integrated, such as
+    incremental search, query replace, transpose objects, and keyboard macros.
+  - In command state, ^X links to the 'ctl-x-map', and ESC can be linked to
+    esc-map or set undefined.  These can give you the full power of Emacs.
+  - See vi-com-map for those keys that are extensions to standard vi, e.g.
+    `vi-name-last-change-or-macro', `vi-verify-spelling', `vi-locate-def',
+    `vi-mark-region', and 'vi-quote-words'.  Some of them are quite handy.
+  - Use M-x vi-switch-mode to switch among different modes quickly.</p>
+<p>
+Syntax table and abbrevs while in vi mode remain as they were in Emacs.</p>
+<p>
+(fn)</p>

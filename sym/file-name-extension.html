@@ -1,0 +1,12 @@
+<h3>Function: file-name-extension</h3>
+<p>
+Return FILENAME's final "extension".
+The extension, in a file name, is the part that follows the last `.',
+excluding version numbers and backup suffixes,
+except that a leading `.', if any, doesn't count.
+Return nil for extensionless file names such as `foo'.
+Return the empty string for file names such as `foo.'.</p>
+<p>
+If PERIOD is non-nil, then the returned value includes the period
+that delimits the extension, and if FILENAME has no extension,
+the value is "".</p>

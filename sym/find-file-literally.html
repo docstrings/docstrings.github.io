@@ -1,0 +1,23 @@
+<h3>Function: find-file-literally</h3>
+<p>
+Visit file FILENAME with no conversion of any kind.
+Format conversion and character code conversion are both disabled,
+and multibyte characters are disabled in the resulting buffer.
+The major mode used is Fundamental mode regardless of the file name,
+and local variable specifications in the file are ignored.
+Automatic uncompression and adding a newline at the end of the
+file due to `require-final-newline' is also disabled.</p>
+<p>
+You cannot absolutely rely on this function to result in
+visiting the file literally.  If Emacs already has a buffer
+which is visiting the file, you get the existing buffer,
+regardless of whether it was created literally or not.</p>
+<p>
+In a Lisp program, if you want to be sure of accessing a file's
+contents literally, you should create a temporary buffer and then read
+the file contents into it using `insert-file-contents-literally'.</p>
+<h3>Variable: find-file-literally</h3>
+<p>
+Non-nil if this buffer was made by `find-file-literally' or equivalent.
+This has the `permanent-local' property, which takes effect if you
+make the variable buffer-local.</p>

@@ -1,0 +1,9 @@
+<h3>Variable: undo-limit</h3>
+<p>
+Keep no more undo information once it exceeds this size.
+This limit is applied when garbage collection happens.
+When a previous command increases the total undo list size past this
+value, the earlier commands that came before it are forgotten.</p>
+<p>
+The size is counted as the number of bytes occupied,
+which includes both saved text and other data.</p>

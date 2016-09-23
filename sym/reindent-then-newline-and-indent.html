@@ -1,0 +1,8 @@
+<h3>Function: reindent-then-newline-and-indent</h3>
+<p>
+Reindent current line, insert newline, then indent the new line.
+Indentation of both lines is done according to the current major mode,
+which means calling the current value of `indent-line-function'.
+In programming language modes, this is the same as TAB.
+In some text modes, where TAB inserts a tab, this indents to the
+column specified by the function `current-left-margin'.</p>

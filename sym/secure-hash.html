@@ -1,0 +1,13 @@
+<h3>Function: secure-hash</h3>
+<p>
+Return the secure hash of OBJECT, a buffer or string.
+ALGORITHM is a symbol specifying the hash to use:
+md5, sha1, sha224, sha256, sha384 or sha512.</p>
+<p>
+The two optional arguments START and END are positions specifying for
+which part of OBJECT to compute the hash.  If nil or omitted, uses the
+whole OBJECT.</p>
+<p>
+If BINARY is non-nil, returns a string in binary form.</p>
+<p>
+(fn ALGORITHM OBJECT &optional START END BINARY)</p>

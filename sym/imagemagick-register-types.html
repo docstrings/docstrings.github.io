@@ -1,0 +1,12 @@
+<h3>Function: imagemagick-register-types</h3>
+<p>
+Register file types that can be handled by ImageMagick.
+This function is called at startup, after loading the init file.
+It registers the ImageMagick types returned by `imagemagick-filter-types'.</p>
+<p>
+Registered image types are added to `auto-mode-alist', so that
+Emacs visits them in Image mode.  They are also added to
+`image-type-file-name-regexps', so that the `image-type' function
+recognizes these files as having image type `imagemagick'.</p>
+<p>
+If Emacs is compiled without ImageMagick support, this does nothing.</p>

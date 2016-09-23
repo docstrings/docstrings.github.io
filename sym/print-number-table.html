@@ -1,0 +1,12 @@
+<h3>Variable: print-number-table</h3>
+<p>
+A vector used internally to produce `#N=' labels and `#N#' references.
+The Lisp printer uses this vector to detect Lisp objects referenced more
+than once.</p>
+<p>
+When you bind `print-continuous-numbering' to t, you should probably
+also bind `print-number-table' to nil.  This ensures that the value of
+`print-number-table' can be garbage-collected once the printing is
+done.  If all elements of `print-number-table' are nil, it means that
+the printing done so far has not found any shared structure or objects
+that need to be recorded in the table.</p>

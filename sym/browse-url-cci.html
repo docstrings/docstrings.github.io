@@ -1,0 +1,18 @@
+<h3>Function: browse-url-cci</h3>
+<p>
+Ask the XMosaic WWW browser to load URL.
+Default to the URL around or before point.</p>
+<p>
+This function only works for XMosaic version 2.5 or later.  You must
+select `CCI' from XMosaic's File menu, set the CCI Port Address to the
+value of variable `browse-url-CCI-port', and enable `Accept requests'.</p>
+<p>
+When called interactively, if variable `browse-url-new-window-flag' is
+non-nil, load the document in a new browser window, otherwise use a
+random existing one.  A non-nil interactive prefix argument reverses
+the effect of `browse-url-new-window-flag'.</p>
+<p>
+When called non-interactively, optional second argument NEW-WINDOW is
+used instead of `browse-url-new-window-flag'.</p>
+<p>
+(fn URL &optional NEW-WINDOW)</p>

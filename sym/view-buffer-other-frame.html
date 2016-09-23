@@ -1,0 +1,20 @@
+<h3>Function: view-buffer-other-frame</h3>
+<p>
+View BUFFER in View mode in another frame.
+Emacs commands editing the buffer contents are not available;
+instead, a special set of commands (mostly letters and
+punctuation) are defined for moving around in the buffer.
+Space scrolls forward, Delete scrolls backward.
+For a list of all View commands, type H or h while viewing.</p>
+<p>
+This command runs the normal hook `view-mode-hook'.</p>
+<p>
+Optional argument NOT-RETURN is ignored.</p>
+<p>
+Optional argument EXIT-ACTION is either nil or a function with buffer as
+argument.  This function is called when finished viewing buffer.  Use
+this argument instead of explicitly setting `view-exit-action'.</p>
+<p>
+This function does not enable View mode if the buffer's major-mode
+has a `special' mode-class, because such modes usually have their
+own View-like bindings.</p>

@@ -1,0 +1,9 @@
+<h3>Function: easy-menu-filter-return</h3>
+<p>
+Convert MENU to the right thing to return from a menu filter.
+MENU is a menu as computed by `easy-menu-define' or `easy-menu-create-menu' or
+a symbol whose value is such a menu.
+In Emacs a menu filter must return a menu (a keymap), in XEmacs a filter must
+return a menu items list (without menu name and keywords).
+This function returns the right thing in the two cases.
+If NAME is provided, it is used for the keymap.</p>

@@ -1,0 +1,17 @@
+<h3>Function: set-mark</h3>
+<p>
+Set this buffer's mark to POS.  Don't use this function!
+That is to say, don't use this function unless you want
+the user to see that the mark has moved, and you want the previous
+mark position to be lost.</p>
+<p>
+Normally, when a new mark is set, the old one should go on the stack.
+This is why most applications should use `push-mark', not `set-mark'.</p>
+<p>
+Novice Emacs Lisp programmers often try to use the mark for the wrong
+purposes.  The mark saves a location for the user's convenience.
+Most editing commands should not alter the mark.
+To remember a location for internal use in the Lisp program,
+store it in a Lisp variable.  Example:</p>
+<p>
+   (let ((beg (point))) (forward-line 1) (delete-region beg (point))).</p>

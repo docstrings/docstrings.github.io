@@ -1,0 +1,11 @@
+<h3>Function: quit-windows-on</h3>
+<p>
+Quit all windows showing BUFFER-OR-NAME.
+BUFFER-OR-NAME may be a buffer or the name of an existing buffer
+and defaults to the current buffer.  Optional argument KILL
+non-nil means to kill BUFFER-OR-NAME.  KILL nil means to bury
+BUFFER-OR-NAME.  Optional argument FRAME is handled as by
+`delete-windows-on'.</p>
+<p>
+This function calls `quit-window' on all candidate windows
+showing BUFFER-OR-NAME.</p>

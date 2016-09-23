@@ -1,0 +1,9 @@
+<h3>Function: byte-compile-disable-warning</h3>
+<p>
+Change `byte-compile-warnings' to disable WARNING.
+If `byte-compile-warnings' is t, set it to `(not WARNING)'.
+Otherwise, if the first element is `not', add WARNING, else remove it.
+Normally you should let-bind `byte-compile-warnings' before calling this,
+else the global value will be modified.</p>
+<p>
+(fn WARNING)</p>

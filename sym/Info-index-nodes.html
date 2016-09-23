@@ -1,0 +1,13 @@
+<h3>Function: Info-index-nodes</h3>
+<p>
+Return a list of names of all index nodes in Info FILE.
+If FILE is omitted, it defaults to the current Info file.
+First look in a list of cached index node names.  Then scan Info
+file and its subfiles for nodes with the index cookie.  Then try
+to find index nodes starting from the first node in the top level
+menu whose name contains the word "Index", plus any immediately
+following nodes whose names also contain the word "Index".</p>
+<h3>Variable: Info-index-nodes</h3>
+<p>
+Alist of cached index node names of visited Info files.
+Each element has the form (INFO-FILE INDEX-NODE-NAMES-LIST).</p>

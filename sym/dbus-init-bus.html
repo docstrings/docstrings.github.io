@@ -1,0 +1,25 @@
+<h3>Function: dbus-init-bus</h3>
+<p>
+Establish the connection to D-Bus BUS.</p>
+<p>
+BUS can be either the symbol `:system' or the symbol `:session', or it
+can be a string denoting the address of the corresponding bus.  For
+the system and session buses, this function is called when loading
+`dbus.el', there is no need to call it again.</p>
+<p>
+The function returns a number, which counts the connections this Emacs
+session has established to the BUS under the same unique name (see
+`dbus-get-unique-name').  It depends on the libraries Emacs is linked
+with, and on the environment Emacs is running.  For example, if Emacs
+is linked with the gtk toolkit, and it runs in a GTK-aware environment
+like Gnome, another connection might already be established.</p>
+<p>
+When PRIVATE is non-nil, a new connection is established instead of
+reusing an existing one.  It results in a new unique name at the bus.
+This can be used, if it is necessary to distinguish from another
+connection used in the same Emacs process, like the one established by
+GTK+.  It should be used with care for at least the `:system' and
+`:session' buses, because other Emacs Lisp packages might already use
+this connection to those buses.</p>
+<p>
+(fn BUS &optional PRIVATE)</p>

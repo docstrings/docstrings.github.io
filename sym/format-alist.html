@@ -1,0 +1,43 @@
+<h3>Variable: format-alist</h3>
+<p>
+List of information about understood file formats.
+Elements are of the form
+(NAME DOC-STR REGEXP FROM-FN TO-FN MODIFY MODE-FN PRESERVE).</p>
+<p>
+NAME    is a symbol, which is stored in `buffer-file-format'.</p>
+<p>
+DOC-STR should be a single line providing more information about the
+        format.  It is currently unused, but in the future will be shown to
+        the user if they ask for more information.</p>
+<p>
+REGEXP  is a regular expression to match against the beginning of the file;
+        it should match only files in that format.  REGEXP may be nil, in
+        which case the format will never be applied automatically to a file.
+        Use this for formats that you only ever want to apply manually.</p>
+<p>
+FROM-FN is called to decode files in that format; it takes two args, BEGIN
+        and END, and can make any modifications it likes, returning the new
+        end.  It must make sure that the beginning of the file no longer
+        matches REGEXP, or else it will get called again.
+	Alternatively, FROM-FN can be a string, which specifies a shell command
+	(including options) to be used as a filter to perform the conversion.</p>
+<p>
+TO-FN   is called to encode a region into that format; it takes three
+        arguments: BEGIN, END, and BUFFER.  BUFFER is the original buffer that
+        the data being written came from, which the function could use, for
+        example, to find the values of local variables.  TO-FN should either
+        return a list of annotations like `write-region-annotate-functions',
+        or modify the region and return the new end.
+	Alternatively, TO-FN can be a string, which specifies a shell command
+	(including options) to be used as a filter to perform the conversion.</p>
+<p>
+MODIFY, if non-nil, means the TO-FN wants to modify the region.  If nil,
+        TO-FN will not make any changes but will instead return a list of
+        annotations.</p>
+<p>
+MODE-FN, if specified, is called when visiting a file with that format.
+         It is called with a single positive argument, on the assumption
+         that this would turn on some minor mode.</p>
+<p>
+PRESERVE, if non-nil, means that `format-write-file' should not remove
+          this format from `buffer-file-format'.</p>

@@ -1,0 +1,11 @@
+<h3>Variable: disable-point-adjustment</h3>
+<p>
+If non-nil, suppress point adjustment after executing a command.</p>
+<p>
+After a command is executed, if point is moved into a region that has
+special properties (e.g. composition, display), we adjust point to
+the boundary of the region.  But, when a command sets this variable to
+non-nil, we suppress the point adjustment.</p>
+<p>
+This variable is set to nil before reading a command, and is checked
+just after executing the command.</p>

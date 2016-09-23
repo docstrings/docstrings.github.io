@@ -1,0 +1,22 @@
+<h3>Function: custom-theme-set-variables</h3>
+<p>
+Initialize variables for theme THEME according to settings in ARGS.
+Each of the arguments in ARGS should be a list of this form:</p>
+<p>
+  (SYMBOL EXP [NOW [REQUEST [COMMENT]]])</p>
+<p>
+SYMBOL is the variable name, and EXP is an expression which
+evaluates to the customized value.  EXP will also be stored,
+without evaluating it, in SYMBOL's `saved-value' property, so
+that it can be restored via the Customize interface.  It is also
+added to the alist in SYMBOL's `theme-value' property (by
+calling `custom-push-theme').</p>
+<p>
+NOW, if present and non-nil, means to install the variable's
+value directly now, even if its `defcustom' declaration has not
+been executed.  This is for internal use only.</p>
+<p>
+REQUEST is a list of features to `require' (which are loaded
+prior to evaluating EXP).</p>
+<p>
+COMMENT is a comment string about SYMBOL.</p>

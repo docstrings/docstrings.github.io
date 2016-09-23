@@ -1,0 +1,28 @@
+<h3>Function: copy-file</h3>
+<p>
+Copy FILE to NEWNAME.  Both args must be strings.
+If NEWNAME names a directory, copy FILE there.</p>
+<p>
+This function always sets the file modes of the output file to match
+the input file.</p>
+<p>
+The optional third argument OK-IF-ALREADY-EXISTS specifies what to do
+if file NEWNAME already exists.  If OK-IF-ALREADY-EXISTS is nil, we
+signal a `file-already-exists' error without overwriting.  If
+OK-IF-ALREADY-EXISTS is a number, we request confirmation from the user
+about overwriting; this is what happens in interactive use with M-x.
+Any other value for OK-IF-ALREADY-EXISTS means to overwrite the
+existing file.</p>
+<p>
+Fourth arg KEEP-TIME non-nil means give the output file the same
+last-modified time as the old one.  (This works on only some systems.)</p>
+<p>
+A prefix arg makes KEEP-TIME non-nil.</p>
+<p>
+If PRESERVE-UID-GID is non-nil, we try to transfer the
+uid and gid of FILE to NEWNAME.</p>
+<p>
+If PRESERVE-SELINUX-CONTEXT is non-nil and SELinux is enabled
+on the system, we copy the SELinux context of FILE to NEWNAME.</p>
+<p>
+(fn FILE NEWNAME &optional OK-IF-ALREADY-EXISTS KEEP-TIME PRESERVE-UID-GID PRESERVE-SELINUX-CONTEXT)</p>

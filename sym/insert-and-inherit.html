@@ -1,0 +1,13 @@
+<h3>Function: insert-and-inherit</h3>
+<p>
+Insert the arguments at point, inheriting properties from adjoining text.
+Point and before-insertion markers move forward to end up
+ after the inserted text.
+Any other markers at the point of insertion remain before the text.</p>
+<p>
+If the current buffer is multibyte, unibyte strings are converted
+to multibyte for insertion (see `unibyte-char-to-multibyte').
+If the current buffer is unibyte, multibyte strings are converted
+to unibyte for insertion.</p>
+<p>
+(fn &rest ARGS)</p>

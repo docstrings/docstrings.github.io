@@ -1,0 +1,18 @@
+<h3>Variable: apropos-do-all</h3>
+<p>
+Non nil means apropos commands will search more extensively.
+This may be slower.  This option affects the following commands:</p>
+<p>
+`apropos-variable' will search all variables, not just user variables.
+`apropos-command' will also search non-interactive functions.
+`apropos' will search all symbols, not just functions, variables, faces,
+and those with property lists.
+`apropos-value' will also search in property lists and functions.
+`apropos-documentation' will search all documentation strings, not just
+those in the etc/DOC documentation file.</p>
+<p>
+This option only controls the default behavior.  Each of the above
+commands also has an optional argument to request a more extensive search.</p>
+<p>
+Additionally, this option makes the function `apropos-library'
+include key-binding information in its output.</p>

@@ -1,0 +1,19 @@
+<h3>Function: shell-directory-tracker</h3>
+<p>
+Tracks cd, pushd and popd commands issued to the shell.
+This function is called on each input passed to the shell.
+It watches for cd, pushd and popd commands and sets the buffer's
+default directory to track these commands.</p>
+<p>
+You may toggle this tracking on and off with M-x shell-dirtrack-mode.
+If Emacs gets confused, you can resync with the shell with M-x dirs.
+(The `dirtrack' package provides an alternative implementation of this
+feature - see the function `dirtrack-mode'.)</p>
+<p>
+See variables `shell-cd-regexp', `shell-chdrive-regexp', `shell-pushd-regexp',
+and  `shell-popd-regexp', while `shell-pushd-tohome', `shell-pushd-dextract',
+and `shell-pushd-dunique' control the behavior of the relevant command.</p>
+<p>
+Environment variables are expanded, see function `substitute-in-file-name'.</p>
+<p>
+(fn STR)</p>

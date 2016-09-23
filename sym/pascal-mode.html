@@ -1,0 +1,49 @@
+<h3>Function: pascal-mode</h3>
+<p>
+Major mode for editing Pascal code. 
+Uses keymap `pascal-mode-map', which is not currently defined.</p>
+<p>
+TAB indents for Pascal code.  Delete converts tabs to spaces as it moves back.</p>
+<p>
+M-x completion-at-point completes the word around current point with respect to position in code
+M-x completion-help-at-point shows all possible completions at this point.</p>
+<p>
+Other useful functions are:</p>
+<p>
+M-x pascal-mark-defun	- Mark function.
+M-x pascal-insert-block	- insert begin ... end;
+M-x pascal-star-comment	- insert (* ... *)
+M-x pascal-comment-area	- Put marked area in a comment, fixing nested comments.
+M-x pascal-uncomment-area	- Uncomment an area commented with M-x pascal-comment-area.
+M-x pascal-beg-of-defun	- Move to beginning of current function.
+M-x pascal-end-of-defun	- Move to end of current function.
+M-x pascal-goto-defun	- Goto function prompted for in the minibuffer.
+M-x pascal-outline-mode	- Enter `pascal-outline-mode'.</p>
+<p>
+Variables controlling indentation/edit style:</p>
+<p>
+ `pascal-indent-level' (default 3)
+    Indentation of Pascal statements with respect to containing block.
+ `pascal-case-indent' (default 2)
+    Indentation for case statements.
+ `pascal-auto-newline' (default nil)
+    Non-nil means automatically newline after semicolons and the punctuation
+    mark after an end.
+ `pascal-indent-nested-functions' (default t)
+    Non-nil means nested functions are indented.
+ `pascal-tab-always-indent' (default t)
+    Non-nil means TAB in Pascal mode should always reindent the current line,
+    regardless of where in the line point is when the TAB command is used.
+ `pascal-auto-endcomments' (default t)
+    Non-nil means a comment { ... } is set after the ends which ends cases and
+    functions. The name of the function or case will be set between the braces.
+ `pascal-auto-lineup' (default t)
+    List of contexts where auto lineup of :'s or ='s should be done.</p>
+<p>
+See also the user variables `pascal-type-keywords', `pascal-start-keywords' and
+`pascal-separator-keywords'.</p>
+<p>
+Turning on Pascal mode calls the value of the variable pascal-mode-hook with
+no args, if that value is non-nil.</p>
+<p>
+(fn)</p>

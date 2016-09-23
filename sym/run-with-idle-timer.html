@@ -1,0 +1,15 @@
+<h3>Function: run-with-idle-timer</h3>
+<p>
+Perform an action the next time Emacs is idle for SECS seconds.
+The action is to call FUNCTION with arguments ARGS.
+SECS may be an integer, a floating point number, or the internal
+time format returned by, e.g., `current-idle-time'.
+If Emacs is currently idle, and has been idle for N seconds (N < SECS),
+then it will call FUNCTION in SECS - N seconds from now.  Using
+SECS <= N is not recommended if this function is invoked from an idle
+timer, because FUNCTION will then be called immediately.</p>
+<p>
+If REPEAT is non-nil, do the action each time Emacs has been idle for
+exactly SECS seconds (that is, only once for each time Emacs becomes idle).</p>
+<p>
+This function returns a timer object which you can use in `cancel-timer'.</p>

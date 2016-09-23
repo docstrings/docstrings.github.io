@@ -1,0 +1,17 @@
+<h3>Function: custom-set-faces</h3>
+<p>
+Initialize faces according to user preferences.
+This associates the settings with the `user' theme.
+The arguments should be a list where each entry has the form:</p>
+<p>
+  (FACE SPEC [NOW [COMMENT]])</p>
+<p>
+SPEC is stored as the saved value for FACE, as well as the value for the
+`user' theme.  The `user' theme is one of the default themes known to Emacs.
+See `custom-known-themes' for more information on the known themes.
+See `custom-theme-set-faces' for more information on the interplay
+between themes and faces.
+See `defface' for the format of SPEC.</p>
+<p>
+If NOW is present and non-nil, FACE is created now, according to SPEC.
+COMMENT is a string comment about FACE.</p>

@@ -1,0 +1,14 @@
+<h3>Function: byte-compile-output-docform</h3>
+<p>
+Print a form with a doc string.  INFO is (prefix doc-index postfix).
+If PREFACE and NAME are non-nil, print them too,
+before INFO and the FORM but after the doc string itself.
+If SPECINDEX is non-nil, it is the index in FORM
+of the function bytecode string.  In that case,
+we output that argument and the following argument
+(the constants vector) together, for lazy loading.
+QUOTED says that we have to put a quote before the
+list that represents a doc string reference.
+`defvaralias', `autoload' and `custom-declare-variable' need that.</p>
+<p>
+(fn PREFACE NAME INFO FORM SPECINDEX QUOTED)</p>

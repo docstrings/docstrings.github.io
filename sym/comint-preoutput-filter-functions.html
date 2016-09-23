@@ -1,0 +1,15 @@
+<h3>Variable: comint-preoutput-filter-functions</h3>
+<p>
+List of functions to call before inserting Comint output into the buffer.
+Each function gets one argument, a string containing the text received
+from the subprocess.  It should return the string to insert, perhaps
+the same string that was received, or perhaps a modified or transformed
+string.</p>
+<p>
+The functions on the list are called sequentially, and each one is
+given the string returned by the previous one.  The string returned by
+the last function is the text that is actually inserted in the
+redirection buffer.</p>
+<p>
+You can use `add-hook' to add functions to this list
+either globally or locally.</p>

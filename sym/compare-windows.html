@@ -1,0 +1,28 @@
+<h3>Function: compare-windows</h3>
+<p>
+Compare text in current window with text in next window.
+Compares the text starting at point in each window,
+moving over text in each one as far as they match.</p>
+<p>
+This command pushes the mark in each window
+at the prior location of point in that window.
+If both windows display the same buffer,
+the mark is pushed twice in that buffer:
+first in the other window, then in the selected window.</p>
+<p>
+A prefix arg means reverse the value of variable
+`compare-ignore-whitespace'.  If `compare-ignore-whitespace' is
+nil, then a prefix arg means ignore changes in whitespace.  If
+`compare-ignore-whitespace' is non-nil, then a prefix arg means
+don't ignore changes in whitespace.  The variable
+`compare-windows-whitespace' controls how whitespace is skipped.
+If `compare-ignore-case' is non-nil, changes in case are also
+ignored.</p>
+<p>
+If `compare-windows-sync' is non-nil, then successive calls of
+this command work in interlaced mode:
+on first call it advances points to the next difference,
+on second call it synchronizes points by skipping the difference,
+on third call it again advances points to the next difference and so on.</p>
+<p>
+(fn IGNORE-WHITESPACE)</p>

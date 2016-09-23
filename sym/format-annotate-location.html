@@ -1,0 +1,18 @@
+<h3>Function: format-annotate-location</h3>
+<p>
+Return annotation(s) needed at location LOC.
+This includes any properties that change between LOC - 1 and LOC.
+If ALL is true, don't look at previous location, but generate annotations for
+all non-nil properties.
+Third argument IGNORE is a list of text-properties not to consider.
+Use the TRANSLATIONS alist (see `format-annotate-region' for doc).</p>
+<p>
+Return value is a vector of 3 elements:
+1. List of annotations to close
+2. List of annotations to open.
+3. List of properties that were ignored or couldn't be annotated.</p>
+<p>
+The annotations in lists 1 and 2 need not be strings.
+They can be whatever the FORMAT-FN in `format-annotate-region'
+can handle.  If that is `enriched-make-annotation', they can be
+either strings, or lists of the form (PARAMETER VALUE).</p>

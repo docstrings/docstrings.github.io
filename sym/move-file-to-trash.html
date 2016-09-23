@@ -1,0 +1,14 @@
+<h3>Function: move-file-to-trash</h3>
+<p>
+Move the file (or directory) named FILENAME to the trash.
+When `delete-by-moving-to-trash' is non-nil, this function is
+called by `delete-file' and `delete-directory' instead of
+deleting files outright.</p>
+<p>
+If the function `system-move-file-to-trash' is defined, call it
+ with FILENAME as an argument.
+Otherwise, if `trash-directory' is non-nil, move FILENAME to that
+ directory.
+Otherwise, trash FILENAME using the freedesktop.org conventions,
+ like the GNOME, KDE and XFCE desktop environments.  Emacs only
+ moves files to "home trash", ignoring per-volume trashcans.</p>

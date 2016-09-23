@@ -1,0 +1,53 @@
+<h3>Function: read-from-minibuffer</h3>
+<p>
+Read a string from the minibuffer, prompting with string PROMPT.
+The optional second arg INITIAL-CONTENTS is an obsolete alternative to
+  DEFAULT-VALUE.  It normally should be nil in new code, except when
+  HIST is a cons.  It is discussed in more detail below.</p>
+<p>
+Third arg KEYMAP is a keymap to use whilst reading;
+  if omitted or nil, the default is `minibuffer-local-map'.</p>
+<p>
+If fourth arg READ is non-nil, interpret the result as a Lisp object
+  and return that object:
+  in other words, do `(car (read-from-string INPUT-STRING))'</p>
+<p>
+Fifth arg HIST, if non-nil, specifies a history list and optionally
+  the initial position in the list.  It can be a symbol, which is the
+  history list variable to use, or a cons cell (HISTVAR . HISTPOS).
+  In that case, HISTVAR is the history list variable to use, and
+  HISTPOS is the initial position for use by the minibuffer history
+  commands.  For consistency, you should also specify that element of
+  the history as the value of INITIAL-CONTENTS.  Positions are counted
+  starting from 1 at the beginning of the list.</p>
+<p>
+Sixth arg DEFAULT-VALUE, if non-nil, should be a string, which is used
+  as the default to `read' if READ is non-nil and the user enters
+  empty input.  But if READ is nil, this function does _not_ return
+  DEFAULT-VALUE for empty input!  Instead, it returns the empty string.</p>
+<p>
+  Whatever the value of READ, DEFAULT-VALUE is made available via the
+  minibuffer history commands.  DEFAULT-VALUE can also be a list of
+  strings, in which case all the strings are available in the history,
+  and the first string is the default to `read' if READ is non-nil.</p>
+<p>
+Seventh arg INHERIT-INPUT-METHOD, if non-nil, means the minibuffer inherits
+ the current input method and the setting of `enable-multibyte-characters'.</p>
+<p>
+If the variable `minibuffer-allow-text-properties' is non-nil,
+ then the string which is returned includes whatever text properties
+ were present in the minibuffer.  Otherwise the value has no text properties.</p>
+<p>
+The remainder of this documentation string describes the
+INITIAL-CONTENTS argument in more detail.  It is only relevant when
+studying existing code, or when HIST is a cons.  If non-nil,
+INITIAL-CONTENTS is a string to be inserted into the minibuffer before
+reading input.  Normally, point is put at the end of that string.
+However, if INITIAL-CONTENTS is (STRING . POSITION), the initial
+input is STRING, but point is placed at _one-indexed_ position
+POSITION in the minibuffer.  Any integer value less than or equal to
+one puts point at the beginning of the string.  *Note* that this
+behavior differs from the way such arguments are used in `completing-read'
+and some related functions, which use zero-indexing for POSITION.</p>
+<p>
+(fn PROMPT &optional INITIAL-CONTENTS KEYMAP READ HIST DEFAULT-VALUE INHERIT-INPUT-METHOD)</p>

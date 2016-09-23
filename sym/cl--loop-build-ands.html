@@ -1,0 +1,9 @@
+<h3>Function: cl--loop-build-ands</h3>
+<p>
+Return various representations of (and . CLAUSES).
+CLAUSES is a list of Elisp expressions, where clauses of the form
+(progn E1 E2 E3 .. t) are the focus of particular optimizations.
+The return value has shape (COND BODY COMBO)
+such that COMBO is equivalent to (and . CLAUSES).</p>
+<p>
+(fn CLAUSES)</p>

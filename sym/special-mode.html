@@ -1,0 +1,23 @@
+<h3>Function: special-mode</h3>
+<p>
+Parent major mode from which special major modes should inherit.</p>
+<p>
+This mode runs the hook `special-mode-hook', as the final step
+during initialization.</p>
+<p>
+key             binding
+---             -------</p>
+<p>
+SPC		scroll-up-command
+-		negative-argument
+0 .. 9		digit-argument
+<		beginning-of-buffer
+>		end-of-buffer
+?		describe-mode
+g		revert-buffer
+h		describe-mode
+q		quit-window
+DEL		scroll-down-command
+<remap>		Prefix Command</p>
+<p>
+</p>

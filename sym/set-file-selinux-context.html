@@ -1,0 +1,10 @@
+<h3>Function: set-file-selinux-context</h3>
+<p>
+Set SELinux context of file named FILENAME to CONTEXT.
+CONTEXT should be a list (USER ROLE TYPE RANGE), where the list
+elements are strings naming the components of a SELinux context.</p>
+<p>
+This function does nothing if SELinux is disabled, or if Emacs was not
+compiled with SELinux support.</p>
+<p>
+(fn FILENAME CONTEXT)</p>

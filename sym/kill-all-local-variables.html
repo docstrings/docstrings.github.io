@@ -1,0 +1,19 @@
+<h3>Function: kill-all-local-variables</h3>
+<p>
+Switch to Fundamental mode by killing current buffer's local variables.
+Most local variable bindings are eliminated so that the default values
+become effective once more.  Also, the syntax table is set from
+`standard-syntax-table', the local keymap is set to nil,
+and the abbrev table from `fundamental-mode-abbrev-table'.
+This function also forces redisplay of the mode line.</p>
+<p>
+Every function to select a new major mode starts by
+calling this function.</p>
+<p>
+As a special exception, local variables whose names have
+a non-nil `permanent-local' property are not eliminated by this function.</p>
+<p>
+The first thing this function does is run
+the normal hook `change-major-mode-hook'.</p>
+<p>
+(fn)</p>

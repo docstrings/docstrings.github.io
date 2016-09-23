@@ -1,0 +1,21 @@
+<h3>Function: pkg-info-defining-library-original-version</h3>
+<p>
+Get the original version of the library defining FUNCTION.</p>
+<p>
+The original version is stored in the X-Original-Version header.
+This header is added by the MELPA package archive to preserve
+upstream version numbers.</p>
+<p>
+If SHOW is non-nil, show the version in mini-buffer.</p>
+<p>
+This function is mainly intended to find the version of a major
+or minor mode, i.e.</p>
+<p>
+   (pkg-info-defining-library-version 'flycheck-mode)</p>
+<p>
+Return the version of the library defining FUNCTION.  Signal an
+error if FUNCTION is not a valid function, if its defining
+library was not found, or if the library had no proper version
+header.</p>
+<p>
+(fn FUNCTION &optional SHOW)</p>

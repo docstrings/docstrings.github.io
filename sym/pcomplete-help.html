@@ -1,0 +1,13 @@
+<h3>Function: pcomplete-help</h3>
+<p>
+Display any help information relative to the current argument.</p>
+<p>
+(fn)</p>
+<h3>Variable: pcomplete-help</h3>
+<p>
+A string or function (or nil) used for context-sensitive help.
+If a string, it should name an Info node that will be jumped to.
+If non-nil, it must a sexp that will be evaluated, and whose
+result will be shown in the minibuffer.
+If nil, the function `pcomplete-man-function' will be called with the
+current command argument.</p>

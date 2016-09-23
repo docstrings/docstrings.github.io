@@ -1,0 +1,31 @@
+<h3>Function: sql-linter</h3>
+<p>
+Run inl by RELEX as an inferior process.</p>
+<p>
+If buffer `*SQL*' exists but no process is running, make a new process.
+If buffer exists and a process is running, just switch to buffer
+`*SQL*'.</p>
+<p>
+Interpreter used comes from variable `sql-linter-program' - usually `inl'.
+Login uses the variables `sql-user', `sql-password', `sql-database' and
+`sql-server' as defaults, if set.  Additional command line parameters
+can be stored in the list `sql-linter-options'.  Run inl -h to get help on
+parameters.</p>
+<p>
+`sql-database' is used to set the LINTER_MBX environment variable for
+local connections, `sql-server' refers to the server name from the
+`nodetab' file for the network connection (dbc_tcp or friends must run
+for this to work).  If `sql-password' is an empty string, inl will use
+an empty password.</p>
+<p>
+The buffer is put in SQL interactive mode, giving commands for sending
+input.  See `sql-interactive-mode'.</p>
+<p>
+To set the buffer name directly, use C-u
+before M-x sql-linter.  Once session has started,
+M-x sql-rename-buffer can be called separately to rename the
+buffer.</p>
+<p>
+(Type C-h m in the SQL buffer for a list of commands.)</p>
+<p>
+(fn &optional BUFFER)</p>

@@ -1,0 +1,11 @@
+<h3>Function: pcomplete-opt</h3>
+<p>
+Complete a set of OPTIONS, each beginning with PREFIX (?- by default).
+PREFIX may be t, in which case no PREFIX character is necessary.
+If NO-GANGING is non-nil, each option is separate (-xy is not allowed).
+If ARGS-FOLLOW is non-nil, then options which take arguments may have
+the argument appear after a ganged set of options.  This is how tar
+behaves, for example.
+Arguments NO-GANGING and ARGS-FOLLOW are currently ignored.</p>
+<p>
+(fn OPTIONS &optional PREFIX NO-GANGING ARGS-FOLLOW)</p>

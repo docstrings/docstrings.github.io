@@ -1,0 +1,16 @@
+<h3>Function: set-justification</h3>
+<p>
+Set the region's justification style to STYLE.
+This commands prompts for the kind of justification to use.
+If the mark is not active, this command operates on the current paragraph.
+If the mark is active, it operates on the region.  However, if the
+beginning and end of the region are not at paragraph breaks, they are
+moved to the beginning and end (respectively) of the paragraphs they
+are in.</p>
+<p>
+If variable `use-hard-newlines' is true, all hard newlines are
+taken to be paragraph breaks.</p>
+<p>
+When calling from a program, operates just on region between BEGIN and END,
+unless optional fourth arg WHOLE-PAR is non-nil.  In that case bounds are
+extended to include entire paragraphs as in the interactive command.</p>

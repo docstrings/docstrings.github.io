@@ -1,0 +1,13 @@
+<h3>Function: push-button</h3>
+<p>
+Perform the action specified by a button at location POS.
+POS may be either a buffer position or a mouse-event.  If
+USE-MOUSE-ACTION is non-nil, invoke the button's mouse-action
+instead of its normal action; if the button has no mouse-action,
+the normal action is used instead.  The action may be either a
+function to call or a marker to display.
+POS defaults to point, except when `push-button' is invoked
+interactively as the result of a mouse-event, in which case, the
+mouse event is used.
+If there's no button at POS, do nothing and return nil, otherwise
+return t.</p>

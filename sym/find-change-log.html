@@ -1,0 +1,18 @@
+<h3>Function: find-change-log</h3>
+<p>
+Find a change log file for M-x add-change-log-entry and return the name.</p>
+<p>
+Optional arg FILE-NAME specifies the file to use.
+If FILE-NAME is nil, use the value of `change-log-default-name'.
+If `change-log-default-name' is nil, behave as though it were 'ChangeLog'
+(or whatever we use on this operating system).</p>
+<p>
+If `change-log-default-name' contains a leading directory component, then
+simply find it in the current directory.  Otherwise, search in the current
+directory and its successive parents for a file so named.</p>
+<p>
+Once a file is found, `change-log-default-name' is set locally in the
+current buffer to the complete file name.
+Optional arg BUFFER-FILE overrides `buffer-file-name'.</p>
+<p>
+(fn &optional FILE-NAME BUFFER-FILE)</p>

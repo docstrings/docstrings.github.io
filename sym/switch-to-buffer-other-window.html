@@ -1,0 +1,20 @@
+<h3>Function: switch-to-buffer-other-window</h3>
+<p>
+Select the buffer specified by BUFFER-OR-NAME in another window.
+BUFFER-OR-NAME may be a buffer, a string (a buffer name), or
+nil.  Return the buffer switched to.</p>
+<p>
+If called interactively, prompt for the buffer name using the
+minibuffer.  The variable `confirm-nonexistent-file-or-buffer'
+determines whether to request confirmation before creating a new
+buffer.</p>
+<p>
+If BUFFER-OR-NAME is a string and does not identify an existing
+buffer, create a new buffer with that name.  If BUFFER-OR-NAME is
+nil, switch to the buffer returned by `other-buffer'.</p>
+<p>
+Optional second argument NORECORD non-nil means do not put this
+buffer at the front of the list of recently selected ones.</p>
+<p>
+This uses the function `display-buffer' as a subroutine; see its
+documentation for additional customization information.</p>

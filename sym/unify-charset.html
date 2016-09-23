@@ -1,0 +1,13 @@
+<h3>Function: unify-charset</h3>
+<p>
+Unify characters of CHARSET with Unicode.
+This means reading the relevant file and installing the table defined
+by CHARSET's `:unify-map' property.</p>
+<p>
+Optional second arg UNIFY-MAP is a file name string or a vector.  It has
+the same meaning as the `:unify-map' attribute in the function
+`define-charset' (which see).</p>
+<p>
+Optional third argument DEUNIFY, if non-nil, means to de-unify CHARSET.</p>
+<p>
+(fn CHARSET &optional UNIFY-MAP DEUNIFY)</p>

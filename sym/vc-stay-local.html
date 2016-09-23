@@ -1,0 +1,16 @@
+<h3>Variable: vc-stay-local</h3>
+<p>
+Non-nil means use local operations when possible for remote repositories.
+This avoids slow queries over the network and instead uses heuristics
+and past information to determine the current status of a file.</p>
+<p>
+If value is the symbol `only-file' `vc-dir' will connect to the
+server, but heuristics will be used to determine the status for
+all other VC operations.</p>
+<p>
+The value can also be a regular expression or list of regular
+expressions to match against the host name of a repository; then VC
+only stays local for hosts that match it.  Alternatively, the value
+can be a list of regular expressions where the first element is the
+symbol `except'; then VC always stays local except for hosts matched
+by these regular expressions.</p>

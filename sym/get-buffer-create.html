@@ -1,0 +1,12 @@
+<h3>Function: get-buffer-create</h3>
+<p>
+Return the buffer specified by BUFFER-OR-NAME, creating a new one if needed.
+If BUFFER-OR-NAME is a string and a live buffer with that name exists,
+return that buffer.  If no such buffer exists, create a new buffer with
+that name and return it.  If BUFFER-OR-NAME starts with a space, the new
+buffer does not keep undo information.</p>
+<p>
+If BUFFER-OR-NAME is a buffer instead of a string, return it as given,
+even if it is dead.  The return value is never nil.</p>
+<p>
+(fn BUFFER-OR-NAME)</p>

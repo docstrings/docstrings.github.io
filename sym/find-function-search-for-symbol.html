@@ -1,0 +1,12 @@
+<h3>Function: find-function-search-for-symbol</h3>
+<p>
+Search for SYMBOL's definition of type TYPE in LIBRARY.
+Visit the library in a buffer, and return a cons cell (BUFFER . POSITION),
+or just (BUFFER . nil) if the definition can't be found in the file.</p>
+<p>
+If TYPE is nil, look for a function definition.
+Otherwise, TYPE specifies the kind of definition,
+and it is interpreted via `find-function-regexp-alist'.
+The search is done in the source for library LIBRARY.</p>
+<p>
+(fn SYMBOL TYPE LIBRARY)</p>

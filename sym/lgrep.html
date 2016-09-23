@@ -1,0 +1,20 @@
+<h3>Function: lgrep</h3>
+<p>
+Run grep, searching for REGEXP in FILES in directory DIR.
+The search is limited to file names matching shell pattern FILES.
+FILES may use abbreviations defined in `grep-files-aliases', e.g.
+entering `ch' is equivalent to `*.[ch]'.</p>
+<p>
+With C-u prefix, you can edit the constructed shell command line
+before it is executed.
+With two C-u prefixes, directly edit and run `grep-command'.</p>
+<p>
+Collect output in a buffer.  While grep runs asynchronously, you
+can use C-x ` (M-x next-error), or 
+Uses keymap `grep-mode-map', which is not currently defined.
+M-x compile-goto-error in the grep output buffer,
+to go to the lines where grep found matches.</p>
+<p>
+This command shares argument histories with M-x rgrep and M-x grep.</p>
+<p>
+(fn REGEXP &optional FILES DIR CONFIRM)</p>

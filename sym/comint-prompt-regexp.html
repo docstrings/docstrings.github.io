@@ -1,0 +1,17 @@
+<h3>Variable: comint-prompt-regexp</h3>
+<p>
+Regexp to recognize prompts in the inferior process.
+Defaults to "^", the null string at BOL.</p>
+<p>
+This variable is only used if the variable
+`comint-use-prompt-regexp' is non-nil.</p>
+<p>
+Good choices:
+  Canonical Lisp: "^[^> \n]*>+:? *" (Lucid, franz, kcl, T, cscheme, oaklisp)
+  Lucid Common Lisp: "^\\(>\\|\\(->\\)+\\) *"
+  franz: "^\\(->\\|<[0-9]*>:\\) *"
+  kcl: "^>+ *"
+  shell: "^[^#$%>\n]*[#$%>] *"
+  T: "^>+ *"</p>
+<p>
+This is a good thing to set in mode hooks.</p>

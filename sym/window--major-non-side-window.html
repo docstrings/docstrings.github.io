@@ -1,0 +1,11 @@
+<h3>Function: window--major-non-side-window</h3>
+<p>
+Return the major non-side window of frame FRAME.
+The optional argument FRAME must be a live frame and defaults to
+the selected one.</p>
+<p>
+If FRAME has at least one side window, the major non-side window
+is either an internal non-side window such that all other
+non-side windows on FRAME descend from it, or the single live
+non-side window of FRAME.  If FRAME has no side windows, return
+its root window.</p>

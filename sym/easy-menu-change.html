@@ -1,0 +1,18 @@
+<h3>Function: easy-menu-change</h3>
+<p>
+Change menu found at PATH as item NAME to contain ITEMS.
+PATH is a list of strings for locating the menu that
+should contain a submenu named NAME.
+ITEMS is a list of menu items, as in `easy-menu-define'.
+These items entirely replace the previous items in that submenu.</p>
+<p>
+If MAP is specified, it should normally be a keymap; nil stands for the local
+menu-bar keymap.  It can also be a symbol, which has earlier been used as the
+first argument in a call to `easy-menu-define', or the value of such a symbol.</p>
+<p>
+If the menu located by PATH has no submenu named NAME, add one.
+If the optional argument BEFORE is present, add it just before
+the submenu named BEFORE, otherwise add it at the end of the menu.</p>
+<p>
+To implement dynamic menus, either call this from
+`menu-bar-update-hook' or use a menu filter.</p>

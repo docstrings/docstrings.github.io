@@ -1,0 +1,12 @@
+<h3>Function: set-input-method</h3>
+<p>
+Select and activate input method INPUT-METHOD for the current buffer.
+This also sets the default input method to the one you specify.
+If INPUT-METHOD is nil, this function turns off the input method, and
+also causes you to be prompted for a name of an input method the next
+time you invoke C-\.
+When called interactively, the optional arg INTERACTIVE is non-nil,
+which marks the variable `default-input-method' as set for Custom buffers.</p>
+<p>
+To deactivate the input method interactively, use C-\.
+To deactivate it programmatically, use `deactivate-input-method'.</p>

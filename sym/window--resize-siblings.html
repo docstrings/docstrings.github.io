@@ -1,0 +1,20 @@
+<h3>Function: window--resize-siblings</h3>
+<p>
+Resize other windows when WINDOW is resized vertically by DELTA lines.
+Optional argument HORIZONTAL non-nil means resize other windows
+when WINDOW is resized horizontally by DELTA columns.  WINDOW
+itself is not resized by this function.</p>
+<p>
+Optional argument IGNORE non-nil means ignore restrictions
+imposed by fixed size windows, `window-min-height' or
+`window-min-width' settings.  If IGNORE equals `safe', live
+windows may get as small as `window-safe-min-height' lines and
+`window-safe-min-width' columns.  If IGNORE is a window, ignore
+restrictions for that window only.  Any other non-nil value means
+ignore all of the above restrictions for all windows.</p>
+<p>
+Optional arguments TRAIL and EDGE, when non-nil, refine the set
+of windows that shall be resized.  If TRAIL equals `before',
+resize only windows on the left or above EDGE.  If TRAIL equals
+`after', resize only windows on the right or below EDGE.  Also,
+preferably only resize windows adjacent to EDGE.</p>

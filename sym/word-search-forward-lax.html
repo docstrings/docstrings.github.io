@@ -1,0 +1,17 @@
+<h3>Function: word-search-forward-lax</h3>
+<p>
+Search forward from point for STRING, ignoring differences in punctuation.
+Set point to the end of the occurrence found, and return point.</p>
+<p>
+Unlike `word-search-forward', the end of STRING need not match a word
+boundary, unless STRING ends in whitespace.</p>
+<p>
+An optional second argument bounds the search; it is a buffer position.
+The match found must not extend after that position.
+Optional third argument, if t, means if fail just return nil (no error).
+  If not nil and not t, move to limit of search and return nil.
+Optional fourth argument is repeat count--search for successive occurrences.</p>
+<p>
+Relies on the function `word-search-regexp' to convert a sequence
+of words in STRING to a regexp used to search words without regard
+to punctuation.</p>

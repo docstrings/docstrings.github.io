@@ -1,0 +1,18 @@
+<h3>Function: cconv-convert</h3>
+<p>
+Return FORM with all its lambdas changed so they are closed.
+ENV is a lexical environment mapping variables to the expression
+used to get its value.  This is used for variables that are copied into
+closures, moved into cons cells, ...
+ENV is a list where each entry takes the shape either:
+ (VAR . (car EXP)): VAR has been moved into the car of a cons-cell, and EXP
+    is an expression that evaluates to this cons-cell.
+ (VAR . (internal-get-closed-var N)): VAR has been copied into the closure
+    environment's Nth slot.
+ (VAR . (apply-partially F ARG1 ARG2 ..)): VAR has been λ-lifted and takes
+    additional arguments ARGs.
+EXTEND is a list of variables which might need to be accessed even from places
+where they are shadowed, because some part of ENV causes them to be used at
+places where they originally did not directly appear.</p>
+<p>
+(fn FORM ENV EXTEND)</p>

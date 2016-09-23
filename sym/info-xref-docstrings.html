@@ -1,0 +1,23 @@
+<h3>Function: info-xref-docstrings</h3>
+<p>
+Check docstring info node references in source files.
+The given files are searched for docstring hyperlinks like</p>
+<p>
+    Info node `(elisp)Documentation Tips'</p>
+<p>
+and those links checked by attempting to visit the target nodes
+as per `info-xref-check' does.</p>
+<p>
+Interactively filenames are read as a wildcard pattern like
+"foo*.el", with the current file as a default.  Usually this
+will be lisp sources, but anything with such hyperlinks can be
+checked, including the Emacs .c sources (or the etc/DOC file of
+all builtins).</p>
+<p>
+Because info node hyperlinks are found by a simple regexp search
+in the files, the Lisp code checked doesn't have to be loaded,
+and links can be in the file commentary or elsewhere too.  Even
+.elc files can usually be checked successfully if you don't have
+the sources handy.</p>
+<p>
+(fn FILENAME-LIST)</p>

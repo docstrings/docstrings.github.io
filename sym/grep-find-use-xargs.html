@@ -1,0 +1,9 @@
+<h3>Variable: grep-find-use-xargs</h3>
+<p>
+How to invoke find and grep.
+If `exec', use `find -exec {} ;'.
+If `exec-plus' use `find -exec {} +'.
+If `gnu', use `find -print0' and `xargs -0'.
+Any other value means to use `find -print' and `xargs'.</p>
+<p>
+This variable's value takes effect when `grep-compute-defaults' is called.</p>

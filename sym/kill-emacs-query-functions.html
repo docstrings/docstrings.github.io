@@ -1,0 +1,6 @@
+<h3>Variable: kill-emacs-query-functions</h3>
+<p>
+Functions to call with no arguments to query about killing Emacs.
+If any of these functions returns nil, killing Emacs is canceled.
+`save-buffers-kill-emacs' calls these functions, but `kill-emacs',
+the low level primitive, does not.  See also `kill-emacs-hook'.</p>

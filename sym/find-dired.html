@@ -1,0 +1,11 @@
+<h3>Function: find-dired</h3>
+<p>
+Run `find' and go into Dired mode on a buffer of the output.
+The command run (after changing into DIR) is essentially</p>
+<p>
+    find . \( ARGS \) -ls</p>
+<p>
+except that the car of the variable `find-ls-option' specifies what to
+use in place of "-ls" as the final argument.</p>
+<p>
+(fn DIR ARGS)</p>

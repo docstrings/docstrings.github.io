@@ -1,0 +1,15 @@
+<h3>Function: face-spec-set</h3>
+<p>
+Set and apply the face spec for FACE.
+If the optional argument FOR-DEFFACE is omitted or nil, set the
+overriding spec to SPEC, recording it in the `face-override-spec'
+property of FACE.  See `defface' for the format of SPEC.</p>
+<p>
+If FOR-DEFFACE is non-nil, set the base spec (the one set by
+`defface' and Custom).  In this case, SPEC is ignored; the caller
+is responsible for putting the face spec in the `saved-face',
+`customized-face', or `face-defface-spec', as appropriate.</p>
+<p>
+The appearance of FACE is controlled by the base spec, by any
+custom theme specs on top of that, and by the overriding spec on
+top of all the rest.</p>

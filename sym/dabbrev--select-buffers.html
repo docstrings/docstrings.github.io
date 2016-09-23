@@ -1,0 +1,13 @@
+<h3>Function: dabbrev--select-buffers</h3>
+<p>
+Return a list of other buffers to search for a possible abbrev.
+The current buffer is not included in the list.</p>
+<p>
+This function makes a list of all the buffers returned by `buffer-list',
+then discards buffers whose names match `dabbrev-ignored-buffer-names'
+or `dabbrev-ignored-buffer-regexps'.  It also discards buffers for which
+`dabbrev-friend-buffer-function', if it is bound, returns nil when called
+with the buffer as argument.
+It returns the list of the buffers that are not discarded.</p>
+<p>
+(fn)</p>

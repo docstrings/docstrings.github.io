@@ -1,0 +1,8 @@
+<h3>Function: format-insert-annotations</h3>
+<p>
+Apply list of annotations to buffer as `write-region' would.
+Insert each element of the given LIST of buffer annotations at its
+appropriate place.  Use second arg OFFSET if the annotations' locations are
+not relative to the beginning of the buffer: annotations will be inserted
+at their location-OFFSET+1 (ie, the offset is treated as the position of
+the first character in the buffer).</p>

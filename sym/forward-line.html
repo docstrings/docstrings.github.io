@@ -1,0 +1,12 @@
+<h3>Function: forward-line</h3>
+<p>
+Move N lines forward (backward if N is negative).
+Precisely, if point is on line I, move to the start of line I + N
+("start of line" in the logical order).
+If there isn't room, go as far as possible (no error).
+Returns the count of lines left to move.  If moving forward,
+that is N - number of lines moved; if backward, N + number moved.
+With positive N, a non-empty line at the end counts as one line
+successfully moved (for the return value).</p>
+<p>
+(fn &optional N)</p>

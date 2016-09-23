@@ -1,0 +1,19 @@
+<h3>Function: kill-buffer</h3>
+<p>
+Kill the buffer specified by BUFFER-OR-NAME.
+The argument may be a buffer or the name of an existing buffer.
+Argument nil or omitted means kill the current buffer.  Return t if the
+buffer is actually killed, nil otherwise.</p>
+<p>
+The functions in `kill-buffer-query-functions' are called with the
+buffer to be killed as the current buffer.  If any of them returns nil,
+the buffer is not killed.  The hook `kill-buffer-hook' is run before the
+buffer is actually killed.  The buffer being killed will be current
+while the hook is running.  Functions called by any of these hooks are
+supposed to not change the current buffer.</p>
+<p>
+Any processes that have this buffer as the `process-buffer' are killed
+with SIGHUP.  This function calls `replace-buffer-in-windows' for
+cleaning up all windows currently displaying the buffer to be killed.</p>
+<p>
+(fn &optional BUFFER-OR-NAME)</p>

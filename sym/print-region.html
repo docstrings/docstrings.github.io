@@ -1,0 +1,16 @@
+<h3>Function: print-region</h3>
+<p>
+Paginate and print the region contents.</p>
+<p>
+The variable `lpr-headers-switches' controls how to paginate.
+If it is nil (the default), we run the `pr' program (or whatever program
+`lpr-page-header-program' specifies) to paginate.
+`lpr-page-header-switches' specifies the switches for that program.</p>
+<p>
+Otherwise, the switches in `lpr-headers-switches' are used
+in the print command itself; we expect them to request pagination.</p>
+<p>
+See the variables `lpr-switches' and `lpr-command'
+for further customization of the printer command.</p>
+<p>
+(fn START END)</p>

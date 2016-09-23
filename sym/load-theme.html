@@ -1,0 +1,21 @@
+<h3>Function: load-theme</h3>
+<p>
+Load Custom theme named THEME from its file.
+The theme file is named THEME-theme.el, in one of the directories
+specified by `custom-theme-load-path'.</p>
+<p>
+If the theme is not considered safe by `custom-safe-themes',
+prompt the user for confirmation before loading it.  But if
+optional arg NO-CONFIRM is non-nil, load the theme without
+prompting.</p>
+<p>
+Normally, this function also enables THEME.  If optional arg
+NO-ENABLE is non-nil, load the theme but don't enable it, unless
+the theme was already enabled.</p>
+<p>
+This function is normally called through Customize when setting
+`custom-enabled-themes'.  If used directly in your init file, it
+should be called with a non-nil NO-CONFIRM argument, or after
+`custom-safe-themes' has been loaded.</p>
+<p>
+Return t if THEME was successfully loaded, nil otherwise.</p>

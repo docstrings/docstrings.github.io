@@ -1,0 +1,16 @@
+<h3>Variable: pcomplete-parse-arguments-function</h3>
+<p>
+A function to call to parse the current line's arguments.
+It should be called with no parameters, and with point at the position
+of the argument that is to be completed.</p>
+<p>
+It must either return nil, or a cons cell of the form:</p>
+<p>
+  ((ARG...) (BEG-POS...))</p>
+<p>
+The two lists must be identical in length.  The first gives the final
+value of each command line argument (which need not match the textual
+representation of that argument), and BEG-POS gives the beginning
+position of each argument, as it is seen by the user.  The establishes
+a relationship between the fully resolved value of the argument, and
+the textual representation of the argument.</p>

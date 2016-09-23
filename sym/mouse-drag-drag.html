@@ -1,0 +1,18 @@
+<h3>Function: mouse-drag-drag</h3>
+<p>
+"Drag" the page according to a mouse drag.</p>
+<p>
+Drag scrolling moves the page according to the movement of the mouse.
+You "grab" the character under the mouse and move it around.</p>
+<p>
+If the mouse is clicked and released in the same place of time we
+assume that the user didn't want to scroll but wanted to whatever
+mouse-2 used to do, so we pass it through.</p>
+<p>
+Drag scrolling is identical to the "hand" option in MacPaint, or the
+middle button in Tk text widgets.</p>
+<p>
+To test this function, evaluate:
+    (global-set-key [down-mouse-2] 'mouse-drag-drag)</p>
+<p>
+(fn START-EVENT)</p>

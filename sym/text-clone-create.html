@@ -1,0 +1,13 @@
+<h3>Function: text-clone-create</h3>
+<p>
+Create a text clone of START...END at point.
+Text clones are chunks of text that are automatically kept identical:
+changes done to one of the clones will be immediately propagated to the other.</p>
+<p>
+The buffer's content at point is assumed to be already identical to
+the one between START and END.
+If SYNTAX is provided it's a regexp that describes the possible text of
+the clones; the clone will be shrunk or killed if necessary to ensure that
+its text matches the regexp.
+If SPREADP is non-nil it indicates that text inserted before/after the
+clone should be incorporated in the clone.</p>

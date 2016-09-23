@@ -1,0 +1,21 @@
+<h3>Function: format-mode-line</h3>
+<p>
+Format a string out of a mode line format specification.
+First arg FORMAT specifies the mode line format (see `mode-line-format'
+for details) to use.</p>
+<p>
+By default, the format is evaluated for the currently selected window.</p>
+<p>
+Optional second arg FACE specifies the face property to put on all
+characters for which no face is specified.  The value nil means the
+default face.  The value t means whatever face the window's mode line
+currently uses (either `mode-line' or `mode-line-inactive',
+depending on whether the window is the selected window or not).
+An integer value means the value string has no text
+properties.</p>
+<p>
+Optional third and fourth args WINDOW and BUFFER specify the window
+and buffer to use as the context for the formatting (defaults
+are the selected window and the WINDOW's buffer).</p>
+<p>
+(fn FORMAT &optional FACE WINDOW BUFFER)</p>

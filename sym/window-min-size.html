@@ -1,0 +1,15 @@
+<h3>Function: window-min-size</h3>
+<p>
+Return the minimum size of WINDOW.
+WINDOW must be a valid window and defaults to the selected one.
+Optional argument HORIZONTAL non-nil means return the minimum
+number of columns of WINDOW; otherwise return the minimum number
+of WINDOW's lines.</p>
+<p>
+Optional argument IGNORE, if non-nil, means ignore restrictions
+imposed by fixed size windows, `window-min-height' or
+`window-min-width' settings.  If IGNORE equals `safe', live
+windows may get as small as `window-safe-min-height' lines and
+`window-safe-min-width' columns.  If IGNORE is a window, ignore
+restrictions for that window only.  Any other non-nil value
+means ignore all of the above restrictions for all windows.</p>

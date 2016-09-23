@@ -1,0 +1,15 @@
+<h3>Function: window-resize-apply</h3>
+<p>
+Apply requested size values for window-tree of FRAME.
+Optional argument HORIZONTAL omitted or nil means apply requested height
+values.  HORIZONTAL non-nil means apply requested width values.</p>
+<p>
+This function checks whether the requested values sum up to a valid
+window layout, recursively assigns the new sizes of all child windows
+and calculates and assigns the new start positions of these windows.</p>
+<p>
+Note: This function does not check any of `window-fixed-size-p',
+`window-min-height' or `window-min-width'.  All these checks have to
+be applied on the Elisp level.</p>
+<p>
+(fn FRAME &optional HORIZONTAL)</p>

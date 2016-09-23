@@ -1,0 +1,20 @@
+<h3>Function: image-dired-dired-with-window-configuration</h3>
+<p>
+Open directory DIR and create a default window configuration.</p>
+<p>
+Convenience command that:</p>
+<p>
+ - Opens dired in folder DIR
+ - Splits windows in most useful (?) way
+ - Set `truncate-lines' to t</p>
+<p>
+After the command has finished, you would typically mark some
+image files in dired and type
+M-x image-dired-display-thumbs (`image-dired-display-thumbs').</p>
+<p>
+If called with prefix argument ARG, skip splitting of windows.</p>
+<p>
+The current window configuration is saved and can be restored by
+calling `image-dired-restore-window-configuration'.</p>
+<p>
+(fn DIR &optional ARG)</p>

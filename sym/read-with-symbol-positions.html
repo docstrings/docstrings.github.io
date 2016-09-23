@@ -1,0 +1,13 @@
+<h3>Variable: read-with-symbol-positions</h3>
+<p>
+If non-nil, add position of read symbols to `read-symbol-positions-list'.</p>
+<p>
+If this variable is a buffer, then only forms read from that buffer
+will be added to `read-symbol-positions-list'.
+If this variable is t, then all read forms will be added.
+The effect of all other values other than nil are not currently
+defined, although they may be in the future.</p>
+<p>
+The positions are relative to the last call to `read' or
+`read-from-string'.  It is probably a bad idea to set this variable at
+the toplevel; bind it instead.</p>

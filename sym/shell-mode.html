@@ -1,0 +1,105 @@
+<h3>Function: shell-mode</h3>
+<p>
+Major mode for interacting with an inferior shell.
+RET after the end of the process' output sends the text from
+    the end of process to the end of the current line.
+RET before end of process output copies the current line minus the prompt to
+    the end of the buffer and sends it (C-c RET just copies the current line).
+M-x send-invisible reads a line of text without echoing it, and sends it to
+    the shell.  This is useful for entering passwords.  Or, add the function
+    `comint-watch-for-password-prompt' to `comint-output-filter-functions'.</p>
+<p>
+If you want to make multiple shell buffers, rename the `*shell*' buffer
+using M-x rename-buffer or M-x rename-uniquely and start a new shell.</p>
+<p>
+If you want to make shell buffers limited in length, add the function
+`comint-truncate-buffer' to `comint-output-filter-functions'.</p>
+<p>
+If you accidentally suspend your process, use M-x comint-continue-subjob
+to continue it.</p>
+<p>
+`cd', `pushd' and `popd' commands given to the shell are watched by Emacs to
+keep this buffer's default directory the same as the shell's working directory.
+While directory tracking is enabled, the shell's working directory is displayed
+by C-x C-b or <C-down-mouse-1> in the `File' field.
+M-x dirs queries the shell and resyncs Emacs's idea of what the current
+    directory stack is.
+M-x shell-dirtrack-mode turns directory tracking on and off.
+(The `dirtrack' package provides an alternative implementation of this
+feature - see the function `dirtrack-mode'.)</p>
+<p>
+key             binding
+---             -------</p>
+<p>
+C-c		Prefix Command
+C-d		comint-delchar-or-maybe-eof
+TAB		completion-at-point
+RET		comint-send-input
+ESC		Prefix Command
+<C-down>	comint-next-input
+<C-up>		comint-previous-input
+<delete>	delete-char
+<kp-delete>	delete-char
+<mouse-2>	comint-insert-input</p>
+<p>
+M-RET		shell-resync-dirs
+M-?		comint-dynamic-list-filename-completions</p>
+<p>
+C-c C-b		shell-backward-command
+C-c C-f		shell-forward-command</p>
+<p>
+C-c C-a		comint-bol-or-process-mark
+C-c C-c		comint-interrupt-subjob
+C-c C-d		comint-send-eof
+C-c C-e		comint-show-maximum-output
+C-c C-l		comint-dynamic-list-input-ring
+C-c RET		comint-copy-old-input
+C-c C-n		comint-next-prompt
+C-c C-o		comint-delete-output
+C-c C-p		comint-previous-prompt
+C-c C-r		comint-show-output
+C-c C-s		comint-write-output
+C-c C-u		comint-kill-input
+C-c C-w		backward-kill-word
+C-c C-x		comint-get-next-from-history
+C-c C-z		comint-stop-subjob
+C-c ESC		Prefix Command
+C-c C-\		comint-quit-subjob
+C-c SPC		comint-accumulate
+C-c .		comint-insert-previous-argument</p>
+<p>
+C-M-l		comint-show-output
+M-n		comint-next-input
+M-p		comint-previous-input
+M-r		comint-history-isearch-backward-regexp</p>
+<p>
+C-c M-r		comint-previous-matching-input-from-input
+C-c M-s		comint-next-matching-input-from-input</p>
+<p>
+
+Customization: Entry to this mode runs the hooks on `comint-mode-hook' and
+`shell-mode-hook' (in that order).  Before each input, the hooks on
+`comint-input-filter-functions' are run.  After each shell output, the hooks
+on `comint-output-filter-functions' are run.</p>
+<p>
+Variables `shell-cd-regexp', `shell-chdrive-regexp', `shell-pushd-regexp'
+and `shell-popd-regexp' are used to match their respective commands,
+while `shell-pushd-tohome', `shell-pushd-dextract' and `shell-pushd-dunique'
+control the behavior of the relevant command.</p>
+<p>
+Variables `comint-completion-autolist', `comint-completion-addsuffix',
+`comint-completion-recexact' and `comint-completion-fignore' control the
+behavior of file name, command name and variable name completion.  Variable
+`shell-completion-execonly' controls the behavior of command name completion.
+Variable `shell-completion-fignore' is used to initialize the value of
+`comint-completion-fignore'.</p>
+<p>
+Variables `comint-input-ring-file-name' and `comint-input-autoexpand' control
+the initialization of the input ring history, and history expansion.</p>
+<p>
+Variables `comint-output-filter-functions', a hook, and
+`comint-scroll-to-bottom-on-input' and `comint-scroll-to-bottom-on-output'
+control whether input and output cause the window to scroll to the end of the
+buffer.</p>
+<p>
+(fn)</p>

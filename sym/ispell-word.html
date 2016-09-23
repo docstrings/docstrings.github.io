@@ -1,0 +1,32 @@
+<h3>Function: ispell-word</h3>
+<p>
+Check spelling of word under or before the cursor.
+If the word is not found in dictionary, display possible corrections
+in a window allowing you to choose one.</p>
+<p>
+If optional argument FOLLOWING is non-nil or if `ispell-following-word'
+is non-nil when called interactively, then the following word
+(rather than preceding) is checked when the cursor is not over a word.
+When the optional argument QUIETLY is non-nil or `ispell-quietly' is non-nil
+when called interactively, non-corrective messages are suppressed.</p>
+<p>
+With a prefix argument (or if CONTINUE is non-nil),
+resume interrupted spell-checking of a buffer or region.</p>
+<p>
+Interactively, in Transient Mark mode when the mark is active, call
+`ispell-region' to check the active region for spelling errors.</p>
+<p>
+Word syntax is controlled by the definition of the chosen dictionary,
+which is in `ispell-local-dictionary-alist' or `ispell-dictionary-alist'.</p>
+<p>
+This will check or reload the dictionary.  Use M-x ispell-change-dictionary
+or M-x ispell-region to update the Ispell process.</p>
+<p>
+Return values:
+nil           word is correct or spelling is accepted.
+0             word is inserted into buffer-local definitions.
+"word"        word corrected from word list.
+("word" arg)  word is hand entered.
+quit          spell session exited.</p>
+<p>
+(fn &optional FOLLOWING QUIETLY CONTINUE REGION)</p>

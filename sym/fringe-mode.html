@@ -1,0 +1,46 @@
+<h3>Function: fringe-mode</h3>
+<p>
+Set the default appearance of fringes on all frames.
+When called interactively, query the user for MODE; valid values
+are `no-fringes', `default', `left-only', `right-only', `minimal'
+and `half-width'.  See `fringe-styles'.</p>
+<p>
+When used in a Lisp program, MODE should be one of these:
+- nil, which means the default width (8 pixels).
+- a cons cell (LEFT . RIGHT), where LEFT and RIGHT are
+  respectively the left and right fringe widths in pixels, or
+  nil (meaning to disable that fringe).
+- a single integer, which specifies the pixel widths of both
+  fringes.
+This command may round up the left and right width specifications
+to ensure that their sum is a multiple of the character width of
+a frame.  It never rounds up a fringe width of 0.</p>
+<p>
+Fringe widths set by `set-window-fringes' override the default
+fringe widths set by this command.  This command applies to all
+frames that exist and frames to be created in the future.  If you
+want to set the default appearance of fringes on the selected
+frame only, see the command `set-fringe-style'.</p>
+<h3>Variable: fringe-mode</h3>
+<p>
+Default appearance of fringes on all frames.
+The Lisp value should be one of the following:
+- nil, which means the default width (8 pixels).
+- a cons cell (LEFT . RIGHT), where LEFT and RIGHT are
+  respectively the left and right fringe widths in pixels, or
+  nil (meaning to disable that fringe).
+- a single integer, which specifies the pixel widths of both
+  fringes.
+Note that the actual width may be rounded up to ensure that the
+sum of the width of the left and right fringes is a multiple of
+the frame's character width.  However, a fringe width of 0 is
+never rounded.</p>
+<p>
+When setting this variable from Customize, the user can choose
+from the mnemonic fringe mode names defined in `fringe-styles'.</p>
+<p>
+When setting this variable in a Lisp program, call
+`set-fringe-mode' afterward to make it take real effect.</p>
+<p>
+To modify the appearance of the fringe in a specific frame, use
+the interactive function `set-fringe-style'.</p>

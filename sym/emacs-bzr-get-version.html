@@ -1,0 +1,12 @@
+<h3>Function: emacs-bzr-get-version</h3>
+<p>
+Try to return as a string the bzr revision of the Emacs sources.
+The format is: [revno] revision_id, where revno may be absent.
+Value is nil if the sources do not seem to be under bzr, or if we could
+not determine the revision.  Note that this reports on the current state
+of the sources, which may not correspond to the running Emacs.</p>
+<p>
+Optional argument DIR is a directory to use instead of `source-directory'.
+Optional argument EXTERNAL non-nil means to maybe ask `bzr' itself,
+if the sources appear to be under bzr.  If `force', always ask bzr.
+Otherwise only ask bzr if we cannot find any information ourselves.</p>

@@ -1,0 +1,14 @@
+<h3>Function: isearch-fallback</h3>
+<p>
+Return point to previous successful match to allow regexp liberalization.</p>
+<p>
+Respects C-s and C-r by stopping at `isearch-barrier' as needed.</p>
+<p>
+Do nothing if a backslash is escaping the liberalizing character.
+If WANT-BACKSLASH is non-nil, invert this behavior (for \} and \|).</p>
+<p>
+Do nothing if regexp has recently been invalid unless optional
+ALLOW-INVALID non-nil.</p>
+<p>
+If optional TO-BARRIER non-nil, ignore previous matches and go exactly
+to the barrier.</p>

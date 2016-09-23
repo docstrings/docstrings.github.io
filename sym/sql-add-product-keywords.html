@@ -1,0 +1,21 @@
+<h3>Function: sql-add-product-keywords</h3>
+<p>
+Add highlighting KEYWORDS for SQL PRODUCT.</p>
+<p>
+PRODUCT should be a symbol, the name of a SQL product, such as
+`oracle'.  KEYWORDS should be a list; see the variable
+`font-lock-keywords'.  By default they are added at the beginning
+of the current highlighting list.  If optional argument APPEND is
+`set', they are used to replace the current highlighting list.
+If APPEND is any other non-nil value, they are added at the end
+of the current highlighting list.</p>
+<p>
+For example:</p>
+<p>
+ (sql-add-product-keywords 'ms
+  '(("\\b\\w+_t\\b" . font-lock-type-face)))</p>
+<p>
+adds a fontification pattern to fontify identifiers ending in
+`_t' as data types.</p>
+<p>
+(fn PRODUCT KEYWORDS &optional APPEND)</p>

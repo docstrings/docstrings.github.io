@@ -1,0 +1,12 @@
+<h3>Function: lookup-nested-alist</h3>
+<p>
+Look up key sequence KEYSEQ in nested alist ALIST.  Return the definition.
+Optional 3rd argument LEN specifies the length of KEYSEQ.
+Optional 4th argument START specifies index of the starting key.
+The returned value is normally a nested alist of which
+car part is the entry for KEYSEQ.
+If ALIST is not deep enough for KEYSEQ, return number which is
+ how many key elements at the front of KEYSEQ it takes
+ to reach a leaf in ALIST.
+Optional 5th argument NIL-FOR-TOO-LONG non-nil means return nil
+ even if ALIST is not deep enough.</p>

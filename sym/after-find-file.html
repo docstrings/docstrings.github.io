@@ -1,0 +1,13 @@
+<h3>Function: after-find-file</h3>
+<p>
+Called after finding a file and by the default revert function.
+Sets buffer mode, parses local variables.
+Optional args ERROR, WARN, and NOAUTO: ERROR non-nil means there was an
+error in reading the file.  WARN non-nil means warn if there
+exists an auto-save file more recent than the visited file.
+NOAUTO means don't mess with auto-save mode.
+Fourth arg AFTER-FIND-FILE-FROM-REVERT-BUFFER is ignored
+(see `revert-buffer-in-progress-p' for similar functionality).
+Fifth arg NOMODES non-nil means don't alter the file's modes.
+Finishes by calling the functions in `find-file-hook'
+unless NOMODES is non-nil.</p>

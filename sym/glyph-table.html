@@ -1,0 +1,10 @@
+<h3>Variable: glyph-table</h3>
+<p>
+Table defining how to output a glyph code to the frame.
+If not nil, this is a vector indexed by glyph code to define the glyph.
+Each element can be:
+ integer: a glyph code which this glyph is an alias for.
+ string: output this glyph using that string (not impl. in X windows).
+ nil: this glyph mod 524288 is the code of a character to output,
+    and this glyph / 524288 is the face number (see `face-id') to use
+    while outputting it.</p>

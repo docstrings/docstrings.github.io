@@ -1,0 +1,19 @@
+<h3>Function: browse-url-mozilla</h3>
+<p>
+Ask the Mozilla WWW browser to load URL.
+Default to the URL around or before point.  The strings in variable
+`browse-url-mozilla-arguments' are also passed to Mozilla.</p>
+<p>
+When called interactively, if variable `browse-url-new-window-flag' is
+non-nil, load the document in a new Mozilla window, otherwise use a
+random existing one.  A non-nil interactive prefix argument reverses
+the effect of `browse-url-new-window-flag'.</p>
+<p>
+If `browse-url-mozilla-new-window-is-tab' is non-nil, then whenever a
+document would otherwise be loaded in a new window, it is loaded in a
+new tab in an existing window instead.</p>
+<p>
+When called non-interactively, optional second argument NEW-WINDOW is
+used instead of `browse-url-new-window-flag'.</p>
+<p>
+(fn URL &optional NEW-WINDOW)</p>

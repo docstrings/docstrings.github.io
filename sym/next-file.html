@@ -1,0 +1,15 @@
+<h3>Function: next-file</h3>
+<p>
+Select next file among files in current tags table.</p>
+<p>
+A first argument of t (prefix arg, if interactive) initializes to the
+beginning of the list of files in the tags table.  If the argument is
+neither nil nor t, it is evalled to initialize the list of files.</p>
+<p>
+Non-nil second argument NOVISIT means use a temporary buffer
+ to save time and avoid uninteresting warnings.</p>
+<p>
+Value is nil if the file was already visited;
+if the file was newly read in, the value is the filename.</p>
+<p>
+(fn &optional INITIALIZE NOVISIT)</p>

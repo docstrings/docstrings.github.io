@@ -1,0 +1,11 @@
+<h3>Function: format-subtract-regions</h3>
+<p>
+Remove from the regions in MINUEND the regions in SUBTRAHEND.
+A region is a dotted pair (FROM . TO).  Both parameters are lists of
+regions.  Each list must contain nonoverlapping, noncontiguous
+regions, in descending order.  The result is also nonoverlapping,
+noncontiguous, and in descending order.  The first element of MINUEND
+can have a cdr of nil, indicating that the end of that region is not
+yet known.</p>
+<p>
+(fn MINUEND SUBTRAHEND)</p>

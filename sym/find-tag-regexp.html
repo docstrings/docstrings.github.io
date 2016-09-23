@@ -1,0 +1,20 @@
+<h3>Function: find-tag-regexp</h3>
+<p>
+Find tag (in current tags table) whose name matches REGEXP.
+Select the buffer containing the tag's definition and move point there.</p>
+<p>
+If second arg NEXT-P is t (interactively, with prefix arg), search for
+another tag that matches the last tagname or regexp used.  When there are
+multiple matches for a tag, more exact matches are found first.  If NEXT-P
+is negative (interactively, with prefix arg that is a negative number or
+just M--), pop back to the previous tag gone to.</p>
+<p>
+If third arg OTHER-WINDOW is non-nil, select the buffer in another window.</p>
+<p>
+A marker representing the point when this command is invoked is pushed
+onto a ring and may be popped back to with M-*.
+Contrast this with the ring of marks gone to by the command.</p>
+<p>
+See documentation of variable `tags-file-name'.</p>
+<p>
+(fn REGEXP &optional NEXT-P OTHER-WINDOW)</p>

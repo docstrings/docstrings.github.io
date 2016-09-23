@@ -1,0 +1,16 @@
+<h3>Function: comint-redirect-setup</h3>
+<p>
+Set up for output redirection.
+This function sets local variables that are used by `comint-redirect-filter'
+to perform redirection.</p>
+<p>
+Output from COMINT-BUFFER is redirected to OUTPUT-BUFFER, until something
+in the output matches FINISHED-REGEXP.</p>
+<p>
+If optional argument ECHO-INPUT is non-nil, output is echoed to the
+original Comint buffer.</p>
+<p>
+This function is called by `comint-redirect-send-command-to-process',
+and does not normally need to be invoked by the end user or programmer.</p>
+<p>
+(fn OUTPUT-BUFFER COMINT-BUFFER FINISHED-REGEXP &optional ECHO-INPUT)</p>

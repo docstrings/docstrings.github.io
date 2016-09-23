@@ -1,0 +1,24 @@
+<h3>Function: ido-mode</h3>
+<p>
+Toggle ido mode on or off.
+With ARG, turn ido-mode on if arg is positive, off otherwise.
+Turning on ido-mode will remap (via a minor-mode keymap) the default
+keybindings for the `find-file' and `switch-to-buffer' families of
+commands to the ido versions of these functions.
+However, if ARG arg equals 'files, remap only commands for files, or
+if it equals 'buffers, remap only commands for buffer switching.
+This function also adds a hook to the minibuffer.</p>
+<p>
+(fn &optional ARG)</p>
+<h3>Variable: ido-mode</h3>
+<p>
+Determines for which functional group (buffer and files) ido behavior
+should be enabled.  The following values are possible:
+- `buffer': Turn only on ido buffer behavior (switching, killing,
+  displaying...)
+- `file': Turn only on ido file behavior (finding, writing, inserting...)
+- `both': Turn on ido buffer and file behavior.
+- `nil': Turn off any ido switching.</p>
+<p>
+Setting this variable directly does not take effect;
+use either M-x customize or the function `ido-mode'.</p>

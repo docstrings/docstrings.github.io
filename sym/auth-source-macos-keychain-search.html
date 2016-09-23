@@ -1,0 +1,42 @@
+<h3>Function: auth-source-macos-keychain-search</h3>
+<p>
+Search the MacOS Keychain; spec is like `auth-source'.</p>
+<p>
+All search keys must match exactly.  If you need substring
+matching, do a wider search and narrow it down yourself.</p>
+<p>
+You'll get back all the properties of the token as a plist.</p>
+<p>
+The :type key is either 'macos-keychain-internet or
+'macos-keychain-generic.</p>
+<p>
+For the internet keychain type, the :label key searches the
+item's labels ("-l LABEL" passed to "/usr/bin/security").
+Similarly, :host maps to "-s HOST", :user maps to "-a USER",
+and :port maps to "-P PORT" or "-r PROT"
+(note PROT has to be a 4-character string).</p>
+<p>
+For the generic keychain type, the :label key searches the item's
+labels ("-l LABEL" passed to "/usr/bin/security").
+Similarly, :host maps to "-c HOST" (the "creator" keychain
+field), :user maps to "-a USER", and :port maps to "-s PORT".</p>
+<p>
+Here's an example that looks for the first item in the default
+generic MacOS Keychain:</p>
+<p>
+ (let ((auth-sources '(macos-keychain-generic)))
+    (auth-source-search :max 1)</p>
+<p>
+Here's another that looks for the first item in the internet
+MacOS Keychain collection whose label is 'gnus':</p>
+<p>
+ (let ((auth-sources '(macos-keychain-internet)))
+    (auth-source-search :max 1 :label "gnus")</p>
+<p>
+And this one looks for the first item in the internet keychain
+entries for git.gnus.org:</p>
+<p>
+ (let ((auth-sources '(macos-keychain-internet")))
+    (auth-source-search :max 1 :host "git.gnus.org"))</p>
+<p>
+(fn &rest SPEC &key BACKEND CREATE DELETE LABEL TYPE MAX HOST USER PORT &allow-other-keys)</p>

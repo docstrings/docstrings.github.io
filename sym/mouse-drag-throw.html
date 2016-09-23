@@ -1,0 +1,24 @@
+<h3>Function: mouse-drag-throw</h3>
+<p>
+"Throw" the page according to a mouse drag.</p>
+<p>
+A "throw" is scrolling the page at a speed relative to the distance
+from the original mouse click to the current mouse location.  Try it;
+you'll like it.  It's easier to observe than to explain.</p>
+<p>
+If the mouse is clicked and released in the same place of time we
+assume that the user didn't want to scroll but wanted to whatever
+mouse-2 used to do, so we pass it through.</p>
+<p>
+Throw scrolling was inspired (but is not identical to) the "hand"
+option in MacPaint, or the middle button in Tk text widgets.</p>
+<p>
+If `mouse-throw-with-scroll-bar' is non-nil, then this command scrolls
+in the opposite direction.  (Different people have different ideas
+about which direction is natural.  Perhaps it has to do with which
+hemisphere you're in.)</p>
+<p>
+To test this function, evaluate:
+    (global-set-key [down-mouse-2] 'mouse-drag-throw)</p>
+<p>
+(fn START-EVENT)</p>

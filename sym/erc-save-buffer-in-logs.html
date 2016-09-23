@@ -1,0 +1,14 @@
+<h3>Function: erc-save-buffer-in-logs</h3>
+<p>
+Append BUFFER contents to the log file, if logging is enabled.
+If BUFFER is not provided, current buffer is used.
+Logging is enabled if `erc-logging-enabled' returns non-nil.</p>
+<p>
+This is normally done on exit, to save the unsaved portion of the
+buffer, since only the text that runs off the buffer limit is logged
+automatically.</p>
+<p>
+You can save every individual message by putting this function on
+`erc-insert-post-hook'.</p>
+<p>
+(fn &optional BUFFER)</p>

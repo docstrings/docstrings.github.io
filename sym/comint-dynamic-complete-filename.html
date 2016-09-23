@@ -1,0 +1,16 @@
+<h3>Function: comint-dynamic-complete-filename</h3>
+<p>
+Dynamically complete the filename at point.
+Completes if after a filename.
+This function is similar to `comint-replace-by-expanded-filename', except that
+it won't change parts of the filename already entered in the buffer; it just
+adds completion characters to the end of the filename.  A completions listing
+may be shown in a separate buffer if completion is ambiguous.</p>
+<p>
+Completion is dependent on the value of `comint-completion-addsuffix',
+`comint-completion-recexact' and `comint-completion-fignore', and the timing of
+completions listing is dependent on the value of `comint-completion-autolist'.</p>
+<p>
+Returns t if successful.</p>
+<p>
+(fn)</p>

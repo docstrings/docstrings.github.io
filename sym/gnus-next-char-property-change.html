@@ -1,0 +1,13 @@
+<h3>Function: gnus-next-char-property-change</h3>
+<p>
+Return the position of next text property or overlay change.
+This scans characters forward in the current buffer from POSITION till
+it finds a change in some text property, or the beginning or end of an
+overlay, and returns the position of that.
+If none is found up to (point-max), the function returns (point-max).</p>
+<p>
+If the optional second argument LIMIT is non-nil, don't search
+past position LIMIT; return LIMIT if nothing is found before LIMIT.
+LIMIT is a no-op if it is greater than (point-max).</p>
+<p>
+(fn POSITION &optional LIMIT)</p>

@@ -1,0 +1,18 @@
+<h3>Function: frame-pixel-height</h3>
+<p>
+Return a FRAME's height in pixels.
+If FRAME is omitted, the selected frame is used.  The exact value
+of the result depends on the window-system and toolkit in use:</p>
+<p>
+In the Gtk+ version of Emacs, it includes only any window (including
+the minibuffer or echo area), mode line, and header line.  It does not
+include the tool bar or menu bar.</p>
+<p>
+With other graphical versions, it also includes the tool bar and the
+menu bar.</p>
+<p>
+For a text terminal, it includes the menu bar.  In this case, the
+result is really in characters rather than pixels (i.e., is identical
+to `frame-height').</p>
+<p>
+(fn &optional FRAME)</p>

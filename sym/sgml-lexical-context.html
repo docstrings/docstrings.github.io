@@ -1,0 +1,8 @@
+<h3>Function: sgml-lexical-context</h3>
+<p>
+Return the lexical context at point as (TYPE . START).
+START is the location of the start of the lexical element.
+TYPE is one of `string', `comment', `tag', `cdata', `pi', or `text'.</p>
+<p>
+Optional argument LIMIT is the position to start parsing from.
+If nil, start from a preceding tag at indentation.</p>

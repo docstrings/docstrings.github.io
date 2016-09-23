@@ -1,0 +1,70 @@
+<h3>Function: global-whitespace-toggle-options</h3>
+<p>
+Toggle global `whitespace-mode' options.</p>
+<p>
+If global whitespace-mode is off, toggle the option given by ARG
+and turn on global whitespace-mode.</p>
+<p>
+If global whitespace-mode is on, toggle the option given by ARG
+and restart global whitespace-mode.</p>
+<p>
+Interactively, it accepts one of the following chars:</p>
+<p>
+  CHAR	MEANING
+  (VIA FACES)
+   f	toggle face visualization
+   t	toggle TAB visualization
+   s	toggle SPACE and HARD SPACE visualization
+   r	toggle trailing blanks visualization
+   l	toggle "long lines" visualization
+   L	toggle "long lines" tail visualization
+   n	toggle NEWLINE visualization
+   e	toggle empty line at bob and/or eob visualization
+   C-i	toggle indentation SPACEs visualization (via `indent-tabs-mode')
+   I	toggle indentation SPACEs visualization
+   i	toggle indentation TABs visualization
+   C-a	toggle SPACEs after TAB visualization (via `indent-tabs-mode')
+   A	toggle SPACEs after TAB: SPACEs visualization
+   a	toggle SPACEs after TAB: TABs visualization
+   C-b	toggle SPACEs before TAB visualization (via `indent-tabs-mode')
+   B	toggle SPACEs before TAB: SPACEs visualization
+   b	toggle SPACEs before TAB: TABs visualization</p>
+<p>
+  (VIA DISPLAY TABLE)
+   T	toggle TAB visualization
+   S	toggle SPACEs before TAB visualization
+   N	toggle NEWLINE visualization</p>
+<p>
+   x	restore `whitespace-style' value
+   ?	display brief help</p>
+<p>
+Non-interactively, ARG should be a symbol or a list of symbols.
+The valid symbols are:</p>
+<p>
+   face			toggle face visualization
+   tabs			toggle TAB visualization
+   spaces		toggle SPACE and HARD SPACE visualization
+   trailing		toggle trailing blanks visualization
+   lines		toggle "long lines" visualization
+   lines-tail		toggle "long lines" tail visualization
+   newline		toggle NEWLINE visualization
+   empty		toggle empty line at bob and/or eob visualization
+   indentation		toggle indentation SPACEs visualization
+   indentation::tab	toggle indentation SPACEs visualization
+   indentation::space	toggle indentation TABs visualization
+   space-after-tab		toggle SPACEs after TAB visualization
+   space-after-tab::tab		toggle SPACEs after TAB: SPACEs visualization
+   space-after-tab::space	toggle SPACEs after TAB: TABs visualization
+   space-before-tab		toggle SPACEs before TAB visualization
+   space-before-tab::tab	toggle SPACEs before TAB: SPACEs visualization
+   space-before-tab::space	toggle SPACEs before TAB: TABs visualization</p>
+<p>
+   tab-mark		toggle TAB visualization
+   space-mark		toggle SPACEs before TAB visualization
+   newline-mark		toggle NEWLINE visualization</p>
+<p>
+   whitespace-style	restore `whitespace-style' value</p>
+<p>
+See `whitespace-style' and `indent-tabs-mode' for documentation.</p>
+<p>
+(fn ARG)</p>

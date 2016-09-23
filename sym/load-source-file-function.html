@@ -1,0 +1,12 @@
+<h3>Variable: load-source-file-function</h3>
+<p>
+Function called in `load' to load an Emacs Lisp source file.
+The value should be a function for doing code conversion before
+reading a source file.  It can also be nil, in which case loading is
+done without any code conversion.</p>
+<p>
+If the value is a function, it is called with four arguments,
+FULLNAME, FILE, NOERROR, NOMESSAGE.  FULLNAME is the absolute name of
+the file to load, FILE is the non-absolute name (for messages etc.),
+and NOERROR and NOMESSAGE are the corresponding arguments passed to
+`load'.  The function should return t if the file was loaded.</p>

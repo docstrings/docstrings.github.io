@@ -1,0 +1,42 @@
+<h3>Function: map-y-or-n-p</h3>
+<p>
+Ask a series of boolean questions.
+Takes args PROMPTER ACTOR LIST, and optional args HELP and ACTION-ALIST.</p>
+<p>
+LIST is a list of objects, or a function of no arguments to return the next
+object or nil.</p>
+<p>
+If PROMPTER is a string, the prompt is (format PROMPTER OBJECT).  If not
+a string, PROMPTER is a function of one arg (an object from LIST), which
+returns a string to be used as the prompt for that object.  If the return
+value is not a string, it may be nil to ignore the object or non-nil to act
+on the object without asking the user.</p>
+<p>
+ACTOR is a function of one arg (an object from LIST),
+which gets called with each object that the user answers `yes' for.</p>
+<p>
+If HELP is given, it is a list (OBJECT OBJECTS ACTION),
+where OBJECT is a string giving the singular noun for an elt of LIST;
+OBJECTS is the plural noun for elts of LIST, and ACTION is a transitive
+verb describing ACTOR.  The default is ("object" "objects" "act on").</p>
+<p>
+At the prompts, the user may enter y, Y, or SPC to act on that object;
+n, N, or DEL to skip that object; ! to act on all following objects;
+ESC or q to exit (skip all following objects); . (period) to act on the
+current object and then exit; or C-h to get help.</p>
+<p>
+If ACTION-ALIST is given, it is an alist (KEY FUNCTION HELP) of extra keys
+that will be accepted.  KEY is a character; FUNCTION is a function of one
+arg (an object from LIST); HELP is a string.  When the user hits KEY,
+FUNCTION is called.  If it returns non-nil, the object is considered
+"acted upon", and the next object from LIST is processed.  If it returns
+nil, the prompt is repeated for the same object.</p>
+<p>
+Final optional argument NO-CURSOR-IN-ECHO-AREA non-nil says not to set
+`cursor-in-echo-area' while prompting.</p>
+<p>
+This function uses `query-replace-map' to define the standard responses,
+but not all of the responses which `query-replace' understands
+are meaningful here.</p>
+<p>
+Returns the number of actions taken.</p>

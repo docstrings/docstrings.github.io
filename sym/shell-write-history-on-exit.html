@@ -1,0 +1,12 @@
+<h3>Function: shell-write-history-on-exit</h3>
+<p>
+Called when the shell process is stopped.</p>
+<p>
+Writes the input history to a history file
+`comint-input-ring-file-name' using `comint-write-input-ring'
+and inserts a short message in the shell buffer.</p>
+<p>
+This function is a sentinel watching the shell interpreter process.
+Sentinels will always get the two parameters PROCESS and EVENT.</p>
+<p>
+(fn PROCESS EVENT)</p>

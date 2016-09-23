@@ -1,0 +1,35 @@
+<h3>Function: help-mode</h3>
+<p>
+Major mode for viewing help text and navigating references in it.
+Entry to this mode runs the normal hook `help-mode-hook'.
+Commands:
+key             binding
+---             -------</p>
+<p>
+C-c		Prefix Command
+TAB		forward-button
+RET		help-follow
+ESC		Prefix Command
+SPC		scroll-up-command
+-		negative-argument
+0 .. 9		digit-argument
+<		beginning-of-buffer
+>		end-of-buffer
+?		describe-mode
+g		revert-buffer
+h		describe-mode
+q		quit-window
+DEL		scroll-down-command
+<XF86Back>	help-go-back
+<XF86Forward>	help-go-forward
+<backtab>	backward-button
+<mouse-2>	help-follow-mouse
+<remap>		Prefix Command</p>
+<p>
+C-c C-b		help-go-back
+C-c C-c		help-follow-symbol
+C-c C-f		help-go-forward</p>
+<p>
+C-M-i		backward-button</p>
+<p>
+</p>

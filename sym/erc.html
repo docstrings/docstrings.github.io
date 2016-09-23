@@ -1,0 +1,23 @@
+<h3>Function: erc</h3>
+<p>
+ERC is a powerful, modular, and extensible IRC client.
+This function is the main entry point for ERC.</p>
+<p>
+It permits you to select connection parameters, and then starts ERC.</p>
+<p>
+Non-interactively, it takes the keyword arguments
+   (server (erc-compute-server))
+   (port   (erc-compute-port))
+   (nick   (erc-compute-nick))
+   password
+   (full-name (erc-compute-full-name)))</p>
+<p>
+That is, if called with</p>
+<p>
+   (erc :server "irc.freenode.net" :full-name "Harry S Truman")</p>
+<p>
+then the server and full-name will be set to those values, whereas
+`erc-compute-port', `erc-compute-nick' and `erc-compute-full-name' will
+be invoked for the values of the other parameters.</p>
+<p>
+(fn &key (server (erc-compute-server)) (port (erc-compute-port)) (nick (erc-compute-nick)) PASSWORD (full-name (erc-compute-full-name)))</p>

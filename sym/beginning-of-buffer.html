@@ -1,0 +1,12 @@
+<h3>Function: beginning-of-buffer</h3>
+<p>
+Move point to the beginning of the buffer.
+With numeric arg N, put point N/10 of the way from the beginning.
+If the buffer is narrowed, this command uses the beginning of the
+accessible part of the buffer.</p>
+<p>
+If Transient Mark mode is disabled, leave mark at previous
+position, unless a C-u prefix is supplied.</p>
+<p>
+Don't use this command in Lisp programs!
+(goto-char (point-min)) is faster.</p>

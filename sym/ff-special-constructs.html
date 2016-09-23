@@ -1,0 +1,8 @@
+<h3>Variable: ff-special-constructs</h3>
+<p>
+List of special constructs recognized by `ff-treat-as-special'.
+Each element, tried in order, has the form (REGEXP . EXTRACT).
+If REGEXP matches the current line (from the beginning of the line),
+`ff-treat-as-special' calls function EXTRACT with no args.
+If EXTRACT returns nil, keep trying.  Otherwise, return the
+filename that EXTRACT returned.</p>

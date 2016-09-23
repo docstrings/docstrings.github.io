@@ -1,0 +1,45 @@
+<h3>Function: outline-mode</h3>
+<p>
+Set major mode for editing outlines with selective display.
+Headings are lines which start with asterisks: one for major headings,
+two for subheadings, etc.  Lines not starting with asterisks are body lines.</p>
+<p>
+Body text or subheadings under a heading can be made temporarily
+invisible, or visible again.  Invisible lines are attached to the end
+of the heading, so they move with it, if the line is killed and yanked
+back.  A heading with text hidden under it is marked with an ellipsis (...).</p>
+<p>
+Commands:
+Uses keymap `outline-mode-map', which is not currently defined.</p>
+<p>
+M-x outline-next-visible-heading   outline-next-visible-heading      move by visible headings
+M-x outline-previous-visible-heading   outline-previous-visible-heading
+M-x outline-forward-same-level   outline-forward-same-level        similar but skip subheadings
+M-x outline-backward-same-level   outline-backward-same-level
+M-x outline-up-heading   outline-up-heading		    move from subheading to heading</p>
+<p>
+M-x hide-body	make all text invisible (not headings).
+M-x show-all	make everything in buffer visible.
+M-x hide-sublevels  make only the first N levels of headers visible.</p>
+<p>
+The remaining commands are used when point is on a heading line.
+They apply to some of the body or subheadings of that heading.
+M-x hide-subtree   hide-subtree	make body and subheadings invisible.
+M-x show-subtree   show-subtree	make body and subheadings visible.
+M-x show-children   show-children	make direct subheadings visible.
+		 No effect on body, or subheadings 2 or more levels down.
+		 With arg N, affects subheadings N levels down.
+M-x hide-entry	   make immediately following body invisible.
+M-x show-entry	   make it visible.
+M-x hide-leaves	   make body under heading and under its subheadings invisible.
+		     The subheadings remain visible.
+M-x show-branches  make all subheadings at all levels visible.</p>
+<p>
+The variable `outline-regexp' can be changed to control what is a heading.
+A line is a heading if `outline-regexp' matches something at the
+beginning of the line.  The longer the match, the deeper the level.</p>
+<p>
+Turning on outline mode calls the value of `text-mode-hook' and then of
+`outline-mode-hook', if they are non-nil.</p>
+<p>
+(fn)</p>

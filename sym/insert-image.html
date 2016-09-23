@@ -1,0 +1,15 @@
+<h3>Function: insert-image</h3>
+<p>
+Insert IMAGE into current buffer at point.
+IMAGE is displayed by inserting STRING into the current buffer
+with a `display' property whose value is the image.  STRING
+defaults to a single space if you omit it.
+AREA is where to display the image.  AREA nil or omitted means
+display it in the text area, a value of `left-margin' means
+display it in the left marginal area, a value of `right-margin'
+means display it in the right marginal area.
+SLICE specifies slice of IMAGE to insert.  SLICE nil or omitted
+means insert whole image.  SLICE is a list (X Y WIDTH HEIGHT)
+specifying the X and Y positions and WIDTH and HEIGHT of image area
+to insert.  A float value 0.0 - 1.0 means relative to the width or
+height of the image; integer values are taken as pixel values.</p>

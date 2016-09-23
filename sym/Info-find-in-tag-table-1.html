@@ -1,0 +1,11 @@
+<h3>Function: Info-find-in-tag-table-1</h3>
+<p>
+Find a node in a tag table.
+MARKER specifies the buffer and position to start searching at.
+REGEXP is a regular expression matching nodes or references.  Its first
+group should match `Node:' or `Ref:'.
+CASE-FOLD t means search for a case-insensitive match.
+If a match was found, value is a list (FOUND-ANCHOR POS MODE), where
+FOUND-ANCHOR is non-nil if a `Ref:' was matched, POS is the position
+where the match was found, and MODE is `major-mode' of the buffer in
+which the match was found.</p>

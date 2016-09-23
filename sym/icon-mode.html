@@ -1,0 +1,37 @@
+<h3>Function: icon-mode</h3>
+<p>
+Major mode for editing Icon code.
+Expression and list commands understand all Icon brackets.
+Tab indents for Icon code.
+Paragraphs are separated by blank lines only.
+Delete converts tabs to spaces as it moves back.</p>
+<p>
+Uses keymap `icon-mode-map', which is not currently defined.</p>
+<p>
+Variables controlling indentation style:
+ icon-tab-always-indent
+    Non-nil means TAB in Icon mode should always reindent the current line,
+    regardless of where in the line point is when the TAB command is used.
+ icon-auto-newline
+    Non-nil means automatically newline before and after braces
+    inserted in Icon code.
+ icon-indent-level
+    Indentation of Icon statements within surrounding block.
+    The surrounding block's indentation is the indentation
+    of the line on which the open-brace appears.
+ icon-continued-statement-offset
+    Extra indentation given to a substatement, such as the
+    then-clause of an if or body of a while.
+ icon-continued-brace-offset
+    Extra indentation given to a brace that starts a substatement.
+    This is in addition to `icon-continued-statement-offset'.
+ icon-brace-offset
+    Extra indentation for line if it starts with an open brace.
+ icon-brace-imaginary-offset
+    An open brace following other text is treated as if it were
+    this far to the right of the start of its line.</p>
+<p>
+Turning on Icon mode calls the value of the variable `icon-mode-hook'
+with no args, if that value is non-nil.</p>
+<p>
+(fn)</p>

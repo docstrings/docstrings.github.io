@@ -1,0 +1,10 @@
+<h3>Variable: dnd-open-remote-file-function</h3>
+<p>
+The function to call when opening a file on a remote machine.
+The function will be called with two arguments; URI and ACTION. See
+`dnd-open-file' for details.
+If nil, then dragging remote files into Emacs will result in an error.
+Predefined functions are `dnd-open-local-file' and `dnd-open-remote-url'.
+`dnd-open-local-file' attempts to open a remote file using its UNC name and
+is the  default on MS-Windows.  `dnd-open-remote-url' uses `url-handler-mode'
+and is the default except for MS-Windows.</p>

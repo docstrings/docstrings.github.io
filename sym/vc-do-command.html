@@ -1,0 +1,18 @@
+<h3>Function: vc-do-command</h3>
+<p>
+Execute a slave command, notifying user and checking for errors.
+Output from COMMAND goes to BUFFER, or the current buffer if
+BUFFER is t.  If the destination buffer is not already current,
+set it up properly and erase it.  The command is considered
+successful if its exit status does not exceed OKSTATUS (if
+OKSTATUS is nil, that means to ignore error status, if it is
+`async', that means not to wait for termination of the
+subprocess; if it is t it means to ignore all execution errors).
+FILE-OR-LIST is the name of a working file; it may be a list of
+files or be nil (to execute commands that don't expect a file
+name or set of files).  If an optional list of FLAGS is present,
+that is inserted into the command line before the filename.
+Return the return value of the slave command in the synchronous
+case, and the process object in the asynchronous case.</p>
+<p>
+(fn BUFFER OKSTATUS COMMAND FILE-OR-LIST &rest FLAGS)</p>

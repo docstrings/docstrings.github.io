@@ -1,0 +1,20 @@
+<h3>Function: ibuffer</h3>
+<p>
+Begin using Ibuffer to edit a list of buffers.
+Type 'h' after entering ibuffer for more information.</p>
+<p>
+All arguments are optional.
+OTHER-WINDOW-P says to use another window.
+NAME specifies the name of the buffer (defaults to "*Ibuffer*").
+QUALIFIERS is an initial set of filtering qualifiers to use;
+  see `ibuffer-filtering-qualifiers'.
+NOSELECT means don't select the Ibuffer buffer.
+SHRINK means shrink the buffer to minimal size.  The special
+  value `onewindow' means always use another window.
+FILTER-GROUPS is an initial set of filtering groups to use;
+  see `ibuffer-filter-groups'.
+FORMATS is the value to use for `ibuffer-formats'.
+  If specified, then the variable `ibuffer-formats' will have
+  that value locally in this buffer.</p>
+<p>
+(fn &optional OTHER-WINDOW-P NAME QUALIFIERS NOSELECT SHRINK FILTER-GROUPS FORMATS)</p>

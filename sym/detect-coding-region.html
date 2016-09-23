@@ -1,0 +1,16 @@
+<h3>Function: detect-coding-region</h3>
+<p>
+Detect coding system of the text in the region between START and END.
+Return a list of possible coding systems ordered by priority.
+The coding systems to try and their priorities follows what
+the function `coding-system-priority-list' (which see) returns.</p>
+<p>
+If only ASCII characters are found (except for such ISO-2022 control
+characters as ESC), it returns a list of single element `undecided'
+or its subsidiary coding system according to a detected end-of-line
+format.</p>
+<p>
+If optional argument HIGHEST is non-nil, return the coding system of
+highest priority.</p>
+<p>
+(fn START END &optional HIGHEST)</p>

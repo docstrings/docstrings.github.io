@@ -1,0 +1,37 @@
+<h3>Function: table-insert-sequence</h3>
+<p>
+Travel cells forward while inserting a specified sequence string in each cell.
+STR is the base string from which the sequence starts.  When STR is an
+empty string then each cell content is erased.  When STR ends with
+numerical characters (they may optionally be surrounded by a pair of
+parentheses) they are incremented as a decimal number.  Otherwise the
+last character in STR is incremented in ASCII code order.  N is the
+number of sequence elements to insert.  When N is negative the cell
+traveling direction is backward.  When N is zero it travels forward
+entire table.  INCREMENT is the increment between adjacent sequence
+elements and can be a negative number for effectively decrementing.
+INTERVAL is the number of cells to travel between sequence element
+insertion which is normally 1.  When zero or less is given for
+INTERVAL it is interpreted as number of cells per row so that sequence
+is placed straight down vertically as long as the table's cell
+structure is uniform.  JUSTIFY is one of the symbol 'left, 'center or
+'right, that specifies justification of the inserted string.</p>
+<p>
+Example:</p>
+<p>
+  (progn
+    (table-insert 16 3 5 1)
+    (table-forward-cell 15)
+    (table-insert-sequence "D0" -16 1 1 'center)
+    (table-forward-cell 16)
+    (table-insert-sequence "A[0]" -16 1 1 'center)
+    (table-forward-cell 1)
+    (table-insert-sequence "-" 16 0 1 'center))</p>
+<p>
+  (progn
+    (table-insert 16 8 5 1)
+    (table-insert-sequence "@" 0 1 2 'right)
+    (table-forward-cell 1)
+    (table-insert-sequence "64" 0 1 2 'left))</p>
+<p>
+(fn STR N INCREMENT INTERVAL JUSTIFY)</p>

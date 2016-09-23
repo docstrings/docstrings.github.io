@@ -1,0 +1,14 @@
+<h3>Function: url-register-auth-scheme</h3>
+<p>
+Register an HTTP authentication method.</p>
+<p>
+TYPE     is a string or symbol specifying the name of the method.
+         This should be the same thing you expect to get returned in
+         an Authenticate header in HTTP/1.0 - it will be downcased.
+FUNCTION is the function to call to get the authorization information.
+         This defaults to `url-?-auth', where ? is TYPE.
+RATING   a rating between 1 and 10 of the strength of the authentication.
+         This is used when asking for the best authentication for a specific
+         URL.  The item with the highest rating is returned.</p>
+<p>
+(fn TYPE &optional FUNCTION RATING)</p>

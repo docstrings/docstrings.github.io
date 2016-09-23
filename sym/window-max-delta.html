@@ -1,0 +1,29 @@
+<h3>Function: window-max-delta</h3>
+<p>
+Return maximum number of lines by which WINDOW can be enlarged.
+WINDOW must be a valid window and defaults to the selected one.
+The return value is zero if WINDOW cannot be enlarged.</p>
+<p>
+Optional argument HORIZONTAL non-nil means return maximum number
+of columns by which WINDOW can be enlarged.</p>
+<p>
+Optional argument IGNORE non-nil means ignore restrictions
+imposed by fixed size windows, `window-min-height' or
+`window-min-width' settings.  If IGNORE is a window, ignore
+restrictions for that window only.  If IGNORE equals `safe',
+live windows may get as small as `window-safe-min-height' lines
+and `window-safe-min-width' columns.  Any other non-nil value means
+ignore all of the above restrictions for all windows.</p>
+<p>
+Optional argument TRAIL restricts the windows that can be enlarged.
+If its value is `before', only windows to the left of or above WINDOW
+can be enlarged.  If it is `after', only windows to the right of or
+below WINDOW can be enlarged.</p>
+<p>
+Optional argument NOUP non-nil means don't go up in the window
+tree but try to obtain the entire space from windows within
+WINDOW's combination.</p>
+<p>
+Optional argument NODOWN non-nil means do not check whether
+WINDOW itself (and its child windows) can be enlarged; check
+only whether other windows can be shrunk appropriately.</p>

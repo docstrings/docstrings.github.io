@@ -1,0 +1,10 @@
+<h3>Function: accessible-keymaps</h3>
+<p>
+Find all keymaps accessible via prefix characters from KEYMAP.
+Returns a list of elements of the form (KEYS . MAP), where the sequence
+KEYS starting from KEYMAP gets you to MAP.  These elements are ordered
+so that the KEYS increase in length.  The first element is ([] . KEYMAP).
+An optional argument PREFIX, if non-nil, should be a key sequence;
+then the value includes only maps for prefixes that start with PREFIX.</p>
+<p>
+(fn KEYMAP &optional PREFIX)</p>

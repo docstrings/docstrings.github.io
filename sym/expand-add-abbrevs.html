@@ -1,0 +1,24 @@
+<h3>Function: expand-add-abbrevs</h3>
+<p>
+Add a list of abbreviations to abbrev table TABLE.
+ABBREVS is a list of abbrev definitions; each abbrev description entry
+has the form (ABBREV EXPANSION ARG).</p>
+<p>
+ABBREV is the abbreviation to replace.</p>
+<p>
+EXPANSION is the replacement string or a function which will make the
+expansion.  For example, you could use the DMacros or skeleton packages
+to generate such functions.</p>
+<p>
+ARG is an optional argument which can be a number or a list of
+numbers.  If ARG is a number, point is placed ARG chars from the
+beginning of the expanded text.</p>
+<p>
+If ARG is a list of numbers, point is placed according to the first
+member of the list, but you can visit the other specified positions
+cyclically with the functions `expand-jump-to-previous-slot' and
+`expand-jump-to-next-slot'.</p>
+<p>
+If ARG is omitted, point is placed at the end of the expanded text.</p>
+<p>
+(fn TABLE ABBREVS)</p>

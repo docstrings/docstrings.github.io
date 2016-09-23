@@ -1,0 +1,202 @@
+<h3>Function: artist-mode</h3>
+<p>
+Toggle Artist mode.
+With argument ARG, turn Artist mode on if ARG is positive.
+Artist lets you draw lines, squares, rectangles and poly-lines,
+ellipses and circles with your mouse and/or keyboard.</p>
+<p>
+How to quit Artist mode</p>
+<p>
+ Type M-x artist-mode-off to quit artist-mode.</p>
+<p>
+
+How to submit a bug report</p>
+<p>
+ Type M-x artist-submit-bug-report to submit a bug report.</p>
+<p>
+
+Drawing with the mouse:</p>
+<p>
+ mouse-2
+ shift mouse-2	Pops up a menu where you can select what to draw with
+		mouse-1, and where you can do some settings (described
+		below).</p>
+<p>
+ mouse-1
+ shift mouse-1	Draws lines, rectangles or poly-lines, erases, cuts, copies
+		or pastes:</p>
+<p>
+		Operation	Not shifted		  Shifted
+		--------------------------------------------------------------
+                Pen             fill-char at point        line from last point
+                                                          to new point
+		--------------------------------------------------------------
+		Line		Line in any direction	  Straight line
+		--------------------------------------------------------------
+		Rectangle	Rectangle		  Square
+		--------------------------------------------------------------
+		Poly-line	Poly-line in any dir	  Straight poly-lines
+		--------------------------------------------------------------
+		Ellipses	Ellipses		  Circles
+		--------------------------------------------------------------
+		Text		Text (see thru)		  Text (overwrite)
+		--------------------------------------------------------------
+		Spray-can	Spray-can		  Set size for spray
+		--------------------------------------------------------------
+		Erase		Erase character		  Erase rectangle
+		--------------------------------------------------------------
+		Vaporize	Erase single line	  Erase connected
+							  lines
+		--------------------------------------------------------------
+		Cut		Cut rectangle		  Cut square
+		--------------------------------------------------------------
+		Copy		Copy rectangle		  Copy square
+		--------------------------------------------------------------
+		Paste		Paste			  Paste
+		--------------------------------------------------------------
+		Flood-fill	Flood-fill		  Flood-fill
+		--------------------------------------------------------------</p>
+<p>
+		* Straight lines can only go horizontally, vertically
+		  or diagonally.</p>
+<p>
+		* Poly-lines are drawn while holding mouse-1 down.  When you
+		  release the button, the point is set.  If you want a segment
+		  to be straight, hold down shift before pressing the
+		  mouse-1 button.  Click mouse-2 or mouse-3 to stop drawing
+		  poly-lines.</p>
+<p>
+		* See thru for text means that text already in the buffer
+		  will be visible through blanks in the text rendered, while
+		  overwrite means the opposite.</p>
+<p>
+		* Vaporizing connected lines only vaporizes lines whose
+		  _endpoints_ are connected.  See also the variable
+		  `artist-vaporize-fuzziness'.</p>
+<p>
+		* Cut copies, then clears the rectangle/square.</p>
+<p>
+		* When drawing lines or poly-lines, you can set arrows.
+		  See below under ``Arrows'' for more info.</p>
+<p>
+		* The mode line shows the currently selected drawing operation.
+		  In addition, if it has an asterisk (*) at the end, you
+		  are currently drawing something.</p>
+<p>
+		* Be patient when flood-filling -- large areas take quite
+		  some time to fill.</p>
+<p>
+
+ mouse-3	Erases character under pointer
+ shift mouse-3	Erases rectangle</p>
+<p>
+
+Settings</p>
+<p>
+ Set fill	Sets the character used when filling rectangles/squares</p>
+<p>
+ Set line	Sets the character used when drawing lines</p>
+<p>
+ Erase char	Sets the character used when erasing</p>
+<p>
+ Rubber-banding	Toggles rubber-banding</p>
+<p>
+ Trimming	Toggles trimming of line-endings (that is: when the shape
+		is drawn, extraneous white-space at end of lines is removed)</p>
+<p>
+ Borders        Toggles the drawing of line borders around filled shapes</p>
+<p>
+
+Drawing with keys</p>
+<p>
+ M-x artist-key-set-point		Does one of the following:
+		For lines/rectangles/squares: sets the first/second endpoint
+		For poly-lines: sets a point (use C-u M-x artist-key-set-point to set last point)
+		When erase characters: toggles erasing
+		When cutting/copying: Sets first/last endpoint of rect/square
+		When pasting: Pastes</p>
+<p>
+ M-x artist-select-operation	Selects what to draw</p>
+<p>
+ Move around with M-x artist-next-line, M-x artist-previous-line, M-x artist-forward-char and M-x artist-backward-char.</p>
+<p>
+ M-x artist-select-fill-char	Sets the character to use when filling
+ M-x artist-select-line-char	Sets the character to use when drawing
+ M-x artist-select-erase-char	Sets the character to use when erasing
+ M-x artist-toggle-rubber-banding	Toggles rubber-banding
+ M-x artist-toggle-trim-line-endings	Toggles trimming of line-endings
+ M-x artist-toggle-borderless-shapes	Toggles borders on drawn shapes</p>
+<p>
+
+Arrows</p>
+<p>
+ M-x artist-toggle-first-arrow		Sets/unsets an arrow at the beginning
+		of the line/poly-line</p>
+<p>
+ M-x artist-toggle-second-arrow		Sets/unsets an arrow at the end
+		of the line/poly-line</p>
+<p>
+
+Selecting operation</p>
+<p>
+ There are some keys for quickly selecting drawing operations:</p>
+<p>
+ M-x artist-select-op-line	Selects drawing lines
+ M-x artist-select-op-straight-line	Selects drawing straight lines
+ M-x artist-select-op-rectangle	Selects drawing rectangles
+ M-x artist-select-op-square	Selects drawing squares
+ M-x artist-select-op-poly-line	Selects drawing poly-lines
+ M-x artist-select-op-straight-poly-line	Selects drawing straight poly-lines
+ M-x artist-select-op-ellipse	Selects drawing ellipses
+ M-x artist-select-op-circle	Selects drawing circles
+ M-x artist-select-op-text-see-thru	Selects rendering text (see thru)
+ M-x artist-select-op-text-overwrite	Selects rendering text (overwrite)
+ M-x artist-select-op-spray-can	Spray with spray-can
+ M-x artist-select-op-spray-set-size	Set size for the spray-can
+ M-x artist-select-op-erase-char	Selects erasing characters
+ M-x artist-select-op-erase-rectangle	Selects erasing rectangles
+ M-x artist-select-op-vaporize-line	Selects vaporizing single lines
+ M-x artist-select-op-vaporize-lines	Selects vaporizing connected lines
+ M-x artist-select-op-cut-rectangle	Selects cutting rectangles
+ M-x artist-select-op-copy-rectangle	Selects copying rectangles
+ M-x artist-select-op-paste	Selects pasting
+ M-x artist-select-op-flood-fill	Selects flood-filling</p>
+<p>
+
+Variables</p>
+<p>
+ This is a brief overview of the different variables.  For more info,
+ see the documentation for the variables (type C-h v <variable> RET).</p>
+<p>
+ artist-rubber-banding		Interactively do rubber-banding or not
+ artist-first-char		What to set at first/second point...
+ artist-second-char		...when not rubber-banding
+ artist-interface-with-rect	If cut/copy/paste should interface with rect
+ artist-arrows			The arrows to use when drawing arrows
+ artist-aspect-ratio		Character height-to-width for squares
+ artist-trim-line-endings	Trimming of line endings
+ artist-flood-fill-right-border	Right border when flood-filling
+ artist-flood-fill-show-incrementally	Update display while filling
+ artist-pointer-shape		Pointer shape to use while drawing
+ artist-ellipse-left-char	Character to use for narrow ellipses
+ artist-ellipse-right-char	Character to use for narrow ellipses
+ artist-borderless-shapes       If shapes should have borders
+ artist-picture-compatibility   Whether or not to be picture mode compatible
+ artist-vaporize-fuzziness      Tolerance when recognizing lines
+ artist-spray-interval          Seconds between repeated sprayings
+ artist-spray-radius            Size of the spray-area
+ artist-spray-chars             The spray-``color''
+ artist-spray-new-chars         Initial spray-``color''</p>
+<p>
+Hooks</p>
+<p>
+ Turning the mode on or off runs `artist-mode-hook'.</p>
+<p>
+
+Keymap summary</p>
+<p>
+
+Uses keymap `artist-mode-map', which is not currently defined.</p>
+<p>
+
+(fn &optional ARG)</p>

@@ -1,0 +1,18 @@
+<h3>Function: commandp</h3>
+<p>
+Non-nil if FUNCTION makes provisions for interactive calling.
+This means it contains a description for how to read arguments to give it.
+The value is nil for an invalid function or a symbol with no function
+definition.</p>
+<p>
+Interactively callable functions include strings and vectors (treated
+as keyboard macros), lambda-expressions that contain a top-level call
+to `interactive', autoload definitions made by `autoload' with non-nil
+fourth argument, and some of the built-in functions of Lisp.</p>
+<p>
+Also, a symbol satisfies `commandp' if its function definition does so.</p>
+<p>
+If the optional argument FOR-CALL-INTERACTIVELY is non-nil,
+then strings and vectors are not accepted.</p>
+<p>
+(fn FUNCTION &optional FOR-CALL-INTERACTIVELY)</p>

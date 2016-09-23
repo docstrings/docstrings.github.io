@@ -1,0 +1,14 @@
+<h3>Function: update-file-autoloads</h3>
+<p>
+Update the autoloads for FILE.
+If prefix arg SAVE-AFTER is non-nil, save the buffer too.</p>
+<p>
+If FILE binds `generated-autoload-file' as a file-local variable,
+autoloads are written into that file.  Otherwise, the autoloads
+file is determined by OUTFILE.  If called interactively, prompt
+for OUTFILE; if called from Lisp with OUTFILE nil, use the
+existing value of `generated-autoload-file'.</p>
+<p>
+Return FILE if there was no autoload cookie in it, else nil.</p>
+<p>
+(fn FILE &optional SAVE-AFTER OUTFILE)</p>

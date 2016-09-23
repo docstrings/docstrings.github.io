@@ -1,0 +1,22 @@
+<h3>Function: emacs-lock-mode</h3>
+<p>
+Toggle Emacs Lock mode in the current buffer.
+If called with a plain prefix argument, ask for the locking mode
+to be used.  With any other prefix ARG, turn mode on if ARG is
+positive, off otherwise.  If called from Lisp, enable the mode if
+ARG is omitted or nil.</p>
+<p>
+Initially, if the user does not pass an explicit locking mode, it
+defaults to `emacs-lock-default-locking-mode' (which see);
+afterwards, the locking mode most recently set on the buffer is
+used instead.</p>
+<p>
+When called from Elisp code, ARG can be any locking mode:</p>
+<p>
+ exit   -- Emacs cannot exit while the buffer is locked
+ kill   -- the buffer cannot be killed, but Emacs can exit as usual
+ all    -- the buffer is locked against both actions</p>
+<p>
+Other values are interpreted as usual.</p>
+<p>
+(fn &optional ARG)</p>

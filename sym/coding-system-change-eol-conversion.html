@@ -1,0 +1,11 @@
+<h3>Function: coding-system-change-eol-conversion</h3>
+<p>
+Return a coding system which differs from CODING-SYSTEM in EOL conversion.
+The returned coding system converts end-of-line by EOL-TYPE
+but text as the same way as CODING-SYSTEM.
+EOL-TYPE should be `unix', `dos', `mac', or nil.
+If EOL-TYPE is nil, the returned coding system detects
+how end-of-line is formatted automatically while decoding.</p>
+<p>
+EOL-TYPE can be specified by an integer 0, 1, or 2.
+They means `unix', `dos', and `mac' respectively.</p>

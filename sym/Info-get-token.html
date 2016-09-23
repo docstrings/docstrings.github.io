@@ -1,0 +1,14 @@
+<h3>Function: Info-get-token</h3>
+<p>
+Return the token around POS.
+POS must be somewhere inside the token.
+START is a regular expression which will match the
+    beginning of the tokens delimited string.
+ALL is a regular expression with a single
+    parenthesized subpattern which is the token to be
+    returned.  E.g. '{(.*)}' would return any string
+    enclosed in braces around POS.
+ERRORSTRING optional fourth argument, controls action on no match:
+    nil: return nil
+    t: beep
+    a string: signal an error, using that string.</p>

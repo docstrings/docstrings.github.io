@@ -1,0 +1,16 @@
+<h3>Function: ansi-color-apply</h3>
+<p>
+Translates SGR control sequences into text properties.
+Delete all other control sequences without processing them.</p>
+<p>
+Applies SGR control sequences setting foreground and background colors
+to STRING using text properties and returns the result.  The colors used
+are given in `ansi-color-faces-vector' and `ansi-color-names-vector'.
+See function `ansi-color-apply-sequence' for details.</p>
+<p>
+Every call to this function will set and use the buffer-local variable
+`ansi-color-context' to save partial escape sequences and current ansi codes.
+This information will be used for the next call to `ansi-color-apply'.
+Set `ansi-color-context' to nil if you don't want this.</p>
+<p>
+This function can be added to `comint-preoutput-filter-functions'.</p>

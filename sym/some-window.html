@@ -1,0 +1,34 @@
+<h3>Function: some-window</h3>
+<p>
+Return a live window satisfying PREDICATE.
+More precisely, cycle through all windows calling the function
+PREDICATE on each one of them with the window as its sole
+argument.  Return the first window for which PREDICATE returns
+non-nil.  Windows are scanned starting with the window following
+the selected window.  If no window satisfies PREDICATE, return
+DEFAULT.</p>
+<p>
+MINIBUF t means include the minibuffer window even if the
+minibuffer is not active.  MINIBUF nil or omitted means include
+the minibuffer window only if the minibuffer is active.  Any
+other value means do not include the minibuffer window even if
+the minibuffer is active.</p>
+<p>
+ALL-FRAMES nil or omitted means consider all windows on the selected
+frame, plus the minibuffer window if specified by the MINIBUF
+argument.  If the minibuffer counts, consider all windows on all
+frames that share that minibuffer too.  The following non-nil
+values of ALL-FRAMES have special meanings:</p>
+<p>
+- t means consider all windows on all existing frames.</p>
+<p>
+- `visible' means consider all windows on all visible frames on
+  the current terminal.</p>
+<p>
+- 0 (the number zero) means consider all windows on all visible
+  and iconified frames on the current terminal.</p>
+<p>
+- A frame means consider all windows on that frame only.</p>
+<p>
+Anything else means consider all windows on the selected frame
+and no others.</p>

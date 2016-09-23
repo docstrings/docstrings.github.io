@@ -1,0 +1,14 @@
+<h3>Function: current-window-configuration</h3>
+<p>
+Return an object representing the current window configuration of FRAME.
+If FRAME is nil or omitted, use the selected frame.
+This describes the number of windows, their sizes and current buffers,
+and for each displayed buffer, where display starts, and the positions of
+point and mark.  An exception is made for point in the current buffer:
+its value is -not- saved.
+This also records the currently selected frame, and FRAME's focus
+redirection (see `redirect-frame-focus').  The variable
+`window-persistent-parameters' specifies which window parameters are
+saved by this function.</p>
+<p>
+(fn &optional FRAME)</p>

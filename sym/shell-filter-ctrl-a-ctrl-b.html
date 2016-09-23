@@ -1,0 +1,14 @@
+<h3>Function: shell-filter-ctrl-a-ctrl-b</h3>
+<p>
+Remove `^A' and `^B' characters from comint output.</p>
+<p>
+Bash uses these characters as internal quoting characters in its
+prompt.  Due to a bug in some bash versions (including 2.03,
+2.04, and 2.05b), they may erroneously show up when bash is
+started with the `--noediting' option and Select Graphic
+Rendition (SGR) control sequences (formerly known as ANSI escape
+sequences) are used to color the prompt.</p>
+<p>
+This function can be put on `comint-preoutput-filter-functions'.</p>
+<p>
+(fn STRING)</p>

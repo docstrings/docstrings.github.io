@@ -1,0 +1,10 @@
+<h3>Function: Info-find-emacs-command-nodes</h3>
+<p>
+Return a list of locations documenting COMMAND.
+The `info-file' property of COMMAND says which Info manual to search.
+If COMMAND has no property, the variable `Info-file-list-for-emacs'
+defines heuristics for which Info manual to try.
+The locations are of the format used in `Info-history', i.e.
+(FILENAME NODENAME BUFFERPOS), where BUFFERPOS is the line number
+in the first element of the returned list (which is treated specially in
+`Info-goto-emacs-command-node'), and 0 for the rest elements of a list.</p>

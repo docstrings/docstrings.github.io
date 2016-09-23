@@ -1,0 +1,19 @@
+<h3>Function: scan-buf-move-to-region</h3>
+<p>
+Go to the start of the next region with non-nil PROP property.
+Then run HOOK, which should be a quoted symbol that is a normal
+hook variable, or an expression evaluating to such a symbol.
+Adjacent areas with different non-nil PROP properties are
+considered different regions.</p>
+<p>
+With numeric argument ARG, move to the start of the ARGth next
+such region, then run HOOK.  If ARG is negative, move backward.
+If point is already in a region, then that region does not count
+toward ARG.  If ARG is 0 and point is inside a region, move to
+the start of that region.  If ARG is 0 and point is not in a
+region, print a message to that effect, but do not move point and
+do not run HOOK.  If there are not enough regions to move over,
+an error results and the number of available regions is mentioned
+in the error message.  Point is not moved and HOOK is not run.</p>
+<p>
+(fn PROP &optional ARG HOOK)</p>

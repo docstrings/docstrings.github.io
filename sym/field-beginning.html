@@ -1,0 +1,11 @@
+<h3>Function: field-beginning</h3>
+<p>
+Return the beginning of the field surrounding POS.
+A field is a region of text with the same `field' property.
+If POS is nil, the value of point is used for POS.
+If ESCAPE-FROM-EDGE is non-nil and POS is at the beginning of its
+field, then the beginning of the *previous* field is returned.
+If LIMIT is non-nil, it is a buffer position; if the beginning of the field
+is before LIMIT, then LIMIT will be returned instead.</p>
+<p>
+(fn &optional POS ESCAPE-FROM-EDGE LIMIT)</p>

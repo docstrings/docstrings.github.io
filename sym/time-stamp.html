@@ -1,0 +1,21 @@
+<h3>Function: time-stamp</h3>
+<p>
+Update the time stamp string(s) in the buffer.
+A template in a file can be automatically updated with a new time stamp
+every time you save the file.  Add this line to your init file:
+    (add-hook 'before-save-hook 'time-stamp)
+or customize `before-save-hook' through Custom.
+Normally the template must appear in the first 8 lines of a file and
+look like one of the following:
+      Time-stamp: <>
+      Time-stamp: " "
+The time stamp is written between the brackets or quotes:
+      Time-stamp: <2001-02-18 10:20:51 gildea>
+The time stamp is updated only if the variable `time-stamp-active' is non-nil.
+The format of the time stamp is set by the variable `time-stamp-pattern' or
+`time-stamp-format'.  The variables `time-stamp-pattern',
+`time-stamp-line-limit', `time-stamp-start', `time-stamp-end',
+`time-stamp-count', and `time-stamp-inserts-lines' control finding
+the template.</p>
+<p>
+(fn)</p>

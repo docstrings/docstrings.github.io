@@ -1,0 +1,44 @@
+<h3>Function: split-window</h3>
+<p>
+Make a new window adjacent to WINDOW.
+WINDOW must be a valid window and defaults to the selected one.
+Return the new window which is always a live window.</p>
+<p>
+Optional argument SIZE a positive number means make WINDOW SIZE
+lines or columns tall.  If SIZE is negative, make the new window
+-SIZE lines or columns tall.  If and only if SIZE is non-nil, its
+absolute value can be less than `window-min-height' or
+`window-min-width'; so this command can make a new window as
+small as one line or two columns.  SIZE defaults to half of
+WINDOW's size.  Interactively, SIZE is the prefix argument.</p>
+<p>
+Optional third argument SIDE nil (or `below') specifies that the
+new window shall be located below WINDOW.  SIDE `above' means the
+new window shall be located above WINDOW.  In both cases SIZE
+specifies the new number of lines for WINDOW (or the new window
+if SIZE is negative) including space reserved for the mode and/or
+header line.</p>
+<p>
+SIDE t (or `right') specifies that the new window shall be
+located on the right side of WINDOW.  SIDE `left' means the new
+window shall be located on the left of WINDOW.  In both cases
+SIZE specifies the new number of columns for WINDOW (or the new
+window provided SIZE is negative) including space reserved for
+fringes and the scrollbar or a divider column.  Any other non-nil
+value for SIDE is currently handled like t (or `right').</p>
+<p>
+If the variable `ignore-window-parameters' is non-nil or the
+`split-window' parameter of WINDOW equals t, do not process any
+parameters of WINDOW.  Otherwise, if the `split-window' parameter
+of WINDOW specifies a function, call that function with all three
+arguments and return the value returned by that function.</p>
+<p>
+Otherwise, if WINDOW is part of an atomic window, "split" the
+root of that atomic window.  The new window does not become a
+member of that atomic window.</p>
+<p>
+If WINDOW is live, properties of the new window like margins and
+scrollbars are inherited from WINDOW.  If WINDOW is an internal
+window, these properties as well as the buffer displayed in the
+new window are inherited from the window selected on WINDOW's
+frame.  The selected window is not changed by this function.</p>

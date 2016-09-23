@@ -1,0 +1,12 @@
+<h3>Function: font-lock-refresh-defaults</h3>
+<p>
+Restart fontification in current buffer after recomputing from defaults.
+Recompute fontification variables using `font-lock-defaults' and
+`font-lock-maximum-decoration'.  Then restart fontification.</p>
+<p>
+Use this function when you have changed any of the above
+variables directly.</p>
+<p>
+Note: This function will erase modifications done by
+`font-lock-add-keywords' or `font-lock-remove-keywords', but will
+preserve `hi-lock-mode' highlighting patterns.</p>

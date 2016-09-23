@@ -1,0 +1,10 @@
+<h3>Variable: byte-compile-call-tree</h3>
+<p>
+Alist of functions and their call tree.
+Each element looks like</p>
+<p>
+  (FUNCTION CALLERS CALLS)</p>
+<p>
+where CALLERS is a list of functions that call FUNCTION, and CALLS
+is a list of functions for which calls were generated while compiling
+FUNCTION.</p>

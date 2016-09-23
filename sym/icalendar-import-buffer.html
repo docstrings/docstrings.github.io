@@ -1,0 +1,20 @@
+<h3>Function: icalendar-import-buffer</h3>
+<p>
+Extract iCalendar events from current buffer.</p>
+<p>
+This function searches the current buffer for the first iCalendar
+object, reads it and adds all VEVENT elements to the diary
+DIARY-FILE.</p>
+<p>
+It will ask for each appointment whether to add it to the diary
+unless DO-NOT-ASK is non-nil.  When called interactively,
+DO-NOT-ASK is nil, so that you are asked for each event.</p>
+<p>
+NON-MARKING determines whether diary events are created as
+non-marking.</p>
+<p>
+Return code t means that importing worked well, return code nil
+means that an error has occurred.  Error messages will be in the
+buffer `*icalendar-errors*'.</p>
+<p>
+(fn &optional DIARY-FILE DO-NOT-ASK NON-MARKING)</p>

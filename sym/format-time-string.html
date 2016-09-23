@@ -1,0 +1,55 @@
+<h3>Function: format-time-string</h3>
+<p>
+Use FORMAT-STRING to format the time TIME, or now if omitted.
+TIME is specified as (HIGH LOW USEC PSEC), as returned by
+`current-time' or `file-attributes'.  The obsolete form (HIGH . LOW)
+is also still accepted.
+The third, optional, argument UNIVERSAL, if non-nil, means describe TIME
+as Universal Time; nil means describe TIME in the local time zone.
+The value is a copy of FORMAT-STRING, but with certain constructs replaced
+by text that describes the specified date and time in TIME:</p>
+<p>
+%Y is the year, %y within the century, %C the century.
+%G is the year corresponding to the ISO week, %g within the century.
+%m is the numeric month.
+%b and %h are the locale's abbreviated month name, %B the full name.
+%d is the day of the month, zero-padded, %e is blank-padded.
+%u is the numeric day of week from 1 (Monday) to 7, %w from 0 (Sunday) to 6.
+%a is the locale's abbreviated name of the day of week, %A the full name.
+%U is the week number starting on Sunday, %W starting on Monday,
+ %V according to ISO 8601.
+%j is the day of the year.</p>
+<p>
+%H is the hour on a 24-hour clock, %I is on a 12-hour clock, %k is like %H
+ only blank-padded, %l is like %I blank-padded.
+%p is the locale's equivalent of either AM or PM.
+%M is the minute.
+%S is the second.
+%N is the nanosecond, %6N the microsecond, %3N the millisecond, etc.
+%Z is the time zone name, %z is the numeric form.
+%s is the number of seconds since 1970-01-01 00:00:00 +0000.</p>
+<p>
+%c is the locale's date and time format.
+%x is the locale's "preferred" date format.
+%D is like "%m/%d/%y".</p>
+<p>
+%R is like "%H:%M", %T is like "%H:%M:%S", %r is like "%I:%M:%S %p".
+%X is the locale's "preferred" time format.</p>
+<p>
+Finally, %n is a newline, %t is a tab, %% is a literal %.</p>
+<p>
+Certain flags and modifiers are available with some format controls.
+The flags are `_', `-', `^' and `#'.  For certain characters X,
+%_X is like %X, but padded with blanks; %-X is like %X,
+but without padding.  %^X is like %X, but with all textual
+characters up-cased; %#X is like %X, but with letter-case of
+all textual characters reversed.
+%NX (where N stands for an integer) is like %X,
+but takes up at least N (a number) positions.
+The modifiers are `E' and `O'.  For certain characters X,
+%EX is a locale's alternative version of %X;
+%OX is like %X, but uses the locale's number symbols.</p>
+<p>
+For example, to produce full ISO 8601 format, use "%Y-%m-%dT%T%z".</p>
+<p>
+(fn FORMAT-STRING &optional TIME UNIVERSAL)</p>

@@ -1,0 +1,10 @@
+<h3>Variable: vc-follow-symlinks</h3>
+<p>
+What to do if visiting a symbolic link to a file under version control.
+Editing such a file through the link bypasses the version control system,
+which is dangerous and probably not what you want.</p>
+<p>
+If this variable is t, VC follows the link and visits the real file,
+telling you about it in the echo area.  If it is `ask', VC asks for
+confirmation whether it should follow the link.  If nil, the link is
+visited and a warning displayed.</p>

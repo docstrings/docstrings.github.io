@@ -1,0 +1,16 @@
+<h3>Variable: ansi-color-for-comint-mode</h3>
+<p>
+Determines what to do with comint output.
+If nil, do nothing.
+If the symbol `filter', then filter all SGR control sequences.
+If anything else (such as t), then translate SGR control sequences
+into text properties.</p>
+<p>
+In order for this to have any effect, `ansi-color-process-output' must
+be in `comint-output-filter-functions'.</p>
+<p>
+This can be used to enable colorized ls --color=yes output
+in shell buffers.  You set this variable by calling one of:
+M-x ansi-color-for-comint-mode-on
+M-x ansi-color-for-comint-mode-off
+M-x ansi-color-for-comint-mode-filter</p>

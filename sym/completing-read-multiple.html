@@ -1,0 +1,30 @@
+<h3>Function: completing-read-multiple</h3>
+<p>
+Read multiple strings in the minibuffer, with completion.
+By using this functionality, a user may specify multiple strings at a
+single prompt, optionally using completion.</p>
+<p>
+Multiple strings are specified by separating each of the strings with
+a prespecified separator character.  For example, if the separator
+character is a comma, the strings 'alice', 'bob', and 'eve' would be
+specified as 'alice,bob,eve'.</p>
+<p>
+The default value for the separator character is the value of
+`crm-default-separator' (comma).  The separator character may be
+changed by modifying the value of `crm-separator'.</p>
+<p>
+Contiguous strings of non-separator-characters are referred to as
+'elements'.  In the aforementioned example, the elements are: 'alice',
+'bob', and 'eve'.</p>
+<p>
+Completion is available on a per-element basis.  For example, if the
+contents of the minibuffer are 'alice,bob,eve' and point is between
+'l' and 'i', pressing TAB operates on the element 'alice'.</p>
+<p>
+The return value of this function is a list of the read strings.</p>
+<p>
+See the documentation for `completing-read' for details on the arguments:
+PROMPT, TABLE, PREDICATE, REQUIRE-MATCH, INITIAL-INPUT, HIST, DEF, and
+INHERIT-INPUT-METHOD.</p>
+<p>
+(fn PROMPT TABLE &optional PREDICATE REQUIRE-MATCH INITIAL-INPUT HIST DEF INHERIT-INPUT-METHOD)</p>

@@ -1,0 +1,23 @@
+<h3>Function: fit-window-to-buffer</h3>
+<p>
+Adjust height of WINDOW to display its buffer's contents exactly.
+WINDOW must be a live window and defaults to the selected one.</p>
+<p>
+Optional argument MAX-HEIGHT specifies the maximum height of
+WINDOW and defaults to the height of WINDOW's frame.  Optional
+argument MIN-HEIGHT specifies the minimum height of WINDOW and
+defaults to `window-min-height'.  Both MAX-HEIGHT and MIN-HEIGHT
+are specified in lines and include the mode line and header line,
+if any.</p>
+<p>
+If WINDOW is a full height window, then if the option
+`fit-frame-to-buffer' is non-nil, this calls the function
+`fit-frame-to-buffer' to adjust the frame height.</p>
+<p>
+Return the number of lines by which WINDOW was enlarged or
+shrunk.  If an error occurs during resizing, return nil but don't
+signal an error.</p>
+<p>
+Note that even if this function makes WINDOW large enough to show
+_all_ lines of its buffer you might not see the first lines when
+WINDOW was scrolled.</p>

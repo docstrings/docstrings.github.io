@@ -1,0 +1,12 @@
+<h3>Function: Info-toc-nodes</h3>
+<p>
+Return a node list of Info FILENAME with parent-children information.
+This information is cached in the variable `Info-toc-nodes' with the help
+of the function `Info-toc-build'.</p>
+<h3>Variable: Info-toc-nodes</h3>
+<p>
+Alist of cached parent-children node information in visited Info files.
+Each element is (FILE (NODE-NAME PARENT SECTION CHILDREN) ...)
+where PARENT is the parent node extracted from the Up pointer,
+SECTION is the section name in the Top node where this node is placed,
+CHILDREN is a list of child nodes extracted from the node menu.</p>

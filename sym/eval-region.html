@@ -1,0 +1,15 @@
+<h3>Function: eval-region</h3>
+<p>
+Execute the region as Lisp code.
+When called from programs, expects two arguments,
+giving starting and ending indices in the current buffer
+of the text to be executed.
+Programs can pass third argument PRINTFLAG which controls output:
+A value of nil means discard it; anything else is stream for printing it.
+Also the fourth argument READ-FUNCTION, if non-nil, is used
+instead of `read' to read each expression.  It gets one argument
+which is the input stream for reading characters.</p>
+<p>
+This function does not move point.</p>
+<p>
+(fn START END &optional PRINTFLAG READ-FUNCTION)</p>

@@ -1,0 +1,16 @@
+<h3>Function: edit-abbrevs</h3>
+<p>
+Alter abbrev definitions by editing a list of them.
+Selects a buffer containing a list of abbrev definitions with
+point located in the abbrev table of current buffer.
+You can edit them and type C-c C-c to redefine abbrevs
+according to your editing.
+Buffer contains a header line for each abbrev table,
+ which is the abbrev table name in parentheses.
+This is followed by one line per abbrev in that table:
+NAME   USECOUNT   EXPANSION   HOOK
+where NAME and EXPANSION are strings with quotes,
+USECOUNT is an integer, and HOOK is any valid function
+or may be omitted (it is usually omitted).</p>
+<p>
+(fn)</p>

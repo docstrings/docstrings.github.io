@@ -1,0 +1,8 @@
+<h3>Variable: write-region-post-annotation-function</h3>
+<p>
+Function to call after `write-region' completes.
+The function is called with no arguments.  If one or more of the
+annotation functions in `write-region-annotate-functions' changed the
+current buffer, the function stored in this variable is called for
+each of those additional buffers as well, in addition to the original
+buffer.  The relevant buffer is current during each function call.</p>

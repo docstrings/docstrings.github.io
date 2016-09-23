@@ -1,0 +1,10 @@
+<h3>Function: menu-bar-open</h3>
+<p>
+Start key navigation of the menu bar in FRAME.</p>
+<p>
+This function decides which method to use to access the menu
+depending on FRAME's terminal device.  On X displays, it calls
+`x-menu-bar-open'; on Windows, `w32-menu-bar-open' otherwise it
+calls `tmm-menubar'.</p>
+<p>
+If FRAME is nil or not given, use the selected frame.</p>

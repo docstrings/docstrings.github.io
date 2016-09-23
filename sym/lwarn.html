@@ -1,0 +1,21 @@
+<h3>Function: lwarn</h3>
+<p>
+Display a warning message made from (format MESSAGE ARGS...).
+Aside from generating the message with `format',
+this is equivalent to `display-warning'.</p>
+<p>
+TYPE is the warning type: either a custom group name (a symbol),
+or a list of symbols whose first element is a custom group name.
+(The rest of the symbols represent subcategories and
+can be whatever you like.)</p>
+<p>
+LEVEL should be either :debug, :warning, :error, or :emergency
+(but see `warning-minimum-level' and `warning-minimum-log-level').</p>
+<p>
+:emergency -- a problem that will seriously impair Emacs operation soon
+	      if you do not attend to it promptly.
+:error     -- invalid data or circumstances.
+:warning   -- suspicious data or circumstances.
+:debug     -- info for debugging only.</p>
+<p>
+(fn TYPE LEVEL MESSAGE &rest ARGS)</p>

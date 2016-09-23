@@ -1,0 +1,14 @@
+<h3>Function: replace-buffer-in-windows</h3>
+<p>
+Replace BUFFER-OR-NAME with some other buffer in all windows showing it.
+BUFFER-OR-NAME may be a buffer or the name of an existing buffer
+and defaults to the current buffer.</p>
+<p>
+When a window showing BUFFER-OR-NAME is dedicated, that window is
+deleted.  If that window is the only window on its frame, the
+frame is deleted too when there are other frames left.  If there
+are no other frames left, some other buffer is displayed in that
+window.</p>
+<p>
+This function removes the buffer denoted by BUFFER-OR-NAME from
+all window-local buffer lists.</p>

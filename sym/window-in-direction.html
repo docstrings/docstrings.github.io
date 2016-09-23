@@ -1,0 +1,15 @@
+<h3>Function: window-in-direction</h3>
+<p>
+Return window in DIRECTION as seen from WINDOW.
+More precisely, return the nearest window in direction DIRECTION
+as seen from the position of `window-point' in window WINDOW.
+DIRECTION must be one of `above', `below', `left' or `right'.
+WINDOW must be a live window and defaults to the selected one.</p>
+<p>
+Do not return a window whose `no-other-window' parameter is
+non-nil.  If the nearest window's `no-other-window' parameter is
+non-nil, try to find another window in the indicated direction.
+If, however, the optional argument IGNORE is non-nil, return that
+window even if its `no-other-window' parameter is non-nil.</p>
+<p>
+Return nil if no suitable window can be found.</p>

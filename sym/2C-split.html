@@ -1,0 +1,20 @@
+<h3>Function: 2C-split</h3>
+<p>
+Split a two-column text at point, into two buffers in two-column minor mode.
+Point becomes the local value of `2C-window-width'.  Only lines that
+have the ARG same preceding characters at that column get split.  The
+ARG preceding characters without any leading whitespace become the local
+value for `2C-separator'.  This way lines that continue across both
+columns remain untouched in the first buffer.</p>
+<p>
+This function can be used with a prototype line, to set up things.  You
+write the first line of each column and then split that line.  E.g.:</p>
+<p>
+First column's text    sSs  Second column's text
+		       \___/\
+			/    \
+   5 character Separator      You type  M-5 M-x 2C-split  with the point here.</p>
+<p>
+(See  C-h m .)</p>
+<p>
+(fn ARG)</p>

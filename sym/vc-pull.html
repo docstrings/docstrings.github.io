@@ -1,0 +1,15 @@
+<h3>Function: vc-pull</h3>
+<p>
+Update the current fileset or branch.
+You must be visiting a version controlled file, or in a `vc-dir' buffer.
+On a distributed version control system, this runs a "pull"
+operation to update the current branch, prompting for an argument
+list if required.  Optional prefix ARG forces a prompt.</p>
+<p>
+On a non-distributed version control system, update the current
+fileset to the tip revisions.  For each unchanged and unlocked
+file, this simply replaces the work file with the latest revision
+on its branch.  If the file contains changes, any changes in the
+tip revision are merged into the working file.</p>
+<p>
+(fn &optional ARG)</p>

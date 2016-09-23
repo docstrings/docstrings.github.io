@@ -1,0 +1,10 @@
+<h3>Function: hack-local-variables-apply</h3>
+<p>
+Apply the elements of `file-local-variables-alist'.
+If there are any elements, runs `before-hack-local-variables-hook',
+then calls `hack-one-local-variable' to apply the alist elements one by one.
+Finishes by running `hack-local-variables-hook', regardless of whether
+the alist is empty or not.</p>
+<p>
+Note that this function ignores a `mode' entry if it specifies the same
+major mode as the buffer already has.</p>

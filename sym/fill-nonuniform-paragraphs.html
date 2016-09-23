@@ -1,0 +1,16 @@
+<h3>Function: fill-nonuniform-paragraphs</h3>
+<p>
+Fill paragraphs within the region, allowing varying indentation within each.
+This command divides the region into "paragraphs",
+only at paragraph-separator lines, then fills each paragraph
+using as the fill prefix the smallest indentation of any line
+in the paragraph.</p>
+<p>
+When calling from a program, pass range to fill as first two arguments.</p>
+<p>
+Optional third and fourth arguments JUSTIFYP and CITATION-REGEXP:
+JUSTIFYP to justify paragraphs (prefix arg).
+When filling a mail message, pass a regexp for CITATION-REGEXP
+which will match the prefix of a line which is a citation marker
+plus whitespace, but no other kind of prefix.
+Also, if CITATION-REGEXP is non-nil, don't fill header lines.</p>

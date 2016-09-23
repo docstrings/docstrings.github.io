@@ -1,0 +1,68 @@
+<h3>Function: array-mode</h3>
+<p>
+Major mode for editing arrays.</p>
+<p>
+  Array mode is a specialized mode for editing arrays.  An array is
+considered to be a two-dimensional set of strings.  The strings are
+NOT recognized as integers or real numbers.</p>
+<p>
+  The array MUST reside at the top of the buffer.</p>
+<p>
+  TABs are not respected, and may be converted into spaces at any time.
+Setting the variable `array-respect-tabs' to non-nil will prevent TAB conversion,
+but will cause many functions to give errors if they encounter one.</p>
+<p>
+  Upon entering array mode, you will be prompted for the values of
+several variables.  Others will be calculated based on the values you
+supply.  These variables are all local to the buffer.  Other buffer
+in array mode may have different values assigned to the variables.
+The variables are:</p>
+<p>
+Variables you assign:
+     array-max-row:          The number of rows in the array.
+     array-max-column:       The number of columns in the array.
+     array-columns-per-line: The number of columns in the array per line of buffer.
+     array-field-width:      The width of each field, in characters.
+     array-rows-numbered:    A logical variable describing whether to ignore
+                       row numbers in the buffer.</p>
+<p>
+Variables which are calculated:
+     array-line-length:      The number of characters in a buffer line.
+     array-lines-per-row:    The number of buffer lines used to display each row.</p>
+<p>
+  The following commands are available (an asterisk indicates it may
+take a numeric prefix argument):</p>
+<p>
+    *  	
+Uses keymap `array-mode-map', which is not currently defined.
+M-x array-forward-column	  Move forward one column.
+    *  	M-x array-backward-column	  Move backward one column.
+    *  	M-x array-next-row	  Move down one row.
+    *  	M-x array-previous-row	  Move up one row.</p>
+<p>
+    *   M-x array-copy-forward	  Copy the current field into the column to the right.
+    *   M-x array-copy-backward	  Copy the current field into the column to the left.
+    *   M-x array-copy-down	  Copy the current field into the row below.
+    *   M-x array-copy-up	  Copy the current field into the row above.</p>
+<p>
+    *   M-x array-copy-column-forward   Copy the current column into the column to the right.
+    *   M-x array-copy-column-backward   Copy the current column into the column to the left.
+    *   M-x array-copy-row-down   Copy the current row into the row below.
+    *   M-x array-copy-row-up   Copy the current row into the row above.</p>
+<p>
+        M-x array-fill-rectangle   Copy the field at mark into every cell with row and column
+                  between that of point and mark.</p>
+<p>
+	M-x array-what-position	  Display the current array row and column.
+	M-x array-goto-cell	  Go to a particular array cell.</p>
+<p>
+	M-x array-make-template	  Make a template for a new array.
+	M-x array-reconfigure-rows	  Reconfigure the array.
+        M-x array-expand-rows   Expand the array (remove row numbers and
+                  newlines inside rows)</p>
+<p>
+        M-x array-display-local-variables   Display the current values of local variables.</p>
+<p>
+Entering array mode calls the function `array-mode-hook'.</p>
+<p>
+(fn)</p>

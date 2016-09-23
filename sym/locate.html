@@ -1,0 +1,24 @@
+<h3>Function: locate</h3>
+<p>
+Run the program `locate', putting results in `*Locate*' buffer.
+Pass it SEARCH-STRING as argument.  Interactively, prompt for SEARCH-STRING.
+With prefix arg ARG, prompt for the exact shell command to run instead.</p>
+<p>
+This program searches for those file names in a database that match
+SEARCH-STRING and normally outputs all matching absolute file names,
+one per line.  The database normally consists of all files on your
+system, or of all files that you have access to.  Consult the
+documentation of the program for the details about how it determines
+which file names match SEARCH-STRING.  (Those details vary highly with
+the version.)</p>
+<p>
+You can specify another program for this command to run by customizing
+the variables `locate-command' or `locate-make-command-line'.</p>
+<p>
+The main use of FILTER is to implement `locate-with-filter'.  See
+the docstring of that function for its meaning.</p>
+<p>
+After preparing the results buffer, this runs `dired-mode-hook' and
+then `locate-post-command-hook'.</p>
+<p>
+(fn SEARCH-STRING &optional FILTER ARG)</p>

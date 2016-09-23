@@ -1,0 +1,15 @@
+<h3>Function: define-widget</h3>
+<p>
+Define a new widget type named NAME from CLASS.</p>
+<p>
+NAME and CLASS should both be symbols, CLASS should be one of the
+existing widget types, or nil to create the widget from scratch.</p>
+<p>
+After the new widget has been defined, the following two calls will
+create identical widgets:</p>
+<p>
+* (widget-create NAME)</p>
+<p>
+* (apply 'widget-create CLASS ARGS)</p>
+<p>
+The third argument DOC is a documentation string for the widget.</p>

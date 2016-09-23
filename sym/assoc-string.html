@@ -1,0 +1,14 @@
+<h3>Function: assoc-string</h3>
+<p>
+Like `assoc' but specifically for strings (and symbols).</p>
+<p>
+This returns the first element of LIST whose car matches the string or
+symbol KEY, or nil if no match exists.  When performing the
+comparison, symbols are first converted to strings, and unibyte
+strings to multibyte.  If the optional arg CASE-FOLD is non-nil, case
+is ignored.</p>
+<p>
+Unlike `assoc', KEY can also match an entry in LIST consisting of a
+single string, rather than a cons cell whose car is a string.</p>
+<p>
+(fn KEY LIST &optional CASE-FOLD)</p>

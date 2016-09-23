@@ -1,0 +1,16 @@
+<h3>Function: vc-merge</h3>
+<p>
+Perform a version control merge operation.
+You must be visiting a version controlled file, or in a `vc-dir' buffer.
+On a distributed version control system, this runs a "merge"
+operation to incorporate changes from another branch onto the
+current branch, prompting for an argument list.</p>
+<p>
+On a non-distributed version control system, this merges changes
+between two revisions into the current fileset.  This asks for
+two revisions to merge from in the minibuffer.  If the first
+revision is a branch number, then merge all changes from that
+branch.  If the first revision is empty, merge the most recent
+changes from the current branch.</p>
+<p>
+(fn)</p>

@@ -1,0 +1,13 @@
+<h3>Function: gnus-agentize</h3>
+<p>
+Allow Gnus to be an offline newsreader.</p>
+<p>
+The gnus-agentize function is now called internally by gnus when
+gnus-agent is set.  If you wish to avoid calling gnus-agentize,
+customize gnus-agent to nil.</p>
+<p>
+This will modify the `gnus-setup-news-hook', and
+`message-send-mail-real-function' variables, and install the Gnus agent
+minor mode in all Gnus buffers.</p>
+<p>
+(fn)</p>

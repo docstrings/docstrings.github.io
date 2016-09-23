@@ -1,0 +1,15 @@
+<h3>Function: view-mode-enter</h3>
+<p>
+Enter View mode and set up exit from view mode depending on optional arguments.
+Optional argument QUIT-RESTORE if non-nil must specify a valid
+entry for quitting and restoring any window showing the current
+buffer.  This entry replaces any parameter installed by
+`display-buffer' and is used by `view-mode-exit'.</p>
+<p>
+Optional argument EXIT-ACTION, if non-nil, must specify a
+function that takes a buffer as argument.  This function will be
+called by `view-mode-exit'.</p>
+<p>
+For a list of all View commands, type H or h while viewing.</p>
+<p>
+This function runs the normal hook `view-mode-hook'.</p>

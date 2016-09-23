@@ -1,0 +1,12 @@
+<h3>Function: set-temporary-overlay-map</h3>
+<p>
+Set MAP as a temporary keymap taking precedence over most other keymaps.
+Note that this does NOT take precedence over the "overriding" maps
+`overriding-terminal-local-map' and `overriding-local-map' (or the
+`keymap' text property).  Unlike those maps, if no match for a key is
+found in MAP, the normal key lookup sequence then continues.</p>
+<p>
+Normally, MAP is used only once.  If the optional argument
+KEEP-PRED is t, MAP stays active if a key from MAP is used.
+KEEP-PRED can also be a function of no arguments: if it returns
+non-nil then MAP stays active.</p>

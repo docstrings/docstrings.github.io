@@ -1,0 +1,15 @@
+<h3>Variable: package--builtins</h3>
+<p>
+Alist of built-in packages.
+The actual value is initialized by loading the library
+`finder-inf'; this is not done until it is needed, e.g. by the
+function `package-built-in-p'.</p>
+<p>
+Each element has the form (PKG . DESC), where PKG is a package
+name (a symbol) and DESC is a vector that describes the package.
+The vector DESC has the form [VERSION-LIST REQS DOCSTRING].
+  VERSION-LIST is a version list.
+  REQS is a list of packages required by the package, each
+   requirement having the form (NAME VL), where NAME is a string
+   and VL is a version list.
+  DOCSTRING is a brief description of the package.</p>

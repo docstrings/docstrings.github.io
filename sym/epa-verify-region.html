@@ -1,0 +1,20 @@
+<h3>Function: epa-verify-region</h3>
+<p>
+Verify the current region between START and END.</p>
+<p>
+Don't use this command in Lisp programs!
+Since this function operates on regions, it does some tricks such
+as coding-system detection and unibyte/multibyte conversion.  If
+you are sure how the data in the region should be treated, you
+should consider using the string based counterpart
+`epg-verify-string', or the file based counterpart
+`epg-verify-file' instead.</p>
+<p>
+For example:</p>
+<p>
+(let ((context (epg-make-context 'OpenPGP)))
+  (decode-coding-string
+    (epg-verify-string context (buffer-substring start end))
+    'utf-8))</p>
+<p>
+(fn START END)</p>

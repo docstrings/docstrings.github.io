@@ -1,0 +1,37 @@
+<h3>Function: reftex-mode</h3>
+<p>
+Minor mode with distinct support for \label, \ref and \cite in LaTeX.</p>
+<p>
+
+Uses keymap `reftex-mode-map', which is not currently defined.
+A Table of Contents of the entire (multifile) document with browsing
+capabilities is available with `M-x reftex-toc'.</p>
+<p>
+Labels can be created with `M-x reftex-label' and referenced with `M-x reftex-reference'.
+When referencing, you get a menu with all labels of a given type and
+context of the label definition.  The selected label is inserted as a
+\ref macro.</p>
+<p>
+Citations can be made with `M-x reftex-citation' which will use a regular expression
+to pull out a *formatted* list of articles from your BibTeX
+database.  The selected citation is inserted as a \cite macro.</p>
+<p>
+Index entries can be made with `M-x reftex-index-selection-or-word' which indexes the word at point
+or the current selection.  More general index entries are created with
+`M-x reftex-index'.  `M-x reftex-display-index' displays the compiled index.</p>
+<p>
+Most command have help available on the fly.  This help is accessed by
+pressing `?' to any prompt mentioning this feature.</p>
+<p>
+Extensive documentation about RefTeX is available in Info format.
+You can view this information with `M-x reftex-info'.</p>
+<p>
+
+Uses keymap `reftex-mode-map', which is not currently defined.</p>
+<p>
+Under X, these and other functions will also be available as `Ref' menu
+on the menu bar.</p>
+<p>
+------------------------------------------------------------------------------</p>
+<p>
+(fn &optional ARG)</p>

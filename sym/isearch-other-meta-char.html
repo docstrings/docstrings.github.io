@@ -1,0 +1,18 @@
+<h3>Function: isearch-other-meta-char</h3>
+<p>
+Process a miscellaneous key sequence in Isearch mode.</p>
+<p>
+Try to convert the current key-sequence to something usable in Isearch
+mode, either by converting it with `function-key-map', downcasing a
+key with C-<upper case>, or finding a "scrolling command" bound to
+it.  (In the last case, we may have to read more events.)  If so,
+either unread the converted sequence or execute the command.</p>
+<p>
+Otherwise, if `search-exit-option' is non-nil (the default) unread the
+key-sequence and exit the search normally.  If it is the symbol
+`edit', the search string is edited in the minibuffer and the meta
+character is unread so that it applies to editing the string.</p>
+<p>
+ARG is the prefix argument.  It will be transmitted through to the
+scrolling command or to the command whose key-sequence exits
+Isearch mode.</p>

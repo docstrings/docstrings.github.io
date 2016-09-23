@@ -1,0 +1,24 @@
+<h3>Function: display-buffer-reuse-window</h3>
+<p>
+Return a window that is already displaying BUFFER.
+Return nil if no usable window is found.</p>
+<p>
+If ALIST has a non-nil `inhibit-same-window' entry, the selected
+window is not eligible for reuse.</p>
+<p>
+If ALIST contains a `reusable-frames' entry, its value determines
+which frames to search for a reusable window:
+  nil -- the selected frame (actually the last non-minibuffer frame)
+  A frame   -- just that frame
+  `visible' -- all visible frames
+  0   -- all frames on the current terminal
+  t   -- all frames.</p>
+<p>
+If ALIST contains no `reusable-frames' entry, search just the
+selected frame if `display-buffer-reuse-frames' and
+`pop-up-frames' are both nil; search all frames on the current
+terminal if either of those variables is non-nil.</p>
+<p>
+If ALIST has a non-nil `inhibit-switch-frame' entry, then in the
+event that a window on another frame is chosen, avoid raising
+that frame.</p>

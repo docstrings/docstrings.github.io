@@ -1,0 +1,31 @@
+<h3>Variable: customize-package-emacs-version-alist</h3>
+<p>
+Alist mapping versions of a package to Emacs versions.
+We use this for packages that have their own names, but are released
+as part of Emacs itself.</p>
+<p>
+Each elements looks like this:</p>
+<p>
+     (PACKAGE (PVERSION . EVERSION)...)</p>
+<p>
+Here PACKAGE is the name of a package, as a symbol.  After
+PACKAGE come one or more elements, each associating a
+package version PVERSION with the first Emacs version
+EVERSION in which it (or a subsequent version of PACKAGE)
+was first released.  Both PVERSION and EVERSION are strings.
+PVERSION should be a string that this package used in
+the :package-version keyword for `defcustom', `defgroup',
+and `defface'.</p>
+<p>
+For example, the MH-E package updates this alist as follows:</p>
+<p>
+     (add-to-list 'customize-package-emacs-version-alist
+                  '(MH-E ("6.0" . "22.1") ("6.1" . "22.1")
+                         ("7.0" . "22.1") ("7.1" . "22.1")
+                         ("7.2" . "22.1") ("7.3" . "22.1")
+                         ("7.4" . "22.1") ("8.0" . "22.1")))</p>
+<p>
+The value of PACKAGE needs to be unique and it needs to match the
+PACKAGE value appearing in the :package-version keyword.  Since
+the user might see the value in a error message, a good choice is
+the official name of the package, such as MH-E or Gnus.</p>

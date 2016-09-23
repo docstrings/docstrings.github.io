@@ -1,0 +1,27 @@
+<h3>Function: x-show-tip</h3>
+<p>
+Show STRING in a "tooltip" window on frame FRAME.
+A tooltip window is a small X window displaying a string.</p>
+<p>
+This is an internal function; Lisp code should call `tooltip-show'.</p>
+<p>
+FRAME nil or omitted means use the selected frame.</p>
+<p>
+PARMS is an optional list of frame parameters which can be used to
+change the tooltip's appearance.</p>
+<p>
+Automatically hide the tooltip after TIMEOUT seconds.  TIMEOUT nil
+means use the default timeout of 5 seconds.</p>
+<p>
+If the list of frame parameters PARMS contains a `left' parameters,
+the tooltip is displayed at that x-position.  Otherwise it is
+displayed at the mouse position, with offset DX added (default is 5 if
+DX isn't specified).  Likewise for the y-position; if a `top' frame
+parameter is specified, it determines the y-position of the tooltip
+window, otherwise it is displayed at the mouse position, with offset
+DY added (default is -10).</p>
+<p>
+A tooltip's maximum size is specified by `x-max-tooltip-size'.
+Text larger than the specified size is clipped.</p>
+<p>
+(fn STRING &optional FRAME PARMS TIMEOUT DX DY)</p>

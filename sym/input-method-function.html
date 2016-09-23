@@ -1,0 +1,20 @@
+<h3>Variable: input-method-function</h3>
+<p>
+If non-nil, the function that implements the current input method.
+It's called with one argument, a printing character that was just read.
+(That means a character with code 040...0176.)
+Typically this function uses `read-event' to read additional events.
+When it does so, it should first bind `input-method-function' to nil
+so it will not be called recursively.</p>
+<p>
+The function should return a list of zero or more events
+to be used as input.  If it wants to put back some events
+to be reconsidered, separately, by the input method,
+it can add them to the beginning of `unread-command-events'.</p>
+<p>
+The input method function can find in `input-method-previous-message'
+the previous echo area message.</p>
+<p>
+The input method function should refer to the variables
+`input-method-use-echo-area' and `input-method-exit-on-first-char'
+for guidance on what to do.</p>

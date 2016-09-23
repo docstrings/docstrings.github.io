@@ -1,0 +1,10 @@
+<h3>Variable: delete-frame-functions</h3>
+<p>
+Functions run before deleting a frame.
+The functions are run with one arg, the frame to be deleted.
+See `delete-frame'.</p>
+<p>
+Note that functions in this list may be called just before the frame is
+actually deleted, or some time later (or even both when an earlier function
+in `delete-frame-functions' (indirectly) calls `delete-frame'
+recursively).</p>

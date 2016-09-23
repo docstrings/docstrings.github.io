@@ -1,0 +1,17 @@
+<h3>Function: special-display-popup-frame</h3>
+<p>
+Pop up a frame displaying BUFFER and return its window.
+If BUFFER is already displayed in a visible or iconified frame,
+raise that frame.  Otherwise, display BUFFER in a new frame.</p>
+<p>
+Optional argument ARGS is a list specifying additional
+information.</p>
+<p>
+If ARGS is an alist, use it as a list of frame parameters.  If
+these parameters contain (same-window . t), display BUFFER in
+the selected window.  If they contain (same-frame . t), display
+BUFFER in a window of the selected frame.</p>
+<p>
+If ARGS is a list whose car is a symbol, use (car ARGS) as a
+function to do the work.  Pass it BUFFER as first argument, and
+pass the elements of (cdr ARGS) as the remaining arguments.</p>

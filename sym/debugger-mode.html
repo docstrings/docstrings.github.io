@@ -1,0 +1,43 @@
+<h3>Function: debugger-mode</h3>
+<p>
+Mode for backtrace buffers, selected in debugger.</p>
+<p>
+A line starts with `*' if exiting that frame will call the debugger.
+Type b or u to set or remove the `*'.</p>
+<p>
+When in debugger due to frame being exited,
+use the r command to override the value
+being returned from that frame.</p>
+<p>
+Use M-x debug-on-entry and M-x cancel-debug-on-entry to control
+which functions will enter the debugger when called.</p>
+<p>
+Complete list of commands:
+key             binding
+---             -------</p>
+<p>
+0 .. 9		digit-argument</p>
+<p>
+TAB		forward-button
+RET		debug-help-follow
+ESC		Prefix Command
+SPC		next-line
+-		negative-argument
+R		debugger-record-expression
+b		debugger-frame
+c		debugger-continue
+d		debugger-step-through
+e		debugger-eval-expression
+h		describe-mode
+j		debugger-jump
+l		debugger-list-functions
+q		top-level
+r		debugger-return-value
+u		debugger-frame-clear
+<backtab>	backward-button
+<mouse-2>	push-button
+<remap>		Prefix Command</p>
+<p>
+C-M-i		backward-button</p>
+<p>
+</p>

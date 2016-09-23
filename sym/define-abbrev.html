@@ -1,0 +1,35 @@
+<h3>Function: define-abbrev</h3>
+<p>
+Define an abbrev in TABLE named NAME, to expand to EXPANSION and call HOOK.
+NAME must be a string, and should be lower-case.
+EXPANSION should usually be a string.
+To undefine an abbrev, define it with EXPANSION = nil.
+If HOOK is non-nil, it should be a function of no arguments;
+it is called after EXPANSION is inserted.
+If EXPANSION is not a string (and not nil), the abbrev is a
+ special one, which does not expand in the usual way but only
+ runs HOOK.</p>
+<p>
+If HOOK is a non-nil symbol with a non-nil `no-self-insert' property,
+it can control whether the character that triggered abbrev expansion
+is inserted.  If such a HOOK returns non-nil, the character is not
+inserted.  If such a HOOK returns nil, then so does `abbrev-insert'
+(and `expand-abbrev'), as if no abbrev expansion had taken place.</p>
+<p>
+PROPS is a property list.  The following properties are special:
+- `:count': the value for the abbrev's usage-count, which is incremented each
+  time the abbrev is used (the default is zero).
+- `:system': if non-nil, says that this is a "system" abbreviation
+  which should not be saved in the user's abbreviation file.
+  Unless `:system' is `force', a system abbreviation will not
+  overwrite a non-system abbreviation of the same name.
+- `:case-fixed': non-nil means that abbreviations are looked up without
+  case-folding, and the expansion is not capitalized/upcased.
+- `:enable-function': a function of no argument which returns non-nil if the
+  abbrev should be used for a particular call of `expand-abbrev'.</p>
+<p>
+An obsolete but still supported calling form is:</p>
+<p>
+(define-abbrev TABLE NAME EXPANSION &optional HOOK COUNT SYSTEM).</p>
+<p>
+(fn TABLE NAME EXPANSION &optional HOOK &rest PROPS)</p>

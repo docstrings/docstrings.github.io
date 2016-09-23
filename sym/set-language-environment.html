@@ -1,0 +1,11 @@
+<h3>Function: set-language-environment</h3>
+<p>
+Set up multilingual environment for using LANGUAGE-NAME.
+This sets the coding system priority and the default input method
+and sometimes other things.  LANGUAGE-NAME should be a string
+which is the name of a language environment.  For example, "Latin-1"
+specifies the character set for the major languages of Western Europe.</p>
+<p>
+If there is a prior value for `current-language-environment', this
+runs the hook `exit-language-environment-hook'.  After setting up
+the new language environment, it runs `set-language-environment-hook'.</p>

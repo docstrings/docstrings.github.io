@@ -1,0 +1,18 @@
+<h3>Function: posix-search-forward</h3>
+<p>
+Search forward from point for regular expression REGEXP.
+Find the longest match in accord with Posix regular expression rules.
+Set point to the end of the occurrence found, and return point.
+An optional second argument bounds the search; it is a buffer position.
+The match found must not extend after that position.
+Optional third argument, if t, means if fail just return nil (no error).
+  If not nil and not t, move to limit of search and return nil.
+Optional fourth argument is repeat count--search for successive occurrences.</p>
+<p>
+Search case-sensitivity is determined by the value of the variable
+`case-fold-search', which see.</p>
+<p>
+See also the functions `match-beginning', `match-end', `match-string',
+and `replace-match'.</p>
+<p>
+(fn REGEXP &optional BOUND NOERROR COUNT)</p>

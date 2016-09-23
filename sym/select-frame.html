@@ -1,0 +1,18 @@
+<h3>Function: select-frame</h3>
+<p>
+Select FRAME.
+Subsequent editing commands apply to its selected window.
+Optional argument NORECORD means to neither change the order of
+recently selected windows nor the buffer list.</p>
+<p>
+The selection of FRAME lasts until the next time the user does
+something to select a different frame, or until the next time
+this function is called.  If you are using a window system, the
+previously selected frame may be restored as the selected frame
+when returning to the command loop, because it still may have
+the window system's input focus.  On a text terminal, the next
+redisplay will display FRAME.</p>
+<p>
+This function returns FRAME, or nil if FRAME has been deleted.</p>
+<p>
+(fn FRAME &optional NORECORD)</p>

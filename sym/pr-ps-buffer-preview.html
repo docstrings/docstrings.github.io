@@ -1,0 +1,14 @@
+<h3>Function: pr-ps-buffer-preview</h3>
+<p>
+Preview buffer using ghostview.</p>
+<p>
+Interactively, the command prompts for N-UP printing number and, when you use a
+prefix argument (C-u), the command prompts the user for a file name, and saves
+the PostScript image in that file instead of saving it in a temporary file.</p>
+<p>
+Noninteractively, if N-UP is nil, prompts for N-UP printing number.  The
+argument FILENAME is treated as follows: if it's nil, save the image in a
+temporary file.  If FILENAME is a string, save the PostScript image in a file
+with that name.  If FILENAME is t, prompts for a file name.</p>
+<p>
+(fn N-UP &optional FILENAME)</p>

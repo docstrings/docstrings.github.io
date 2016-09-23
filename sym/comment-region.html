@@ -1,0 +1,18 @@
+<h3>Function: comment-region</h3>
+<p>
+Comment or uncomment each line in the region.
+With just C-u prefix arg, uncomment each line in region BEG .. END.
+Numeric prefix ARG means use ARG comment characters.
+If ARG is negative, delete that many comment characters instead.</p>
+<p>
+The strings used as comment starts are built from `comment-start'
+and `comment-padding'; the strings used as comment ends are built
+from `comment-end' and `comment-padding'.</p>
+<p>
+By default, the `comment-start' markers are inserted at the
+current indentation of the region, and comments are terminated on
+each line (even for syntaxes in which newline does not end the
+comment and blank lines do not get comments).  This can be
+changed with `comment-style'.</p>
+<p>
+(fn BEG END &optional ARG)</p>

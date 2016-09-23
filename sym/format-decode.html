@@ -1,0 +1,17 @@
+<h3>Function: format-decode</h3>
+<p>
+Decode text from any known FORMAT.
+FORMAT is a symbol appearing in `format-alist' or a list of such symbols,
+or nil, in which case this function tries to guess the format of the data by
+matching against the regular expressions in `format-alist'.  After a match is
+found and the region decoded, the alist is searched again from the beginning
+for another match.</p>
+<p>
+Second arg LENGTH is the number of characters following point to operate on.
+If optional third arg VISIT-FLAG is true, set `buffer-file-format'
+to the reverted list of formats used, and call any mode functions defined
+for those formats.</p>
+<p>
+Return the new length of the decoded region.</p>
+<p>
+For most purposes, consider using `format-decode-region' instead.</p>

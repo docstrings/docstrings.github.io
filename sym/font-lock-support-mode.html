@@ -1,0 +1,20 @@
+<h3>Variable: font-lock-support-mode</h3>
+<p>
+Support mode for Font Lock mode.
+Support modes speed up Font Lock mode by being choosy about when fontification
+occurs.  The default support mode, Just-in-time Lock mode (symbol
+`jit-lock-mode'), is recommended.</p>
+<p>
+Other, older support modes are Fast Lock mode (symbol `fast-lock-mode') and
+Lazy Lock mode (symbol `lazy-lock-mode').  See those modes for more info.
+However, they are no longer recommended, as Just-in-time Lock mode is better.</p>
+<p>
+If nil, means support for Font Lock mode is never performed.
+If a symbol, use that support mode.
+If a list, each element should be of the form (MAJOR-MODE . SUPPORT-MODE),
+where MAJOR-MODE is a symbol or t (meaning the default).  For example:
+ ((c-mode . fast-lock-mode) (c++-mode . fast-lock-mode) (t . lazy-lock-mode))
+means that Fast Lock mode is used to support Font Lock mode for buffers in C or
+C++ modes, and Lazy Lock mode is used to support Font Lock mode otherwise.</p>
+<p>
+The value of this variable is used when Font Lock mode is turned on.</p>

@@ -1,0 +1,25 @@
+<h3>Variable: byte-compile-warnings</h3>
+<p>
+List of warnings that the byte-compiler should issue (t for all).</p>
+<p>
+Elements of the list may be:</p>
+<p>
+  free-vars   references to variables not in the current lexical scope.
+  unresolved  calls to unknown functions.
+  callargs    function calls with args that don't match the definition.
+  redefine    function name redefined from a macro to ordinary function or vice
+              versa, or redefined to take a different number of arguments.
+  obsolete    obsolete variables and functions.
+  noruntime   functions that may not be defined at runtime (typically
+              defined only under `eval-when-compile').
+  cl-functions    calls to runtime functions from the CL package (as
+		  distinguished from macros and aliases).
+  interactive-only
+	      commands that normally shouldn't be called from Lisp code.
+  make-local  calls to make-variable-buffer-local that may be incorrect.
+  mapcar      mapcar called for effect.
+  constants   let-binding of, or assignment to, constants/nonvariables.
+  suspicious  constructs that usually don't do what the coder wanted.</p>
+<p>
+If the list begins with `not', then the remaining elements specify warnings to
+suppress.  For example, (not mapcar) will suppress warnings about mapcar.</p>

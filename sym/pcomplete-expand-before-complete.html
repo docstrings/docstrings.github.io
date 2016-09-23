@@ -1,0 +1,9 @@
+<h3>Variable: pcomplete-expand-before-complete</h3>
+<p>
+If non-nil, expand the current argument before completing it.
+This means that typing something such as '$HOME/bi' followed by
+M-x pcomplete-argument will cause the variable reference to be
+resolved first, and the resultant value that will be completed against
+to be inserted in the buffer.  Note that exactly what gets expanded
+and how is entirely up to the behavior of the
+`pcomplete-parse-arguments-function'.</p>

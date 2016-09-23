@@ -1,0 +1,16 @@
+<h3>Function: facemenu-set-face-from-menu</h3>
+<p>
+Set the FACE of the region or next character typed.
+This function is designed to be called from a menu; FACE is determined
+using the event type of the menu entry.  If FACE is a symbol whose
+name starts with "fg:" or "bg:", then this functions sets the
+foreground or background to the color specified by the rest of the
+symbol's name.  Any other symbol is considered the name of a face.</p>
+<p>
+If the region is active (normally true except in Transient Mark mode)
+and there is no prefix argument, this command sets the region to the
+requested face.</p>
+<p>
+Otherwise, this command specifies the face for the next character
+inserted.  Moving point or switching buffers before typing a character
+to insert cancels the specification.</p>

@@ -1,0 +1,30 @@
+<h3>Function: compile</h3>
+<p>
+Compile the program including the current buffer.  Default: run `make'.
+Runs COMMAND, a shell command, in a separate process asynchronously
+with output going to the buffer `*compilation*'.</p>
+<p>
+You can then use the command C-x ` to find the next error message
+and move to the source code that caused it.</p>
+<p>
+If optional second arg COMINT is t the buffer will be in Comint mode with
+`compilation-shell-minor-mode'.</p>
+<p>
+Interactively, prompts for the command if `compilation-read-command' is
+non-nil; otherwise uses `compile-command'.  With prefix arg, always prompts.
+Additionally, with universal prefix arg, compilation buffer will be in
+comint mode, i.e. interactive.</p>
+<p>
+To run more than one compilation at once, start one then rename
+the `*compilation*' buffer to some other name with
+M-x rename-buffer.  Then _switch buffers_ and start the new compilation.
+It will create a new `*compilation*' buffer.</p>
+<p>
+On most systems, termination of the main compilation process
+kills its subprocesses.</p>
+<p>
+The name used for the buffer is actually whatever is returned by
+the function in `compilation-buffer-name-function', so you can set that
+to a function that generates a unique name.</p>
+<p>
+(fn COMMAND &optional COMINT)</p>

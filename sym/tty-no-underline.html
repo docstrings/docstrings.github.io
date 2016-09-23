@@ -1,0 +1,12 @@
+<h3>Function: tty-no-underline</h3>
+<p>
+Declare that the tty used by TERMINAL does not handle underlining.
+This is used to override the terminfo data, for certain terminals that
+do not really do underlining, but say that they do.  This function has
+no effect if used on a non-tty terminal.</p>
+<p>
+TERMINAL can be a terminal object, a frame or nil (meaning the
+selected frame's terminal).  This function always returns nil if
+TERMINAL does not refer to a text terminal.</p>
+<p>
+(fn &optional TERMINAL)</p>

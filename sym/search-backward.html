@@ -1,0 +1,18 @@
+<h3>Function: search-backward</h3>
+<p>
+Search backward from point for STRING.
+Set point to the beginning of the occurrence found, and return point.
+An optional second argument bounds the search; it is a buffer position.
+The match found must not extend before that position.
+Optional third argument, if t, means if fail just return nil (no error).
+ If not nil and not t, position at limit of search and return nil.
+Optional fourth argument COUNT, if non-nil, means to search for COUNT
+ successive occurrences.  If COUNT is negative, search forward,
+ instead of backward, for -COUNT occurrences.</p>
+<p>
+Search case-sensitivity is determined by the value of the variable
+`case-fold-search', which see.</p>
+<p>
+See also the functions `match-beginning', `match-end' and `replace-match'.</p>
+<p>
+(fn STRING &optional BOUND NOERROR COUNT)</p>

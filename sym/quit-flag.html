@@ -1,0 +1,8 @@
+<h3>Variable: quit-flag</h3>
+<p>
+Non-nil causes `eval' to abort, unless `inhibit-quit' is non-nil.
+If the value is t, that means do an ordinary quit.
+If the value equals `throw-on-input', that means quit by throwing
+to the tag specified in `throw-on-input'; it's for handling `while-no-input'.
+Typing C-g sets `quit-flag' to t, regardless of `inhibit-quit',
+but `inhibit-quit' non-nil prevents anything from taking notice of that.</p>

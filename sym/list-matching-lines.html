@@ -1,0 +1,27 @@
+<h3>Function: list-matching-lines</h3>
+<p>
+Show all lines in the current buffer containing a match for REGEXP.
+If a match spreads across multiple lines, all those lines are shown.</p>
+<p>
+Each line is displayed with NLINES lines before and after, or -NLINES
+before if NLINES is negative.
+NLINES defaults to `list-matching-lines-default-context-lines'.
+Interactively it is the prefix arg.</p>
+<p>
+The lines are shown in a buffer named `*Occur*'.
+It serves as a menu to find any of the occurrences in this buffer.
+C-h m in that buffer will explain how.</p>
+<p>
+If REGEXP contains upper case characters (excluding those preceded by `\')
+and `search-upper-case' is non-nil, the matching is case-sensitive.</p>
+<p>
+When NLINES is a string or when the function is called
+interactively with prefix argument without a number (`C-u' alone
+as prefix) the matching strings are collected into the `*Occur*'
+buffer by using NLINES as a replacement regexp.  NLINES may
+contain \& and \N which convention follows `replace-match'.
+For example, providing "defun\s +\(\S +\)" for REGEXP and
+"\1" for NLINES collects all the function names in a lisp
+program.  When there is no parenthesized subexpressions in REGEXP
+the entire match is collected.  In any case the searched buffer
+is not modified.</p>

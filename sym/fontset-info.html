@@ -1,0 +1,21 @@
+<h3>Function: fontset-info</h3>
+<p>
+Return information about a fontset FONTSET on frame FRAME.</p>
+<p>
+FONTSET is a fontset name string, nil for the fontset of FRAME, or t
+for the default fontset.  FRAME nil means the selected frame.</p>
+<p>
+The value is a char-table whose elements have this form:</p>
+<p>
+    ((FONT OPENED-FONT ...) ...)</p>
+<p>
+FONT is a name of font specified for a range of characters.</p>
+<p>
+OPENED-FONT is a name of a font actually opened.</p>
+<p>
+The char-table has one extra slot.  If FONTSET is not the default
+fontset, the value the extra slot is a char-table containing the
+information about the derived fonts from the default fontset.  The
+format is the same as above.</p>
+<p>
+(fn FONTSET &optional FRAME)</p>

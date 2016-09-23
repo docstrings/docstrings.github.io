@@ -1,0 +1,15 @@
+<h3>Function: set-variable</h3>
+<p>
+Set VARIABLE to VALUE.  VALUE is a Lisp object.
+VARIABLE should be a user option variable name, a Lisp variable
+meant to be customized by users.  You should enter VALUE in Lisp syntax,
+so if you want VALUE to be a string, you must surround it with doublequotes.
+VALUE is used literally, not evaluated.</p>
+<p>
+If VARIABLE has a `variable-interactive' property, that is used as if
+it were the arg to `interactive' (which see) to interactively read VALUE.</p>
+<p>
+If VARIABLE has been defined with `defcustom', then the type information
+in the definition is used to check that VALUE is valid.</p>
+<p>
+With a prefix argument, set VARIABLE to VALUE buffer-locally.</p>

@@ -1,0 +1,14 @@
+<h3>Function: quoted-printable-decode-region</h3>
+<p>
+Decode quoted-printable in the region between FROM and TO, per RFC 2045.
+If CODING-SYSTEM is non-nil, decode bytes into characters with that
+coding-system.</p>
+<p>
+Interactively, you can supply the CODING-SYSTEM argument
+with C-x RET c.</p>
+<p>
+The CODING-SYSTEM argument is a historical hangover and is deprecated.
+QP encodes raw bytes and should be decoded into raw bytes.  Decoding
+them into characters should be done separately.</p>
+<p>
+(fn FROM TO &optional CODING-SYSTEM)</p>

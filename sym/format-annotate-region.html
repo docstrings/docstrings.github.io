@@ -1,0 +1,35 @@
+<h3>Function: format-annotate-region</h3>
+<p>
+Generate annotations for text properties in the region.
+Search for changes between FROM and TO, and describe them with a list of
+annotations as defined by alist TRANSLATIONS and FORMAT-FN.  IGNORE lists text
+properties not to consider; any text properties that are neither ignored nor
+listed in TRANSLATIONS are warned about.
+If you actually want to modify the region, give the return value of this
+function to `format-insert-annotations'.</p>
+<p>
+Format of the TRANSLATIONS argument:</p>
+<p>
+Each element is a list whose car is a PROPERTY, and the following
+elements have the form (VALUE ANNOTATIONS...).
+Whenever the property takes on the value VALUE, the annotations
+(as formatted by FORMAT-FN) are inserted into the file.
+When the property stops having that value, the matching negated annotation
+will be inserted (it may actually be closed earlier and reopened, if
+necessary, to keep proper nesting).</p>
+<p>
+If VALUE is a list, then each element of the list is dealt with
+separately.</p>
+<p>
+If a VALUE is numeric, then it is assumed that there is a single annotation
+and each occurrence of it increments the value of the property by that number.
+Thus, given the entry (left-margin (4 "indent")), if the left margin
+changes from 4 to 12, two <indent> annotations will be generated.</p>
+<p>
+If the VALUE is nil, then instead of annotations, a function should be
+specified.  This function is used as a default: it is called for all
+transitions not explicitly listed in the table.  The function is called with
+two arguments, the OLD and NEW values of the property.  It should return
+a cons cell (CLOSE . OPEN) as `format-annotate-single-property-change' does.</p>
+<p>
+The same TRANSLATIONS structure can be used in reverse for reading files.</p>

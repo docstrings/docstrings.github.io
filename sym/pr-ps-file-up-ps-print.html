@@ -1,0 +1,18 @@
+<h3>Function: pr-ps-file-up-ps-print</h3>
+<p>
+Process a PostScript file IFILENAME and send it to printer.</p>
+<p>
+Interactively, the command prompts for N-UP printing number, for an input
+PostScript file IFILENAME and, when you use a prefix argument (C-u), the
+command prompts the user for an output PostScript file name OFILENAME, and
+saves the PostScript image in that file instead of sending it to the printer.</p>
+<p>
+Noninteractively, if N-UP is nil, prompts for N-UP printing number.  The
+argument IFILENAME is treated as follows: if it's t, prompts for an input
+PostScript file name; otherwise, it *must* be a string that it's an input
+PostScript file name.  The argument OFILENAME is treated as follows: if it's
+nil, send the image to the printer.  If OFILENAME is a string, save the
+PostScript image in a file with that name.  If OFILENAME is t, prompts for a
+file name.</p>
+<p>
+(fn N-UP IFILENAME &optional OFILENAME)</p>

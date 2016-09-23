@@ -1,0 +1,8 @@
+<h3>Variable: max-specpdl-size</h3>
+<p>
+Limit on number of Lisp variable bindings and `unwind-protect's.
+If Lisp code tries to increase the total number past this amount,
+an error is signaled.
+You can safely use a value considerably larger than the default value,
+if that proves inconveniently small.  However, if you increase it too far,
+Emacs could run out of memory trying to make the stack bigger.</p>

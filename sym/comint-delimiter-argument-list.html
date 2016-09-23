@@ -1,0 +1,11 @@
+<h3>Variable: comint-delimiter-argument-list</h3>
+<p>
+List of characters to recognize as separate arguments in input.
+Strings comprising a character in this list will separate the arguments
+surrounding them, and also be regarded as arguments in their own right (unlike
+whitespace).  See `comint-arguments'.
+Defaults to the empty list.</p>
+<p>
+For shells, a good value is (?\| ?& ?< ?> ?\( ?\) ?;).</p>
+<p>
+This is a good thing to set in mode hooks.</p>

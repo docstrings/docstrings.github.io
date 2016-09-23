@@ -1,0 +1,12 @@
+<h3>Function: set-time-zone-rule</h3>
+<p>
+Set the local time zone using TZ, a string specifying a time zone rule.
+If TZ is nil, use implementation-defined default time zone information.
+If TZ is t, use Universal Time.</p>
+<p>
+Instead of calling this function, you typically want (setenv "TZ" TZ).
+That changes both the environment of the Emacs process and the
+variable `process-environment', whereas `set-time-zone-rule' affects
+only the former.</p>
+<p>
+(fn TZ)</p>

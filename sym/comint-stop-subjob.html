@@ -1,0 +1,12 @@
+<h3>Function: comint-stop-subjob</h3>
+<p>
+Stop the current subjob.
+This command also kills the pending input
+between the process mark and point.</p>
+<p>
+WARNING: if there is no current subjob, you can end up suspending
+the top-level process running in the buffer.  If you accidentally do
+this, use M-x comint-continue-subjob to resume the process.  (This
+is not a problem with most shells, since they ignore this signal.)</p>
+<p>
+(fn)</p>

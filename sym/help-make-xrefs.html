@@ -1,0 +1,21 @@
+<h3>Function: help-make-xrefs</h3>
+<p>
+Parse and hyperlink documentation cross-references in the given BUFFER.</p>
+<p>
+Find cross-reference information in a buffer and activate such cross
+references for selection with `help-follow'.  Cross-references have
+the canonical form `...'  and the type of reference may be
+disambiguated by the preceding word(s) used in
+`help-xref-symbol-regexp'.  Faces only get cross-referenced if
+preceded or followed by the word `face'.  Variables without
+variable documentation do not get cross-referenced, unless
+preceded by the word `variable' or `option'.</p>
+<p>
+If the variable `help-xref-mule-regexp' is non-nil, find also
+cross-reference information related to multilingual environment
+(e.g., coding-systems).  This variable is also used to disambiguate
+the type of reference as the same way as `help-xref-symbol-regexp'.</p>
+<p>
+A special reference `back' is made to return back through a stack of
+help buffers.  Variable `help-back-label' specifies the text for
+that.</p>

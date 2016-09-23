@@ -1,0 +1,12 @@
+<h3>Function: walk-window-subtree</h3>
+<p>
+Run function FUN on the subtree of windows rooted at WINDOW.
+WINDOW defaults to the selected window.  FUN must be a function
+with one argument - a window.  By default, run FUN only on live
+windows of the subtree.  If the optional argument ANY is non-nil,
+run FUN on all live and internal windows of the subtree.  If
+WINDOW is live, run FUN on WINDOW only.</p>
+<p>
+This function performs a pre-order, depth-first traversal of the
+subtree rooted at WINDOW.  If FUN changes that tree, the result
+is unpredictable.</p>

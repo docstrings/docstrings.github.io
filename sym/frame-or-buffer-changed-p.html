@@ -1,0 +1,15 @@
+<h3>Function: frame-or-buffer-changed-p</h3>
+<p>
+Return non-nil if the frame and buffer state appears to have changed.
+VARIABLE is a variable name whose value is either nil or a state vector
+that will be updated to contain all frames and buffers,
+aside from buffers whose names start with space,
+along with the buffers' read-only and modified flags.  This allows a fast
+check to see whether buffer menus might need to be recomputed.
+If this function returns non-nil, it updates the internal vector to reflect
+the current state.</p>
+<p>
+If VARIABLE is nil, an internal variable is used.  Users should not
+pass nil for VARIABLE.</p>
+<p>
+(fn &optional VARIABLE)</p>

@@ -1,0 +1,12 @@
+<h3>Function: face-attribute-relative-p</h3>
+<p>
+Check whether a face attribute value is relative.
+Specifically, this function returns t if the attribute ATTRIBUTE
+with the value VALUE is relative.</p>
+<p>
+A relative value is one that doesn't entirely override whatever is
+inherited from another face.  For most possible attributes,
+the only relative value that users see is `unspecified'.
+However, for :height, floating point values are also relative.</p>
+<p>
+(fn ATTRIBUTE VALUE)</p>

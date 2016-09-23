@@ -1,0 +1,27 @@
+<h3>Function: keypad-setup</h3>
+<p>
+Set keypad bindings in `function-key-map' according to SETUP.
+If optional second argument NUMLOCK is non-nil, the NumLock On bindings
+are changed.  Otherwise, the NumLock Off bindings are changed.
+If optional third argument SHIFT is non-nil, the shifted keypad
+keys are bound.</p>
+<p>
+ Setup      Binding
+ -------------------------------------------------------------
+ 'prefix   Command prefix argument, i.e.  M-0 .. M-9 and M--
+ 'S-cursor Bind shifted keypad keys to the shifted cursor movement keys.
+ 'cursor   Bind keypad keys to the cursor movement keys.
+ 'numeric  Plain numeric keypad, i.e. 0 .. 9 and .  (or DECIMAL arg)
+ 'none     Removes all bindings for keypad keys in function-key-map;
+           this enables any user-defined bindings for the keypad keys
+           in the global and local keymaps.</p>
+<p>
+If SETUP is 'numeric and the optional fourth argument DECIMAL is non-nil,
+the decimal key on the keypad is mapped to DECIMAL instead of `.'</p>
+<p>
+(fn SETUP &optional NUMLOCK SHIFT DECIMAL)</p>
+<h3>Variable: keypad-setup</h3>
+<p>
+Specifies the keypad setup for unshifted keypad keys when NumLock is off.
+When selecting the plain numeric keypad setup, the character returned by the
+decimal key must be specified.</p>

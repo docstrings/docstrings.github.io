@@ -1,0 +1,12 @@
+<h3>Function: set-window-combination-limit</h3>
+<p>
+Set combination limit of window WINDOW to LIMIT; return LIMIT.
+If LIMIT is nil, child windows of WINDOW can be recombined with WINDOW's
+siblings.  LIMIT t means that child windows of WINDOW are never
+(re-)combined with WINDOW's siblings.  Other values are reserved for
+future use.</p>
+<p>
+WINDOW must be a valid window.  Setting the combination limit is
+meaningful for internal windows only.</p>
+<p>
+(fn WINDOW LIMIT)</p>

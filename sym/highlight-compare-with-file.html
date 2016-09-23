@@ -1,0 +1,16 @@
+<h3>Function: highlight-compare-with-file</h3>
+<p>
+Compare this buffer with a file, and highlight differences.</p>
+<p>
+If the buffer has a backup filename, it is used as the default when
+this function is called interactively.</p>
+<p>
+If the current buffer is visiting the file being compared against, it
+also will have its differences highlighted.  Otherwise, the file is
+read in temporarily but the buffer is deleted.</p>
+<p>
+If the buffer is read-only, differences will be highlighted but no property
+changes are made, so M-x highlight-changes-next-change and
+M-x highlight-changes-previous-change will not work.</p>
+<p>
+(fn FILE-B)</p>

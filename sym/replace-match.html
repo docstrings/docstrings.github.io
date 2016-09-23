@@ -1,0 +1,39 @@
+<h3>Function: replace-match</h3>
+<p>
+Replace text matched by last search with NEWTEXT.
+Leave point at the end of the replacement text.</p>
+<p>
+If optional second arg FIXEDCASE is non-nil, do not alter the case of
+the replacement text.  Otherwise, maybe capitalize the whole text, or
+maybe just word initials, based on the replaced text.  If the replaced
+text has only capital letters and has at least one multiletter word,
+convert NEWTEXT to all caps.  Otherwise if all words are capitalized
+in the replaced text, capitalize each word in NEWTEXT.</p>
+<p>
+If optional third arg LITERAL is non-nil, insert NEWTEXT literally.
+Otherwise treat `\' as special:
+  `\&' in NEWTEXT means substitute original matched text.
+  `\N' means substitute what matched the Nth `\(...\)'.
+       If Nth parens didn't match, substitute nothing.
+  `\\' means insert one `\'.
+  `\?' is treated literally
+       (for compatibility with `query-replace-regexp').
+  Any other character following `\' signals an error.
+Case conversion does not apply to these substitutions.</p>
+<p>
+If optional fourth argument STRING is non-nil, it should be a string
+to act on; this should be the string on which the previous match was
+done via `string-match'.  In this case, `replace-match' creates and
+returns a new string, made by copying STRING and replacing the part of
+STRING that was matched (the original STRING itself is not altered).</p>
+<p>
+The optional fifth argument SUBEXP specifies a subexpression;
+it says to replace just that subexpression with NEWTEXT,
+rather than replacing the entire matched text.
+This is, in a vague sense, the inverse of using `\N' in NEWTEXT;
+`\N' copies subexp N into NEWTEXT, but using N as SUBEXP puts
+NEWTEXT in place of subexp N.
+This is useful only after a regular expression search or match,
+since only regular expressions have distinguished subexpressions.</p>
+<p>
+(fn NEWTEXT &optional FIXEDCASE LITERAL STRING SUBEXP)</p>

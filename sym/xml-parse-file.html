@@ -1,0 +1,23 @@
+<h3>Function: xml-parse-file</h3>
+<p>
+Parse the well-formed XML file FILE.
+Return the top node with all its children.
+If PARSE-DTD is non-nil, the DTD is parsed rather than skipped.</p>
+<p>
+If PARSE-NS is non-nil, then QNAMES are expanded.  By default,
+the variable `xml-default-ns' is the mapping from namespaces to
+URIs, and expanded names will be returned as a cons</p>
+<p>
+  ("namespace:" . "foo").</p>
+<p>
+If PARSE-NS is an alist, it will be used as the mapping from
+namespace to URIs instead.</p>
+<p>
+If it is the symbol 'symbol-qnames, expanded names will be
+returned as a plain symbol 'namespace:foo instead of a cons.</p>
+<p>
+Both features can be combined by providing a cons cell</p>
+<p>
+  (symbol-qnames . ALIST).</p>
+<p>
+(fn FILE &optional PARSE-DTD PARSE-NS)</p>

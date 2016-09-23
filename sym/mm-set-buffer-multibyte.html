@@ -1,0 +1,13 @@
+<h3>Function: mm-set-buffer-multibyte</h3>
+<p>
+Set the multibyte flag of the current buffer to FLAG.
+If FLAG is t, this makes the buffer a multibyte buffer.
+If FLAG is nil, this makes the buffer a single-byte buffer.
+In these cases, the buffer contents remain unchanged as a sequence of
+bytes but the contents viewed as characters do change.
+If FLAG is `to', this makes the buffer a multibyte buffer by changing
+all eight-bit bytes to eight-bit characters.
+If the multibyte flag was really changed, undo information of the
+current buffer is cleared.</p>
+<p>
+(fn FLAG)</p>

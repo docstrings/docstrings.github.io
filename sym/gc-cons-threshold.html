@@ -1,0 +1,11 @@
+<h3>Variable: gc-cons-threshold</h3>
+<p>
+Number of bytes of consing between garbage collections.
+Garbage collection can happen automatically once this many bytes have been
+allocated since the last garbage collection.  All data types count.</p>
+<p>
+Garbage collection happens automatically only when `eval' is called.</p>
+<p>
+By binding this temporarily to a large number, you can effectively
+prevent garbage collection during a part of the program.
+See also `gc-cons-percentage'.</p>

@@ -1,0 +1,17 @@
+<h3>Function: highlight-compare-buffers</h3>
+<p>
+Compare two buffers and highlight the differences.</p>
+<p>
+The default is the current buffer and the one in the next window.</p>
+<p>
+If either buffer is modified and is visiting a file, you are prompted
+to save the file.</p>
+<p>
+Unless the buffer is unmodified and visiting a file, the buffer is
+written to a temporary file for comparison.</p>
+<p>
+If a buffer is read-only, differences will be highlighted but no property
+changes are made, so M-x highlight-changes-next-change and
+M-x highlight-changes-previous-change will not work.</p>
+<p>
+(fn BUF-A BUF-B)</p>

@@ -1,0 +1,13 @@
+<h3>Function: ansi-color-process-output</h3>
+<p>
+Maybe translate SGR control sequences of comint output into text properties.</p>
+<p>
+Depending on variable `ansi-color-for-comint-mode' the comint output is
+either not processed, SGR control sequences are filtered using
+`ansi-color-filter-region', or SGR control sequences are translated into
+text properties using `ansi-color-apply-on-region'.</p>
+<p>
+The comint output is assumed to lie between the marker
+`comint-last-output-start' and the process-mark.</p>
+<p>
+This is a good function to put in `comint-output-filter-functions'.</p>

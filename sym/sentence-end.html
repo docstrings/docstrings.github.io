@@ -1,0 +1,22 @@
+<h3>Function: sentence-end</h3>
+<p>
+Return the regexp describing the end of a sentence.</p>
+<p>
+This function returns either the value of the variable `sentence-end'
+if it is non-nil, or the default value constructed from the
+variables `sentence-end-base', `sentence-end-double-space',
+`sentence-end-without-period' and `sentence-end-without-space'.</p>
+<p>
+The default value specifies that in order to be recognized as the
+end of a sentence, the ending period, question mark, or exclamation point
+must be followed by two spaces, with perhaps some closing delimiters
+in between.  See Info node `(elisp)Standard Regexps'.</p>
+<h3>Variable: sentence-end</h3>
+<p>
+Regexp describing the end of a sentence.
+The value includes the whitespace following the sentence.
+All paragraph boundaries also end sentences, regardless.</p>
+<p>
+The value nil means to use the default value defined by the
+function `sentence-end'.  You should always use this function
+to obtain the value of this variable.</p>

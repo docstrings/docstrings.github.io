@@ -1,0 +1,8 @@
+<h3>Function: read-key</h3>
+<p>
+Read a key from the keyboard.
+Contrary to `read-event' this will not return a raw event but instead will
+obey the input decoding and translations usually done by `read-key-sequence'.
+So escape sequences and keyboard encoding are taken into account.
+When there's an ambiguity because the key looks like the prefix of
+some sort of escape sequence, the ambiguity is resolved via `read-key-delay'.</p>

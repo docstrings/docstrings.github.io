@@ -1,0 +1,12 @@
+<h3>Variable: auth-source-debug</h3>
+<p>
+Whether auth-source should log debug messages.</p>
+<p>
+If the value is nil, debug messages are not logged.</p>
+<p>
+If the value is t, debug messages are logged with `message'.  In
+that case, your authentication data will be in the clear (except
+for passwords).</p>
+<p>
+If the value is a function, debug messages are logged by calling
+ that function using the same arguments as `message'.</p>

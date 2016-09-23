@@ -1,0 +1,13 @@
+<h3>Function: trace-function</h3>
+<p>
+Traces FUNCTION with trace output going to BUFFER.
+For every call of FUNCTION Lisp-style trace messages that display argument
+and return values will be inserted into BUFFER.  This function generates the
+trace advice for FUNCTION and activates it together with any other advice
+there might be!!  The trace BUFFER will popup whenever FUNCTION is called.
+Do not use this to trace functions that switch buffers or do any other
+display oriented stuff, use `trace-function-background' instead.</p>
+<p>
+To untrace a function, use `untrace-function' or `untrace-all'.</p>
+<p>
+(fn FUNCTION &optional BUFFER)</p>

@@ -1,0 +1,12 @@
+<h3>Function: dabbrev--substitute-expansion</h3>
+<p>
+Replace OLD with EXPANSION in the buffer.
+OLD is text currently in the buffer, perhaps the abbreviation
+or perhaps another expansion that was tried previously.
+ABBREV is the abbreviation we are expanding.
+It is " " if we are copying subsequent words.
+EXPANSION is the expansion substring to be used this time.
+RECORD-CASE-PATTERN, if non-nil, means set `dabbrev--last-case-pattern'
+to record whether we upcased the expansion, downcased it, or did neither.</p>
+<p>
+(fn OLD ABBREV EXPANSION RECORD-CASE-PATTERN)</p>

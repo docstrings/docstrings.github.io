@@ -1,0 +1,59 @@
+<h3>Function: bibtex-mode</h3>
+<p>
+Major mode for editing BibTeX files.</p>
+<p>
+General information on working with BibTeX mode:</p>
+<p>
+Use commands such as 
+Uses keymap `bibtex-mode-map', which is not currently defined.
+M-x bibtex-Book to get a template for a specific entry.
+Then fill in all desired fields using M-x bibtex-next-field to jump from field
+to field.  After having filled in all desired fields in the entry, clean the
+new entry with the command M-x bibtex-clean-entry.</p>
+<p>
+Some features of BibTeX mode are available only by setting the variable
+`bibtex-maintain-sorted-entries' to non-nil.  However, then BibTeX mode
+works only with buffers containing valid (syntactically correct) and sorted
+entries.  This is usually the case, if you have created a buffer completely
+with BibTeX mode and finished every new entry with M-x bibtex-clean-entry.</p>
+<p>
+For third party BibTeX files, call the command M-x bibtex-convert-alien
+to fully take advantage of all features of BibTeX mode.</p>
+<p>
+
+Special information:</p>
+<p>
+A command such as M-x bibtex-Book outlines the fields for a BibTeX book entry.</p>
+<p>
+The names of optional fields start with the string OPT, and are thus ignored
+by BibTeX.  The names of alternative fields from which only one is required
+start with the string ALT.  The OPT or ALT string may be removed from
+the name of a field with M-x bibtex-remove-OPT-or-ALT.
+M-x bibtex-make-field inserts a new field after the current one.
+M-x bibtex-kill-field kills the current field entirely.
+M-x bibtex-yank yanks the last recently killed field after the current field.
+M-x bibtex-remove-delimiters removes the double-quotes or braces around the text of the current field.
+M-x bibtex-empty-field replaces the text of the current field with the default "" or {}.
+M-x bibtex-find-text moves point to the end of the current field.
+M-x completion-at-point completes word fragment before point according to context.</p>
+<p>
+The command M-x bibtex-clean-entry cleans the current entry, i.e. it removes OPT/ALT
+from the names of all non-empty optional or alternative fields, checks that
+no required fields are empty, and does some formatting dependent on the value
+of `bibtex-entry-format'.  Furthermore, it can automatically generate a key
+for the BibTeX entry, see `bibtex-generate-autokey'.
+Note: some functions in BibTeX mode depend on entries being in a special
+format (all fields beginning on separate lines), so it is usually a bad
+idea to remove `realign' from `bibtex-entry-format'.</p>
+<p>
+BibTeX mode supports Imenu and hideshow minor mode (`hs-minor-mode').</p>
+<p>
+----------------------------------------------------------
+Entry to BibTeX mode calls the value of `bibtex-mode-hook'
+if that value is non-nil.</p>
+<p>
+
+Uses keymap `bibtex-mode-map', which is not currently defined.</p>
+<p>
+
+(fn)</p>

@@ -1,0 +1,19 @@
+<h3>Function: align</h3>
+<p>
+Attempt to align a region based on a set of alignment rules.
+BEG and END mark the region.  If BEG and END are specifically set to
+nil (this can only be done programmatically), the beginning and end of
+the current alignment section will be calculated based on the location
+of point, and the value of `align-region-separate' (or possibly each
+rule's `separate' attribute).</p>
+<p>
+If SEPARATE is non-nil, it overrides the value of
+`align-region-separate' for all rules, except those that have their
+`separate' attribute set.</p>
+<p>
+RULES and EXCLUDE-RULES, if either is non-nil, will replace the
+default rule lists defined in `align-rules-list' and
+`align-exclude-rules-list'.  See `align-rules-list' for more details
+on the format of these lists.</p>
+<p>
+(fn BEG END &optional SEPARATE RULES EXCLUDE-RULES)</p>

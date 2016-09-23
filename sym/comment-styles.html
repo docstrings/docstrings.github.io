@@ -1,0 +1,42 @@
+<h3>Variable: comment-styles</h3>
+<p>
+Comment region style definitions.
+Each style is defined with a form (STYLE . (MULTI ALIGN EXTRA INDENT DOC)).
+DOC should succinctly describe the style.
+STYLE should be a mnemonic symbol.
+MULTI specifies that comments are allowed to span multiple lines.
+  e.g. in C it comments regions as
+     /* blabla
+      * bli */
+  rather than
+     /* blabla */
+     /* bli */
+  if `comment-end' is empty, this has no effect.</p>
+<p>
+ALIGN specifies that the `comment-end' markers should be aligned.
+  e.g. in C it comments regions as
+     /* blabla */
+     /* bli    */
+  rather than
+     /* blabla */
+     /* bli */
+  if `comment-end' is empty, this has no effect, unless EXTRA is also set,
+  in which case the comment gets wrapped in a box.</p>
+<p>
+EXTRA specifies that an extra line should be used before and after the
+  region to comment (to put the `comment-end' and `comment-start').
+  e.g. in C it comments regions as
+     /*
+      * blabla
+      * bli
+      */
+  rather than
+     /* blabla
+      * bli */
+  if the comment style is not multi line, this has no effect, unless ALIGN
+  is also set, in which case the comment gets wrapped in a box.</p>
+<p>
+INDENT specifies that the `comment-start' markers should not be put at the
+  left margin but at the current indentation of the region to comment.
+If INDENT is `multi-char', that means indent multi-character
+  comment starters, but not one-character comment starters.</p>

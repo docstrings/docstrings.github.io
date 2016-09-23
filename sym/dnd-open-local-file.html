@@ -1,0 +1,11 @@
+<h3>Function: dnd-open-local-file</h3>
+<p>
+Open a local file.
+The file is opened in the current window, or a new window if
+`dnd-open-file-other-window' is set.  URI is the url for the file,
+and must have the format file:file-name or file:///file-name.
+The last / in file:/// is part of the file name.  If the system
+natively supports unc file names, then remote urls of the form
+file://server-name/file-name will also be handled by this function.
+An alternative for systems that do not support unc file names is
+`dnd-open-remote-url'. ACTION is ignored.</p>

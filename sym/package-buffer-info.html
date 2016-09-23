@@ -1,0 +1,17 @@
+<h3>Function: package-buffer-info</h3>
+<p>
+Return a vector describing the package in the current buffer.
+The vector has the form</p>
+<p>
+   [FILENAME REQUIRES DESCRIPTION VERSION COMMENTARY]</p>
+<p>
+FILENAME is the file name, a string, sans the ".el" extension.
+REQUIRES is a list of requirements, each requirement having the
+ form (NAME VER); NAME is a string and VER is a version list.
+DESCRIPTION is the package description, a string.
+VERSION is the version, a string.
+COMMENTARY is the commentary section, a string, or nil if none.</p>
+<p>
+If the buffer does not contain a conforming package, signal an
+error.  If there is a package, narrow the buffer to the file's
+boundaries.</p>

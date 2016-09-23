@@ -1,0 +1,20 @@
+<h3>Function: comint-update-fence</h3>
+<p>
+Update read-only status of newline before point.
+The `fence' read-only property is used to indicate that a newline
+is read-only for no other reason than to "fence off" a
+following front-sticky read-only region.  This is used to
+implement comint read-only prompts.  If the text after a newline
+changes, the read-only status of that newline may need updating.
+That is what this function does.</p>
+<p>
+This function does nothing if point is not at the beginning of a
+line, or is at the beginning of the accessible portion of the buffer.
+Otherwise, if the character after point has a front-sticky
+read-only property, then the preceding newline is given a
+read-only property of `fence', unless it already is read-only.
+If the character after point does not have a front-sticky
+read-only property, any read-only property of `fence' on the
+preceding newline is removed.</p>
+<p>
+(fn)</p>

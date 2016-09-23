@@ -1,0 +1,19 @@
+<h3>Function: accept-process-output</h3>
+<p>
+Allow any pending output from subprocesses to be read by Emacs.
+It is read into the process' buffers or given to their filter functions.
+Non-nil arg PROCESS means do not return until some output has been received
+from PROCESS.</p>
+<p>
+Non-nil second arg SECONDS and third arg MILLISEC are number of seconds
+and milliseconds to wait; return after that much time whether or not
+there is any subprocess output.  If SECONDS is a floating point number,
+it specifies a fractional number of seconds to wait.
+The MILLISEC argument is obsolete and should be avoided.</p>
+<p>
+If optional fourth arg JUST-THIS-ONE is non-nil, only accept output
+from PROCESS, suspending reading output from other processes.
+If JUST-THIS-ONE is an integer, don't run any timers either.
+Return non-nil if we received any output before the timeout expired.</p>
+<p>
+(fn &optional PROCESS SECONDS MILLISEC JUST-THIS-ONE)</p>

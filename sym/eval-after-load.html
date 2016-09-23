@@ -1,0 +1,31 @@
+<h3>Function: eval-after-load</h3>
+<p>
+Arrange that if FILE is loaded, FORM will be run immediately afterwards.
+If FILE is already loaded, evaluate FORM right now.</p>
+<p>
+If a matching file is loaded again, FORM will be evaluated again.</p>
+<p>
+If FILE is a string, it may be either an absolute or a relative file
+name, and may have an extension (e.g. ".el") or may lack one, and
+additionally may or may not have an extension denoting a compressed
+format (e.g. ".gz").</p>
+<p>
+When FILE is absolute, this first converts it to a true name by chasing
+symbolic links.  Only a file of this name (see next paragraph regarding
+extensions) will trigger the evaluation of FORM.  When FILE is relative,
+a file whose absolute true name ends in FILE will trigger evaluation.</p>
+<p>
+When FILE lacks an extension, a file name with any extension will trigger
+evaluation.  Otherwise, its extension must match FILE's.  A further
+extension for a compressed format (e.g. ".gz") on FILE will not affect
+this name matching.</p>
+<p>
+Alternatively, FILE can be a feature (i.e. a symbol), in which case FORM
+is evaluated at the end of any file that `provide's this feature.
+If the feature is provided when evaluating code not associated with a
+file, FORM is evaluated immediately after the provide statement.</p>
+<p>
+Usually FILE is just a library name like "font-lock" or a feature name
+like 'font-lock.</p>
+<p>
+This function makes or adds to an entry on `after-load-alist'.</p>

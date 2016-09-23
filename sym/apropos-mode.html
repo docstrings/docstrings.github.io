@@ -1,0 +1,30 @@
+<h3>Function: apropos-mode</h3>
+<p>
+Major mode for following hyperlinks in output of apropos commands.</p>
+<p>
+key             binding
+---             -------</p>
+<p>
+TAB		forward-button
+RET		apropos-follow
+ESC		Prefix Command
+SPC		scroll-up-command
+-		negative-argument
+0 .. 9		digit-argument
+<		beginning-of-buffer
+>		end-of-buffer
+?		describe-mode
+g		revert-buffer
+h		describe-mode
+q		quit-window
+DEL		scroll-down-command
+<backtab>	backward-button
+<remap>		Prefix Command</p>
+<p>
+C-M-i		backward-button</p>
+<p>
+</p>
+<p>
+In addition to any hooks its parent mode `special-mode' might have run,
+this mode runs the hook `apropos-mode-hook', as the final step
+during initialization.</p>

@@ -1,0 +1,13 @@
+<h3>Variable: x-sent-selection-functions</h3>
+<p>
+A list of functions to be called when Emacs answers a selection request.
+The functions are called with three arguments:
+  - the selection name (typically `PRIMARY', `SECONDARY', or `CLIPBOARD');
+  - the selection-type which Emacs was asked to convert the
+    selection into before sending (for example, `STRING' or `LENGTH');
+  - a flag indicating success or failure for responding to the request.
+We might have failed (and declined the request) for any number of reasons,
+including being asked for a selection that we no longer own, or being asked
+to convert into a type that we don't know about or that is inappropriate.
+This hook doesn't let you change the behavior of Emacs's selection replies,
+it merely informs you that they have happened.</p>

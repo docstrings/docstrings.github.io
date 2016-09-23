@@ -1,0 +1,11 @@
+<h3>Variable: magic-mode-alist</h3>
+<p>
+Alist of buffer beginnings vs. corresponding major mode functions.
+Each element looks like (REGEXP . FUNCTION) or (MATCH-FUNCTION . FUNCTION).
+After visiting a file, if REGEXP matches the text at the beginning of the
+buffer, or calling MATCH-FUNCTION returns non-nil, `normal-mode' will
+call FUNCTION rather than allowing `auto-mode-alist' to decide the buffer's
+major mode.</p>
+<p>
+If FUNCTION is nil, then it is not called.  (That is a way of saying
+"allow `auto-mode-alist' to decide for these files.")</p>

@@ -1,0 +1,18 @@
+<h3>Function: landmark</h3>
+<p>
+Start or resume an Landmark game.
+If a game is in progress, this command allows you to resume it.
+Here is the relation between prefix args and game options:</p>
+<p>
+prefix arg | robot is auto-started | weights are saved from last game
+---------------------------------------------------------------------
+none / 1   | yes                   | no
+       2   | yes                   | yes
+       3   | no                    | yes
+       4   | no                    | no</p>
+<p>
+You start by moving to a square and typing M-x landmark-start-robot,
+if you did not use a prefix arg to ask for automatic start.
+Use C-h m for more info.</p>
+<p>
+(fn PARG)</p>

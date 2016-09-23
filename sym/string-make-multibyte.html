@@ -1,0 +1,13 @@
+<h3>Function: string-make-multibyte</h3>
+<p>
+Return the multibyte equivalent of STRING.
+If STRING is unibyte and contains non-ASCII characters, the function
+`unibyte-char-to-multibyte' is used to convert each unibyte character
+to a multibyte character.  In this case, the returned string is a
+newly created string with no text properties.  If STRING is multibyte
+or entirely ASCII, it is returned unchanged.  In particular, when
+STRING is unibyte and entirely ASCII, the returned string is unibyte.
+(When the characters are all ASCII, Emacs primitives will treat the
+string the same way whether it is unibyte or multibyte.)</p>
+<p>
+(fn STRING)</p>

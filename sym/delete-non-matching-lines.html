@@ -1,0 +1,24 @@
+<h3>Function: delete-non-matching-lines</h3>
+<p>
+Delete all lines except those containing matches for REGEXP.
+A match split across lines preserves all the lines it lies in.
+When called from Lisp (and usually interactively as well, see below)
+applies to all lines starting after point.</p>
+<p>
+If REGEXP contains upper case characters (excluding those preceded by `\')
+and `search-upper-case' is non-nil, the matching is case-sensitive.</p>
+<p>
+Second and third arg RSTART and REND specify the region to operate on.
+This command operates on (the accessible part of) all lines whose
+accessible part is entirely contained in the region determined by RSTART
+and REND.  (A newline ending a line counts as part of that line.)</p>
+<p>
+Interactively, in Transient Mark mode when the mark is active, operate
+on all lines whose accessible part is entirely contained in the region.
+Otherwise, the command applies to all lines starting after point.
+When calling this function from Lisp, you can pretend that it was
+called interactively by passing a non-nil INTERACTIVE argument.</p>
+<p>
+This function starts looking for the next match from the end of
+the previous match.  Hence, it ignores matches that overlap
+a previously found match.</p>

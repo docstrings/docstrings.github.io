@@ -1,0 +1,17 @@
+<h3>Variable: lisp-lambda-list-keyword-parameter-alignment</h3>
+<p>
+Whether to vertically align lambda-list keyword parameters together.
+If nil (the default), the parameters are aligned
+with their corresponding keyword, plus the value of
+`lisp-lambda-list-keyword-parameter-indentation', like this:</p>
+<p>
+(defun foo (arg1 arg2 &key key1 key2
+                        key3 key4)
+  #|...|#)</p>
+<p>
+If non-nil, alignment is done with the first parameter
+(or falls back to the previous case), as in:</p>
+<p>
+(defun foo (arg1 arg2 &key key1 key2
+                            key3 key4)
+  #|...|#)</p>

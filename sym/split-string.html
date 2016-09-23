@@ -1,0 +1,25 @@
+<h3>Function: split-string</h3>
+<p>
+Split STRING into substrings bounded by matches for SEPARATORS.</p>
+<p>
+The beginning and end of STRING, and each match for SEPARATORS, are
+splitting points.  The substrings matching SEPARATORS are removed, and
+the substrings between the splitting points are collected as a list,
+which is returned.</p>
+<p>
+If SEPARATORS is non-nil, it should be a regular expression matching text
+which separates, but is not part of, the substrings.  If nil it defaults to
+`split-string-default-separators', normally "[ \f\t\n\r\v]+", and
+OMIT-NULLS is forced to t.</p>
+<p>
+If OMIT-NULLS is t, zero-length substrings are omitted from the list (so
+that for the default value of SEPARATORS leading and trailing whitespace
+are effectively trimmed).  If nil, all zero-length substrings are retained,
+which correctly parses CSV format, for example.</p>
+<p>
+Note that the effect of `(split-string STRING)' is the same as
+`(split-string STRING split-string-default-separators t)'.  In the rare
+case that you wish to retain zero-length substrings when splitting on
+whitespace, use `(split-string STRING split-string-default-separators)'.</p>
+<p>
+Modifies the match data; use `save-match-data' if necessary.</p>

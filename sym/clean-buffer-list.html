@@ -1,0 +1,14 @@
+<h3>Function: clean-buffer-list</h3>
+<p>
+Kill old buffers that have not been displayed recently.
+The relevant variables are `clean-buffer-list-delay-general',
+`clean-buffer-list-delay-special', `clean-buffer-list-kill-buffer-names',
+`clean-buffer-list-kill-never-buffer-names',
+`clean-buffer-list-kill-regexps' and
+`clean-buffer-list-kill-never-regexps'.
+While processing buffers, this procedure displays messages containing
+the current date/time, buffer name, how many seconds ago it was
+displayed (can be nil if the buffer was never displayed) and its
+lifetime, i.e., its "age" when it will be purged.</p>
+<p>
+(fn)</p>

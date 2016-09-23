@@ -1,0 +1,14 @@
+<h3>Function: x-selection</h3>
+<p>
+Return the value of an X Windows selection.
+The argument TYPE (default `PRIMARY') says which selection,
+and the argument DATA-TYPE (default `STRING') says
+how to convert the data.</p>
+<p>
+TYPE may be any symbol (but nil stands for `PRIMARY').  However,
+only a few symbols are commonly used.  They conventionally have
+all upper-case names.  The most often used ones, in addition to
+`PRIMARY', are `SECONDARY' and `CLIPBOARD'.</p>
+<p>
+DATA-TYPE is usually `STRING', but can also be one of the symbols
+in `selection-converter-alist', which see.</p>

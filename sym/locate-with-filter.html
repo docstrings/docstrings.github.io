@@ -1,0 +1,17 @@
+<h3>Function: locate-with-filter</h3>
+<p>
+Run the executable program `locate' with a filter.
+This function is similar to the function `locate', which see.
+The difference is that, when invoked interactively, the present function
+prompts for both SEARCH-STRING and FILTER.  It passes SEARCH-STRING
+to the locate executable program.  It produces a `*Locate*' buffer
+that lists only those lines in the output of the locate program that
+contain a match for the regular expression FILTER; this is often useful
+to constrain a big search.</p>
+<p>
+ARG is the interactive prefix arg, which has the same effect as in `locate'.</p>
+<p>
+When called from Lisp, this function is identical with `locate',
+except that FILTER is not optional.</p>
+<p>
+(fn SEARCH-STRING FILTER &optional ARG)</p>

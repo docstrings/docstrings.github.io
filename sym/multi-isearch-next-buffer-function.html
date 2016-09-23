@@ -1,0 +1,22 @@
+<h3>Variable: multi-isearch-next-buffer-function</h3>
+<p>
+Function to call to get the next buffer to search.</p>
+<p>
+When this variable is set to a function that returns a buffer, then
+after typing another C-s or C-r at a failing search, the search goes
+to the next buffer in the series and continues searching for the
+next occurrence.</p>
+<p>
+This function should return the next buffer (it doesn't need to switch
+to it), or nil if it can't find the next buffer (when it reaches the
+end of the search space).</p>
+<p>
+The first argument of this function is the current buffer where the
+search is currently searching.  It defines the base buffer relative to
+which this function should find the next buffer.  When the isearch
+direction is backward (when `isearch-forward' is nil), this function
+should return the previous buffer to search.</p>
+<p>
+If the second argument of this function WRAP is non-nil, then it
+should return the first buffer in the series; and for the backward
+search, it should return the last buffer in the series.</p>

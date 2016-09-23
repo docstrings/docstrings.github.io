@@ -1,0 +1,17 @@
+<h3>Function: View-search-regexp-forward</h3>
+<p>
+Search forward for first (or prefix Nth) occurrence of REGEXP in View mode.</p>
+<p>
+Displays line found at center of window.  Sets mark at starting position and
+pushes mark ring.</p>
+<p>
+Characters @ and ! are special at the beginning of REGEXP.  They modify
+the search rather than become part of the pattern searched for.
+@ means search all the buffer i.e. start search at the beginning of buffer.
+! means search for a line that contains no match for the pattern.
+If REGEXP is empty or only consist of these control characters, then
+an earlier remembered REGEXP is used, otherwise REGEXP is remembered
+for use by later search commands.</p>
+<p>
+The variable `view-highlight-face' controls the face that is used
+for highlighting the match that is found.</p>

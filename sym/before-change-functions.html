@@ -1,0 +1,15 @@
+<h3>Variable: before-change-functions</h3>
+<p>
+List of functions to call before each text change.
+Two arguments are passed to each function: the positions of
+the beginning and end of the range of old text to be changed.
+(For an insertion, the beginning and end are at the same place.)
+No information is given about the length of the text after the change.</p>
+<p>
+Buffer changes made while executing the `before-change-functions'
+don't call any before-change or after-change functions.
+That's because `inhibit-modification-hooks' is temporarily set non-nil.</p>
+<p>
+If an unhandled error happens in running these functions,
+the variable's value remains nil.  That prevents the error
+from happening repeatedly and making Emacs nonfunctional.</p>

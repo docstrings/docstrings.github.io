@@ -1,0 +1,14 @@
+<h3>Variable: imagemagick-types-inhibit</h3>
+<p>
+List of ImageMagick types that should never be treated as images.
+This should be a list of symbols, each of which should be one of
+the ImageMagick types listed by `imagemagick-types'.  The listed
+image types are not registered by `imagemagick-register-types'.</p>
+<p>
+If the value is t, inhibit the use of ImageMagick for images.</p>
+<p>
+If you change this without using customize, you must call
+`imagemagick-register-types' afterwards.</p>
+<p>
+If Emacs is compiled without ImageMagick support, this variable
+has no effect.</p>

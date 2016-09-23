@@ -1,0 +1,18 @@
+<h3>Variable: custom-face-attributes</h3>
+<p>
+Alist of face attributes.</p>
+<p>
+The elements are of the form (KEY TYPE PRE-FILTER POST-FILTER),
+where KEY is the name of the attribute, TYPE is a widget type for
+editing the attribute, PRE-FILTER is a function to make the attribute's
+value suitable for the customization widget, and POST-FILTER is a
+function to make the customized value suitable for storing.  PRE-FILTER
+and POST-FILTER are optional.</p>
+<p>
+The PRE-FILTER should take a single argument, the attribute value as
+stored, and should return a value for customization (using the
+customization type TYPE).</p>
+<p>
+The POST-FILTER should also take a single argument, the value after
+being customized, and should return a value suitable for setting the
+given face attribute.</p>

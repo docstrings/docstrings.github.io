@@ -1,0 +1,19 @@
+<h3>Function: window--side-check</h3>
+<p>
+Check the side window configuration of FRAME.
+FRAME defaults to the selected frame.</p>
+<p>
+A valid side window configuration preserves the following two
+invariants:</p>
+<p>
+- If there exists a window whose window-side parameter is
+  non-nil, there must exist at least one live window whose
+  window-side parameter is nil.</p>
+<p>
+- If a window W has a non-nil window-side parameter (i) it must
+  have a parent window and that parent's window-side parameter
+  must be either nil or the same as for W, and (ii) any child
+  window of W must have the same window-side parameter as W.</p>
+<p>
+If the configuration is invalid, reset the window-side parameters
+of all windows on FRAME to nil.</p>

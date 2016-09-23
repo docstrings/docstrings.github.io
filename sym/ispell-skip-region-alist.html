@@ -1,0 +1,9 @@
+<h3>Variable: ispell-skip-region-alist</h3>
+<p>
+Alist expressing beginning and end of regions not to spell check.
+The alist key must be a regular expression.
+Valid forms include:
+  (KEY) - just skip the key.
+  (KEY . REGEXP) - skip to the end of REGEXP.  REGEXP may be string or symbol.
+  (KEY REGEXP) - skip to end of REGEXP.  REGEXP must be a string.
+  (KEY FUNCTION ARGS) - FUNCTION called with ARGS returns end of region.</p>

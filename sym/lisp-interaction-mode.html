@@ -1,0 +1,30 @@
+<h3>Function: lisp-interaction-mode</h3>
+<p>
+Major mode for typing and evaluating Lisp forms.
+Like Lisp mode except that M-x eval-print-last-sexp evals the Lisp expression
+before point, and prints its value into the buffer, advancing point.
+Note that printing is controlled by `eval-expression-print-length'
+and `eval-expression-print-level'.</p>
+<p>
+Commands:
+Delete converts tabs to spaces as it moves back.
+Paragraphs are separated only by blank lines.
+Semicolons start comments.</p>
+<p>
+key             binding
+---             -------</p>
+<p>
+C-j		eval-print-last-sexp
+ESC		Prefix Command
+DEL		backward-delete-char-untabify</p>
+<p>
+C-M-i		completion-at-point
+C-M-q		indent-pp-sexp
+C-M-x		eval-defun</p>
+<p>
+C-M-q		indent-sexp
+  (that binding is currently shadowed by another mode)</p>
+<p>
+
+Entry to this mode calls the value of `lisp-interaction-mode-hook'
+if that value is non-nil.</p>

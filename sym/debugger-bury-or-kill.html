@@ -1,0 +1,26 @@
+<h3>Variable: debugger-bury-or-kill</h3>
+<p>
+What to do with the debugger buffer when exiting `debug'.
+The value affects the behavior of operations on any window
+previously showing the debugger buffer.</p>
+<p>
+`nil' means that if its window is not deleted when exiting the
+  debugger, invoking `switch-to-prev-buffer' will usually show
+  the debugger buffer again.</p>
+<p>
+`append' means that if the window is not deleted, the debugger
+  buffer moves to the end of the window's previous buffers so
+  it's less likely that a future invocation of
+  `switch-to-prev-buffer' will switch to it.  Also, it moves the
+  buffer to the end of the frame's buffer list.</p>
+<p>
+`bury' means that if the window is not deleted, its buffer is
+  removed from the window's list of previous buffers.  Also, it
+  moves the buffer to the end of the frame's buffer list.  This
+  value provides the most reliable remedy to not have
+  `switch-to-prev-buffer' switch to the debugger buffer again
+  without killing the buffer.</p>
+<p>
+`kill' means to kill the debugger buffer.</p>
+<p>
+The value used here is passed to `quit-restore-window'.</p>

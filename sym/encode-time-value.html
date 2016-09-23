@@ -1,0 +1,8 @@
+<h3>Function: encode-time-value</h3>
+<p>
+Encode HIGH, LOW, MICRO, and PICO into a time value of type TYPE.
+Type 0 is the cons cell (HIGH . LOW), type 1 is the list (HIGH LOW),
+type 2 is (HIGH LOW MICRO), and type 3 is (HIGH LOW MICRO PICO).</p>
+<p>
+For backward compatibility, if only four arguments are given,
+it is assumed that PICO was omitted and should be treated as zero.</p>

@@ -1,0 +1,24 @@
+<h3>Function: asm-mode</h3>
+<p>
+Major mode for editing typical assembler code.
+Features a private abbrev table and the following bindings:</p>
+<p>
+M-x asm-colon	outdent a preceding label, tab to next tab stop.
+M-i	tab to next tab stop.
+M-x asm-newline	newline, then tab to next tab stop.
+M-x asm-comment	smart placement of assembler comments.</p>
+<p>
+The character used for making comments is set by the variable
+`asm-comment-char' (which defaults to `?\;').</p>
+<p>
+Alternatively, you may set this variable in `asm-mode-set-comment-hook',
+which is called near the beginning of mode initialization.</p>
+<p>
+Turning on Asm mode runs the hook `asm-mode-hook' at the end of initialization.</p>
+<p>
+Special commands:</p>
+<p>
+Uses keymap `asm-mode-map', which is not currently defined.</p>
+<p>
+
+(fn)</p>

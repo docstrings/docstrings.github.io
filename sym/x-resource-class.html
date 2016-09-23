@@ -1,0 +1,11 @@
+<h3>Variable: x-resource-class</h3>
+<p>
+The class Emacs uses to look up X resources.
+`x-get-resource' uses this as the first component of the instance class
+when requesting resource values.</p>
+<p>
+Emacs initially sets `x-resource-class' to "Emacs".</p>
+<p>
+Setting this variable permanently is not a reasonable thing to do,
+but binding this variable locally around a call to `x-get-resource'
+is a reasonable practice.  See also the variable `x-resource-name'.</p>

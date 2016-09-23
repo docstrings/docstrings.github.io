@@ -1,0 +1,32 @@
+<h3>Variable: url-privacy-level</h3>
+<p>
+How private you want your requests to be.
+HTTP has header fields for various information about the user, including
+operating system information, email addresses, the last page you visited, etc.
+This variable controls how much of this information is sent.</p>
+<p>
+This should a symbol or a list.
+Valid values if a symbol are:
+none     -- send all information
+low      -- don't send the last location
+high     -- don't send the email address or last location
+paranoid -- don't send anything</p>
+<p>
+If a list, this should be a list of symbols of what NOT to send.
+Valid symbols are:
+email    -- the email address
+os       -- the operating system info
+lastloc  -- the last location
+agent    -- do not send the User-Agent string
+cookies  -- never accept HTTP cookies</p>
+<p>
+Samples:</p>
+<p>
+ (setq url-privacy-level 'high)
+ (setq url-privacy-level '(email lastloc))    ;; equivalent to 'high
+ (setq url-privacy-level '(os))</p>
+<p>
+::NOTE::
+This variable controls several other variables and is _NOT_ automatically
+updated.  Call the function `url-setup-privacy-info' after modifying this
+variable.</p>

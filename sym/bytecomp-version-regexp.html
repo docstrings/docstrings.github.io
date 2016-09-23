@@ -1,0 +1,7 @@
+<h3>Variable: bytecomp-version-regexp</h3>
+<p>
+Regular expression matching safe to load compiled Lisp files.
+When Emacs loads a compiled Lisp file, it reads the first 512 bytes
+from the file, and matches them against this regular expression.
+When the regular expression matches, the file is considered to be safe
+to load.  See also `load-dangerous-libraries'.</p>

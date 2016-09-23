@@ -1,0 +1,25 @@
+<h3>Function: conf-space-mode</h3>
+<p>
+Conf Mode starter for space separated conf files.
+"Assignments" are with ` '.  Keywords before the parameters are
+recognized according to the variable `conf-space-keywords-alist'.
+Alternatively, you can specify a value for the file local variable
+`conf-space-keywords'.
+Use the function `conf-space-keywords' if you want to specify keywords
+in an interactive fashion instead.</p>
+<p>
+For details see `conf-mode'.  Example:</p>
+<p>
+# Conf mode font-locks this right with M-x conf-space-mode (space separated)</p>
+<p>
+image/jpeg			jpeg jpg jpe
+image/png			png
+image/tiff			tiff tif</p>
+<p>
+# Or with keywords (from a recognized file name):
+class desktop
+# Standard multimedia devices
+add /dev/audio		desktop
+add /dev/mixer		desktop</p>
+<p>
+(fn)</p>

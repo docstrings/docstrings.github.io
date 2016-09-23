@@ -1,0 +1,25 @@
+<h3>Variable: inhibit-iso-escape-detection</h3>
+<p>
+If non-nil, Emacs ignores ISO-2022 escape sequences during code detection.</p>
+<p>
+When Emacs reads text, it tries to detect how the text is encoded.
+This code detection is sensitive to escape sequences.  If Emacs sees
+a valid ISO-2022 escape sequence, it assumes the text is encoded in one
+of the ISO2022 encodings, and decodes text by the corresponding coding
+system (e.g. `iso-2022-7bit').</p>
+<p>
+However, there may be a case that you want to read escape sequences in
+a file as is.  In such a case, you can set this variable to non-nil.
+Then the code detection will ignore any escape sequences, and no text is
+detected as encoded in some ISO-2022 encoding.  The result is that all
+escape sequences become visible in a buffer.</p>
+<p>
+The default value is nil, and it is strongly recommended not to change
+it.  That is because many Emacs Lisp source files that contain
+non-ASCII characters are encoded by the coding system `iso-2022-7bit'
+in Emacs's distribution, and they won't be decoded correctly on
+reading if you suppress escape sequence detection.</p>
+<p>
+The other way to read escape sequences in a file without decoding is
+to explicitly specify some coding system that doesn't use ISO-2022
+escape sequence (e.g., `latin-1') on reading by C-x RET c.</p>

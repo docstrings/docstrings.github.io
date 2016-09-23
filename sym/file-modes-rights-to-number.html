@@ -1,0 +1,9 @@
+<h3>Function: file-modes-rights-to-number</h3>
+<p>
+Convert a symbolic mode string specification to an equivalent number.
+RIGHTS is the symbolic mode spec, it should match "([+=-][rwxXstugo]*)+".
+WHO-MASK is the bit-mask specifying the category of users to which to
+apply the access permissions.  See `file-modes-char-to-who'.
+FROM (or 0 if nil) gives the mode bits on which to base permissions if
+RIGHTS request to add, remove, or set permissions based on existing ones,
+as in "og+rX-w".</p>

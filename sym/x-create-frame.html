@@ -1,0 +1,13 @@
+<h3>Function: x-create-frame</h3>
+<p>
+Make a new X window, which is called a "frame" in Emacs terms.
+Return an Emacs frame object.
+PARMS is an alist of frame parameters.
+If the parameters specify that the frame should not have a minibuffer,
+and do not specify a specific minibuffer window to use,
+then `default-minibuffer-frame' must be a frame whose minibuffer can
+be shared by the new frame.</p>
+<p>
+This function is an internal primitive--use `make-frame' instead.</p>
+<p>
+(fn PARMS)</p>

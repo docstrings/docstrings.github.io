@@ -1,0 +1,12 @@
+<h3>Function: quit-window</h3>
+<p>
+Quit WINDOW and bury its buffer.
+WINDOW must be a live window and defaults to the selected one.
+With prefix argument KILL non-nil, kill the buffer instead of
+burying it.</p>
+<p>
+According to information stored in WINDOW's `quit-restore' window
+parameter either (1) delete WINDOW and its frame, (2) delete
+WINDOW, (3) restore the buffer previously displayed in WINDOW,
+or (4) make WINDOW display some other buffer than the present
+one.  If non-nil, reset `quit-restore' parameter to nil.</p>

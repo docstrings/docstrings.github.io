@@ -1,0 +1,14 @@
+<h3>Function: table-query-dimension</h3>
+<p>
+Return the dimension of the current cell and the current table.
+The result is a list (cw ch tw th c r cells) where cw is the cell
+width, ch is the cell height, tw is the table width, th is the table
+height, c is the number of columns, r is the number of rows and cells
+is the total number of cells.  The cell dimension excludes the cell
+frame while the table dimension includes the table frame.  The columns
+and the rows are counted by the number of cell boundaries.  Therefore
+the number tends to be larger than it appears for the tables with
+non-uniform cell structure (heavily spanned and split).  When optional
+WHERE is provided the cell and table at that location is reported.</p>
+<p>
+(fn &optional WHERE)</p>

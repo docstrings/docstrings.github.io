@@ -1,0 +1,17 @@
+<h3>Function: set-mouse-position</h3>
+<p>
+Move the mouse pointer to the center of character cell (X,Y) in FRAME.
+Coordinates are relative to the frame, not a window,
+so the coordinates of the top left character in the frame
+may be nonzero due to left-hand scroll bars or the menu bar.</p>
+<p>
+The position is given in character cells, where (0, 0) is the
+upper-left corner of the frame, X is the horizontal offset, and Y is
+the vertical offset.</p>
+<p>
+This function is a no-op for an X frame that is not visible.
+If you have just created a frame, you must wait for it to become visible
+before calling this function on it, like this.
+  (while (not (frame-visible-p frame)) (sleep-for .5))</p>
+<p>
+(fn FRAME X Y)</p>

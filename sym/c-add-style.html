@@ -1,0 +1,13 @@
+<h3>Function: c-add-style</h3>
+<p>
+Adds a style to `c-style-alist', or updates an existing one.
+STYLE is a string identifying the style to add or update.  DESCRIPTION
+is an association list describing the style and must be of the form:</p>
+<p>
+  ([BASESTYLE] (VARIABLE . VALUE) [(VARIABLE . VALUE) ...])</p>
+<p>
+See the variable `c-style-alist' for the semantics of BASESTYLE,
+VARIABLE and VALUE.  This function also sets the current style to
+STYLE using `c-set-style' if the optional SET-P flag is non-nil.</p>
+<p>
+(fn STYLE DESCRIPTION &optional SET-P)</p>

@@ -1,0 +1,58 @@
+<h3>Function: vc-state</h3>
+<p>
+Return the version control state of FILE.</p>
+<p>
+A return of nil from this function means we have no information on the
+status of this file.  Otherwise, the value returned is one of:</p>
+<p>
+  'up-to-date        The working file is unmodified with respect to the
+                     latest version on the current branch, and not locked.</p>
+<p>
+  'edited            The working file has been edited by the user.  If
+                     locking is used for the file, this state means that
+                     the current version is locked by the calling user.
+                     This status should *not* be reported for files
+                     which have a changed mtime but the same content
+                     as the repo copy.</p>
+<p>
+  USER               The current version of the working file is locked by
+                     some other USER (a string).</p>
+<p>
+  'needs-update      The file has not been edited by the user, but there is
+                     a more recent version on the current branch stored
+                     in the repository.</p>
+<p>
+  'needs-merge       The file has been edited by the user, and there is also
+                     a more recent version on the current branch stored in
+                     the repository.  This state can only occur if locking
+                     is not used for the file.</p>
+<p>
+  'unlocked-changes  The working version of the file is not locked,
+                     but the working file has been changed with respect
+                     to that version.  This state can only occur for files
+                     with locking; it represents an erroneous condition that
+                     should be resolved by the user (vc-next-action will
+                     prompt the user to do it).</p>
+<p>
+  'added             Scheduled to go into the repository on the next commit.
+                     Often represented by vc-working-revision = "0" in VCSes
+                     with monotonic IDs like Subversion and Mercurial.</p>
+<p>
+  'removed           Scheduled to be deleted from the repository on next commit.</p>
+<p>
+  'conflict          The file contains conflicts as the result of a merge.
+                     For now the conflicts are text conflicts.  In the
+                     future this might be extended to deal with metadata
+                     conflicts too.</p>
+<p>
+  'missing           The file is not present in the file system, but the VC
+                     system still tracks it.</p>
+<p>
+  'ignored           The file showed up in a dir-status listing with a flag
+                     indicating the version-control system is ignoring it,
+                     Note: This property is not set reliably (some VCSes
+                     don't have useful directory-status commands) so assume
+                     that any file with vc-state nil might be ignorable
+                     without VC knowing it.</p>
+<p>
+  'unregistered      The file is not under version control.</p>

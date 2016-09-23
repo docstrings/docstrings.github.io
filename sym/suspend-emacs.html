@@ -1,0 +1,16 @@
+<h3>Function: suspend-emacs</h3>
+<p>
+Stop Emacs and return to superior process.  You can resume later.
+If `cannot-suspend' is non-nil, or if the system doesn't support job
+control, run a subshell instead.</p>
+<p>
+If optional arg STUFFSTRING is non-nil, its characters are stuffed
+to be read as terminal input by Emacs's parent, after suspension.</p>
+<p>
+Before suspending, run the normal hook `suspend-hook'.
+After resumption run the normal hook `suspend-resume-hook'.</p>
+<p>
+Some operating systems cannot stop the Emacs process and resume it later.
+On such systems, Emacs starts a subshell instead of suspending.</p>
+<p>
+(fn &optional STUFFSTRING)</p>

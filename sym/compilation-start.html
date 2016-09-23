@@ -1,0 +1,21 @@
+<h3>Function: compilation-start</h3>
+<p>
+Run compilation command COMMAND (low level interface).
+If COMMAND starts with a cd command, that becomes the `default-directory'.
+The rest of the arguments are optional; for them, nil means use the default.</p>
+<p>
+MODE is the major mode to set in the compilation buffer.  Mode
+may also be t meaning use `compilation-shell-minor-mode' under `comint-mode'.</p>
+<p>
+If NAME-FUNCTION is non-nil, call it with one argument (the mode name)
+to determine the buffer name.  Otherwise, the default is to
+reuses the current buffer if it has the proper major mode,
+else use or create a buffer with name based on the major mode.</p>
+<p>
+If HIGHLIGHT-REGEXP is non-nil, `next-error' will temporarily highlight
+the matching section of the visited source line; the default is to use the
+global value of `compilation-highlight-regexp'.</p>
+<p>
+Returns the compilation buffer created.</p>
+<p>
+(fn COMMAND &optional MODE NAME-FUNCTION HIGHLIGHT-REGEXP)</p>

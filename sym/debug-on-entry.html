@@ -1,0 +1,15 @@
+<h3>Function: debug-on-entry</h3>
+<p>
+Request FUNCTION to invoke debugger each time it is called.</p>
+<p>
+When called interactively, prompt for FUNCTION in the minibuffer.</p>
+<p>
+This works by modifying the definition of FUNCTION.  If you tell the
+debugger to continue, FUNCTION's execution proceeds.  If FUNCTION is a
+normal function or a macro written in Lisp, you can also step through
+its execution.  FUNCTION can also be a primitive that is not a special
+form, in which case stepping is not possible.  Break-on-entry for
+primitive functions only works when that function is called from Lisp.</p>
+<p>
+Use M-x cancel-debug-on-entry to cancel the effect of this command.
+Redefining FUNCTION also cancels it.</p>

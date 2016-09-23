@@ -1,0 +1,16 @@
+<h3>Function: make-directory</h3>
+<p>
+Create the directory DIR and optionally any nonexistent parent dirs.
+If DIR already exists as a directory, signal an error, unless
+PARENTS is non-nil.</p>
+<p>
+Interactively, the default choice of directory to create is the
+current buffer's default directory.  That is useful when you have
+visited a file in a nonexistent directory.</p>
+<p>
+Noninteractively, the second (optional) argument PARENTS, if
+non-nil, says whether to create parent directories that don't
+exist.  Interactively, this happens by default.</p>
+<p>
+If creating the directory or directories fail, an error will be
+raised.</p>

@@ -1,0 +1,15 @@
+<h3>Variable: default-minibuffer-frame</h3>
+<p>
+Minibufferless frames use this frame's minibuffer.</p>
+<p>
+Emacs cannot create minibufferless frames unless this is set to an
+appropriate surrogate.</p>
+<p>
+Emacs consults this variable only when creating minibufferless
+frames; once the frame is created, it sticks with its assigned
+minibuffer, no matter what this variable is set to.  This means that
+this variable doesn't necessarily say anything meaningful about the
+current set of frames, or where the minibuffer is currently being
+displayed.</p>
+<p>
+This variable is local to the current terminal and cannot be buffer-local.</p>

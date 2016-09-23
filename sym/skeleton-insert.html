@@ -1,0 +1,65 @@
+<h3>Function: skeleton-insert</h3>
+<p>
+Insert the complex statement skeleton SKELETON describes very concisely.</p>
+<p>
+With optional second argument REGIONS, wrap first interesting point
+(`_') in skeleton around next REGIONS words, if REGIONS is positive.
+If REGIONS is negative, wrap REGIONS preceding interregions into first
+REGIONS interesting positions (successive `_'s) in skeleton.</p>
+<p>
+An interregion is the stretch of text between two contiguous marked
+points.  If you marked A B C [] (where [] is the cursor) in
+alphabetical order, the 3 interregions are simply the last 3 regions.
+But if you marked B A [] C, the interregions are B-A, A-[], []-C.</p>
+<p>
+The optional third argument STR, if specified, is the value for the
+variable `str' within the skeleton.  When this is non-nil, the
+interactor gets ignored, and this should be a valid skeleton element.</p>
+<p>
+SKELETON is made up as (INTERACTOR ELEMENT ...).  INTERACTOR may be nil if
+not needed, a prompt-string or an expression for complex read functions.</p>
+<p>
+If ELEMENT is a string or a character it gets inserted (see also
+`skeleton-transformation-function').  Other possibilities are:</p>
+<p>
+	\n	go to next line and indent according to mode
+	_	interesting point, interregion here
+	-	interesting point, no interregion interaction, overrides
+		interesting point set by _
+	>	indent line (or interregion if > _) according to major mode
+	@	add position to `skeleton-positions'
+	&	do next ELEMENT if previous moved point
+	|	do next ELEMENT if previous didn't move point
+	-num	delete num preceding characters (see `skeleton-untabify')
+	resume:	skipped, continue here if quit is signaled
+	nil	skipped</p>
+<p>
+After termination, point will be positioned at the last occurrence of -
+or at the first occurrence of _ or at the end of the inserted text.</p>
+<p>
+Further elements can be defined via `skeleton-further-elements'.  ELEMENT may
+itself be a SKELETON with an INTERACTOR.  The user is prompted repeatedly for
+different inputs.  The SKELETON is processed as often as the user enters a
+non-empty string.  C-g terminates skeleton insertion, but
+continues after `resume:' and positions at `_' if any.  If INTERACTOR in such
+a subskeleton is a prompt-string which contains a ".. %s .." it is
+formatted with `skeleton-subprompt'.  Such an INTERACTOR may also be a list of
+strings with the subskeleton being repeated once for each string.</p>
+<p>
+Quoted Lisp expressions are evaluated for their side-effects.
+Other Lisp expressions are evaluated and the value treated as above.
+Note that expressions may not return t since this implies an
+endless loop.  Modes can define other symbols by locally setting them
+to any valid skeleton element.  The following local variables are
+available:</p>
+<p>
+	str	first time: read a string according to INTERACTOR
+		then: insert previously read string once more
+	help	help-form during interaction with the user or nil
+	input	initial input (string or cons with index) while reading str
+	v1, v2	local variables for memorizing anything you want</p>
+<p>
+When done with skeleton, but before going back to `_'-point call
+`skeleton-end-hook' if that is non-nil.</p>
+<p>
+(fn SKELETON &optional REGIONS STR)</p>

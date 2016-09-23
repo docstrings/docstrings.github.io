@@ -1,0 +1,43 @@
+<h3>Variable: reference-point-alist</h3>
+<p>
+Alist of symbols vs integer codes of glyph reference points.
+A glyph reference point symbol is to be used to specify a composition
+rule in COMPONENTS argument to such functions as `compose-region'.</p>
+<p>
+The meaning of glyph reference point codes is as follows:</p>
+<p>
+    0----1----2 <---- ascent	0:tl or top-left
+    |         |			1:tc or top-center
+    |         |			2:tr or top-right
+    |         |			3:Bl or base-left     9:cl or center-left
+    9   10   11 <---- center	4:Bc or base-center  10:cc or center-center
+    |         |			5:Br or base-right   11:cr or center-right
+  --3----4----5-- <-- baseline	6:bl or bottom-left
+    |         |			7:bc or bottom-center
+    6----7----8 <---- descent	8:br or bottom-right</p>
+<p>
+Glyph reference point symbols are to be used to specify composition
+rule of the form (GLOBAL-REF-POINT . NEW-REF-POINT), where
+GLOBAL-REF-POINT is a reference point in the overall glyphs already
+composed, and NEW-REF-POINT is a reference point in the new glyph to
+be added.</p>
+<p>
+For instance, if GLOBAL-REF-POINT is `br' (bottom-right) and
+NEW-REF-POINT is `tc' (top-center), the overall glyph is updated as
+follows (the point `*' corresponds to both reference points):</p>
+<p>
+    +-------+--+ <--- new ascent
+    |       |  |
+    | global|  |
+    | glyph |  |
+ -- |       |  |-- <--- baseline (doesn't change)
+    +----+--*--+
+    |    | new |
+    |    |glyph|
+    +----+-----+ <--- new descent</p>
+<p>
+A composition rule may have the form (GLOBAL-REF-POINT
+NEW-REF-POINT XOFF YOFF), where XOFF and YOFF specify how much
+to shift NEW-REF-POINT from GLOBAL-REF-POINT.  In this case, XOFF
+and YOFF are integers in the range -100..100 representing the
+shifting percentage against the font size.</p>

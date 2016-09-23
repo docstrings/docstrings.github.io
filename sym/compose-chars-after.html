@@ -1,0 +1,14 @@
+<h3>Function: compose-chars-after</h3>
+<p>
+Compose characters in current buffer after position POS.</p>
+<p>
+It looks up the char-table `composition-function-table' (which
+see) by a character at POS, and compose characters after POS
+according to the contents of `composition-function-table'.</p>
+<p>
+Optional 2nd arg LIMIT, if non-nil, limits characters to compose.</p>
+<p>
+Optional 3rd arg OBJECT, if non-nil, is a string that contains the
+text to compose.  In that case, POS and LIMIT index into the string.</p>
+<p>
+This function is the default value of `compose-chars-after-function'.</p>

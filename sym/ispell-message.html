@@ -1,0 +1,22 @@
+<h3>Function: ispell-message</h3>
+<p>
+Check the spelling of a mail message or news post.
+Don't check spelling of message headers except the Subject field.
+Don't check included messages.</p>
+<p>
+To abort spell checking of a message region and send the message anyway,
+use the `x' command.  (Any subsequent regions will be checked.)
+The `X' command aborts sending the message so that you can edit the buffer.</p>
+<p>
+To spell-check whenever a message is sent, include the appropriate lines
+in your init file:
+   (add-hook 'message-send-hook 'ispell-message)  ;; GNUS 5
+   (add-hook 'news-inews-hook 'ispell-message)    ;; GNUS 4
+   (add-hook 'mail-send-hook  'ispell-message)
+   (add-hook 'mh-before-send-letter-hook 'ispell-message)</p>
+<p>
+You can bind this to the key C-c i in GNUS or mail by adding to
+`news-reply-mode-hook' or `mail-mode-hook' the following lambda expression:
+   (function (lambda () (local-set-key "\C-ci" 'ispell-message)))</p>
+<p>
+(fn)</p>

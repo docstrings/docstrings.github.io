@@ -1,0 +1,33 @@
+<h3>Function: charset-info</h3>
+<p>
+Return a vector of information of CHARSET.
+This function is provided for backward compatibility.</p>
+<p>
+The elements of the vector are:
+	CHARSET-ID, BYTES, DIMENSION, CHARS, WIDTH, DIRECTION,
+	LEADING-CODE-BASE, LEADING-CODE-EXT,
+	ISO-FINAL-CHAR, ISO-GRAPHIC-PLANE,
+	REVERSE-CHARSET, SHORT-NAME, LONG-NAME,	DESCRIPTION,
+	PLIST.
+where
+CHARSET-ID is always 0.
+BYTES is always 0.
+DIMENSION is the number of bytes of a code-point of the charset:
+  1, 2, 3, or 4.
+CHARS is the number of characters in a dimension:
+  94, 96, 128, or 256.
+WIDTH is always 0.
+DIRECTION is always 0.
+LEADING-CODE-BASE is always 0.
+LEADING-CODE-EXT is always 0.
+ISO-FINAL-CHAR (character) is the final character of the
+  corresponding ISO 2022 charset.  If the charset is not assigned
+  any final character, the value is -1.
+ISO-GRAPHIC-PLANE is always 0.
+REVERSE-CHARSET is always -1.
+SHORT-NAME (string) is the short name to refer to the charset.
+LONG-NAME (string) is the long name to refer to the charset
+DESCRIPTION (string) is the description string of the charset.
+PLIST (property list) may contain any type of information a user
+  want to put and get by functions `put-charset-property' and
+  `get-charset-property' respectively.</p>

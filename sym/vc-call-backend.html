@@ -1,0 +1,13 @@
+<h3>Function: vc-call-backend</h3>
+<p>
+Call for BACKEND the implementation of FUNCTION-NAME with the given ARGS.
+Calls</p>
+<p>
+    (apply 'vc-BACKEND-FUN ARGS)</p>
+<p>
+if vc-BACKEND-FUN exists (after trying to find it in vc-BACKEND.el)
+and else calls</p>
+<p>
+    (apply 'vc-default-FUN BACKEND ARGS)</p>
+<p>
+It is usually called via the `vc-call' macro.</p>

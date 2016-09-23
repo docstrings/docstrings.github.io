@@ -1,0 +1,11 @@
+<h3>Function: icalendar-export-region</h3>
+<p>
+Export region in diary file to iCalendar format.
+All diary entries in the region from MIN to MAX in the current buffer are
+converted to iCalendar format.  The result is appended to the file
+ICAL-FILENAME.
+This function attempts to return t if something goes wrong.  In this
+case an error string which describes all the errors and problems is
+written into the buffer `*icalendar-errors*'.</p>
+<p>
+(fn MIN MAX ICAL-FILENAME)</p>

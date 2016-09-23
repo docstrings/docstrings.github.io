@@ -1,0 +1,9 @@
+<h3>Function: jit-lock-after-change</h3>
+<p>
+Mark the rest of the buffer as not fontified after a change.
+Installed on `after-change-functions'.
+START and END are the start and end of the changed text.  OLD-LEN
+is the pre-change length.
+This function ensures that lines following the change will be refontified
+in case the syntax of those lines has changed.  Refontification
+will take place when text is fontified stealthily.</p>

@@ -1,0 +1,16 @@
+<h3>Function: edebug-all-defs</h3>
+<p>
+Toggle edebugging of all definitions.</p>
+<p>
+(fn)</p>
+<h3>Variable: edebug-all-defs</h3>
+<p>
+If non-nil, evaluating defining forms instruments for Edebug.
+This applies to `eval-defun', `eval-region', `eval-buffer', and
+`eval-current-buffer'.  `eval-region' is also called by
+`eval-last-sexp', and `eval-print-last-sexp'.</p>
+<p>
+You can use the command `edebug-all-defs' to toggle the value of this
+variable.  You may wish to make it local to each buffer with
+(make-local-variable 'edebug-all-defs) in your
+`emacs-lisp-mode-hook'.</p>

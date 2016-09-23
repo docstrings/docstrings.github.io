@@ -1,0 +1,7 @@
+<h3>Variable: process-connection-type</h3>
+<p>
+Control type of device used to communicate with subprocesses.
+Values are nil to use a pipe, or t or `pty' to use a pty.
+The value has no effect if the system has no ptys or if all ptys are busy:
+then a pipe is used in any case.
+The value takes effect when `start-process' is called.</p>

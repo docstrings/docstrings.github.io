@@ -1,0 +1,15 @@
+<h3>Variable: font-lock-keywords-alist</h3>
+<p>
+Alist of additional `font-lock-keywords' elements for major modes.</p>
+<p>
+Each element has the form (MODE KEYWORDS . HOW).
+`font-lock-set-defaults' adds the elements in the list KEYWORDS to
+`font-lock-keywords' when Font Lock is turned on in major mode MODE.</p>
+<p>
+If HOW is nil, KEYWORDS are added at the beginning of
+`font-lock-keywords'.  If it is `set', they are used to replace the
+value of `font-lock-keywords'.  If HOW is any other non-nil value,
+they are added at the end.</p>
+<p>
+This is normally set via `font-lock-add-keywords' and
+`font-lock-remove-keywords'.</p>

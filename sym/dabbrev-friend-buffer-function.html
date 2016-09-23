@@ -1,0 +1,12 @@
+<h3>Variable: dabbrev-friend-buffer-function</h3>
+<p>
+A function to decide whether dabbrev should search OTHER-BUFFER.
+The function should take one argument, OTHER-BUFFER, and return
+non-nil if that buffer should be searched.  Have a look at
+`dabbrev--same-major-mode-p' for an example.</p>
+<p>
+The value of `dabbrev-friend-buffer-function' has an effect only if
+the value of `dabbrev-select-buffers-function' uses it.  The function
+`dabbrev--select-buffers' is one function you can use here.</p>
+<p>
+A mode setting this variable should make it buffer local.</p>

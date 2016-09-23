@@ -1,0 +1,13 @@
+<h3>Variable: dnd-protocol-alist</h3>
+<p>
+The functions to call for different protocols when a drop is made.
+This variable is used by `dnd-handle-one-url' and `dnd-handle-file-name'.
+The list contains of (REGEXP . FUNCTION) pairs.
+The functions shall take two arguments, URL, which is the URL dropped and
+ACTION which is the action to be performed for the drop (move, copy, link,
+private or ask).
+If no match is found here, and the value of `browse-url-browser-function'
+is a pair of (REGEXP . FUNCTION), those regexps are tried for a match.
+If no match is found, the URL is inserted as text by calling `dnd-insert-text'.
+The function shall return the action done (move, copy, link or private)
+if some action was made, or nil if the URL is ignored.</p>

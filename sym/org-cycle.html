@@ -1,0 +1,50 @@
+<h3>Function: org-cycle</h3>
+<p>
+TAB-action and visibility cycling for Org-mode.</p>
+<p>
+This is the command invoked in Org-mode by the TAB key.  Its main purpose
+is outline visibility cycling, but it also invokes other actions
+in special contexts.</p>
+<p>
+- When this function is called with a prefix argument, rotate the entire
+  buffer through 3 states (global cycling)
+  1. OVERVIEW: Show only top-level headlines.
+  2. CONTENTS: Show all headlines of all levels, but no body text.
+  3. SHOW ALL: Show everything.
+  When called with two `C-u C-u' prefixes, switch to the startup visibility,
+  determined by the variable `org-startup-folded', and by any VISIBILITY
+  properties in the buffer.
+  When called with three `C-u C-u C-u' prefixed, show the entire buffer,
+  including any drawers.</p>
+<p>
+- When inside a table, re-align the table and move to the next field.</p>
+<p>
+- When point is at the beginning of a headline, rotate the subtree started
+  by this line through 3 different states (local cycling)
+  1. FOLDED:   Only the main headline is shown.
+  2. CHILDREN: The main headline and the direct children are shown.
+               From this state, you can move to one of the children
+               and zoom in further.
+  3. SUBTREE:  Show the entire subtree, including body text.
+  If there is no subtree, switch directly from CHILDREN to FOLDED.</p>
+<p>
+- When point is at the beginning of an empty headline and the variable
+  `org-cycle-level-after-item/entry-creation' is set, cycle the level
+  of the headline by demoting and promoting it to likely levels.  This
+  speeds up creation document structure by pressing TAB once or several
+  times right after creating a new headline.</p>
+<p>
+- When there is a numeric prefix, go up to a heading with level ARG, do
+  a `show-subtree' and return to the previous cursor position.  If ARG
+  is negative, go up that many levels.</p>
+<p>
+- When point is not at the beginning of a headline, execute the global
+  binding for TAB, which is re-indenting the line.  See the option
+  `org-cycle-emulate-tab' for details.</p>
+<p>
+- Special case: if point is at the beginning of the buffer and there is
+  no headline in line 1, this function will act as if called with prefix arg
+  (C-u TAB, same as S-TAB) also when called without prefix arg.
+  But only if also the variable `org-cycle-global-at-bob' is t.</p>
+<p>
+(fn &optional ARG)</p>

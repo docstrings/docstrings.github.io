@@ -1,0 +1,14 @@
+<h3>Variable: undo-ask-before-discard</h3>
+<p>
+If non-nil ask about discarding undo info for the current command.
+Normally, Emacs discards the undo info for the current command if
+it exceeds `undo-outer-limit'.  But if you set this option
+non-nil, it asks in the echo area whether to discard the info.
+If you answer no, there is a slight risk that Emacs might crash, so
+only do it if you really want to undo the command.</p>
+<p>
+This option is mainly intended for debugging.  You have to be
+careful if you use it for other purposes.  Garbage collection is
+inhibited while the question is asked, meaning that Emacs might
+leak memory.  So you should make sure that you do not wait
+excessively long before answering the question.</p>

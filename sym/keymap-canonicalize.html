@@ -1,0 +1,7 @@
+<h3>Function: keymap-canonicalize</h3>
+<p>
+Return a simpler equivalent keymap.
+This resolves inheritance and redefinitions.  The returned keymap
+should behave identically to a copy of KEYMAP w.r.t `lookup-key'
+and use in active keymaps and menus.
+Subkeymaps may be modified but are not canonicalized.</p>

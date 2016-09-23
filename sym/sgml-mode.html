@@ -1,0 +1,52 @@
+<h3>Function: sgml-mode</h3>
+<p>
+Major mode for editing SGML documents.
+Makes > match <.
+Keys <, &, SPC within <>, ", / and ' can be electric depending on
+`sgml-quick-keys'.</p>
+<p>
+An argument of N to a tag-inserting command means to wrap it around
+the next N words.  In Transient Mark mode, when the mark is active,
+N defaults to -1, which means to wrap it around the current region.</p>
+<p>
+If you like upcased tags, put (setq sgml-transformation-function 'upcase)
+in your init file.</p>
+<p>
+Use M-x sgml-validate to validate your document with an SGML parser.</p>
+<p>
+Do C-h v sgml- SPC to see available variables.
+Do C-h k on the following bindings to discover what they do.
+key             binding
+---             -------</p>
+<p>
+ .. ÿ	sgml-maybe-name-self</p>
+<p>
+C-c		Prefix Command
+ESC		Prefix Command
+/		sgml-slash</p>
+<p>
+C-c C-a		sgml-attributes
+C-c C-b		sgml-skip-tag-backward
+C-c C-d		sgml-delete-tag
+C-c C-e		sgml-close-tag
+C-c C-f		sgml-skip-tag-forward
+C-c TAB		sgml-tags-invisible
+C-c C-n		sgml-name-char
+C-c C-o		sgml-tag
+C-c C-t		sgml-tag
+C-c C-v		sgml-validate
+C-c /		sgml-close-tag
+C-c 8		sgml-name-8bit-mode
+C-c ?		sgml-tag-help
+C-c ]		sgml-close-tag
+C-c DEL		sgml-delete-tag
+C-c <left>	sgml-skip-tag-backward
+C-c <right>	sgml-skip-tag-forward</p>
+<p>
+C-M-i		ispell-complete-word</p>
+<p>
+</p>
+<p>
+In addition to any hooks its parent mode `text-mode' might have run,
+this mode runs the hook `sgml-mode-hook', as the final step
+during initialization.</p>

@@ -1,0 +1,11 @@
+<h3>Function: get-unused-iso-final-char</h3>
+<p>
+Return an unused ISO final char for a charset of DIMENSION and CHARS.
+DIMENSION is the number of bytes to represent a character: 1 or 2.
+CHARS is the number of characters in a dimension: 94 or 96.</p>
+<p>
+This final char is for private use, thus the range is `0' (48) .. `?' (63).
+If there's no unused final char for the specified kind of charset,
+return nil.</p>
+<p>
+(fn DIMENSION CHARS)</p>

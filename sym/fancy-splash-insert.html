@@ -1,0 +1,13 @@
+<h3>Function: fancy-splash-insert</h3>
+<p>
+Insert text into the current buffer, with faces.
+Arguments from ARGS should be either strings; functions called
+with no args that return a string; pairs `:face FACE', where FACE
+is a face specification usable with `put-text-property'; or pairs
+`:link LINK' where LINK is a list of arguments to pass to
+`insert-button', of the form (LABEL ACTION [HELP-ECHO]), which
+specifies the button's label, `action' property and help-echo string.
+FACE and LINK can also be functions, which are evaluated to obtain
+a face or button specification.</p>
+<p>
+(fn &rest ARGS)</p>

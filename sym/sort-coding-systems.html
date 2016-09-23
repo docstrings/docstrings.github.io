@@ -1,0 +1,13 @@
+<h3>Function: sort-coding-systems</h3>
+<p>
+Sort coding system list CODINGS by a priority of each coding system.
+Return the sorted list.  CODINGS is modified by side effects.</p>
+<p>
+If a coding system is most preferred, it has the highest priority.
+Otherwise, coding systems that correspond to MIME charsets have
+higher priorities.  Among them, a coding system included in the
+`coding-system' key of the current language environment has higher
+priority.  See also the documentation of `language-info-alist'.</p>
+<p>
+If the variable `sort-coding-systems-predicate' (which see) is
+non-nil, it is used to sort CODINGS instead.</p>

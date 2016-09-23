@@ -1,0 +1,9 @@
+<h3>Variable: Info-virtual-nodes</h3>
+<p>
+List of definitions of virtual Info nodes.
+Each element of the list has the format (NODENAME (OPERATION . HANDLER) ...)
+where NODENAME is a regexp that matches a class of virtual Info node names.
+It should be carefully chosen to not cause node name clashes with
+existing node names.  OPERATION is one of the following operation
+symbols `find-node' that define what HANDLER function to call instead
+of calling the default corresponding function to override it.</p>

@@ -1,0 +1,21 @@
+<h3>Function: bookmark-load</h3>
+<p>
+Load bookmarks from FILE (which must be in bookmark format).
+Appends loaded bookmarks to the front of the list of bookmarks.  If
+optional second argument OVERWRITE is non-nil, existing bookmarks are
+destroyed.  Optional third arg NO-MSG means don't display any messages
+while loading.</p>
+<p>
+If you load a file that doesn't contain a proper bookmark alist, you
+will corrupt Emacs's bookmark list.  Generally, you should only load
+in files that were created with the bookmark functions in the first
+place.  Your own personal bookmark file, `~/.emacs.bmk', is
+maintained automatically by Emacs; you shouldn't need to load it
+explicitly.</p>
+<p>
+If you load a file containing bookmarks with the same names as
+bookmarks already present in your Emacs, the new bookmarks will get
+unique numeric suffixes "<2>", "<3>", ... following the same
+method buffers use to resolve name collisions.</p>
+<p>
+(fn FILE &optional OVERWRITE NO-MSG)</p>

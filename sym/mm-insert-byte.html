@@ -1,0 +1,14 @@
+<h3>Function: mm-insert-byte</h3>
+<p>
+Insert COUNT (second arg) copies of BYTE (first arg).
+Both arguments are required.
+BYTE is a number of the range 0..255.</p>
+<p>
+If BYTE is 128..255 and the current buffer is multibyte, the
+corresponding eight-bit character is inserted.</p>
+<p>
+Point, and before-insertion markers, are relocated as in the function `insert'.
+The optional third arg INHERIT, if non-nil, says to inherit text properties
+from adjoining text, if those properties are sticky.</p>
+<p>
+(fn BYTE COUNT &optional INHERIT)</p>

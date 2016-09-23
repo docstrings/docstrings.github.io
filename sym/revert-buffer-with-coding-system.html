@@ -1,0 +1,10 @@
+<h3>Function: revert-buffer-with-coding-system</h3>
+<p>
+Visit the current buffer's file again using coding system CODING-SYSTEM.
+For a list of possible values of CODING-SYSTEM, use M-x list-coding-systems.</p>
+<p>
+If CODING-SYSTEM leaves the text conversion unspecified, or if it leaves
+the end-of-line conversion unspecified, FORCE controls what to do.
+If FORCE is nil, get the unspecified aspect (or aspects) from the buffer's
+previous `buffer-file-coding-system' value (if it is specified there).
+Otherwise, determine it from the file contents as usual for visiting a file.</p>

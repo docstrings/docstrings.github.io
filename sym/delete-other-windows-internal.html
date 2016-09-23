@@ -1,0 +1,17 @@
+<h3>Function: delete-other-windows-internal</h3>
+<p>
+Make WINDOW fill its frame.
+Only the frame WINDOW is on is affected.  WINDOW must be a valid window
+and defaults to the selected one.</p>
+<p>
+Optional argument ROOT, if non-nil, must specify an internal window such
+that WINDOW is in its window subtree.  If this is the case, replace ROOT
+by WINDOW and leave alone any windows not part of ROOT's subtree.</p>
+<p>
+When WINDOW is live try to reduce display jumps by keeping the text
+previously visible in WINDOW in the same place on the frame.  Doing this
+depends on the value of (window-start WINDOW), so if calling this
+function in a program gives strange scrolling, make sure the
+window-start value is reasonable when this function is called.</p>
+<p>
+(fn &optional WINDOW ROOT)</p>

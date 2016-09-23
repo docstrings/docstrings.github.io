@@ -1,0 +1,21 @@
+<h3>Function: byte-recompile-file</h3>
+<p>
+Recompile FILENAME file if it needs recompilation.
+This happens when its `.elc' file is older than itself.</p>
+<p>
+If the `.elc' file exists and is up-to-date, normally this function
+*does not* compile FILENAME.  If the prefix argument FORCE is non-nil,
+however, it compiles FILENAME even if the destination already
+exists and is up-to-date.</p>
+<p>
+If the `.elc' file does not exist, normally this function *does not*
+compile FILENAME.  If optional argument ARG is 0, it compiles
+the input file even if the `.elc' file does not exist.
+Any other non-nil value of ARG means to ask the user.</p>
+<p>
+If optional argument LOAD is non-nil, loads the file after compiling.</p>
+<p>
+If compilation is needed, this functions returns the result of
+`byte-compile-file'; otherwise it returns 'no-byte-compile.</p>
+<p>
+(fn FILENAME &optional FORCE ARG LOAD)</p>

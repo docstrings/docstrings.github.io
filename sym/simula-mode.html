@@ -1,0 +1,45 @@
+<h3>Function: simula-mode</h3>
+<p>
+Major mode for editing SIMULA code.</p>
+<p>
+Uses keymap `simula-mode-map', which is not currently defined.</p>
+<p>
+Variables controlling indentation style:
+ `simula-tab-always-indent'
+    Non-nil means TAB in SIMULA mode should always reindent the current line,
+    regardless of where in the line point is when the TAB command is used.
+ `simula-indent-level'
+    Indentation of SIMULA statements with respect to containing block.
+ `simula-substatement-offset'
+    Extra indentation after DO, THEN, ELSE, WHEN and OTHERWISE.
+ `simula-continued-statement-offset' 3
+    Extra indentation for lines not starting a statement or substatement,
+    e.g. a nested FOR-loop.  If value is a list, each line in a multiple-
+    line continued statement will have the car of the list extra indentation
+    with respect to the previous line of the statement.
+ `simula-label-offset' -4711
+    Offset of SIMULA label lines relative to usual indentation.
+ `simula-if-indent' '(0 . 0)
+    Extra indentation of THEN and ELSE with respect to the starting IF.
+    Value is a cons cell, the car is extra THEN indentation and the cdr
+    extra ELSE indentation.  IF after ELSE is indented as the starting IF.
+ `simula-inspect-indent' '(0 . 0)
+    Extra indentation of WHEN and OTHERWISE with respect to the
+    corresponding INSPECT.  Value is a cons cell, the car is
+    extra WHEN indentation and the cdr extra OTHERWISE indentation.
+ `simula-electric-indent' nil
+    If this variable is non-nil, `simula-indent-line'
+    will check the previous line to see if it has to be reindented.
+ `simula-abbrev-keyword' 'upcase
+    Determine how SIMULA keywords will be expanded.  Value is one of
+    the symbols `upcase', `downcase', `capitalize', (as in) `abbrev-table',
+    or nil if they should not be changed.
+ `simula-abbrev-stdproc' 'abbrev-table
+    Determine how standard SIMULA procedure and class names will be
+    expanded.  Value is one of the symbols `upcase', `downcase', `capitalize',
+    (as in) `abbrev-table', or nil if they should not be changed.</p>
+<p>
+Turning on SIMULA mode calls the value of the variable simula-mode-hook
+with no arguments, if that value is non-nil.</p>
+<p>
+(fn)</p>

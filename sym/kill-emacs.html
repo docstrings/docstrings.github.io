@@ -1,0 +1,14 @@
+<h3>Function: kill-emacs</h3>
+<p>
+Exit the Emacs job and kill it.
+If ARG is an integer, return ARG as the exit program code.
+If ARG is a string, stuff it as keyboard input.</p>
+<p>
+This function is called upon receipt of the signals SIGTERM
+or SIGHUP, and upon SIGINT in batch mode.</p>
+<p>
+The value of `kill-emacs-hook', if not void,
+is a list of functions (of no args),
+all of which are called before Emacs is actually killed.</p>
+<p>
+(fn &optional ARG)</p>

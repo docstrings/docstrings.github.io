@@ -1,0 +1,91 @@
+<h3>Function: makefile-mode</h3>
+<p>
+Major mode for editing standard Makefiles.</p>
+<p>
+If you are editing a file for a different make, try one of the
+variants `makefile-automake-mode', `makefile-gmake-mode',
+`makefile-makepp-mode', `makefile-bsdmake-mode' or,
+`makefile-imake-mode'.  All but the last should be correctly
+chosen based on the file name, except if it is *.mk.  This
+function ends by invoking the function(s) `makefile-mode-hook'.</p>
+<p>
+It is strongly recommended to use `font-lock-mode', because that
+provides additional parsing information.  This is used for
+example to see that a rule action `echo foo: bar' is a not rule
+dependency, despite the colon.</p>
+<p>
+
+Uses keymap `makefile-mode-map', which is not currently defined.</p>
+<p>
+
+In the browser, use the following keys:</p>
+<p>
+
+Uses keymap `makefile-browser-map', which is not currently defined.</p>
+<p>
+
+Makefile mode can be configured by modifying the following variables:</p>
+<p>
+`makefile-browser-buffer-name':
+    Name of the macro- and target browser buffer.</p>
+<p>
+`makefile-target-colon':
+    The string that gets appended to all target names
+    inserted by `makefile-insert-target'.
+    ":" or "::" are quite common values.</p>
+<p>
+`makefile-macro-assign':
+   The string that gets appended to all macro names
+   inserted by `makefile-insert-macro'.
+   The normal value should be " = ", since this is what
+   standard make expects.  However, newer makes such as dmake
+   allow a larger variety of different macro assignments, so you
+   might prefer to use " += " or " := " .</p>
+<p>
+`makefile-tab-after-target-colon':
+   If you want a TAB (instead of a space) to be appended after the
+   target colon, then set this to a non-nil value.</p>
+<p>
+`makefile-browser-leftmost-column':
+   Number of blanks to the left of the browser selection mark.</p>
+<p>
+`makefile-browser-cursor-column':
+   Column in which the cursor is positioned when it moves
+   up or down in the browser.</p>
+<p>
+`makefile-browser-selected-mark':
+   String used to mark selected entries in the browser.</p>
+<p>
+`makefile-browser-unselected-mark':
+   String used to mark unselected entries in the browser.</p>
+<p>
+`makefile-browser-auto-advance-after-selection-p':
+   If this variable is set to a non-nil value the cursor
+   will automagically advance to the next line after an item
+   has been selected in the browser.</p>
+<p>
+`makefile-pickup-everything-picks-up-filenames-p':
+   If this variable is set to a non-nil value then
+   `makefile-pickup-everything' also picks up filenames as targets
+   (i.e. it calls `makefile-pickup-filenames-as-targets'), otherwise
+   filenames are omitted.</p>
+<p>
+`makefile-cleanup-continuations':
+   If this variable is set to a non-nil value then Makefile mode
+   will assure that no line in the file ends with a backslash
+   (the continuation character) followed by any whitespace.
+   This is done by silently removing the trailing whitespace, leaving
+   the backslash itself intact.
+   IMPORTANT: Please note that enabling this option causes Makefile mode
+   to MODIFY A FILE WITHOUT YOUR CONFIRMATION when "it seems necessary".</p>
+<p>
+`makefile-browser-hook':
+   A function or list of functions to be called just before the
+   browser is entered. This is executed in the makefile buffer.</p>
+<p>
+`makefile-special-targets-list':
+   List of special targets. You will be offered to complete
+   on one of those in the minibuffer whenever you enter a `.'.
+   at the beginning of a line in Makefile mode.</p>
+<p>
+(fn)</p>

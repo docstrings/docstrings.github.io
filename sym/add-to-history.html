@@ -1,0 +1,11 @@
+<h3>Function: add-to-history</h3>
+<p>
+Add NEWELT to the history list stored in the variable HISTORY-VAR.
+Return the new history list.
+If MAXELT is non-nil, it specifies the maximum length of the history.
+Otherwise, the maximum history length is the value of the `history-length'
+property on symbol HISTORY-VAR, if set, or the value of the `history-length'
+variable.
+Remove duplicates of NEWELT if `history-delete-duplicates' is non-nil.
+If optional fourth arg KEEP-ALL is non-nil, add NEWELT to history even
+if it is empty or a duplicate.</p>

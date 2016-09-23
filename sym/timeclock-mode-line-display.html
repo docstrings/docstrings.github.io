@@ -1,0 +1,12 @@
+<h3>Function: timeclock-mode-line-display</h3>
+<p>
+Toggle display of the amount of time left today in the mode line.
+If `timeclock-use-display-time' is non-nil (the default), then
+the function `display-time-mode' must be active, and the mode line
+will be updated whenever the time display is updated.  Otherwise,
+the timeclock will use its own sixty second timer to do its
+updating.  With prefix ARG, turn mode line display on if and only
+if ARG is positive.  Returns the new status of timeclock mode line
+display (non-nil means on).</p>
+<p>
+(fn &optional ARG)</p>

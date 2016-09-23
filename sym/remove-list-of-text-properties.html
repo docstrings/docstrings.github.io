@@ -1,0 +1,10 @@
+<h3>Function: remove-list-of-text-properties</h3>
+<p>
+Remove some properties from text from START to END.
+The third argument LIST-OF-PROPERTIES is a list of property names to remove.
+If the optional fourth argument OBJECT is a buffer (or nil, which means
+the current buffer), START and END are buffer positions (integers or
+markers).  If OBJECT is a string, START and END are 0-based indices into it.
+Return t if any property was actually removed, nil otherwise.</p>
+<p>
+(fn START END LIST-OF-PROPERTIES &optional OBJECT)</p>

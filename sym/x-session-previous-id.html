@@ -1,0 +1,22 @@
+<h3>Variable: x-session-previous-id</h3>
+<p>
+The previous session id Emacs got from session manager.
+If Emacs is running on a window system that has a session manager, the
+session manager gives Emacs a session id.  It is feasible for Emacs Lisp
+code to use the session id to save configuration in, for example, a file
+with a file name based on the session id.  If Emacs is running when the
+window system is shut down, the session manager remembers that Emacs was
+running and saves the session id Emacs had.</p>
+<p>
+When the window system is started again, the session manager restarts
+Emacs and hands Emacs the session id it had the last time it was
+running.  This is now the previous session id and the value of this
+variable.  If configuration was saved in a file as stated above, the
+previous session id shall be used to reconstruct the file name.</p>
+<p>
+The session id Emacs has while it is running is in the variable
+`x-session-id'.  The value of this variable and `x-session-id' may be the
+same, depending on how the session manager works.</p>
+<p>
+See also `emacs-save-session-functions', `emacs-session-save' and
+`emacs-session-restore'."</p>

@@ -1,0 +1,35 @@
+<h3>Variable: imenu-generic-expression</h3>
+<p>
+List of definition matchers for creating an Imenu index.
+Each element of this list should have the form</p>
+<p>
+  (MENU-TITLE REGEXP INDEX [FUNCTION] [ARGUMENTS...])</p>
+<p>
+MENU-TITLE should be nil (in which case the matches for this
+element are put in the top level of the buffer index) or a
+string (which specifies the title of a submenu into which the
+matches are put).
+REGEXP is a regular expression matching a definition construct
+which is to be displayed in the menu.  REGEXP may also be a
+function, called without arguments.  It is expected to search
+backwards.  It must return true and set `match-data' if it finds
+another element.
+INDEX is an integer specifying which subexpression of REGEXP
+matches the definition's name; this subexpression is displayed as
+the menu item.
+FUNCTION, if present, specifies a function to call when the index
+item is selected by the user.  This function is called with
+arguments consisting of the item name, the buffer position, and
+the ARGUMENTS.</p>
+<p>
+The variable `imenu-case-fold-search' determines whether or not
+the regexp matches are case sensitive, and `imenu-syntax-alist'
+can be used to alter the syntax table for the search.</p>
+<p>
+If non-nil this pattern is passed to `imenu--generic-function' to
+create a buffer index.</p>
+<p>
+For example, see the value of `fortran-imenu-generic-expression'
+used by `fortran-mode' with `imenu-syntax-alist' set locally to
+give the characters which normally have "symbol" syntax
+"word" syntax during matching.</p>

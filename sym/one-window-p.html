@@ -1,0 +1,27 @@
+<h3>Function: one-window-p</h3>
+<p>
+Return non-nil if the selected window is the only window.
+Optional arg NOMINI non-nil means don't count the minibuffer
+even if it is active.  Otherwise, the minibuffer is counted
+when it is active.</p>
+<p>
+Optional argument ALL-FRAMES specifies the set of frames to
+consider, see also `next-window'.  ALL-FRAMES nil or omitted
+means consider windows on the selected frame only, plus the
+minibuffer window if specified by the NOMINI argument.  If the
+minibuffer counts, consider all windows on all frames that share
+that minibuffer too.  The remaining non-nil values of ALL-FRAMES
+with a special meaning are:</p>
+<p>
+- t means consider all windows on all existing frames.</p>
+<p>
+- `visible' means consider all windows on all visible frames on
+  the current terminal.</p>
+<p>
+- 0 (the number zero) means consider all windows on all visible
+  and iconified frames on the current terminal.</p>
+<p>
+- A frame means consider all windows on that frame only.</p>
+<p>
+Anything else means consider all windows on the selected frame
+and no others.</p>

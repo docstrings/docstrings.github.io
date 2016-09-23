@@ -1,0 +1,14 @@
+<h3>Function: gdb-enable-debug</h3>
+<p>
+Toggle logging of transaction between Emacs and Gdb.
+The log is stored in `gdb-debug-log' as an alist with elements
+whose cons is send, send-item or recv and whose cdr is the string
+being transferred.  This list may grow up to a size of
+`gdb-debug-log-max' after which the oldest element (at the end of
+the list) is deleted every time a new one is added (at the front).</p>
+<p>
+(fn &optional ARG)</p>
+<h3>Variable: gdb-enable-debug</h3>
+<p>
+Non-nil if Gdb-Enable-Debug mode is enabled.
+See the command `gdb-enable-debug' for a description of this minor mode.</p>

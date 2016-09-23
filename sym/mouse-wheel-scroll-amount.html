@@ -1,0 +1,12 @@
+<h3>Variable: mouse-wheel-scroll-amount</h3>
+<p>
+Amount to scroll windows by when spinning the mouse wheel.
+This is an alist mapping the modifier key to the amount to scroll when
+the wheel is moved with the modifier key depressed.
+Elements of the list have the form (MODIFIERS . AMOUNT) or just AMOUNT if
+MODIFIERS is nil.</p>
+<p>
+AMOUNT should be the number of lines to scroll, or nil for near full
+screen.  It can also be a floating point number, specifying the fraction of
+a full screen to scroll.  A near full screen is `next-screen-context-lines'
+less than a full screen.</p>

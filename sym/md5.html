@@ -1,0 +1,30 @@
+<h3>Function: md5</h3>
+<p>
+Return MD5 message digest of OBJECT, a buffer or string.</p>
+<p>
+A message digest is a cryptographic checksum of a document, and the
+algorithm to calculate it is defined in RFC 1321.</p>
+<p>
+The two optional arguments START and END are character positions
+specifying for which part of OBJECT the message digest should be
+computed.  If nil or omitted, the digest is computed for the whole
+OBJECT.</p>
+<p>
+The MD5 message digest is computed from the result of encoding the
+text in a coding system, not directly from the internal Emacs form of
+the text.  The optional fourth argument CODING-SYSTEM specifies which
+coding system to encode the text with.  It should be the same coding
+system that you used or will use when actually writing the text into a
+file.</p>
+<p>
+If CODING-SYSTEM is nil or omitted, the default depends on OBJECT.  If
+OBJECT is a buffer, the default for CODING-SYSTEM is whatever coding
+system would be chosen by default for writing this text into a file.</p>
+<p>
+If OBJECT is a string, the most preferred coding system (see the
+command `prefer-coding-system') is used.</p>
+<p>
+If NOERROR is non-nil, silently assume the `raw-text' coding if the
+guesswork fails.  Normally, an error is signaled in such case.</p>
+<p>
+(fn OBJECT &optional START END CODING-SYSTEM NOERROR)</p>

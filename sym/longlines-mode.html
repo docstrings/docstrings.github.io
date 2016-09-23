@@ -1,0 +1,20 @@
+<h3>Function: longlines-mode</h3>
+<p>
+Toggle Long Lines mode in this buffer.
+With a prefix argument ARG, enable Long Lines mode if ARG is
+positive, and disable it otherwise.  If called from Lisp, enable
+the mode if ARG is omitted or nil.</p>
+<p>
+When Long Lines mode is enabled, long lines are wrapped if they
+extend beyond `fill-column'.  The soft newlines used for line
+wrapping will not show up when the text is yanked or saved to
+disk.</p>
+<p>
+If the variable `longlines-auto-wrap' is non-nil, lines are
+automatically wrapped whenever the buffer is changed.  You can
+always call `fill-paragraph' to fill individual paragraphs.</p>
+<p>
+If the variable `longlines-show-hard-newlines' is non-nil, hard
+newlines are indicated with a symbol.</p>
+<p>
+(fn &optional ARG)</p>

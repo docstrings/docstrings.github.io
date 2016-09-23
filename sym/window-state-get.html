@@ -1,0 +1,18 @@
+<h3>Function: window-state-get</h3>
+<p>
+Return state of WINDOW as a Lisp object.
+WINDOW can be any window and defaults to the root window of the
+selected frame.</p>
+<p>
+Optional argument WRITABLE non-nil means do not use markers for
+sampling `window-point' and `window-start'.  Together, WRITABLE
+and the variable `window-persistent-parameters' specify which
+window parameters are saved by this function.  WRITABLE should be
+non-nil when the return value shall be written to a file and read
+back in another session.  Otherwise, an application may run into
+an `invalid-read-syntax' error while attempting to read back the
+value from file.</p>
+<p>
+The return value can be used as argument for `window-state-put'
+to put the state recorded here into an arbitrary window.  The
+value can be also stored on disk and read back in a new session.</p>

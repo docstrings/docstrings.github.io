@@ -1,0 +1,18 @@
+<h3>Function: delete-other-windows</h3>
+<p>
+Make WINDOW fill its frame.
+WINDOW must be a valid window and defaults to the selected one.
+Return nil.</p>
+<p>
+If the variable `ignore-window-parameters' is non-nil or the
+`delete-other-windows' parameter of WINDOW equals t, do not
+process any parameters of WINDOW.  Otherwise, if the
+`delete-other-windows' parameter of WINDOW specifies a function,
+call that function with WINDOW as its sole argument and return
+the value returned by that function.</p>
+<p>
+Otherwise, if WINDOW is part of an atomic window, call this
+function with the root of the atomic window as its argument.  If
+WINDOW is a non-side window, make WINDOW the only non-side window
+on the frame.  Side windows are not deleted.  If WINDOW is a side
+window signal an error.</p>

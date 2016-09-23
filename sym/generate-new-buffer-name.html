@@ -1,0 +1,14 @@
+<h3>Function: generate-new-buffer-name</h3>
+<p>
+Return a string that is the name of no existing buffer based on NAME.
+If there is no live buffer named NAME, then return NAME.
+Otherwise modify name by appending `<NUMBER>', incrementing NUMBER
+(starting at 2) until an unused name is found, and then return that name.
+Optional second argument IGNORE specifies a name that is okay to use (if
+it is in the sequence to be tried) even if a buffer with that name exists.</p>
+<p>
+If NAME begins with a space (i.e., a buffer that is not normally
+visible to users), then if buffer NAME already exists a random number
+is first appended to NAME, to speed up finding a non-existent buffer.</p>
+<p>
+(fn NAME &optional IGNORE)</p>

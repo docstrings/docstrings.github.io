@@ -1,0 +1,16 @@
+<h3>Function: apropos-command</h3>
+<p>
+Show commands (interactively callable functions) that match PATTERN.
+PATTERN can be a word, a list of words (separated by spaces),
+or a regexp (using some regexp special characters).  If it is a word,
+search for matches for that word as a substring.  If it is a list of words,
+search for matches for any two (or more) of those words.</p>
+<p>
+With C-u prefix, or if `apropos-do-all' is non-nil, also show
+noninteractive functions.</p>
+<p>
+If VAR-PREDICATE is non-nil, show only variables, and only those that
+satisfy the predicate VAR-PREDICATE.</p>
+<p>
+When called from a Lisp program, a string PATTERN is used as a regexp,
+while a list of strings is used as a word list.</p>

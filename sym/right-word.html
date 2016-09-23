@@ -1,0 +1,12 @@
+<h3>Function: right-word</h3>
+<p>
+Move point N words to the right (to the left if N is negative).</p>
+<p>
+Depending on the bidirectional context, this may move either forward
+or backward in the buffer.  This is in contrast with M-f
+and M-b, which see.</p>
+<p>
+Value is normally t.
+If an edge of the buffer or a field boundary is reached, point is left there
+there and the function returns nil.  Field boundaries are not noticed
+if `inhibit-field-text-motion' is non-nil.</p>

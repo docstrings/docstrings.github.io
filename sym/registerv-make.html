@@ -1,0 +1,15 @@
+<h3>Function: registerv-make</h3>
+<p>
+Create a register value object.</p>
+<p>
+DATA can be any value.
+PRINT-FUNC if provided controls how `list-registers' and
+`view-register' print the register.  It should be a function
+receiving one argument DATA and print text that completes
+this sentence:
+  Register X contains [TEXT PRINTED BY PRINT-FUNC]
+JUMP-FUNC if provided, controls how `jump-to-register' jumps to the register.
+INSERT-FUNC if provided, controls how `insert-register' insert the register.
+They both receive DATA as argument.</p>
+<p>
+(fn DATA &key PRINT-FUNC JUMP-FUNC INSERT-FUNC)</p>

@@ -1,0 +1,42 @@
+<h3>Function: mouse-on-link-p</h3>
+<p>
+Return non-nil if POS is on a link in the current buffer.
+POS must be a buffer position in the current buffer or a mouse
+event location in the selected window (see `event-start').
+However, if `mouse-1-click-in-non-selected-windows' is non-nil,
+POS may be a mouse event location in any window.</p>
+<p>
+A clickable link is identified by one of the following methods:</p>
+<p>
+- If the character at POS has a non-nil `follow-link' text or
+overlay property, the value of that property determines what to do.</p>
+<p>
+- If there is a local key-binding or a keybinding at position POS
+for the `follow-link' event, the binding of that event determines
+what to do.</p>
+<p>
+The resulting value determine whether POS is inside a link:</p>
+<p>
+- If the value is `mouse-face', POS is inside a link if there
+is a non-nil `mouse-face' property at POS.  Return t in this case.</p>
+<p>
+- If the value is a function, FUNC, POS is inside a link if
+the call (FUNC POS) returns non-nil.  Return the return value
+from that call.  Arg is (posn-point POS) if POS is a mouse event.</p>
+<p>
+- Otherwise, return the value itself.</p>
+<p>
+The return value is interpreted as follows:</p>
+<p>
+- If it is a string, the mouse-1 event is translated into the
+first character of the string, i.e. the action of the mouse-1
+click is the local or global binding of that character.</p>
+<p>
+- If it is a vector, the mouse-1 event is translated into the
+first element of that vector, i.e. the action of the mouse-1
+click is the local or global binding of that event.</p>
+<p>
+- Otherwise, the mouse-1 event is translated into a mouse-2 event
+at the same position.</p>
+<p>
+(fn POS)</p>

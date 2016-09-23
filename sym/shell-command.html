@@ -1,0 +1,55 @@
+<h3>Function: shell-command</h3>
+<p>
+Execute string COMMAND in inferior shell; display output, if any.
+With prefix argument, insert the COMMAND's output at point.</p>
+<p>
+If COMMAND ends in `&', execute it asynchronously.
+The output appears in the buffer `*Async Shell Command*'.
+That buffer is in shell mode.  You can also use
+`async-shell-command' that automatically adds `&'.</p>
+<p>
+Otherwise, COMMAND is executed synchronously.  The output appears in
+the buffer `*Shell Command Output*'.  If the output is short enough to
+display in the echo area (which is determined by the variables
+`resize-mini-windows' and `max-mini-window-height'), it is shown
+there, but it is nonetheless available in buffer `*Shell Command
+Output*' even though that buffer is not automatically displayed.</p>
+<p>
+To specify a coding system for converting non-ASCII characters
+in the shell command output, use C-x RET c before this command.</p>
+<p>
+Noninteractive callers can specify coding systems by binding
+`coding-system-for-read' and `coding-system-for-write'.</p>
+<p>
+The optional second argument OUTPUT-BUFFER, if non-nil,
+says to put the output in some other buffer.
+If OUTPUT-BUFFER is a buffer or buffer name, put the output there.
+If OUTPUT-BUFFER is not a buffer and not nil,
+insert output in current buffer.  (This cannot be done asynchronously.)
+In either case, the buffer is first erased, and the output is
+inserted after point (leaving mark after it).</p>
+<p>
+If the command terminates without error, but generates output,
+and you did not specify "insert it in the current buffer",
+the output can be displayed in the echo area or in its buffer.
+If the output is short enough to display in the echo area
+(determined by the variable `max-mini-window-height' if
+`resize-mini-windows' is non-nil), it is shown there.
+Otherwise,the buffer containing the output is displayed.</p>
+<p>
+If there is output and an error, and you did not specify "insert it
+in the current buffer", a message about the error goes at the end
+of the output.</p>
+<p>
+If there is no output, or if output is inserted in the current buffer,
+then `*Shell Command Output*' is deleted.</p>
+<p>
+If the optional third argument ERROR-BUFFER is non-nil, it is a buffer
+or buffer name to which to direct the command's standard error output.
+If it is nil, error output is mingled with regular output.
+In an interactive call, the variable `shell-command-default-error-buffer'
+specifies the value of ERROR-BUFFER.</p>
+<p>
+In Elisp, you will often be better served by calling `call-process' or
+`start-process' directly, since it offers more control and does not impose
+the use of a shell (with its need to quote arguments).</p>

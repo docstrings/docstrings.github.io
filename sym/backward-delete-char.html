@@ -1,0 +1,14 @@
+<h3>Function: backward-delete-char</h3>
+<p>
+Delete the previous N characters (following if N is negative).
+If Transient Mark mode is enabled, the mark is active, and N is 1,
+delete the text in the region and deactivate the mark instead.
+To disable this, set `delete-active-region' to nil.</p>
+<p>
+Optional second arg KILLFLAG, if non-nil, means to kill (save in
+kill ring) instead of delete.  Interactively, N is the prefix
+arg, and KILLFLAG is set if N is explicitly specified.</p>
+<p>
+In Overwrite mode, single character backward deletion may replace
+tabs with spaces so as to back over columns, unless point is at
+the end of the line.</p>

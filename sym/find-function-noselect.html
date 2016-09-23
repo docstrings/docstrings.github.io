@@ -1,0 +1,18 @@
+<h3>Function: find-function-noselect</h3>
+<p>
+Return a pair (BUFFER . POINT) pointing to the definition of FUNCTION.</p>
+<p>
+Finds the source file containing the definition of FUNCTION
+in a buffer and the point of the definition.  The buffer is
+not selected.  If the function definition can't be found in
+the buffer, returns (BUFFER).</p>
+<p>
+If FUNCTION is a built-in function, this function normally
+attempts to find it in the Emacs C sources; however, if LISP-ONLY
+is non-nil, signal an error instead.</p>
+<p>
+If the file where FUNCTION is defined is not known, then it is
+searched for in `find-function-source-path' if non-nil, otherwise
+in `load-path'.</p>
+<p>
+(fn FUNCTION &optional LISP-ONLY)</p>

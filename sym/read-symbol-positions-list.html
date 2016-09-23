@@ -1,0 +1,14 @@
+<h3>Variable: read-symbol-positions-list</h3>
+<p>
+A list mapping read symbols to their positions.
+This variable is modified during calls to `read' or
+`read-from-string', but only when `read-with-symbol-positions' is
+non-nil.</p>
+<p>
+Each element of the list looks like (SYMBOL . CHAR-POSITION), where
+CHAR-POSITION is an integer giving the offset of that occurrence of the
+symbol from the position where `read' or `read-from-string' started.</p>
+<p>
+Note that a symbol will appear multiple times in this list, if it was
+read multiple times.  The list is in the same order as the symbols
+were read in.</p>

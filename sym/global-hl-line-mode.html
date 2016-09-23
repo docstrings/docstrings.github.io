@@ -1,0 +1,22 @@
+<h3>Function: global-hl-line-mode</h3>
+<p>
+Toggle line highlighting in all buffers (Global Hl-Line mode).
+With a prefix argument ARG, enable Global Hl-Line mode if ARG is
+positive, and disable it otherwise.  If called from Lisp, enable
+the mode if ARG is omitted or nil.</p>
+<p>
+If `global-hl-line-sticky-flag' is non-nil, Global Hl-Line mode
+highlights the line about the current buffer's point in all
+windows.</p>
+<p>
+Global-Hl-Line mode uses the functions `global-hl-line-unhighlight' and
+`global-hl-line-highlight' on `pre-command-hook' and `post-command-hook'.</p>
+<p>
+(fn &optional ARG)</p>
+<h3>Variable: global-hl-line-mode</h3>
+<p>
+Non-nil if Global-Hl-Line mode is enabled.
+See the command `global-hl-line-mode' for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `global-hl-line-mode'.</p>

@@ -1,0 +1,51 @@
+<h3>Function: query-replace-regexp</h3>
+<p>
+Replace some things after point matching REGEXP with TO-STRING.
+As each match is found, the user must type a character saying
+what to do with it.  For directions, type C-h at that time.</p>
+<p>
+In Transient Mark mode, if the mark is active, operate on the contents
+of the region.  Otherwise, operate from point to the end of the buffer.</p>
+<p>
+Use M-n to pull the last incremental search regexp to the minibuffer
+that reads REGEXP, or invoke replacements from
+incremental search with a key sequence like `C-M-s C-M-s C-M-%'
+to use its current search regexp as the regexp to replace.</p>
+<p>
+Matching is independent of case if `case-fold-search' is non-nil and
+REGEXP has no uppercase letters.  Replacement transfers the case
+pattern of the old text to the new text, if `case-replace' and
+`case-fold-search' are non-nil and REGEXP has no uppercase letters.
+(Transferring the case pattern means that if the old text matched is
+all caps, or capitalized, then its replacement is upcased or
+capitalized.)</p>
+<p>
+If `replace-regexp-lax-whitespace' is non-nil, a space or spaces in the regexp
+to be replaced will match a sequence of whitespace chars defined by the
+regexp in `search-whitespace-regexp'.</p>
+<p>
+Third arg DELIMITED (prefix arg if interactive), if non-nil, means replace
+only matches surrounded by word boundaries.
+Fourth and fifth arg START and END specify the region to operate on.</p>
+<p>
+In TO-STRING, `\&' stands for whatever matched the whole of REGEXP,
+and `\N' (where N is a digit) stands for
+whatever what matched the Nth `\(...\)' in REGEXP.
+`\?' lets you edit the replacement text in the minibuffer
+at the given position for each replacement.</p>
+<p>
+In interactive calls, the replacement text can contain `\,'
+followed by a Lisp expression.  Each
+replacement evaluates that expression to compute the replacement
+string.  Inside of that expression, `\&' is a string denoting the
+whole match as a string, `\N' for a partial match, `\#&' and `\#N'
+for the whole or a partial match converted to a number with
+`string-to-number', and `\#' itself for the number of replacements
+done so far (starting with zero).</p>
+<p>
+If the replacement expression is a symbol, write a space after it
+to terminate it.  One space there, if any, will be discarded.</p>
+<p>
+When using those Lisp features interactively in the replacement
+text, TO-STRING is actually made a list instead of a string.
+Use C-x M-: after this command for details.</p>

@@ -1,0 +1,43 @@
+<h3>Function: package-menu-mode</h3>
+<p>
+Major mode for browsing a list of packages.
+Letters do not insert themselves; instead, they are commands.</p>
+<p>
+key             binding
+---             -------</p>
+<p>
+TAB		forward-button
+RET		package-menu-describe-package
+ESC		Prefix Command
+SPC		scroll-up-command
+-		negative-argument
+0 .. 9		digit-argument
+<		beginning-of-buffer
+>		end-of-buffer
+?		package-menu-describe-package
+S		tabulated-list-sort
+U		package-menu-mark-upgrades
+d		package-menu-mark-delete
+g		revert-buffer
+h		package-menu-quick-help
+i		package-menu-mark-install
+n		next-line
+p		previous-line
+q		quit-window
+r		package-menu-refresh
+u		package-menu-mark-unmark
+x		package-menu-execute
+~		package-menu-mark-obsolete-for-deletion
+DEL		package-menu-backup-unmark
+<backtab>	backward-button
+<follow-link>	mouse-face
+<mouse-2>	mouse-select-window
+<remap>		Prefix Command</p>
+<p>
+C-M-i		backward-button</p>
+<p>
+</p>
+<p>
+In addition to any hooks its parent mode `tabulated-list-mode' might have run,
+this mode runs the hook `package-menu-mode-hook', as the final step
+during initialization.</p>

@@ -1,0 +1,13 @@
+<h3>Function: x-get-resource</h3>
+<p>
+Return the value of ATTRIBUTE, of class CLASS, from the X defaults database.
+This uses `INSTANCE.ATTRIBUTE' as the key and `Emacs.CLASS' as the
+class, where INSTANCE is the name under which Emacs was invoked, or
+the name specified by the `-name' or `-rn' command-line arguments.</p>
+<p>
+The optional arguments COMPONENT and SUBCLASS add to the key and the
+class, respectively.  You must specify both of them or neither.
+If you specify them, the key is `INSTANCE.COMPONENT.ATTRIBUTE'
+and the class is `Emacs.CLASS.SUBCLASS'.</p>
+<p>
+(fn ATTRIBUTE CLASS &optional COMPONENT SUBCLASS)</p>

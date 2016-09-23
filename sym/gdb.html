@@ -1,0 +1,56 @@
+<h3>Function: gdb</h3>
+<p>
+Run gdb on program FILE in buffer *gud-FILE*.
+The directory containing FILE becomes the initial working directory
+and source-file directory for your debugger.</p>
+<p>
+COMMAND-LINE is the shell command for starting the gdb session.
+It should be a string consisting of the name of the gdb
+executable followed by command-line options.  The command-line
+options should include "-i=mi" to use gdb's MI text interface.
+Note that the old "--annotate" option is no longer supported.</p>
+<p>
+If `gdb-many-windows' is nil (the default value) then gdb just
+pops up the GUD buffer unless `gdb-show-main' is t.  In this case
+it starts with two windows: one displaying the GUD buffer and the
+other with the source file with the main routine of the inferior.</p>
+<p>
+If `gdb-many-windows' is t, regardless of the value of
+`gdb-show-main', the layout below will appear.  Keybindings are
+shown in some of the buffers.</p>
+<p>
+Watch expressions appear in the speedbar/slowbar.</p>
+<p>
+The following commands help control operation :</p>
+<p>
+`gdb-many-windows'    - Toggle the number of windows gdb uses.
+`gdb-restore-windows' - To restore the window layout.</p>
+<p>
+See Info node `(emacs)GDB Graphical Interface' for a more
+detailed description of this mode.</p>
+<p>
+
++----------------------------------------------------------------------+
+|                               GDB Toolbar                            |
++-----------------------------------+----------------------------------+
+| GUD buffer (I/O of GDB)           | Locals buffer                    |
+|                                   |                                  |
+|                                   |                                  |
+|                                   |                                  |
++-----------------------------------+----------------------------------+
+| Source buffer                     | I/O buffer (of debugged program) |
+|                                   | (comint-mode)                    |
+|                                   |                                  |
+|                                   |                                  |
+|                                   |                                  |
+|                                   |                                  |
+|                                   |                                  |
+|                                   |                                  |
++-----------------------------------+----------------------------------+
+| Stack buffer                      | Breakpoints buffer               |
+| RET      gdb-select-frame         | SPC    gdb-toggle-breakpoint     |
+|                                   | RET    gdb-goto-breakpoint       |
+|                                   | D      gdb-delete-breakpoint     |
++-----------------------------------+----------------------------------+</p>
+<p>
+(fn COMMAND-LINE)</p>

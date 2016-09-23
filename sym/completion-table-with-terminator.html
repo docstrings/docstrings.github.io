@@ -1,0 +1,17 @@
+<h3>Function: completion-table-with-terminator</h3>
+<p>
+Construct a completion table like TABLE but with an extra TERMINATOR.
+This is meant to be called in a curried way by first passing TERMINATOR
+and TABLE only (via `apply-partially').
+TABLE is a completion table, and TERMINATOR is a string appended to TABLE's
+completion if it is complete.  TERMINATOR is also used to determine the
+completion suffix's boundary.
+TERMINATOR can also be a cons cell (TERMINATOR . TERMINATOR-REGEXP)
+in which case TERMINATOR-REGEXP is a regular expression whose submatch
+number 1 should match TERMINATOR.  This is used when there is a need to
+distinguish occurrences of the TERMINATOR strings which are really terminators
+from others (e.g. escaped).  In this form, the car of TERMINATOR can also be,
+instead of a string, a function that takes the completion and returns the
+"terminated" string.</p>
+<p>
+(fn TERMINATOR TABLE STRING PRED ACTION)</p>

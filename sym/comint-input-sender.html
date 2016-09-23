@@ -1,0 +1,8 @@
+<h3>Variable: comint-input-sender</h3>
+<p>
+Function to actually send to PROCESS the STRING submitted by user.
+Usually this is just `comint-simple-send', but if your mode needs to
+massage the input string, put a different function here.
+`comint-simple-send' just sends the string plus a newline.
+(If `comint-input-sender-no-newline' is non-nil, it omits the newline.)
+This is called from the user command `comint-send-input'.</p>

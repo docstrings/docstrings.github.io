@@ -1,0 +1,23 @@
+<h3>Function: frame-geom-spec-cons</h3>
+<p>
+Return equivalent geometry spec for FRAME as a cons with car `+'.
+A geometry specification equivalent to SPEC for FRAME is returned,
+where the value is a cons with car `+', not numeric.
+SPEC is a frame geometry spec: (left . VALUE) or (top . VALUE).
+If VALUE is a number, then it is converted to a cons value, perhaps
+   relative to the opposite frame edge from that in the original spec.
+FRAME defaults to the selected frame.</p>
+<p>
+Examples (measures in pixels) -
+ Assuming display height=1024, frame height=600:
+ top 300 below display top:               (top .  300) => (top +  300)
+                                          (top +  300) => (top +  300)
+ bottom 300 above display bottom:         (top -  300) => (top +  124)
+                                          (top . -300) => (top +  124)
+ top 300 above display top
+  (= bottom 724 above display bottom):    (top + -300) => (top + -300)
+ bottom 300 below display bottom
+  (= top 724 below display top):          (top - -300) => (top +  724)</p>
+<p>
+In the 3rd, 4th, and 6th examples, the returned value is relative to
+the opposite frame edge from the edge indicated in the input spec.</p>

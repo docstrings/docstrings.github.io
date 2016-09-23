@@ -1,0 +1,16 @@
+<h3>Function: vc-register</h3>
+<p>
+Register into a version control system.
+If VC-FILESET is given, register the files in that fileset.
+Otherwise register the current file.
+With prefix argument SET-REVISION, allow user to specify initial revision
+level.  If COMMENT is present, use that as an initial comment.</p>
+<p>
+The version control system to use is found by cycling through the list
+`vc-handled-backends'.  The first backend in that list which declares
+itself responsible for the file (usually because other files in that
+directory are already registered under that backend) will be used to
+register the file.  If no backend declares itself responsible, the
+first backend that could register the file is used.</p>
+<p>
+(fn &optional SET-REVISION VC-FILESET COMMENT)</p>

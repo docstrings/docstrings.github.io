@@ -1,0 +1,13 @@
+<h3>Function: comment-dwim</h3>
+<p>
+Call the comment command you want (Do What I Mean).
+If the region is active and `transient-mark-mode' is on, call
+`comment-region' (unless it only consists of comments, in which
+case it calls `uncomment-region').
+Else, if the current line is empty, call `comment-insert-comment-function'
+if it is defined, otherwise insert a comment and indent it.
+Else if a prefix ARG is specified, call `comment-kill'.
+Else, call `comment-indent'.
+You can configure `comment-style' to change the way regions are commented.</p>
+<p>
+(fn ARG)</p>

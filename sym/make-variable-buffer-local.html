@@ -1,0 +1,16 @@
+<h3>Function: make-variable-buffer-local</h3>
+<p>
+Make VARIABLE become buffer-local whenever it is set.
+At any time, the value for the current buffer is in effect,
+unless the variable has never been set in this buffer,
+in which case the default value is in effect.
+Note that binding the variable with `let', or setting it while
+a `let'-style binding made in this buffer is in effect,
+does not make the variable buffer-local.  Return VARIABLE.</p>
+<p>
+In most cases it is better to use `make-local-variable',
+which makes a variable local in just one buffer.</p>
+<p>
+The function `default-value' gets the default value and `set-default' sets it.</p>
+<p>
+(fn VARIABLE)</p>

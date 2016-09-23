@@ -1,0 +1,11 @@
+<h3>Function: generic-make-keywords-list</h3>
+<p>
+Return a `font-lock-keywords' construct that highlights KEYWORD-LIST.
+KEYWORD-LIST is a list of keyword strings that should be
+highlighted with face FACE.  This function calculates a regular
+expression that matches these keywords and concatenates it with
+PREFIX and SUFFIX.  Then it returns a construct based on this
+regular expression that can be used as an element of
+`font-lock-keywords'.</p>
+<p>
+(fn KEYWORD-LIST FACE &optional PREFIX SUFFIX)</p>

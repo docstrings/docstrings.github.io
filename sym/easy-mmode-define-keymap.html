@@ -1,0 +1,19 @@
+<h3>Function: easy-mmode-define-keymap</h3>
+<p>
+Return a keymap built from bindings BS.
+BS must be a list of (KEY . BINDING) where
+KEY and BINDINGS are suitable for `define-key'.
+Optional NAME is passed to `make-sparse-keymap'.
+Optional map M can be used to modify an existing map.
+ARGS is a list of additional keyword arguments.</p>
+<p>
+Valid keywords and arguments are:</p>
+<p>
+  :name      Name of the keymap; overrides NAME argument.
+  :dense     Non-nil for a dense keymap.
+  :inherit   Parent keymap.
+  :group     Ignored.
+  :suppress  Non-nil to call `suppress-keymap' on keymap,
+             'nodigits to suppress digits as prefix arguments.</p>
+<p>
+(fn BS &optional NAME M ARGS)</p>

@@ -1,0 +1,14 @@
+<h3>Function: read</h3>
+<p>
+Read one Lisp expression as text from STREAM, return as Lisp object.
+If STREAM is nil, use the value of `standard-input' (which see).
+STREAM or the value of `standard-input' may be:
+ a buffer (read from point and advance it)
+ a marker (read from where it points and advance it)
+ a function (call it with no arguments for each character,
+     call it with a char as argument to push a char back)
+ a string (takes text from string, starting at the beginning)
+ t (read text line using minibuffer and use it, or read from
+    standard input in batch mode).</p>
+<p>
+(fn &optional STREAM)</p>

@@ -1,0 +1,14 @@
+<h3>Function: window-with-parameter</h3>
+<p>
+Return first window on FRAME with PARAMETER non-nil.
+FRAME defaults to the selected frame.  Optional argument VALUE
+non-nil means only return a window whose window-parameter value
+for PARAMETER equals VALUE (comparison is done with `equal').
+Optional argument ANY non-nil means consider internal windows
+too.</p>
+<p>
+Optional argument MINIBUF t means consider FRAME's minibuffer
+window even if it isn't active.  MINIBUF nil or omitted means
+consider FRAME's minibuffer window only if it's active.  In both
+cases the minibuffer window must be part of FRAME.  MINIBUF
+neither nil nor t means never consider the minibuffer window.</p>

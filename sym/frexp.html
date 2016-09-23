@@ -1,0 +1,13 @@
+<h3>Function: frexp</h3>
+<p>
+Get significand and exponent of a floating point number.
+Breaks the floating point number X into its binary significand SGNFCAND
+(a floating point value between 0.5 (included) and 1.0 (excluded))
+and an integral exponent EXP for 2, such that:</p>
+<p>
+  X = SGNFCAND * 2^EXP</p>
+<p>
+The function returns the cons cell (SGNFCAND . EXP).
+If X is zero, both parts (SGNFCAND and EXP) are zero.</p>
+<p>
+(fn X)</p>

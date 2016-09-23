@@ -1,0 +1,20 @@
+<h3>Function: coordinates-in-window-p</h3>
+<p>
+Return non-nil if COORDINATES are in WINDOW.
+WINDOW must be a live window and defaults to the selected one.
+COORDINATES is a cons of the form (X . Y), X and Y being distances
+measured in characters from the upper-left corner of the frame.
+(0 . 0) denotes the character in the upper left corner of the
+frame.
+If COORDINATES are in the text portion of WINDOW,
+   the coordinates relative to the window are returned.
+If they are in the mode line of WINDOW, `mode-line' is returned.
+If they are in the top mode line of WINDOW, `header-line' is returned.
+If they are in the left fringe of WINDOW, `left-fringe' is returned.
+If they are in the right fringe of WINDOW, `right-fringe' is returned.
+If they are on the border between WINDOW and its right sibling,
+  `vertical-line' is returned.
+If they are in the windows's left or right marginal areas, `left-margin'
+  or `right-margin' is returned.</p>
+<p>
+(fn COORDINATES WINDOW)</p>

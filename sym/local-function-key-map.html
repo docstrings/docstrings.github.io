@@ -1,0 +1,29 @@
+<h3>Variable: local-function-key-map</h3>
+<p>
+Keymap that translates key sequences to key sequences during input.
+This is used mainly for mapping key sequences into some preferred
+key events (symbols).</p>
+<p>
+The `read-key-sequence' function replaces any subsequence bound by
+`local-function-key-map' with its binding.  More precisely, when the
+active keymaps have no binding for the current key sequence but
+`local-function-key-map' binds a suffix of the sequence to a vector or
+string, `read-key-sequence' replaces the matching suffix with its
+binding, and continues with the new sequence.</p>
+<p>
+If the binding is a function, it is called with one argument (the prompt)
+and its return value (a key sequence) is used.</p>
+<p>
+The events that come from bindings in `local-function-key-map' are not
+themselves looked up in `local-function-key-map'.</p>
+<p>
+For example, suppose `local-function-key-map' binds `ESC O P' to [f1].
+Typing `ESC O P' to `read-key-sequence' would return [f1].  Typing
+`C-x ESC O P' would return [?\C-x f1].  If [f1] were a prefix key,
+typing `ESC O P x' would return [f1 x].</p>
+<p>
+`local-function-key-map' has a separate binding for each terminal
+device.  See Info node `(elisp)Multiple Terminals'.  If you need to
+define a binding on all terminals, change `function-key-map'
+instead.  Initially, `local-function-key-map' is an empty keymap that
+has `function-key-map' as its parent on all terminal devices.</p>

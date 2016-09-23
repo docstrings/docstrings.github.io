@@ -1,0 +1,41 @@
+<h3>Function: find-composition</h3>
+<p>
+Return information about a composition at or near buffer position POS.</p>
+<p>
+If the character at POS has `composition' property, the value is a list
+(FROM TO VALID-P).</p>
+<p>
+FROM and TO specify the range of text that has the same `composition'
+property, VALID-P is t if this composition is valid, and nil if not.</p>
+<p>
+If there's no composition at POS, and the optional 2nd argument LIMIT
+is non-nil, search for a composition toward the position given by LIMIT.</p>
+<p>
+If no composition is found, return nil.</p>
+<p>
+Optional 3rd argument STRING, if non-nil, is a string to look for a
+composition in; nil means the current buffer.</p>
+<p>
+If a valid composition is found and the optional 4th argument DETAIL-P
+is non-nil, the return value is a list of the form</p>
+<p>
+   (FROM TO COMPONENTS RELATIVE-P MOD-FUNC WIDTH)</p>
+<p>
+COMPONENTS is a vector of integers, the meaning depends on RELATIVE-P.</p>
+<p>
+RELATIVE-P is t if the composition method is relative, else nil.</p>
+<p>
+If RELATIVE-P is t, COMPONENTS is a vector of characters to be
+composed.  If RELATIVE-P is nil, COMPONENTS is a vector of characters
+and composition rules as described in `compose-region'.</p>
+<p>
+MOD-FUNC is a modification function of the composition.</p>
+<p>
+WIDTH is a number of columns the composition occupies on the screen.</p>
+<p>
+When Automatic Composition mode is on, this function also finds a
+chunk of text that is automatically composed.  If such a chunk is
+found closer to POS than the position that has `composition'
+property, the value is a list of FROM, TO, and a glyph-string
+that specifies how the chunk is to be composed.  See the function
+`composition-get-gstring' for the format of the glyph-string.</p>

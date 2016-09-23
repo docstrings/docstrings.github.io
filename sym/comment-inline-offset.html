@@ -1,0 +1,10 @@
+<h3>Variable: comment-inline-offset</h3>
+<p>
+Inline comments have to be preceded by at least this many spaces.
+This is useful when style-conventions require a certain minimal offset.
+Python's PEP8 for example recommends two spaces, so you could do:</p>
+<p>
+(add-hook 'python-mode-hook
+   (lambda () (set (make-local-variable 'comment-inline-offset) 2)))</p>
+<p>
+See `comment-padding' for whole-line comments.</p>

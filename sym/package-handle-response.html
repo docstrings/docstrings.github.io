@@ -1,0 +1,7 @@
+<h3>Function: package-handle-response</h3>
+<p>
+Handle the response from a `url-retrieve-synchronously' call.
+Parse the HTTP response and throw if an error occurred.
+The url package seems to require extra processing for this.
+This should be called in a `save-excursion', in the download buffer.
+It will move point to somewhere in the headers.</p>

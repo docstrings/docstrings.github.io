@@ -1,0 +1,24 @@
+<h3>Function: truncate-string-to-width</h3>
+<p>
+Truncate string STR to end at column END-COLUMN.
+The optional 3rd arg START-COLUMN, if non-nil, specifies the starting
+column; that means to return the characters occupying columns
+START-COLUMN ... END-COLUMN of STR.  Both END-COLUMN and START-COLUMN
+are specified in terms of character display width in the current
+buffer; see also `char-width'.</p>
+<p>
+The optional 4th arg PADDING, if non-nil, specifies a padding
+character (which should have a display width of 1) to add at the end
+of the result if STR doesn't reach column END-COLUMN, or if END-COLUMN
+comes in the middle of a character in STR.  PADDING is also added at
+the beginning of the result if column START-COLUMN appears in the
+middle of a character in STR.</p>
+<p>
+If PADDING is nil, no padding is added in these cases, so
+the resulting string may be narrower than END-COLUMN.</p>
+<p>
+If ELLIPSIS is non-nil, it should be a string which will replace the
+end of STR (including any padding) if it extends beyond END-COLUMN,
+unless the display width of STR is equal to or less than the display
+width of ELLIPSIS.  If it is non-nil and not a string, then ELLIPSIS
+defaults to "...".</p>

@@ -1,0 +1,12 @@
+<h3>Variable: ansi-color-map</h3>
+<p>
+A brand new color map suitable for `ansi-color-get-face'.</p>
+<p>
+The value of this variable is usually constructed by
+`ansi-color-make-color-map'.  The values in the array are such that the
+numbers included in an SGR control sequences point to the correct
+foreground or background colors.</p>
+<p>
+Example: The sequence [34m specifies a blue foreground.  Therefore:
+     (aref ansi-color-map 34)
+          => (foreground-color . "blue")</p>

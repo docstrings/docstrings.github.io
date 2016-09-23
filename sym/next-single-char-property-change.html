@@ -1,0 +1,19 @@
+<h3>Function: next-single-char-property-change</h3>
+<p>
+Return the position of next text property or overlay change for a specific property.
+Scans characters forward from POSITION till it finds
+a change in the PROP property, then returns the position of the change.
+If the optional third argument OBJECT is a buffer (or nil, which means
+the current buffer), POSITION is a buffer position (integer or marker).
+If OBJECT is a string, POSITION is a 0-based index into it.</p>
+<p>
+In a string, scan runs to the end of the string.
+In a buffer, it runs to (point-max), and the value cannot exceed that.</p>
+<p>
+The property values are compared with `eq'.
+If the property is constant all the way to the end of OBJECT, return the
+last valid position in OBJECT.
+If the optional fourth argument LIMIT is non-nil, don't search
+past position LIMIT; return LIMIT if nothing is found before LIMIT.</p>
+<p>
+(fn POSITION PROP &optional OBJECT LIMIT)</p>

@@ -1,0 +1,10 @@
+<h3>Function: bitmap-spec-p</h3>
+<p>
+Value is non-nil if OBJECT is a valid bitmap specification.
+A bitmap specification is either a string, a file name, or a list
+(WIDTH HEIGHT DATA) where WIDTH is the pixel width of the bitmap,
+HEIGHT is its height, and DATA is a string containing the bits of
+the pixmap.  Bits are stored row by row, each row occupies
+(WIDTH + 7)/8 bytes.</p>
+<p>
+(fn OBJECT)</p>

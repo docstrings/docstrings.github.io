@@ -1,0 +1,26 @@
+<h3>Function: completion-list-mode</h3>
+<p>
+Major mode for buffers showing lists of possible completions.
+Type RET in the completion list to select the completion near point.
+Use <mouse-2> to select one with the mouse.</p>
+<p>
+key             binding
+---             -------</p>
+<p>
+RET		choose-completion
+ESC		Prefix Command
+q		quit-window
+z		kill-this-buffer
+<follow-link>	mouse-face
+<left>		previous-completion
+<mouse-2>	mouse-choose-completion
+<right>		next-completion</p>
+<p>
+ESC ESC		Prefix Command</p>
+<p>
+M-ESC ESC	delete-completion-window</p>
+<p>
+</p>
+<p>
+This mode runs the hook `completion-list-mode-hook', as the final step
+during initialization.</p>

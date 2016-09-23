@@ -1,0 +1,17 @@
+<h3>Function: comint-dynamic-simple-complete</h3>
+<p>
+Dynamically complete STUB from CANDIDATES list.
+This function inserts completion characters at point by
+completing STUB from the strings in CANDIDATES.  If completion is
+ambiguous, possibly show a completions listing in a separate
+buffer.</p>
+<p>
+Return nil if no completion was inserted.
+Return `sole' if completed with the only completion match.
+Return `shortest' if completed with the shortest match.
+Return `partial' if completed as far as possible.
+Return `listed' if a completion listing was shown.</p>
+<p>
+See also `comint-dynamic-complete-filename'.</p>
+<p>
+(fn STUB CANDIDATES)</p>

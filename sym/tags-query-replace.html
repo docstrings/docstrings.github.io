@@ -1,0 +1,16 @@
+<h3>Function: tags-query-replace</h3>
+<p>
+Do `query-replace-regexp' of FROM with TO on all files listed in tags table.
+Third arg DELIMITED (prefix arg) means replace only word-delimited matches.
+If you exit (C-g, RET or q), you can resume the query replace
+with the command M-,.
+Fourth arg FILE-LIST-FORM non-nil means initialize the replacement loop.
+Fifth and sixth arguments START and END are accepted, for compatibility
+with `query-replace-regexp', and ignored.</p>
+<p>
+If FILE-LIST-FORM is non-nil, it is a form to evaluate to
+produce the list of files to search.</p>
+<p>
+See also the documentation of the variable `tags-file-name'.</p>
+<p>
+(fn FROM TO &optional DELIMITED FILE-LIST-FORM)</p>

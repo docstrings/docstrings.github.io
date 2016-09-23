@@ -1,0 +1,12 @@
+<h3>Function: directory-files</h3>
+<p>
+Return a list of names of files in DIRECTORY.
+There are three optional arguments:
+If FULL is non-nil, return absolute file names.  Otherwise return names
+ that are relative to the specified directory.
+If MATCH is non-nil, mention only file names that match the regexp MATCH.
+If NOSORT is non-nil, the list is not sorted--its order is unpredictable.
+ Otherwise, the list returned is sorted with `string-lessp'.
+ NOSORT is useful if you plan to sort the result yourself.</p>
+<p>
+(fn DIRECTORY &optional FULL MATCH NOSORT)</p>

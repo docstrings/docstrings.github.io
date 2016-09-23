@@ -1,0 +1,15 @@
+<h3>Function: x-selection-exists-p</h3>
+<p>
+Whether there is an owner for the given X selection.
+SELECTION should be the name of the selection in question, typically
+one of the symbols `PRIMARY', `SECONDARY', `CLIPBOARD', or
+`CLIPBOARD_MANAGER' (X expects these literal upper-case names.)  The
+symbol nil is the same as `PRIMARY', and t is the same as `SECONDARY'.</p>
+<p>
+TERMINAL should be a terminal object or a frame specifying the X
+server to query.  If omitted or nil, that stands for the selected
+frame's display, or the first available X display.</p>
+<p>
+On Nextstep, TERMINAL is unused.</p>
+<p>
+(fn &optional SELECTION TERMINAL)</p>

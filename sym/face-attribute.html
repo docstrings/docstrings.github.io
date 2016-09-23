@@ -1,0 +1,19 @@
+<h3>Function: face-attribute</h3>
+<p>
+Return the value of FACE's ATTRIBUTE on FRAME.
+If the optional argument FRAME is given, report on face FACE in that frame.
+If FRAME is t, report on the defaults for face FACE (for new frames).
+If FRAME is omitted or nil, use the selected frame.</p>
+<p>
+If INHERIT is nil, only attributes directly defined by FACE are considered,
+  so the return value may be `unspecified', or a relative value.
+If INHERIT is non-nil, FACE's definition of ATTRIBUTE is merged with the
+  faces specified by its `:inherit' attribute; however the return value
+  may still be `unspecified' or relative.
+If INHERIT is a face or a list of faces, then the result is further merged
+  with that face (or faces), until it becomes specified and absolute.</p>
+<p>
+To ensure that the return value is always specified and absolute, use a
+value of `default' for INHERIT; this will resolve any unspecified or
+relative values by merging with the `default' face (which is always
+completely specified).</p>

@@ -1,0 +1,12 @@
+<h3>Function: window-body-height</h3>
+<p>
+Return the height, in lines, of WINDOW's text area.
+WINDOW must be a live window and defaults to the selected one.</p>
+<p>
+The returned height does not include the mode line or header line.
+On a graphical display, the height is expressed as an integer multiple
+of the default character height.  If a line at the bottom of the text
+area is only partially visible, that counts as a whole line; to
+exclude partially-visible lines, use `window-text-height'.</p>
+<p>
+(fn &optional WINDOW)</p>

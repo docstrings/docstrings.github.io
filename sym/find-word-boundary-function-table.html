@@ -1,0 +1,15 @@
+<h3>Variable: find-word-boundary-function-table</h3>
+<p>
+Char table of functions to search for the word boundary.
+Each function is called with two arguments; POS and LIMIT.
+POS and LIMIT are character positions in the current buffer.</p>
+<p>
+If POS is less than LIMIT, POS is at the first character of a word,
+and the return value of a function is a position after the last
+character of that word.</p>
+<p>
+If POS is not less than LIMIT, POS is at the last character of a word,
+and the return value of a function is a position at the first
+character of that word.</p>
+<p>
+In both cases, LIMIT bounds the search.</p>

@@ -1,0 +1,16 @@
+<h3>Function: x-disown-selection-internal</h3>
+<p>
+If we own the selection SELECTION, disown it.
+Disowning it means there is no such selection.</p>
+<p>
+Sets the last-change time for the selection to TIME-OBJECT (by default
+the time of the last event).</p>
+<p>
+TERMINAL should be a terminal object or a frame specifying the X
+server to query.  If omitted or nil, that stands for the selected
+frame's display, or the first available X display.</p>
+<p>
+On Nextstep, the TIME-OBJECT and TERMINAL arguments are unused.
+On MS-DOS, all this does is return non-nil if we own the selection.</p>
+<p>
+(fn SELECTION &optional TIME-OBJECT TERMINAL)</p>

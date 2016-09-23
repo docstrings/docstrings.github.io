@@ -1,0 +1,9 @@
+<h3>Function: replace-match-maybe-edit</h3>
+<p>
+Make a replacement with `replace-match', editing `\?'.
+NEWTEXT, FIXEDCASE, LITERAL are just passed on.  If NOEDIT is true, no
+check for `\?' is made to save time.  MATCH-DATA is used for the
+replacement.  In case editing is done, it is changed to use markers.</p>
+<p>
+The return value is non-nil if there has been no `\?' or NOEDIT was
+passed in.  If LITERAL is set, no checking is done, anyway.</p>

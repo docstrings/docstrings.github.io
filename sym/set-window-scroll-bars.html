@@ -1,0 +1,14 @@
+<h3>Function: set-window-scroll-bars</h3>
+<p>
+Set width and type of scroll bars of window WINDOW.
+WINDOW must be a live window and defaults to the selected one.</p>
+<p>
+Second parameter WIDTH specifies the pixel width for the scroll bar;
+this is automatically adjusted to a multiple of the frame column width.
+Third parameter VERTICAL-TYPE specifies the type of the vertical scroll
+bar: left, right, or nil.
+If WIDTH is nil, use the frame's scroll-bar width.
+If VERTICAL-TYPE is t, use the frame's scroll-bar type.
+Fourth parameter HORIZONTAL-TYPE is currently unused.</p>
+<p>
+(fn WINDOW WIDTH &optional VERTICAL-TYPE HORIZONTAL-TYPE)</p>

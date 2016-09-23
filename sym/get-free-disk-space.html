@@ -1,0 +1,11 @@
+<h3>Function: get-free-disk-space</h3>
+<p>
+Return the amount of free space on directory DIR's file system.
+The return value is a string describing the amount of free
+space (normally, the number of free 1KB blocks).</p>
+<p>
+This function calls `file-system-info' if it is available, or
+invokes the program specified by `directory-free-space-program'
+and `directory-free-space-args'.  If the system call or program
+is unsuccessful, or if DIR is a remote directory, this function
+returns nil.</p>

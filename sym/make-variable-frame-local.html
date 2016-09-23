@@ -1,0 +1,21 @@
+<h3>Function: make-variable-frame-local</h3>
+<p>
+Enable VARIABLE to have frame-local bindings.
+This does not create any frame-local bindings for VARIABLE,
+it just makes them possible.</p>
+<p>
+A frame-local binding is actually a frame parameter value.
+If a frame F has a value for the frame parameter named VARIABLE,
+that also acts as a frame-local binding for VARIABLE in F--
+provided this function has been called to enable VARIABLE
+to have frame-local bindings at all.</p>
+<p>
+The only way to create a frame-local binding for VARIABLE in a frame
+is to set the VARIABLE frame parameter of that frame.  See
+`modify-frame-parameters' for how to set frame parameters.</p>
+<p>
+Note that since Emacs 23.1, variables cannot be both buffer-local and
+frame-local any more (buffer-local bindings used to take precedence over
+frame-local bindings).</p>
+<p>
+(fn VARIABLE)</p>

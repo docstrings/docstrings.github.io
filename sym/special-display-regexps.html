@@ -1,0 +1,45 @@
+<h3>Variable: special-display-regexps</h3>
+<p>
+List of regexps saying which buffers should be displayed specially.
+Displaying a buffer with `display-buffer' or `pop-to-buffer', if
+any regexp in this list matches its name, displays it specially
+using `special-display-function'.  `special-display-popup-frame'
+(the default for `special-display-function') usually displays
+the buffer in a separate frame made with the parameters specified
+by `special-display-frame-alist'.  If `special-display-function'
+has been set to some other function, that function is called with
+the buffer as first, and nil as second argument.</p>
+<p>
+Alternatively, an element of this list can be specified as
+(REGEXP FRAME-PARAMETERS), where REGEXP is a regexp as above and
+FRAME-PARAMETERS an alist of (PARAMETER . VALUE) pairs.
+`special-display-popup-frame' will then interpret these pairs as
+frame parameters when creating a special frame for a buffer whose
+name matches REGEXP, overriding the corresponding values from
+`special-display-frame-alist'.</p>
+<p>
+As a special case, if FRAME-PARAMETERS contains (same-window . t)
+`special-display-popup-frame' displays buffers matching REGEXP in
+the selected window.  (same-frame . t) in FRAME-PARAMETERS means
+to display such buffers in a window on the selected frame.</p>
+<p>
+If `special-display-function' specifies some other function than
+`special-display-popup-frame', that function is called with the
+buffer whose name matched REGEXP as first, and FRAME-PARAMETERS
+as second argument.</p>
+<p>
+Finally, an element of this list can be also specified as
+(REGEXP FUNCTION OTHER-ARGS).  `special-display-popup-frame'
+will then call FUNCTION with the buffer whose name matched
+REGEXP as first, and OTHER-ARGS as second argument.</p>
+<p>
+Any alternative function specified here is responsible for
+setting up the quit-restore parameter of the window used.</p>
+<p>
+If this variable appears "not to work", because you added a
+name to it but the corresponding buffer is displayed in the
+selected window, look at the values of `same-window-buffer-names'
+and `same-window-regexps'.  Those variables take precedence over
+this one.</p>
+<p>
+See also `special-display-buffer-names'.</p>

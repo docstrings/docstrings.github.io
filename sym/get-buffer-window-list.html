@@ -1,0 +1,31 @@
+<h3>Function: get-buffer-window-list</h3>
+<p>
+Return list of all windows displaying BUFFER-OR-NAME, or nil if none.
+BUFFER-OR-NAME may be a buffer or the name of an existing buffer
+and defaults to the current buffer.  Windows are scanned starting
+with the selected window.</p>
+<p>
+MINIBUF t means include the minibuffer window even if the
+minibuffer is not active.  MINIBUF nil or omitted means include
+the minibuffer window only if the minibuffer is active.  Any
+other value means do not include the minibuffer window even if
+the minibuffer is active.</p>
+<p>
+ALL-FRAMES nil or omitted means consider all windows on the
+selected frame, plus the minibuffer window if specified by the
+MINIBUF argument.  If the minibuffer counts, consider all windows
+on all frames that share that minibuffer too.  The following
+non-nil values of ALL-FRAMES have special meanings:</p>
+<p>
+- t means consider all windows on all existing frames.</p>
+<p>
+- `visible' means consider all windows on all visible frames on
+  the current terminal.</p>
+<p>
+- 0 (the number zero) means consider all windows on all visible
+  and iconified frames on the current terminal.</p>
+<p>
+- A frame means consider all windows on that frame only.</p>
+<p>
+Anything else means consider all windows on the selected frame
+and no others.</p>

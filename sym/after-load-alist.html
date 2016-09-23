@@ -1,0 +1,14 @@
+<h3>Variable: after-load-alist</h3>
+<p>
+An alist of expressions to be evalled when particular files are loaded.
+Each element looks like (REGEXP-OR-FEATURE FORMS...).</p>
+<p>
+REGEXP-OR-FEATURE is either a regular expression to match file names, or
+a symbol (a feature name).</p>
+<p>
+When `load' is run and the file-name argument matches an element's
+REGEXP-OR-FEATURE, or when `provide' is run and provides the symbol
+REGEXP-OR-FEATURE, the FORMS in the element are executed.</p>
+<p>
+An error in FORMS does not undo the load, but does prevent execution of
+the rest of the FORMS.</p>

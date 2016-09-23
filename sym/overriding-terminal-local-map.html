@@ -1,0 +1,13 @@
+<h3>Variable: overriding-terminal-local-map</h3>
+<p>
+Per-terminal keymap that overrides all other local keymaps.
+If this variable is non-nil, it is used as a keymap instead of the
+buffer's local map, and the minor mode keymaps and text property keymaps.
+It also replaces `overriding-local-map'.</p>
+<p>
+This variable is intended to let commands such as `universal-argument'
+set up a different keymap for reading the next command.</p>
+<p>
+`overriding-terminal-local-map' has a separate binding for each
+terminal device.
+See Info node `(elisp)Multiple Terminals'.</p>

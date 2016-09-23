@@ -1,0 +1,12 @@
+<h3>Function: isearch-occur</h3>
+<p>
+Run `occur' using the last search string as the regexp.
+Interactively, REGEXP is constructed using the search string from the
+last search command.  NLINES has the same meaning as in `occur'.</p>
+<p>
+If the last search command was a word search, REGEXP is computed from
+the search words, ignoring punctuation.  If the last search
+command was a regular expression search, REGEXP is the regular
+expression used in that search.  If the last search command searched
+for a literal string, REGEXP is constructed by quoting all the special
+characters in that string.</p>

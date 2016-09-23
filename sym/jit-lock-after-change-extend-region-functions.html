@@ -1,0 +1,12 @@
+<h3>Variable: jit-lock-after-change-extend-region-functions</h3>
+<p>
+Hook that can extend the text to refontify after a change.
+This is run after every buffer change.  The functions are called with
+the three arguments of `after-change-functions': START END OLD-LEN.
+The extended region to refontify is returned indirectly by modifying
+the variables `jit-lock-start' and `jit-lock-end'.</p>
+<p>
+Note that extending the region this way is not strictly necessary, except
+that the nature of the redisplay code tends to otherwise leave some of
+the rehighlighted text displayed with the old highlight until the next
+redisplay (see comment about repeated redisplay in `jit-lock-fontify-now').</p>

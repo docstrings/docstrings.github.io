@@ -1,0 +1,19 @@
+<h3>Function: kmacro-start-macro-or-insert-counter</h3>
+<p>
+Record subsequent keyboard input, defining a keyboard macro.
+The commands are recorded even as they are executed.</p>
+<p>
+Sets the `kmacro-counter' to ARG (or 0 if no prefix arg) before defining the
+macro.</p>
+<p>
+With C-u, appends to current keyboard macro (keeping
+the current value of `kmacro-counter').</p>
+<p>
+When defining/executing macro, inserts macro counter and increments
+the counter with ARG or 1 if missing.  With C-u,
+inserts previous `kmacro-counter' (but do not modify counter).</p>
+<p>
+The macro counter can be modified via M-x kmacro-set-counter and M-x kmacro-add-counter.
+The format of the counter can be modified via M-x kmacro-set-format.</p>
+<p>
+(fn ARG)</p>

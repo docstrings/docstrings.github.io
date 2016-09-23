@@ -1,0 +1,13 @@
+<h3>Function: string-match</h3>
+<p>
+Return index of start of first match for REGEXP in STRING, or nil.
+Matching ignores case if `case-fold-search' is non-nil.
+If third arg START is non-nil, start search at that index in STRING.
+For index of first char beyond the match, do (match-end 0).
+`match-end' and `match-beginning' also give indices of substrings
+matched by parenthesis constructs in the pattern.</p>
+<p>
+You can use the function `match-string' to extract the substrings
+matched by the parenthesis constructions in REGEXP.</p>
+<p>
+(fn REGEXP STRING &optional START)</p>

@@ -1,0 +1,17 @@
+<h3>Function: minibuffer-complete-and-exit</h3>
+<p>
+Exit if the minibuffer contains a valid completion.
+Otherwise, try to complete the minibuffer contents.  If
+completion leads to a valid completion, a repetition of this
+command will exit.</p>
+<p>
+If `minibuffer-completion-confirm' is `confirm', do not try to
+ complete; instead, ask for confirmation and accept any input if
+ confirmed.
+If `minibuffer-completion-confirm' is `confirm-after-completion',
+ do not try to complete; instead, ask for confirmation if the
+ preceding minibuffer command was a member of
+ `minibuffer-confirm-exit-commands', and accept the input
+ otherwise.</p>
+<p>
+(fn)</p>

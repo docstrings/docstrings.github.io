@@ -1,0 +1,14 @@
+<h3>Function: xesam-search</h3>
+<p>
+Perform an interactive search.
+ENGINE is the Xesam search engine to be applied, it must be one of the
+entries of `xesam-search-engines'.  QUERY is the search string in the
+Xesam user query language.  If the search engine does not support
+the Xesam user query language, a Xesam fulltext search is applied.</p>
+<p>
+The default search engine is the first entry in `xesam-search-engines'.
+Example:</p>
+<p>
+  (xesam-search (car (xesam-search-engines)) "emacs")</p>
+<p>
+(fn ENGINE QUERY)</p>

@@ -1,0 +1,18 @@
+<h3>Function: mm-set-buffer-file-coding-system</h3>
+<p>
+Set the file coding-system of the current buffer to CODING-SYSTEM.
+This means that when you save the buffer, it will be converted
+according to CODING-SYSTEM.  For a list of possible values of
+CODING-SYSTEM, use M-x list-coding-systems.</p>
+<p>
+If CODING-SYSTEM leaves the text conversion unspecified, or if it leaves
+the end-of-line conversion unspecified, FORCE controls what to do.
+If FORCE is nil, get the unspecified aspect (or aspects) from the buffer's
+previous `buffer-file-coding-system' value (if it is specified there).
+Otherwise, leave it unspecified.</p>
+<p>
+This marks the buffer modified so that the succeeding C-x C-s
+surely saves the buffer with CODING-SYSTEM.  From a program, if you
+don't want to mark the buffer modified, specify t for NOMODIFY.
+If you know exactly what coding system you want to use,
+just set the variable `buffer-file-coding-system' directly.</p>

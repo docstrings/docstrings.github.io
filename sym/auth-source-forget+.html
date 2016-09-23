@@ -1,0 +1,10 @@
+<h3>Function: auth-source-forget+</h3>
+<p>
+Forget any cached data matching SPEC.  Returns forgotten count.</p>
+<p>
+This is not a full `auth-source-search' spec but works similarly.
+For instance, (:host "myhost" "yourhost") would find all the
+cached data that was found with a search for those two hosts,
+while (:host t) would find all host entries.</p>
+<p>
+(fn &rest SPEC &allow-other-keys)</p>

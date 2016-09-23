@@ -1,0 +1,13 @@
+<h3>Function: find-file-other-window</h3>
+<p>
+Edit file FILENAME, in another window.</p>
+<p>
+Like C-x C-f (which see), but creates a new window or reuses
+an existing one.  See the function `display-buffer'.</p>
+<p>
+Interactively, the default if you just type RET is the current directory,
+but the visited file name is available through the minibuffer history:
+type M-n to pull it into the minibuffer.</p>
+<p>
+Interactively, or if WILDCARDS is non-nil in a call from Lisp,
+expand wildcards (if any) and visit multiple files.</p>

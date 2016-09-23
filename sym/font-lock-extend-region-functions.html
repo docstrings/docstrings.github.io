@@ -1,0 +1,13 @@
+<h3>Variable: font-lock-extend-region-functions</h3>
+<p>
+Special hook run just before proceeding to fontify a region.
+This is used to allow major modes to help font-lock find safe buffer positions
+as beginning and end of the fontified region.  Its most common use is to solve
+the problem of /identification/ of multiline elements by providing a function
+that tries to find such elements and move the boundaries such that they do
+not fall in the middle of one.
+Each function is called with no argument; it is expected to adjust the
+dynamically bound variables `font-lock-beg' and `font-lock-end'; and return
+non-nil if it did make such an adjustment.
+These functions are run in turn repeatedly until they all return nil.
+Put first the functions more likely to cause a change and cheaper to compute.</p>

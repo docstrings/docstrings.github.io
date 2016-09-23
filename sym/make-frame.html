@@ -1,0 +1,41 @@
+<h3>Function: make-frame</h3>
+<p>
+Return a newly created frame displaying the current buffer.
+Optional argument PARAMETERS is an alist of frame parameters for
+the new frame.  Each element of PARAMETERS should have the
+form (NAME . VALUE), for example:</p>
+<p>
+ (name . STRING)	The frame should be named STRING.</p>
+<p>
+ (width . NUMBER)	The frame should be NUMBER characters in width.
+ (height . NUMBER)	The frame should be NUMBER text lines high.</p>
+<p>
+You cannot specify either `width' or `height', you must specify
+neither or both.</p>
+<p>
+ (minibuffer . t)	The frame should have a minibuffer.
+ (minibuffer . nil)	The frame should have no minibuffer.
+ (minibuffer . only)	The frame should contain only a minibuffer.
+ (minibuffer . WINDOW)	The frame should use WINDOW as its minibuffer window.</p>
+<p>
+ (window-system . nil)	The frame should be displayed on a terminal device.
+ (window-system . x)	The frame should be displayed in an X window.</p>
+<p>
+ (display . ":0")     The frame should appear on display :0.</p>
+<p>
+ (terminal . TERMINAL)  The frame should use the terminal object TERMINAL.</p>
+<p>
+In addition, any parameter specified in `default-frame-alist',
+but not present in PARAMETERS, is applied.</p>
+<p>
+Before creating the frame (via `frame-creation-function-alist'),
+this function runs the hook `before-make-frame-hook'.  After
+creating the frame, it runs the hook `after-make-frame-functions'
+with one arg, the newly created frame.</p>
+<p>
+If a display parameter is supplied and a window-system is not,
+guess the window-system from the display.</p>
+<p>
+On graphical displays, this function does not itself make the new
+frame the selected frame.  However, the window system may select
+the new frame according to its own rules.</p>

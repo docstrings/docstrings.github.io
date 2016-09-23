@@ -1,0 +1,12 @@
+<h3>Function: tty-color-define</h3>
+<p>
+Specify a tty color by its NAME, terminal INDEX and RGB values.
+NAME is a string, INDEX is typically a small integer used to send to
+the terminal driver a command to switch this color on, and RGB is a
+list of 3 numbers that specify the intensity of red, green, and blue
+components of the color.
+If specified, each one of the RGB components must be a number between
+0 and 65535.  If RGB is omitted, the specified color will never be used
+by `tty-color-translate' as an approximation to another color.
+FRAME is the frame where the defined color should be used.
+If FRAME is not specified or is nil, it defaults to the selected frame.</p>

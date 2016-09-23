@@ -1,0 +1,18 @@
+<h3>Variable: directory-abbrev-alist</h3>
+<p>
+Alist of abbreviations for file directories.
+A list of elements of the form (FROM . TO), each meaning to replace
+FROM with TO when it appears in a directory name.  This replacement is
+done when setting up the default directory of a newly visited file.</p>
+<p>
+FROM is matched against directory names anchored at the first
+character, so it should start with a "\\`", or, if directory
+names cannot have embedded newlines, with a "^".</p>
+<p>
+FROM and TO should be equivalent names, which refer to the
+same directory.  Do not use `~' in the TO strings;
+they should be ordinary absolute directory names.</p>
+<p>
+Use this feature when you have directories which you normally refer to
+via absolute symbolic links.  Make TO the name of the link, and FROM
+the name it is linked to.</p>

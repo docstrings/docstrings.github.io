@@ -1,0 +1,19 @@
+<h3>Function: ad-activate</h3>
+<p>
+Activate all the advice information of an advised FUNCTION.
+If FUNCTION has a proper original definition then an advised
+definition will be generated from FUNCTION's advice info and the
+definition of FUNCTION will be replaced with it.  If a previously
+cached advised definition was available, it will be used.
+The optional COMPILE argument determines whether the resulting function
+or a compilable cached definition will be compiled.  If it is negative
+no compilation will be performed, if it is positive or otherwise non-nil
+the resulting function will be compiled, if it is nil the behavior depends
+on the value of `ad-default-compilation-action' (which see).
+Activation of an advised function that has an advice info but no actual
+pieces of advice is equivalent to a call to `ad-unadvise'.  Activation of
+an advised function that has actual pieces of advice but none of them are
+enabled is equivalent to a call to `ad-deactivate'.  The current advised
+definition will always be cached for later usage.</p>
+<p>
+(fn FUNCTION &optional COMPILE)</p>

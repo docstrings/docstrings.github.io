@@ -1,0 +1,16 @@
+<h3>Function: format-write-file</h3>
+<p>
+Write current buffer into FILENAME, using a format based on FORMAT.
+Constructs the actual format starting from FORMAT, then appending
+any elements from the value of `buffer-file-format' with a non-nil
+`preserve' flag (see the documentation of `format-alist'), if they
+are not already present in FORMAT.  It then updates `buffer-file-format'
+with this format, making it the default for future saves.</p>
+<p>
+If the buffer is already visiting a file, you can specify a
+directory name as FILENAME, to write a file of the same old name
+in that directory.</p>
+<p>
+If optional third arg CONFIRM is non-nil, asks for confirmation before
+overwriting an existing file.  Interactively, requires confirmation
+unless you supply a prefix argument.</p>

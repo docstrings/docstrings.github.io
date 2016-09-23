@@ -1,0 +1,23 @@
+<h3>Variable: auto-save-file-name-transforms</h3>
+<p>
+Transforms to apply to buffer file name before making auto-save file name.
+Each transform is a list (REGEXP REPLACEMENT UNIQUIFY):
+REGEXP is a regular expression to match against the file name.
+If it matches, `replace-match' is used to replace the
+matching part with REPLACEMENT.
+If the optional element UNIQUIFY is non-nil, the auto-save file name is
+constructed by taking the directory part of the replaced file-name,
+concatenated with the buffer file name with all directory separators
+changed to `!' to prevent clashes.  This will not work
+correctly if your filesystem truncates the resulting name.</p>
+<p>
+All the transforms in the list are tried, in the order they are listed.
+When one transform applies, its result is final;
+no further transforms are tried.</p>
+<p>
+The default value is set up to put the auto-save file into the
+temporary directory (see the variable `temporary-file-directory') for
+editing a remote file.</p>
+<p>
+On MS-DOS filesystems without long names this variable is always
+ignored.</p>

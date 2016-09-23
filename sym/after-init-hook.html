@@ -1,0 +1,10 @@
+<h3>Variable: after-init-hook</h3>
+<p>
+Normal hook run after initializing the Emacs session.
+It is run after Emacs loads the init file, `default' library, the
+abbrevs file, and additional Lisp packages (if any), and setting
+the value of `after-init-time'.</p>
+<p>
+There is no `condition-case' around the running of this hook;
+therefore, if `debug-on-error' is non-nil, an error in one of
+these functions will invoke the debugger.</p>

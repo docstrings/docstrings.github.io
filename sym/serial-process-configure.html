@@ -1,0 +1,57 @@
+<h3>Function: serial-process-configure</h3>
+<p>
+Configure speed, bytesize, etc. of a serial process.</p>
+<p>
+Arguments are specified as keyword/argument pairs.  Attributes that
+are not given are re-initialized from the process's current
+configuration (available via the function `process-contact') or set to
+reasonable default values.  The following arguments are defined:</p>
+<p>
+:process PROCESS
+:name NAME
+:buffer BUFFER
+:port PORT
+-- Any of these arguments can be given to identify the process that is
+to be configured.  If none of these arguments is given, the current
+buffer's process is used.</p>
+<p>
+:speed SPEED -- SPEED is the speed of the serial port in bits per
+second, also called baud rate.  Any value can be given for SPEED, but
+most serial ports work only at a few defined values between 1200 and
+115200, with 9600 being the most common value.  If SPEED is nil, the
+serial port is not configured any further, i.e., all other arguments
+are ignored.  This may be useful for special serial ports such as
+Bluetooth-to-serial converters which can only be configured through AT
+commands.  A value of nil for SPEED can be used only when passed
+through `make-serial-process' or `serial-term'.</p>
+<p>
+:bytesize BYTESIZE -- BYTESIZE is the number of bits per byte, which
+can be 7 or 8.  If BYTESIZE is not given or nil, a value of 8 is used.</p>
+<p>
+:parity PARITY -- PARITY can be nil (don't use parity), the symbol
+`odd' (use odd parity), or the symbol `even' (use even parity).  If
+PARITY is not given, no parity is used.</p>
+<p>
+:stopbits STOPBITS -- STOPBITS is the number of stopbits used to
+terminate a byte transmission.  STOPBITS can be 1 or 2.  If STOPBITS
+is not given or nil, 1 stopbit is used.</p>
+<p>
+:flowcontrol FLOWCONTROL -- FLOWCONTROL determines the type of
+flowcontrol to be used, which is either nil (don't use flowcontrol),
+the symbol `hw' (use RTS/CTS hardware flowcontrol), or the symbol `sw'
+(use XON/XOFF software flowcontrol).  If FLOWCONTROL is not given, no
+flowcontrol is used.</p>
+<p>
+`serial-process-configure' is called by `make-serial-process' for the
+initial configuration of the serial port.</p>
+<p>
+Examples:</p>
+<p>
+(serial-process-configure :process "/dev/ttyS0" :speed 1200)</p>
+<p>
+(serial-process-configure
+    :buffer "COM1" :stopbits 1 :parity 'odd :flowcontrol 'hw)</p>
+<p>
+(serial-process-configure :port "\\.\COM13" :bytesize 7)</p>
+<p>
+(fn &rest ARGS)</p>

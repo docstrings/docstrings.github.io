@@ -1,0 +1,15 @@
+<h3>Function: format-annotate-single-property-change</h3>
+<p>
+Return annotations for property PROP changing from OLD to NEW.
+These are searched for in the translations alist TRANSLATIONS
+ (see `format-annotate-region' for the format).
+If NEW does not appear in the list, but there is a default function,
+then call that function.
+Return a cons of the form (CLOSE . OPEN)
+where CLOSE is a list of annotations to close
+and OPEN is a list of annotations to open.</p>
+<p>
+The annotations in CLOSE and OPEN need not be strings.
+They can be whatever the FORMAT-FN in `format-annotate-region'
+can handle.  If that is `enriched-make-annotation', they can be
+either strings, or lists of the form (PARAMETER VALUE).</p>

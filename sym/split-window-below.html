@@ -1,0 +1,15 @@
+<h3>Function: split-window-below</h3>
+<p>
+Split the selected window into two windows, one above the other.
+The selected window is above.  The newly split-off window is
+below, and displays the same buffer.  Return the new window.</p>
+<p>
+If optional argument SIZE is omitted or nil, both windows get the
+same height, or close to it.  If SIZE is positive, the upper
+(selected) window gets SIZE lines.  If SIZE is negative, the
+lower (new) window gets -SIZE lines.</p>
+<p>
+If the variable `split-window-keep-point' is non-nil, both
+windows get the same value of point as the selected window.
+Otherwise, the window starts are chosen so as to minimize the
+amount of redisplay; this is convenient on slow terminals.</p>

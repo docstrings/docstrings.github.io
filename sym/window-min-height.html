@@ -1,0 +1,12 @@
+<h3>Variable: window-min-height</h3>
+<p>
+The minimum number of lines of any window.
+The value has to accommodate a mode- or header-line if present.
+A value less than `window-safe-min-height' is ignored.  The value
+of this variable is honored when windows are resized or split.</p>
+<p>
+Applications should never rebind this variable.  To resize a
+window to a height less than the one specified here, an
+application should instead call `window-resize' with a non-nil
+IGNORE argument.  In order to have `split-window' make a window
+shorter, explicitly specify the SIZE argument of that function.</p>

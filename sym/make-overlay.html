@@ -1,0 +1,13 @@
+<h3>Function: make-overlay</h3>
+<p>
+Create a new overlay with range BEG to END in BUFFER.
+If omitted, BUFFER defaults to the current buffer.
+BEG and END may be integers or markers.
+The fourth arg FRONT-ADVANCE, if non-nil, makes the marker
+for the front of the overlay advance when text is inserted there
+(which means the text *is not* included in the overlay).
+The fifth arg REAR-ADVANCE, if non-nil, makes the marker
+for the rear of the overlay advance when text is inserted there
+(which means the text *is* included in the overlay).</p>
+<p>
+(fn BEG END &optional BUFFER FRONT-ADVANCE REAR-ADVANCE)</p>

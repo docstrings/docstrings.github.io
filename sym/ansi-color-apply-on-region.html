@@ -1,0 +1,19 @@
+<h3>Function: ansi-color-apply-on-region</h3>
+<p>
+Translates SGR control sequences into overlays or extents.
+Delete all other control sequences without processing them.</p>
+<p>
+SGR control sequences are applied by calling the function
+specified by `ansi-color-apply-face-function'.  The default
+function sets foreground and background colors to the text
+between BEGIN and END, using overlays.  The colors used are given
+in `ansi-color-faces-vector' and `ansi-color-names-vector'.  See
+`ansi-color-apply-sequence' for details.</p>
+<p>
+Every call to this function will set and use the buffer-local
+variable `ansi-color-context-region' to save position and current
+ansi codes.  This information will be used for the next call to
+`ansi-color-apply-on-region'.  Specifically, it will override
+BEGIN, the start of the region and set the face with which to
+start.  Set `ansi-color-context-region' to nil if you don't want
+this.</p>

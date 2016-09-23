@@ -1,0 +1,8 @@
+<h3>Function: easy-menu-convert-item</h3>
+<p>
+Memoize the value returned by `easy-menu-convert-item-1' called on ITEM.
+This makes key-shortcut-caching work a *lot* better when this
+conversion is done from within a filter.
+This also helps when the NAME of the entry is recreated each time:
+since the menu is built and traversed separately, the lookup
+would always fail because the key is `equal' but not `eq'.</p>

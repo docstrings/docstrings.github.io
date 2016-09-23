@@ -1,0 +1,55 @@
+<h3>Function: whitespace-cleanup</h3>
+<p>
+Cleanup some blank problems in all buffer or at region.</p>
+<p>
+It usually applies to the whole buffer, but in transient mark
+mode when the mark is active, it applies to the region.  It also
+applies to the region when it is not in transient mark mode, the
+mark is active and C-u was pressed just before
+calling `whitespace-cleanup' interactively.</p>
+<p>
+See also `whitespace-cleanup-region'.</p>
+<p>
+The problems cleaned up are:</p>
+<p>
+1. empty lines at beginning of buffer.
+2. empty lines at end of buffer.
+   If `whitespace-style' includes the value `empty', remove all
+   empty lines at beginning and/or end of buffer.</p>
+<p>
+3. 8 or more SPACEs at beginning of line.
+   If `whitespace-style' includes the value `indentation':
+   replace 8 or more SPACEs at beginning of line by TABs, if
+   `indent-tabs-mode' is non-nil; otherwise, replace TABs by
+   SPACEs.
+   If `whitespace-style' includes the value `indentation::tab',
+   replace 8 or more SPACEs at beginning of line by TABs.
+   If `whitespace-style' includes the value `indentation::space',
+   replace TABs by SPACEs.</p>
+<p>
+4. SPACEs before TAB.
+   If `whitespace-style' includes the value `space-before-tab':
+   replace SPACEs by TABs, if `indent-tabs-mode' is non-nil;
+   otherwise, replace TABs by SPACEs.
+   If `whitespace-style' includes the value
+   `space-before-tab::tab', replace SPACEs by TABs.
+   If `whitespace-style' includes the value
+   `space-before-tab::space', replace TABs by SPACEs.</p>
+<p>
+5. SPACEs or TABs at end of line.
+   If `whitespace-style' includes the value `trailing', remove
+   all SPACEs or TABs at end of line.</p>
+<p>
+6. 8 or more SPACEs after TAB.
+   If `whitespace-style' includes the value `space-after-tab':
+   replace SPACEs by TABs, if `indent-tabs-mode' is non-nil;
+   otherwise, replace TABs by SPACEs.
+   If `whitespace-style' includes the value
+   `space-after-tab::tab', replace SPACEs by TABs.
+   If `whitespace-style' includes the value
+   `space-after-tab::space', replace TABs by SPACEs.</p>
+<p>
+See `whitespace-style', `indent-tabs-mode' and `tab-width' for
+documentation.</p>
+<p>
+(fn)</p>

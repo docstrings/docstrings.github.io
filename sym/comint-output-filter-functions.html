@@ -1,0 +1,13 @@
+<h3>Variable: comint-output-filter-functions</h3>
+<p>
+Functions to call after output is inserted into the buffer.
+One possible function is `comint-postoutput-scroll-to-bottom'.
+These functions get one argument, a string containing the text as originally
+inserted.  Note that this might not be the same as the buffer contents between
+`comint-last-output-start' and the buffer's `process-mark', if other filter
+functions have already modified the buffer.</p>
+<p>
+See also `comint-preoutput-filter-functions'.</p>
+<p>
+You can use `add-hook' to add functions to this list
+either globally or locally.</p>

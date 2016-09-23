@@ -1,0 +1,11 @@
+<h3>Function: x-parse-geometry</h3>
+<p>
+Parse a display geometry string STRING.
+Returns an alist of the form ((top . TOP), (left . LEFT) ... ).
+The properties returned may include `top', `left', `height', and `width'.
+For X, the value of `left' or `top' may be an integer,
+or a list (+ N) meaning N pixels relative to top/left corner,
+or a list (- N) meaning -N pixels relative to bottom/right corner.
+On Nextstep, this just calls `ns-parse-geometry'.</p>
+<p>
+(fn STRING)</p>

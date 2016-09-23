@@ -1,0 +1,13 @@
+<h3>Function: window--resize-root-window-vertically</h3>
+<p>
+Resize root window WINDOW vertically by DELTA lines.
+If DELTA is less than zero and we can't shrink WINDOW by DELTA
+lines, shrink it as much as possible.  If DELTA is greater than
+zero, this function can resize fixed-size windows in order to
+recover the necessary lines.</p>
+<p>
+Return the number of lines that were recovered.</p>
+<p>
+This function is only called by the minibuffer window resizing
+routines.  It resizes windows proportionally and never deletes
+any windows.</p>

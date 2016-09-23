@@ -1,0 +1,10 @@
+<h3>Function: string-to-unibyte</h3>
+<p>
+Return a unibyte string with the same individual chars as STRING.
+If STRING is unibyte, the result is STRING itself.
+Otherwise it is a newly created string, with no text properties,
+where each `eight-bit' character is converted to the corresponding byte.
+If STRING contains a non-ASCII, non-`eight-bit' character,
+an error is signaled.</p>
+<p>
+(fn STRING)</p>

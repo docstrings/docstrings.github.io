@@ -1,0 +1,13 @@
+<h3>Function: command-execute</h3>
+<p>
+Execute CMD as an editor command.
+CMD must be a symbol that satisfies the `commandp' predicate.
+Optional second arg RECORD-FLAG non-nil
+means unconditionally put this command in `command-history'.
+Otherwise, that is done only if an arg is read using the minibuffer.
+The argument KEYS specifies the value to use instead of (this-command-keys)
+when reading the arguments; if it is nil, (this-command-keys) is used.
+The argument SPECIAL, if non-nil, means that this command is executing
+a special event, so ignore the prefix argument and don't clear it.</p>
+<p>
+(fn CMD &optional RECORD-FLAG KEYS SPECIAL)</p>

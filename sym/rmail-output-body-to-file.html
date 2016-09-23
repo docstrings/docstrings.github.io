@@ -1,0 +1,14 @@
+<h3>Function: rmail-output-body-to-file</h3>
+<p>
+Write this message body to the file FILE-NAME.
+Interactively, the default file name comes from either the message
+"Subject" header, or from `rmail-default-body-file'.  Updates the value
+of `rmail-default-body-file' accordingly.  In all uses, if FILE-NAME
+is not absolute, it is expanded with the directory part of
+`rmail-default-body-file'.</p>
+<p>
+Note that this overwrites FILE-NAME (after confirmation), rather
+than appending to it.  Deletes the message after writing if
+`rmail-delete-after-output' is non-nil.</p>
+<p>
+(fn FILE-NAME)</p>

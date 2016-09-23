@@ -1,0 +1,15 @@
+<h3>Function: insert-text-button</h3>
+<p>
+Insert a button with the label LABEL.
+The remaining arguments form a sequence of PROPERTY VALUE pairs,
+specifying properties to add to the button.
+In addition, the keyword argument :type may be used to specify a
+button-type from which to inherit other properties; see
+`define-button-type'.</p>
+<p>
+This function is like `insert-button', except that the button is
+actually part of the text instead of being a property of the buffer.
+Creating large numbers of buttons can also be somewhat faster using
+`insert-text-button'.</p>
+<p>
+Also see `make-text-button'.</p>

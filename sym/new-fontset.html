@@ -1,0 +1,16 @@
+<h3>Function: new-fontset</h3>
+<p>
+Create a new fontset NAME from font information in FONTLIST.</p>
+<p>
+FONTLIST is an alist of scripts vs the corresponding font specification list.
+Each element of FONTLIST has the form (SCRIPT FONT-SPEC ...), where a
+character of SCRIPT is displayed by a font that matches one of
+FONT-SPEC.</p>
+<p>
+SCRIPT is a symbol that appears in the first extra slot of the
+char-table `char-script-table'.</p>
+<p>
+FONT-SPEC is a vector, a cons, or a string.  See the documentation of
+`set-fontset-font' for the meaning.</p>
+<p>
+(fn NAME FONTLIST)</p>

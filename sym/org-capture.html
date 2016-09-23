@@ -1,0 +1,27 @@
+<h3>Function: org-capture</h3>
+<p>
+Capture something.</p>
+<p>
+Uses keymap `org-capture-mode-map', which is not currently defined.</p>
+<p>
+This will let you select a template from `org-capture-templates', and then
+file the newly captured information.  The text is immediately inserted
+at the target location, and an indirect buffer is shown where you can
+edit it.  Pressing M-x org-capture-finalize brings you back to the previous state
+of Emacs, so that you can continue your work.</p>
+<p>
+When called interactively with a C-u prefix argument GOTO, don't capture
+anything, just go to the file/headline where the selected template
+stores its notes.  With a double prefix argument C-u C-u, go to the last note
+stored.</p>
+<p>
+When called with a `C-0' (zero) prefix, insert a template at point.</p>
+<p>
+Lisp programs can set KEYS to a string associated with a template
+in `org-capture-templates'.  In this case, interactive selection
+will be bypassed.</p>
+<p>
+If `org-capture-use-agenda-date' is non-nil, capturing from the
+agenda will use the date at point as the default date.</p>
+<p>
+(fn &optional GOTO KEYS)</p>

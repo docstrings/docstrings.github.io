@@ -1,0 +1,11 @@
+<h3>Function: indirect-variable</h3>
+<p>
+Return the variable at the end of OBJECT's variable chain.
+If OBJECT is a symbol, follow its variable indirections (if any), and
+return the variable at the end of the chain of aliases.  See Info node
+`(elisp)Variable Aliases'.</p>
+<p>
+If OBJECT is not a symbol, just return it.  If there is a loop in the
+chain of aliases, signal a `cyclic-variable-indirection' error.</p>
+<p>
+(fn OBJECT)</p>

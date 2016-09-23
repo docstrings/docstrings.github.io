@@ -1,0 +1,17 @@
+<h3>Function: pcomplete-arg</h3>
+<p>
+Return the textual content of the INDEXth argument.
+INDEX is based from the current processing position.  If INDEX is
+positive, values returned are closer to the command argument; if
+negative, they are closer to the last argument.  If the INDEX is
+outside of the argument list, nil is returned.  The default value for
+INDEX is 0, meaning the current argument being examined.</p>
+<p>
+The special indices `first' and `last' may be used to access those
+parts of the list.</p>
+<p>
+The OFFSET argument is added to/taken away from the index that will be
+used.  This is really only useful with `first' and `last', for
+accessing absolute argument positions.</p>
+<p>
+(fn &optional INDEX OFFSET)</p>

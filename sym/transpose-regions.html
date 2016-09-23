@@ -1,0 +1,12 @@
+<h3>Function: transpose-regions</h3>
+<p>
+Transpose region STARTR1 to ENDR1 with STARTR2 to ENDR2.
+The regions should not be overlapping, because the size of the buffer is
+never changed in a transposition.</p>
+<p>
+Optional fifth arg LEAVE-MARKERS, if non-nil, means don't update
+any markers that happen to be located in the regions.</p>
+<p>
+Transposing beyond buffer boundaries is an error.</p>
+<p>
+(fn STARTR1 ENDR1 STARTR2 ENDR2 &optional LEAVE-MARKERS)</p>

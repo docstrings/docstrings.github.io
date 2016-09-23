@@ -1,0 +1,81 @@
+<h3>Function: comint-mode</h3>
+<p>
+Major mode for interacting with an inferior interpreter.
+Interpreter name is same as buffer name, sans the asterisks.
+Return at end of buffer sends line as input.
+Return not at end copies rest of line to end and sends it.
+Setting variable `comint-eol-on-send' means jump to the end of the line
+before submitting new input.</p>
+<p>
+This mode is customized to create major modes such as Inferior Lisp
+mode, Shell mode, etc.  This can be done by setting the hooks
+`comint-input-filter-functions', `comint-input-filter', `comint-input-sender'
+and `comint-get-old-input' to appropriate functions, and the variable
+`comint-prompt-regexp' to the appropriate regular expression.</p>
+<p>
+The mode maintains an input history of size `comint-input-ring-size'.
+You can access this with the commands M-x comint-next-input,
+M-x comint-previous-input, and M-x comint-dynamic-list-input-ring.
+Input ring history expansion can be achieved with the commands
+M-x comint-replace-by-expanded-history or M-x comint-magic-space.
+Input ring expansion is controlled by the variable `comint-input-autoexpand',
+and addition is controlled by the variable `comint-input-ignoredups'.</p>
+<p>
+Commands with no default key bindings include `send-invisible',
+`comint-dynamic-complete', `comint-dynamic-list-filename-completions', and
+`comint-magic-space'.</p>
+<p>
+Input to, and output from, the subprocess can cause the window to scroll to
+the end of the buffer.  See variables `comint-output-filter-functions',
+`comint-preoutput-filter-functions', `comint-scroll-to-bottom-on-input',
+and `comint-move-point-for-output'.</p>
+<p>
+If you accidentally suspend your process, use M-x comint-continue-subjob
+to continue it.</p>
+<p>
+key             binding
+---             -------</p>
+<p>
+C-c		Prefix Command
+C-d		comint-delchar-or-maybe-eof
+RET		comint-send-input
+ESC		Prefix Command
+<C-down>	comint-next-input
+<C-up>		comint-previous-input
+<delete>	delete-char
+<kp-delete>	delete-char
+<mouse-2>	comint-insert-input</p>
+<p>
+C-c C-a		comint-bol-or-process-mark
+C-c C-c		comint-interrupt-subjob
+C-c C-d		comint-send-eof
+C-c C-e		comint-show-maximum-output
+C-c C-l		comint-dynamic-list-input-ring
+C-c RET		comint-copy-old-input
+C-c C-n		comint-next-prompt
+C-c C-o		comint-delete-output
+C-c C-p		comint-previous-prompt
+C-c C-r		comint-show-output
+C-c C-s		comint-write-output
+C-c C-u		comint-kill-input
+C-c C-w		backward-kill-word
+C-c C-x		comint-get-next-from-history
+C-c C-z		comint-stop-subjob
+C-c ESC		Prefix Command
+C-c C-\		comint-quit-subjob
+C-c SPC		comint-accumulate
+C-c .		comint-insert-previous-argument</p>
+<p>
+C-M-l		comint-show-output
+M-n		comint-next-input
+M-p		comint-previous-input
+M-r		comint-history-isearch-backward-regexp</p>
+<p>
+C-c M-r		comint-previous-matching-input-from-input
+C-c M-s		comint-next-matching-input-from-input</p>
+<p>
+</p>
+<p>
+Entry to this mode runs the hooks on `comint-mode-hook'.</p>
+<p>
+(fn)</p>

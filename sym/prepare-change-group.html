@@ -1,0 +1,28 @@
+<h3>Function: prepare-change-group</h3>
+<p>
+Return a handle for the current buffer's state, for a change group.
+If you specify BUFFER, make a handle for BUFFER's state instead.</p>
+<p>
+Pass the handle to `activate-change-group' afterward to initiate
+the actual changes of the change group.</p>
+<p>
+To finish the change group, call either `accept-change-group' or
+`cancel-change-group' passing the same handle as argument.  Call
+`accept-change-group' to accept the changes in the group as final;
+call `cancel-change-group' to undo them all.  You should use
+`unwind-protect' to make sure the group is always finished.  The call
+to `activate-change-group' should be inside the `unwind-protect'.
+Once you finish the group, don't use the handle again--don't try to
+finish the same group twice.  For a simple example of correct use, see
+the source code of `atomic-change-group'.</p>
+<p>
+The handle records only the specified buffer.  To make a multibuffer
+change group, call this function once for each buffer you want to
+cover, then use `nconc' to combine the returned values, like this:</p>
+<p>
+  (nconc (prepare-change-group buffer-1)
+         (prepare-change-group buffer-2))</p>
+<p>
+You can then activate that multibuffer change group with a single
+call to `activate-change-group' and finish it with a single call
+to `accept-change-group' or `cancel-change-group'.</p>

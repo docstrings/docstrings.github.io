@@ -1,0 +1,19 @@
+<h3>Function: make-terminal-frame</h3>
+<p>
+Create an additional terminal frame, possibly on another terminal.
+This function takes one argument, an alist specifying frame parameters.</p>
+<p>
+You can create multiple frames on a single text terminal, but only one
+of them (the selected terminal frame) is actually displayed.</p>
+<p>
+In practice, generally you don't need to specify any parameters,
+except when you want to create a new frame on another terminal.
+In that case, the `tty' parameter specifies the device file to open,
+and the `tty-type' parameter specifies the terminal type.  Example:</p>
+<p>
+   (make-terminal-frame '((tty . "/dev/pts/5") (tty-type . "xterm")))</p>
+<p>
+Note that changing the size of one terminal frame automatically
+affects all frames on the same terminal device.</p>
+<p>
+(fn PARMS)</p>

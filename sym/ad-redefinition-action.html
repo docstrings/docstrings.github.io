@@ -1,0 +1,11 @@
+<h3>Variable: ad-redefinition-action</h3>
+<p>
+Defines what to do with redefinitions during Advice de/activation.
+Redefinition occurs if a previously activated function that already has an
+original definition associated with it gets redefined and then de/activated.
+In such a case we can either accept the current definition as the new
+original definition, discard the current definition and replace it with the
+old original, or keep it and raise an error.  The values `accept', `discard',
+`error' or `warn' govern what will be done.  `warn' is just like `accept' but
+it additionally prints a warning message.  All other values will be
+interpreted as `error'.</p>

@@ -1,0 +1,21 @@
+<h3>Variable: tabulated-list-format</h3>
+<p>
+The format of the current Tabulated List mode buffer.
+This should be a vector of elements (NAME WIDTH SORT . PROPS),
+where:
+ - NAME is a string describing the column.
+   This is the label for the column in the header line.
+   Different columns must have non-`equal' names.
+ - WIDTH is the width to reserve for the column.
+   For the final element, its numerical value is ignored.
+ - SORT specifies how to sort entries by this column.
+   If nil, this column cannot be used for sorting.
+   If t, sort by comparing the string value printed in the column.
+   Otherwise, it should be a predicate function suitable for
+   `sort', accepting arguments with the same form as the elements
+   of `tabulated-list-entries'.
+ - PROPS is a plist of additional column properties.
+   Currently supported properties are:
+   - `:right-align': if non-nil, the column should be right-aligned.
+   - `:pad-right': Number of additional padding spaces to the
+     right of the column (defaults to 1 if omitted).</p>

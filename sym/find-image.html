@@ -1,0 +1,19 @@
+<h3>Function: find-image</h3>
+<p>
+Find an image, choosing one of a list of image specifications.</p>
+<p>
+SPECS is a list of image specifications.</p>
+<p>
+Each image specification in SPECS is a property list.  The contents of
+a specification are image type dependent.  All specifications must at
+least contain the properties `:type TYPE' and either `:file FILE' or
+`:data DATA', where TYPE is a symbol specifying the image type,
+e.g. `xbm', FILE is the file to load the image from, and DATA is a
+string containing the actual image data.  The specification whose TYPE
+is supported, and FILE exists, is used to construct the image
+specification to be returned.  Return nil if no specification is
+satisfied.</p>
+<p>
+The image is looked for in `image-load-path'.</p>
+<p>
+Image files should not be larger than specified by `max-image-size'.</p>

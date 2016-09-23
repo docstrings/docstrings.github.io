@@ -1,0 +1,15 @@
+<h3>Function: regexp-opt</h3>
+<p>
+Return a regexp to match a string in the list STRINGS.
+Each string should be unique in STRINGS and should not contain any regexps,
+quoted or not.  If optional PAREN is non-nil, ensure that the returned regexp
+is enclosed by at least one regexp grouping construct.
+The returned regexp is typically more efficient than the equivalent regexp:</p>
+<p>
+ (let ((open (if PAREN "\\(" "")) (close (if PAREN "\\)" "")))
+   (concat open (mapconcat 'regexp-quote STRINGS "\\|") close))</p>
+<p>
+If PAREN is `words', then the resulting regexp is additionally surrounded
+by \< and \>.
+If PAREN is `symbols', then the resulting regexp is additionally surrounded
+by \_< and \_>.</p>

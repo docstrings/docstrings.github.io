@@ -1,0 +1,12 @@
+<h3>Function: View-revert-buffer-scroll-page-forward</h3>
+<p>
+Scroll forward, reverting buffer if needed, in View mode.
+If buffer has not been changed and the corresponding file is newer, first
+revert the buffer, then scroll.
+This command is useful if you are viewing a changing file.</p>
+<p>
+The prefix argument LINES says how many lines to scroll.
+If you don't specify a prefix argument, it uses the number of lines set by
+M-x View-scroll-page-forward-set-page-size or
+M-x View-scroll-page-backward-set-page-size.
+If LINES is more than a window-full, only the last window-full is shown.</p>

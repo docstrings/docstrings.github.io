@@ -1,0 +1,13 @@
+<h3>Function: window-end</h3>
+<p>
+Return position at which display currently ends in WINDOW.
+WINDOW must be a live window and defaults to the selected one.
+This is updated by redisplay, when it runs to completion.
+Simply changing the buffer text or setting `window-start'
+does not update this value.
+Return nil if there is no recorded value.  (This can happen if the
+last redisplay of WINDOW was preempted, and did not finish.)
+If UPDATE is non-nil, compute the up-to-date position
+if it isn't already recorded.</p>
+<p>
+(fn &optional WINDOW UPDATE)</p>

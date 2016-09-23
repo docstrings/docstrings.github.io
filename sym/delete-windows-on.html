@@ -1,0 +1,25 @@
+<h3>Function: delete-windows-on</h3>
+<p>
+Delete all windows showing BUFFER-OR-NAME.
+BUFFER-OR-NAME may be a buffer or the name of an existing buffer
+and defaults to the current buffer.</p>
+<p>
+The following non-nil values of the optional argument FRAME
+have special meanings:</p>
+<p>
+- t means consider all windows on the selected frame only.</p>
+<p>
+- `visible' means consider all windows on all visible frames on
+  the current terminal.</p>
+<p>
+- 0 (the number zero) means consider all windows on all visible
+  and iconified frames on the current terminal.</p>
+<p>
+- A frame means consider all windows on that frame only.</p>
+<p>
+Any other value of FRAME means consider all windows on all
+frames.</p>
+<p>
+When a window showing BUFFER-OR-NAME is dedicated and the only
+window of its frame, that frame is deleted when there are other
+frames left.</p>

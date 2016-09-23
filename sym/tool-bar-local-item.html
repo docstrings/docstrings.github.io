@@ -1,0 +1,12 @@
+<h3>Function: tool-bar-local-item</h3>
+<p>
+Add an item to the tool bar in map MAP.
+ICON names the image, DEF is the key definition and KEY is a symbol
+for the fake function key in the menu keymap.  Remaining arguments
+PROPS are additional items to add to the menu item specification.  See
+Info node `(elisp)Tool Bar'.  Items are added from left to right.</p>
+<p>
+ICON is the base name of a file containing the image to use.  The
+function will first try to use low-color/ICON.xpm if `display-color-cells'
+is less or equal to 256, then ICON.xpm, then ICON.pbm, and finally
+ICON.xbm, using `find-image'.</p>

@@ -1,0 +1,17 @@
+<h3>Variable: init-file-user</h3>
+<p>
+Identity of user whose init file is or was read.
+The value is nil if `-q' or `--no-init-file' was specified,
+meaning do not load any init file.</p>
+<p>
+Otherwise, the value may be an empty string, meaning
+use the init file for the user who originally logged in,
+or it may be a string containing a user's name meaning
+use that person's init file.</p>
+<p>
+In either of the latter cases, `(concat "~" init-file-user "/")'
+evaluates to the name of the directory where the init file was
+looked for.</p>
+<p>
+Setting `init-file-user' does not prevent Emacs from loading
+`site-start.el'.  The only way to do that is to use `--no-site-file'.</p>

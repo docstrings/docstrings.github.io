@@ -1,0 +1,21 @@
+<h3>Variable: load-history</h3>
+<p>
+Alist mapping loaded file names to symbols and features.
+Each alist element should be a list (FILE-NAME ENTRIES...), where
+FILE-NAME is the name of a file that has been loaded into Emacs.
+The file name is absolute and true (i.e. it doesn't contain symlinks).
+As an exception, one of the alist elements may have FILE-NAME nil,
+for symbols and features not associated with any file.</p>
+<p>
+The remaining ENTRIES in the alist element describe the functions and
+variables defined in that file, the features provided, and the
+features required.  Each entry has the form `(provide . FEATURE)',
+`(require . FEATURE)', `(defun . FUNCTION)', `(autoload . SYMBOL)',
+`(defface . SYMBOL)', or `(t . SYMBOL)'.  Entries like `(t . SYMBOL)'
+may precede a `(defun . FUNCTION)' entry, and means that SYMBOL was an
+autoload before this file redefined it as a function.  In addition,
+entries may also be single symbols, which means that SYMBOL was
+defined by `defvar' or `defconst'.</p>
+<p>
+During preloading, the file name recorded is relative to the main Lisp
+directory.  These file names are converted to absolute at startup.</p>

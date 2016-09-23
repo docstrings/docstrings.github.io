@@ -1,0 +1,44 @@
+<h3>Function: list-load-path-shadows</h3>
+<p>
+Display a list of Emacs Lisp files that shadow other files.</p>
+<p>
+If STRINGP is non-nil, returns any shadows as a string.
+Otherwise, if interactive shows any shadows in a `*Shadows*' buffer;
+else prints messages listing any shadows.</p>
+<p>
+This function lists potential load path problems.  Directories in
+the `load-path' variable are searched, in order, for Emacs Lisp
+files.  When a previously encountered file name is found again, a
+message is displayed indicating that the later file is "hidden" by
+the earlier.</p>
+<p>
+For example, suppose `load-path' is set to</p>
+<p>
+("/usr/gnu/emacs/site-lisp" "/usr/gnu/emacs/share/emacs/19.30/lisp")</p>
+<p>
+and that each of these directories contains a file called XXX.el.  Then
+XXX.el in the site-lisp directory is referred to by all of:
+(require 'XXX), (autoload .... "XXX"), (load-library "XXX") etc.</p>
+<p>
+The first XXX.el file prevents Emacs from seeing the second (unless
+the second is loaded explicitly via `load-file').</p>
+<p>
+When not intended, such shadowings can be the source of subtle
+problems.  For example, the above situation may have arisen because the
+XXX package was not distributed with versions of Emacs prior to
+19.30.  An Emacs maintainer downloaded XXX from elsewhere and installed
+it.  Later, XXX was updated and included in the Emacs distribution.
+Unless the Emacs maintainer checks for this, the new version of XXX
+will be hidden behind the old (which may no longer work with the new
+Emacs version).</p>
+<p>
+This function performs these checks and flags all possible
+shadowings.  Because a .el file may exist without a corresponding .elc
+(or vice-versa), these suffixes are essentially ignored.  A file
+XXX.elc in an early directory (that does not contain XXX.el) is
+considered to shadow a later file XXX.el, and vice-versa.</p>
+<p>
+Shadowings are located by calling the (non-interactive) companion
+function, `load-path-shadows-find'.</p>
+<p>
+(fn &optional STRINGP)</p>

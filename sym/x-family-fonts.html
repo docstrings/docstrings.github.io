@@ -1,0 +1,19 @@
+<h3>Function: x-family-fonts</h3>
+<p>
+Return a list of available fonts of family FAMILY on FRAME.
+If FAMILY is omitted or nil, list all families.
+Otherwise, FAMILY must be a string, possibly containing wildcards
+`?' and `*'.
+If FRAME is omitted or nil, use the selected frame.
+Each element of the result is a vector [FAMILY WIDTH POINT-SIZE WEIGHT
+SLANT FIXED-P FULL REGISTRY-AND-ENCODING].
+FAMILY is the font family name.  POINT-SIZE is the size of the
+font in 1/10 pt.  WIDTH, WEIGHT, and SLANT are symbols describing the
+width, weight and slant of the font.  These symbols are the same as for
+face attributes.  FIXED-P is non-nil if the font is fixed-pitch.
+FULL is the full name of the font, and REGISTRY-AND-ENCODING is a string
+giving the registry and encoding of the font.
+The result list is sorted according to the current setting of
+the face font sort order.</p>
+<p>
+(fn &optional FAMILY FRAME)</p>

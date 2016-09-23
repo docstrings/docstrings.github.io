@@ -1,0 +1,29 @@
+<h3>Function: org-diary</h3>
+<p>
+Return diary information from org files.
+This function can be used in a "sexp" diary entry in the Emacs calendar.
+It accesses org files and extracts information from those files to be
+listed in the diary.  The function accepts arguments specifying what
+items should be listed.  For a list of arguments allowed here, see the
+variable `org-agenda-entry-types'.</p>
+<p>
+The call in the diary file should look like this:</p>
+<p>
+   &%%(org-diary) ~/path/to/some/orgfile.org</p>
+<p>
+Use a separate line for each org file to check.  Or, if you omit the file name,
+all files listed in `org-agenda-files' will be checked automatically:</p>
+<p>
+   &%%(org-diary)</p>
+<p>
+If you don't give any arguments (as in the example above), the default
+arguments (:deadline :scheduled :timestamp :sexp) are used.
+So the example above may also be written as</p>
+<p>
+   &%%(org-diary :deadline :timestamp :sexp :scheduled)</p>
+<p>
+The function expects the lisp variables `entry' and `date' to be provided
+by the caller, because this is how the calendar works.  Don't use this
+function from a program - use `org-agenda-get-day-entries' instead.</p>
+<p>
+(fn &rest ARGS)</p>

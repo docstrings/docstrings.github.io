@@ -1,0 +1,12 @@
+<h3>Function: display-buffer-pop-up-frame</h3>
+<p>
+Display BUFFER in a new frame.
+This works by calling `pop-up-frame-function'.  If successful,
+return the window used; otherwise return nil.</p>
+<p>
+If ALIST has a non-nil `inhibit-switch-frame' entry, avoid
+raising the new frame.</p>
+<p>
+If ALIST has a non-nil `pop-up-frame-parameters' entry, the
+corresponding value is an alist of frame parameters to give the
+new frame.</p>

@@ -1,0 +1,68 @@
+<h3>Function: tabulated-list-mode</h3>
+<p>
+Generic major mode for browsing a list of items.
+This mode is usually not used directly; instead, other major
+modes are derived from it, using `define-derived-mode'.</p>
+<p>
+In this major mode, the buffer is divided into multiple columns,
+which are labeled using the header line.  Each non-empty line
+belongs to one "entry", and the entries can be sorted according
+to their column values.</p>
+<p>
+An inheriting mode should usually do the following in their body:</p>
+<p>
+ - Set `tabulated-list-format', specifying the column format.
+ - Set `tabulated-list-revert-hook', if the buffer contents need
+   to be specially recomputed prior to `revert-buffer'.
+ - Maybe set a `tabulated-list-entries' function (see below).
+ - Maybe set `tabulated-list-printer' (see below).
+ - Maybe set `tabulated-list-padding'.
+ - Call `tabulated-list-init-header' to initialize `header-line-format'
+   according to `tabulated-list-format'.</p>
+<p>
+An inheriting mode is usually accompanied by a "list-FOO"
+command (e.g. `list-packages', `list-processes').  This command
+creates or switches to a buffer and enables the major mode in
+that buffer.  If `tabulated-list-entries' is not a function, the
+command should initialize it to a list of entries for displaying.
+Finally, it should call `tabulated-list-print'.</p>
+<p>
+`tabulated-list-print' calls the printer function specified by
+`tabulated-list-printer', once for each entry.  The default
+printer is `tabulated-list-print-entry', but a mode that keeps
+data in an ewoc may instead specify a printer function (e.g., one
+that calls `ewoc-enter-last'), with `tabulated-list-print-entry'
+as the ewoc pretty-printer.</p>
+<p>
+In addition to any hooks its parent mode `special-mode' might have run,
+this mode runs the hook `tabulated-list-mode-hook', as the final step
+during initialization.</p>
+<p>
+key             binding
+---             -------</p>
+<p>
+TAB		forward-button
+ESC		Prefix Command
+SPC		scroll-up-command
+-		negative-argument
+0 .. 9		digit-argument
+<		beginning-of-buffer
+>		end-of-buffer
+?		describe-mode
+S		tabulated-list-sort
+g		revert-buffer
+h		describe-mode
+n		next-line
+p		previous-line
+q		quit-window
+DEL		scroll-down-command
+<backtab>	backward-button
+<follow-link>	mouse-face
+<mouse-2>	mouse-select-window
+<remap>		Prefix Command</p>
+<p>
+C-M-i		backward-button</p>
+<p>
+</p>
+<p>
+(fn)</p>

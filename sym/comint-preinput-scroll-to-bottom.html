@@ -1,0 +1,11 @@
+<h3>Function: comint-preinput-scroll-to-bottom</h3>
+<p>
+Go to the end of buffer in all windows showing it.
+Movement occurs if point in the selected window is not after the process mark,
+and `this-command' is an insertion command.  Insertion commands recognized
+are `self-insert-command', `comint-magic-space', `yank', and `hilit-yank'.
+Depends on the value of `comint-scroll-to-bottom-on-input'.</p>
+<p>
+This function should be a pre-command hook.</p>
+<p>
+(fn)</p>

@@ -1,0 +1,26 @@
+<h3>Function: vc-next-action</h3>
+<p>
+Do the next logical version control operation on the current fileset.
+This requires that all files in the current VC fileset be in the
+same state.  If not, signal an error.</p>
+<p>
+For merging-based version control systems:
+  If every file in the VC fileset is not registered for version
+   control, register the fileset (but don't commit).
+  If every work file in the VC fileset is added or changed, pop
+   up a *vc-log* buffer to commit the fileset.
+  For a centralized version control system, if any work file in
+   the VC fileset is out of date, offer to update the fileset.</p>
+<p>
+For old-style locking-based version control systems, like RCS:
+  If every file is not registered, register the file(s).
+  If every file is registered and unlocked, check out (lock)
+   the file(s) for editing.
+  If every file is locked by you and has changes, pop up a
+   *vc-log* buffer to check in the changes.  If the variable
+   `vc-keep-workfiles' is non-nil (the default), leave a
+   read-only copy of each changed file after checking in.
+  If every file is locked by you and unchanged, unlock them.
+  If every file is locked by someone else, offer to steal the lock.</p>
+<p>
+(fn VERBOSE)</p>

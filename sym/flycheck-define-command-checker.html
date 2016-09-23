@@ -1,0 +1,79 @@
+<h3>Function: flycheck-define-command-checker</h3>
+<p>
+Define SYMBOL as syntax checker to run a command.</p>
+<p>
+Define SYMBOL as generic syntax checker via
+`flycheck-define-generic-checker', which uses an external command
+to check the buffer.  SYMBOL and DOCSTRING are the same as for
+`flycheck-define-generic-checker'.</p>
+<p>
+In addition to the properties understood by
+`flycheck-define-generic-checker', the following PROPERTIES
+constitute a command syntax checker.  Unless otherwise noted, all
+properties are mandatory.  Note that the default `:error-filter'
+of command checkers is `flycheck-sanitize-errors'.</p>
+<p>
+`:command COMMAND'
+     The command to run for syntax checking.</p>
+<p>
+     COMMAND is a list of the form `(EXECUTABLE [ARG ...])'.</p>
+<p>
+     EXECUTABLE is a string with the executable of this syntax
+     checker.  It can be overridden with the variable
+     `flycheck-SYMBOL-executable'.  Note that this variable is
+     NOT implicitly defined by this function.  Use
+     `flycheck-def-executable-var' to define this variable.</p>
+<p>
+     Each ARG is an argument to the executable, either as string,
+     or as special symbol or form for
+     `flycheck-substitute-argument', which see.</p>
+<p>
+`:error-patterns PATTERNS'
+     A list of patterns to parse the output of the `:command'.</p>
+<p>
+     Each ITEM in PATTERNS is a list `(LEVEL SEXP ...)', where
+     LEVEL is a Flycheck error level (see
+     `flycheck-define-error-level'), followed by one or more RX
+     `SEXP's which parse an error of that level and extract line,
+     column, file name and the message.</p>
+<p>
+     See `rx' for general information about RX, and
+     `flycheck-rx-to-string' for some special RX forms provided
+     by Flycheck.</p>
+<p>
+     All patterns are applied in the order of declaration to the
+     whole output of the syntax checker.  Output already matched
+     by a pattern will not be matched by subsequent patterns.  In
+     other words, the first pattern wins.</p>
+<p>
+     This property is optional.  If omitted, however, an
+     `:error-parser' is mandatory.</p>
+<p>
+`:error-parser FUNCTION'
+     A function to parse errors with.</p>
+<p>
+     The function shall accept three arguments OUTPUT CHECKER
+     BUFFER.  OUTPUT is the syntax checker output as string,
+     CHECKER the syntax checker that was used, and BUFFER a
+     buffer object representing the checked buffer.  The function
+     must return a list of `flycheck-error' objects parsed from
+     OUTPUT.</p>
+<p>
+     This property is optional.  If omitted, it defaults to
+     `flycheck-parse-with-patterns'.  In this case,
+     `:error-patterns' is mandatory.</p>
+<p>
+`:standard-input t'
+     Whether to send the buffer contents on standard input.</p>
+<p>
+     If this property is given and has a non-nil value, send the
+     contents of the buffer on standard input.</p>
+<p>
+     Defaults to nil.</p>
+<p>
+Note that you may not give `:start', `:interrupt', and
+`:print-doc' for a command checker.  You can give a custom
+`:verify' function, though, whose results will be appended to the
+default `:verify' function of command checkers.</p>
+<p>
+(fn SYMBOL DOCSTRING &rest PROPERTIES)</p>

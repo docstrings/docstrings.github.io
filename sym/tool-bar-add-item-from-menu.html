@@ -1,0 +1,13 @@
+<h3>Function: tool-bar-add-item-from-menu</h3>
+<p>
+Define tool bar binding for COMMAND in keymap MAP using the given ICON.
+This makes a binding for COMMAND in `tool-bar-map', copying its
+binding from the menu bar in MAP (which defaults to `global-map'), but
+modifies the binding by adding an image specification for ICON.  It
+finds ICON just like `tool-bar-add-item'.  PROPS are additional
+properties to add to the binding.</p>
+<p>
+MAP must contain appropriate binding for `[menu-bar]' which holds a keymap.</p>
+<p>
+Use this function only to make bindings in the global value of `tool-bar-map'.
+To define items in any other map, use `tool-bar-local-item-from-menu'.</p>

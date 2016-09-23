@@ -1,0 +1,16 @@
+<h3>Function: kinsoku</h3>
+<p>
+Go to a line breaking position near point by doing `kinsoku' processing.
+LINEBEG is a buffer position we can't break a line before.</p>
+<p>
+`Kinsoku' processing is to prohibit specific characters to be placed
+at beginning of line or at end of line.  Characters not to be placed
+at beginning and end of line have character category `>' and `<'
+respectively.  This restriction is dissolved by making a line longer or
+shorter.</p>
+<p>
+`Kinsoku' is a Japanese word which originally means ordering to stay
+in one place, and is used for the text processing described above in
+the context of text formatting.</p>
+<p>
+(fn LINEBEG)</p>

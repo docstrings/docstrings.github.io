@@ -1,0 +1,9 @@
+<h3>Function: edirs-merge-with-ancestor</h3>
+<p>
+Merge files in directories DIR1 and DIR2 using files in ANCESTOR-DIR as ancestors.
+Ediff merges files that have identical names in DIR1, DIR2.  If a pair of files
+in DIR1 and DIR2 doesn't have an ancestor in ANCESTOR-DIR, Ediff will merge
+without ancestor.  The fourth argument, REGEXP, is nil or a regular expression;
+only file names that match the regexp are considered.</p>
+<p>
+(fn DIR1 DIR2 ANCESTOR-DIR REGEXP &optional MERGE-AUTOSTORE-DIR)</p>

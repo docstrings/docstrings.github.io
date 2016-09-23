@@ -1,0 +1,15 @@
+<h3>Variable: imenu-sort-function</h3>
+<p>
+The function to use for sorting the index mouse-menu.</p>
+<p>
+Affects only the mouse index menu.</p>
+<p>
+Set this to nil if you don't want any sorting (faster).
+The items in the menu are then presented in the order they were found
+in the buffer.</p>
+<p>
+Set it to `imenu--sort-by-name' if you want alphabetic sorting.</p>
+<p>
+The function should take two arguments and return t if the first
+element should come before the second.  The arguments are cons cells;
+(NAME . POSITION).  Look at `imenu--sort-by-name' for an example.</p>

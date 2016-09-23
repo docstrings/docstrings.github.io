@@ -1,0 +1,83 @@
+<h3>Function: open-protocol-stream</h3>
+<p>
+Open a TCP connection to HOST, optionally with encryption.
+Normally, return a network process object; with a non-nil
+:return-list parameter, return a list instead (see below).
+Input and output work as for subprocesses; `delete-process'
+closes it.</p>
+<p>
+NAME is the name for the process.  It is modified if necessary to
+ make it unique.
+BUFFER is a buffer or buffer name to associate with the process.
+ Process output goes at end of that buffer.  BUFFER may be nil,
+ meaning that the process is not associated with any buffer.
+HOST is the name or IP address of the host to connect to.
+SERVICE is the name of the service desired, or an integer specifying
+ a port number to connect to.</p>
+<p>
+The remaining PARAMETERS should be a sequence of keywords and
+values:</p>
+<p>
+:type specifies the connection type, one of the following:
+  nil or `network'
+             -- Begin with an ordinary network connection, and if
+                the parameters :success and :capability-command
+                are also supplied, try to upgrade to an encrypted
+                connection via STARTTLS.  Even if that
+                fails (e.g. if HOST does not support TLS), retain
+                an unencrypted connection.
+  `plain'    -- An ordinary, unencrypted network connection.
+  `starttls' -- Begin with an ordinary connection, and try
+                upgrading via STARTTLS.  If that fails for any
+                reason, drop the connection; in that case the
+                returned object is a killed process.
+  `tls'      -- A TLS connection.
+  `ssl'      -- Equivalent to `tls'.
+  `shell'    -- A shell connection.</p>
+<p>
+:return-list specifies this function's return value.
+  If omitted or nil, return a process object.  A non-nil means to
+  return (PROC . PROPS), where PROC is a process object and PROPS
+  is a plist of connection properties, with these keywords:
+   :greeting -- the greeting returned by HOST (a string), or nil.
+   :capabilities -- a string representing HOST's capabilities,
+                    or nil if none could be found.
+   :type -- the resulting connection type; `plain' (unencrypted)
+            or `tls' (TLS-encrypted).</p>
+<p>
+:end-of-command specifies a regexp matching the end of a command.</p>
+<p>
+:end-of-capability specifies a regexp matching the end of the
+  response to the command specified for :capability-command.
+  It defaults to the regexp specified for :end-of-command.</p>
+<p>
+:success specifies a regexp matching a message indicating a
+  successful STARTTLS negotiation.  For instance, the default
+  should be "^3" for an NNTP connection.</p>
+<p>
+:capability-command specifies a command used to query the HOST
+  for its capabilities.  For instance, for IMAP this should be
+  "1 CAPABILITY\r\n".</p>
+<p>
+:starttls-function specifies a function for handling STARTTLS.
+  This function should take one parameter, the response to the
+  capability command, and should return the command to switch on
+  STARTTLS if the server supports STARTTLS, and nil otherwise.</p>
+<p>
+:always-query-capabilities says whether to query the server for
+  capabilities, even if we're doing a `plain' network connection.</p>
+<p>
+:client-certificate should either be a list where the first
+  element is the certificate key file name, and the second
+  element is the certificate file name itself, or `t', which
+  means that `auth-source' will be queried for the key and the
+  certificate.  This parameter will only be used when doing TLS
+  or STARTTLS connections.</p>
+<p>
+:use-starttls-if-possible is a boolean that says to do opportunistic
+STARTTLS upgrades even if Emacs doesn't have built-in TLS functionality.</p>
+<p>
+:nowait is a boolean that says the connection should be made
+  asynchronously, if possible.</p>
+<p>
+(fn NAME BUFFER HOST SERVICE &rest PARAMETERS)</p>

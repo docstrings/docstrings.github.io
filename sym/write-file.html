@@ -1,0 +1,15 @@
+<h3>Function: write-file</h3>
+<p>
+Write current buffer into file FILENAME.
+This makes the buffer visit that file, and marks it as not modified.</p>
+<p>
+If you specify just a directory name as FILENAME, that means to use
+the default file name but in that directory.  You can also yank
+the default file name into the minibuffer to edit it, using M-n.</p>
+<p>
+If the buffer is not already visiting a file, the default file name
+for the output file is the buffer name.</p>
+<p>
+If optional second arg CONFIRM is non-nil, this function
+asks for confirmation before overwriting an existing file.
+Interactively, confirmation is required unless you supply a prefix argument.</p>

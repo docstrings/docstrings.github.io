@@ -1,0 +1,9 @@
+<h3>Function: help-split-fundoc</h3>
+<p>
+Split a function DOCSTRING into the actual doc and the usage info.
+Return (USAGE . DOC) or nil if there's no usage info, where USAGE info
+is a string describing the argument list of DEF, such as
+"(apply FUNCTION &rest ARGUMENTS)".
+DEF is the function whose usage we're looking for in DOCSTRING.</p>
+<p>
+(fn DOCSTRING DEF)</p>

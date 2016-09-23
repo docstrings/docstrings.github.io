@@ -1,0 +1,39 @@
+<h3>Function: follow-mode</h3>
+<p>
+Toggle Follow mode.
+With a prefix argument ARG, enable Follow mode if ARG is
+positive, and disable it otherwise.  If called from Lisp, enable
+the mode if ARG is omitted or nil.</p>
+<p>
+Follow mode is a minor mode that combines windows into one tall
+virtual window.  This is accomplished by two main techniques:</p>
+<p>
+* The windows always displays adjacent sections of the buffer.
+  This means that whenever one window is moved, all the
+  others will follow.  (Hence the name Follow mode.)</p>
+<p>
+* Should the point (cursor) end up outside a window, another
+  window displaying that point is selected, if possible.  This
+  makes it possible to walk between windows using normal cursor
+  movement commands.</p>
+<p>
+Follow mode comes to its prime when used on a large screen and two
+side-by-side windows are used.  The user can, with the help of Follow
+mode, use two full-height windows as though they would have been
+one.  Imagine yourself editing a large function, or section of text,
+and being able to use 144 lines instead of the normal 72... (your
+mileage may vary).</p>
+<p>
+To split one large window into two side-by-side windows, the commands
+`C-x 3' or `M-x follow-delete-other-windows-and-split' can be used.</p>
+<p>
+Only windows displayed in the same frame follow each other.</p>
+<p>
+This command runs the normal hook `follow-mode-hook'.</p>
+<p>
+Keys specific to Follow mode:</p>
+<p>
+Uses keymap `follow-mode-map', which is not currently defined.</p>
+<p>
+
+(fn &optional ARG)</p>

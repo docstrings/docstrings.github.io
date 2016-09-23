@@ -1,0 +1,16 @@
+<h3>Function: kill-new</h3>
+<p>
+Make STRING the latest kill in the kill ring.
+Set `kill-ring-yank-pointer' to point to it.
+If `interprogram-cut-function' is non-nil, apply it to STRING.
+Optional second argument REPLACE non-nil means that STRING will replace
+the front of the kill ring, rather than being added to the list.</p>
+<p>
+When `save-interprogram-paste-before-kill' and `interprogram-paste-function'
+are non-nil, saves the interprogram paste string(s) into `kill-ring' before
+STRING.</p>
+<p>
+When the yank handler has a non-nil PARAM element, the original STRING
+argument is not used by `insert-for-yank'.  However, since Lisp code
+may access and use elements from the kill ring directly, the STRING
+argument should still be a "useful" string for such uses.</p>

@@ -1,0 +1,21 @@
+<h3>Function: get-buffer-window</h3>
+<p>
+Return a window currently displaying BUFFER-OR-NAME, or nil if none.
+BUFFER-OR-NAME may be a buffer or a buffer name and defaults to
+the current buffer.</p>
+<p>
+The optional argument ALL-FRAMES specifies the frames to consider:</p>
+<p>
+- t means consider all windows on all existing frames.</p>
+<p>
+- `visible' means consider all windows on all visible frames.</p>
+<p>
+- 0 (the number zero) means consider all windows on all visible
+    and iconified frames.</p>
+<p>
+- A frame means consider all windows on that frame only.</p>
+<p>
+Any other value of ALL-FRAMES means consider all windows on the
+selected frame and no others.</p>
+<p>
+(fn &optional BUFFER-OR-NAME ALL-FRAMES)</p>

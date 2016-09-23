@@ -1,0 +1,9 @@
+<h3>Variable: warning-prefix-function</h3>
+<p>
+Function to generate warning prefixes.
+This function, if non-nil, is called with two arguments,
+the severity level and its entry in `warning-levels',
+and should return the entry that should actually be used.
+The warnings buffer is current when this function is called
+and the function can insert text in it.  This text becomes
+the beginning of the warning.</p>

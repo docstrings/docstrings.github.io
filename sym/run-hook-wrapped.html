@@ -1,0 +1,9 @@
+<h3>Function: run-hook-wrapped</h3>
+<p>
+Run HOOK, passing each function through WRAP-FUNCTION.
+I.e. instead of calling each function FUN directly with arguments ARGS,
+it calls WRAP-FUNCTION with arguments FUN and ARGS.
+As soon as a call to WRAP-FUNCTION returns non-nil, `run-hook-wrapped'
+aborts and returns that value.</p>
+<p>
+(fn HOOK WRAP-FUNCTION &rest ARGS)</p>

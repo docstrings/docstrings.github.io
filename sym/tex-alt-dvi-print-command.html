@@ -1,0 +1,15 @@
+<h3>Variable: tex-alt-dvi-print-command</h3>
+<p>
+Command used by M-x tex-print with a prefix arg to print a .dvi file.
+If this string contains an asterisk (`*'), that is replaced by the file name;
+otherwise, the file name, preceded by blank, is added at the end.</p>
+<p>
+If two printers are not enough of a choice, you can set the variable
+`tex-alt-dvi-print-command' to an expression that asks what you want;
+for example,</p>
+<p>
+    (setq tex-alt-dvi-print-command
+         '(format "lpr -P%s" (read-string "Use printer: ")))</p>
+<p>
+would tell M-x tex-print with a prefix argument to ask you which printer to
+use.</p>

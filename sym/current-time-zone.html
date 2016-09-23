@@ -1,0 +1,18 @@
+<h3>Function: current-time-zone</h3>
+<p>
+Return the offset and name for the local time zone.
+This returns a list of the form (OFFSET NAME).
+OFFSET is an integer number of seconds ahead of UTC (east of Greenwich).
+    A negative value means west of Greenwich.
+NAME is a string giving the name of the time zone.
+If SPECIFIED-TIME is given, the time zone offset is determined from it
+instead of using the current time.  The argument should have the form
+(HIGH LOW . IGNORED).  Thus, you can use times obtained from
+`current-time' and from `file-attributes'.  SPECIFIED-TIME can also
+have the form (HIGH . LOW), but this is considered obsolete.</p>
+<p>
+Some operating systems cannot provide all this information to Emacs;
+in this case, `current-time-zone' returns a list containing nil for
+the data it can't find.</p>
+<p>
+(fn &optional SPECIFIED-TIME)</p>

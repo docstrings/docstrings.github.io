@@ -1,0 +1,21 @@
+<h3>Function: reposition-window</h3>
+<p>
+Make the current definition and/or comment visible.
+Further invocations move it to the top of the window or toggle the
+visibility of comments that precede it.
+  Point is left unchanged unless prefix ARG is supplied.
+  If the definition is fully onscreen, it is moved to the top of the
+window.  If it is partly offscreen, the window is scrolled to get the
+definition (or as much as will fit) onscreen, unless point is in a comment
+which is also partly offscreen, in which case the scrolling attempts to get
+as much of the comment onscreen as possible.
+  Initially `reposition-window' attempts to make both the definition and
+preceding comments visible.  Further invocations toggle the visibility of
+the comment lines.
+  If ARG is non-nil, point may move in order to make the whole defun
+visible (if only part could otherwise be made so), to make the defun line
+visible (if point is in code and it could not be made so, or if only
+comments, including the first comment line, are visible), or to make the
+first comment line visible (if point is in a comment).</p>
+<p>
+(fn &optional ARG)</p>

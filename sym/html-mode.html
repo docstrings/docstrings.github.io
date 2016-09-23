@@ -1,0 +1,95 @@
+<h3>Function: html-mode</h3>
+<p>
+Major mode based on SGML mode for editing HTML documents.
+This allows inserting skeleton constructs used in hypertext documents with
+completion.  See below for an introduction to HTML.  Use
+C-c C-v to see how this comes out.  See also `sgml-mode' on
+which this is based.</p>
+<p>
+Do C-h v html- SPC and C-h v sgml- SPC to see available variables.</p>
+<p>
+To write fairly well formatted pages you only need to know few things.  Most
+browsers have a function to read the source code of the page being seen, so
+you can imitate various tricks.  Here's a very short HTML primer which you
+can also view with a browser to see what happens:</p>
+<p>
+<title>A Title Describing Contents</title> should be on every page.  Pages can
+have <h1>Very Major Headlines</h1> through <h6>Very Minor Headlines</h6>
+<hr> Parts can be separated with horizontal rules.</p>
+<p>
+<p>Paragraphs only need an opening tag.  Line breaks and multiple spaces are
+ignored unless the text is <pre>preformatted.</pre>  Text can be marked as
+<b>bold</b>, <i>italic</i> or <u>underlined</u> using the normal M-o or
+Edit/Text Properties/Face commands.</p>
+<p>
+Pages can have <a name="SOMENAME">named points</a> and can link other points
+to them with <a href="#SOMENAME">see also somename</a>.  In the same way <a
+href="URL">see also URL</a> where URL is a filename relative to current
+directory, or absolute as in `http://www.cs.indiana.edu/elisp/w3/docs.html'.</p>
+<p>
+Images in many formats can be inlined with <img src="URL">.</p>
+<p>
+If you mainly create your own documents, `sgml-specials' might be
+interesting.  But note that some HTML 2 browsers can't handle `&apos;'.
+To work around that, do:
+   (eval-after-load "sgml-mode" '(aset sgml-char-names ?' nil))</p>
+<p>
+key             binding
+---             -------</p>
+<p>
+ .. ÿ	sgml-maybe-name-self</p>
+<p>
+C-c		Prefix Command
+ESC		Prefix Command
+/		sgml-slash</p>
+<p>
+C-c C-c		Prefix Command
+C-c C-j		html-line
+C-c RET		html-paragraph
+C-c C-s		html-autoview-mode
+C-c C-v		browse-url-of-buffer
+C-c 1		html-headline-1
+C-c 2		html-headline-2
+C-c 3		html-headline-3
+C-c 4		html-headline-4
+C-c 5		html-headline-5
+C-c 6		html-headline-6</p>
+<p>
+C-c C-a		sgml-attributes
+C-c C-b		sgml-skip-tag-backward
+C-c C-d		sgml-delete-tag
+C-c C-e		sgml-close-tag
+C-c C-f		sgml-skip-tag-forward
+C-c TAB		sgml-tags-invisible
+C-c C-n		sgml-name-char
+C-c C-o		sgml-tag
+C-c C-t		sgml-tag
+C-c C-v		sgml-validate
+  (that binding is currently shadowed by another mode)
+C-c /		sgml-close-tag
+C-c 8		sgml-name-8bit-mode
+C-c ?		sgml-tag-help
+C-c ]		sgml-close-tag
+C-c DEL		sgml-delete-tag
+C-c <left>	sgml-skip-tag-backward
+  (that binding is currently shadowed by another mode)
+C-c <right>	sgml-skip-tag-forward
+  (that binding is currently shadowed by another mode)</p>
+<p>
+C-M-i		ispell-complete-word</p>
+<p>
+C-c C-c -	html-horizontal-rule
+C-c C-c c	html-checkboxes
+C-c C-c h	html-href-anchor
+C-c C-c i	html-image
+C-c C-c l	html-list-item
+C-c C-c n	html-name-anchor
+C-c C-c o	html-ordered-list
+C-c C-c r	html-radio-buttons
+C-c C-c u	html-unordered-list</p>
+<p>
+</p>
+<p>
+In addition to any hooks its parent mode might have run,
+this mode runs the hook `html-mode-hook', as the final step
+during initialization.</p>

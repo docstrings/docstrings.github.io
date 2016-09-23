@@ -1,0 +1,18 @@
+<h3>Function: decode-time</h3>
+<p>
+Decode a time value as (SEC MINUTE HOUR DAY MONTH YEAR DOW DST ZONE).
+The optional SPECIFIED-TIME should be a list of (HIGH LOW . IGNORED),
+as from `current-time' and `file-attributes', or nil to use the
+current time.  The obsolete form (HIGH . LOW) is also still accepted.
+The list has the following nine members: SEC is an integer between 0
+and 60; SEC is 60 for a leap second, which only some operating systems
+support.  MINUTE is an integer between 0 and 59.  HOUR is an integer
+between 0 and 23.  DAY is an integer between 1 and 31.  MONTH is an
+integer between 1 and 12.  YEAR is an integer indicating the
+four-digit year.  DOW is the day of week, an integer between 0 and 6,
+where 0 is Sunday.  DST is t if daylight saving time is in effect,
+otherwise nil.  ZONE is an integer indicating the number of seconds
+east of Greenwich.  (Note that Common Lisp has different meanings for
+DOW and ZONE.)</p>
+<p>
+(fn &optional SPECIFIED-TIME)</p>

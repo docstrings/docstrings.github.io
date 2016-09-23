@@ -1,0 +1,15 @@
+<h3>Function: c-macro-expand</h3>
+<p>
+Expand C macros in the region, using the C preprocessor.
+Normally display output in temp buffer, but
+prefix arg means replace the region with it.</p>
+<p>
+`c-macro-preprocessor' specifies the preprocessor to use.
+Tf the user option `c-macro-prompt-flag' is non-nil
+prompt for arguments to the preprocessor (e.g. `-DDEBUG -I ./include'),
+otherwise use `c-macro-cppflags'.</p>
+<p>
+Noninteractive args are START, END, SUBST.
+For use inside Lisp programs, see also `c-macro-expansion'.</p>
+<p>
+(fn START END SUBST)</p>

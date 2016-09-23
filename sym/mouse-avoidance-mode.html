@@ -1,0 +1,33 @@
+<h3>Function: mouse-avoidance-mode</h3>
+<p>
+Set Mouse Avoidance mode to MODE.
+MODE should be one of the symbols `banish', `exile', `jump', `animate',
+`cat-and-mouse', `proteus', or `none'.</p>
+<p>
+If MODE is nil, toggle mouse avoidance between `none' and `banish'
+modes.  Positive numbers and symbols other than the above are treated
+as equivalent to `banish'; negative numbers and `-' are equivalent to `none'.</p>
+<p>
+Effects of the different modes:
+ * banish: Move the mouse to the upper-right corner on any keypress.
+ * exile: Move the mouse to the corner only if the cursor gets too close,
+     and allow it to return once the cursor is out of the way.
+ * jump: If the cursor gets too close to the mouse, displace the mouse
+     a random distance & direction.
+ * animate: As `jump', but shows steps along the way for illusion of motion.
+ * cat-and-mouse: Same as `animate'.
+ * proteus: As `animate', but changes the shape of the mouse pointer too.</p>
+<p>
+Whenever the mouse is moved, the frame is also raised.</p>
+<p>
+(See `mouse-avoidance-threshold' for definition of "too close",
+and `mouse-avoidance-nudge-dist' and `mouse-avoidance-nudge-var' for
+definition of "random distance".)</p>
+<p>
+(fn &optional MODE)</p>
+<h3>Variable: mouse-avoidance-mode</h3>
+<p>
+Activate Mouse Avoidance mode.
+See function `mouse-avoidance-mode' for possible values.
+Setting this variable directly does not take effect;
+use either M-x customize or the function `mouse-avoidance-mode'.</p>

@@ -1,0 +1,20 @@
+<h3>Function: font-lock-match-c-style-declaration-item-and-skip-to-next</h3>
+<p>
+Match, and move over, any declaration/definition item after point.
+Matches after point, but ignores leading whitespace and `*' characters.
+Does not move further than LIMIT.</p>
+<p>
+The expected syntax of a declaration/definition item is `word' (preceded by
+optional whitespace and `*' characters and proceeded by optional whitespace)
+optionally followed by a `('.  Everything following the item (but belonging to
+it) is expected to be skip-able by `scan-sexps', and items are expected to be
+separated with a `,' and to be terminated with a `;'.</p>
+<p>
+Thus the regexp matches after point:	word (
+					^^^^ ^
+Where the match subexpressions are:	  1  2</p>
+<p>
+The item is delimited by (match-beginning 1) and (match-end 1).
+If (match-beginning 2) is non-nil, the item is followed by a `('.</p>
+<p>
+This function could be MATCHER in a MATCH-ANCHORED `font-lock-keywords' item.</p>

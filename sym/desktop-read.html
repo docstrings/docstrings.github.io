@@ -1,0 +1,11 @@
+<h3>Function: desktop-read</h3>
+<p>
+Read and process the desktop file in directory DIRNAME.
+Look for a desktop file in DIRNAME, or if DIRNAME is omitted, look in
+directories listed in `desktop-path'.  If a desktop file is found, it
+is processed and `desktop-after-read-hook' is run.  If no desktop file
+is found, clear the desktop and run `desktop-no-desktop-file-hook'.
+This function is a no-op when Emacs is running in batch mode.
+It returns t if a desktop file was loaded, nil otherwise.</p>
+<p>
+(fn &optional DIRNAME)</p>

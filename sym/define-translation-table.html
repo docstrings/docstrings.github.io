@@ -1,0 +1,17 @@
+<h3>Function: define-translation-table</h3>
+<p>
+Define SYMBOL as the name of translation table made by ARGS.
+This sets up information so that the table can be used for
+translations in a CCL program.</p>
+<p>
+If the first element of ARGS is a char-table whose purpose is
+`translation-table', just define SYMBOL to name it.  (Note that this
+function does not bind SYMBOL.)</p>
+<p>
+Any other ARGS should be suitable as arguments of the function
+`make-translation-table' (which see).</p>
+<p>
+This function sets properties `translation-table' and
+`translation-table-id' of SYMBOL to the created table itself and the
+identification number of the table respectively.  It also registers
+the table in `translation-table-vector'.</p>

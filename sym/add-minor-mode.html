@@ -1,0 +1,25 @@
+<h3>Function: add-minor-mode</h3>
+<p>
+Register a new minor mode.</p>
+<p>
+This is an XEmacs-compatibility function.  Use `define-minor-mode' instead.</p>
+<p>
+TOGGLE is a symbol which is the name of a buffer-local variable that
+is toggled on or off to say whether the minor mode is active or not.</p>
+<p>
+NAME specifies what will appear in the mode line when the minor mode
+is active.  NAME should be either a string starting with a space, or a
+symbol whose value is such a string.</p>
+<p>
+Optional KEYMAP is the keymap for the minor mode that will be added
+to `minor-mode-map-alist'.</p>
+<p>
+Optional AFTER specifies that TOGGLE should be added after AFTER
+in `minor-mode-alist'.</p>
+<p>
+Optional TOGGLE-FUN is an interactive function to toggle the mode.
+It defaults to (and should by convention be) TOGGLE.</p>
+<p>
+If TOGGLE has a non-nil `:included' property, an entry for the mode is
+included in the mode-line minor mode menu.
+If TOGGLE has a `:menu-tag', that is used for the menu item's label.</p>

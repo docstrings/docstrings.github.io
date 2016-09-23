@@ -1,0 +1,15 @@
+<h3>Function: perform-replace</h3>
+<p>
+Subroutine of `query-replace'.  Its complexity handles interactive queries.
+Don't use this in your own program unless you want to query and set the mark
+just as `query-replace' does.  Instead, write a simple loop like this:</p>
+<p>
+  (while (re-search-forward "foo[ \t]+bar" nil t)
+    (replace-match "foobar" nil nil))</p>
+<p>
+which will run faster and probably do exactly what you want.  Please
+see the documentation of `replace-match' to find out how to simulate
+`case-replace'.</p>
+<p>
+This function returns nil if and only if there were no matches to
+make, or the user didn't cancel the call.</p>

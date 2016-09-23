@@ -1,0 +1,66 @@
+<h3>Function: font-spec</h3>
+<p>
+Return a newly created font-spec with arguments as properties.</p>
+<p>
+ARGS must come in pairs KEY VALUE of font properties.  KEY must be a
+valid font property name listed below:</p>
+<p>
+`:family', `:weight', `:slant', `:width'</p>
+<p>
+They are the same as face attributes of the same name.  See
+`set-face-attribute'.</p>
+<p>
+`:foundry'</p>
+<p>
+VALUE must be a string or a symbol specifying the font foundry, e.g. ``misc''.</p>
+<p>
+`:adstyle'</p>
+<p>
+VALUE must be a string or a symbol specifying the additional
+typographic style information of a font, e.g. ``sans''.</p>
+<p>
+`:registry'</p>
+<p>
+VALUE must be a string or a symbol specifying the charset registry and
+encoding of a font, e.g. ``iso8859-1''.</p>
+<p>
+`:size'</p>
+<p>
+VALUE must be a non-negative integer or a floating point number
+specifying the font size.  It specifies the font size in pixels (if
+VALUE is an integer), or in points (if VALUE is a float).</p>
+<p>
+`:name'</p>
+<p>
+VALUE must be a string of XLFD-style or fontconfig-style font name.</p>
+<p>
+`:script'</p>
+<p>
+VALUE must be a symbol representing a script that the font must
+support.  It may be a symbol representing a subgroup of a script
+listed in the variable `script-representative-chars'.</p>
+<p>
+`:lang'</p>
+<p>
+VALUE must be a symbol of two-letter ISO-639 language names,
+e.g. `ja'.</p>
+<p>
+`:otf'</p>
+<p>
+VALUE must be a list (SCRIPT-TAG LANGSYS-TAG GSUB [ GPOS ]) to specify
+required OpenType features.</p>
+<p>
+  SCRIPT-TAG: OpenType script tag symbol (e.g. `deva').
+  LANGSYS-TAG: OpenType language system tag symbol,
+     or nil for the default language system.
+  GSUB: List of OpenType GSUB feature tag symbols, or nil if none required.
+  GPOS: List of OpenType GPOS feature tag symbols, or nil if none required.</p>
+<p>
+GSUB and GPOS may contain `nil' element.  In such a case, the font
+must not have any of the remaining elements.</p>
+<p>
+For instance, if the VALUE is `(thai nil nil (mark))', the font must
+be an OpenType font whose GPOS table of `thai' script's default
+language system must contain `mark' feature.</p>
+<p>
+(fn ARGS...)</p>

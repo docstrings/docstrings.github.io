@@ -1,0 +1,21 @@
+<h3>Function: make-comint-in-buffer</h3>
+<p>
+Make a Comint process NAME in BUFFER, running PROGRAM.
+If BUFFER is nil, it defaults to NAME surrounded by `*'s.
+If there is a running process in BUFFER, it is not restarted.</p>
+<p>
+PROGRAM should be one of the following:
+- a string, denoting an executable program to create via
+  `start-file-process'
+- a cons pair of the form (HOST . SERVICE), denoting a TCP
+  connection to be opened via `open-network-stream'
+- nil, denoting a newly-allocated pty.</p>
+<p>
+Optional fourth arg STARTFILE is the name of a file, whose
+contents are sent to the process as its initial input.</p>
+<p>
+If PROGRAM is a string, any more args are arguments to PROGRAM.</p>
+<p>
+Return the (possibly newly created) process buffer.</p>
+<p>
+(fn NAME BUFFER PROGRAM &optional STARTFILE &rest SWITCHES)</p>

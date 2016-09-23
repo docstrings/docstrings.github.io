@@ -1,0 +1,9 @@
+<h3>Function: Info-following-node-name-re</h3>
+<p>
+Return a regexp matching a node name.
+ALLOWEDCHARS, if non-nil, goes within [...] to make a regexp
+saying which chars may appear in the node name.
+Submatch 1 is the complete node name.
+Submatch 2 if non-nil is the parenthesized file name part of the node name.
+Submatch 3 is the local part of the node name.
+End of submatch 0, 1, and 3 are the same, so you can safely concat.</p>

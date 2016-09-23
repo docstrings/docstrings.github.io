@@ -1,0 +1,46 @@
+<h3>Function: org-search-view</h3>
+<p>
+Show all entries that contain a phrase or words or regular expressions.</p>
+<p>
+With optional prefix argument TODO-ONLY, only consider entries that are
+TODO entries.  The argument STRING can be used to pass a default search
+string into this function.  If EDIT-AT is non-nil, it means that the
+user should get a chance to edit this string, with cursor at position
+EDIT-AT.</p>
+<p>
+The search string can be viewed either as a phrase that should be found as
+is, or it can be broken into a number of snippets, each of which must match
+in a Boolean way to select an entry.  The default depends on the variable
+`org-agenda-search-view-always-boolean'.
+Even if this is turned off (the default) you can always switch to
+Boolean search dynamically by preceding the first word with  "+" or "-".</p>
+<p>
+The default is a direct search of the whole phrase, where each space in
+the search string can expand to an arbitrary amount of whitespace,
+including newlines.</p>
+<p>
+If using a Boolean search, the search string is split on whitespace and
+each snippet is searched separately, with logical AND to select an entry.
+Words prefixed with a minus must *not* occur in the entry.  Words without
+a prefix or prefixed with a plus must occur in the entry.  Matching is
+case-insensitive.  Words are enclosed by word delimiters (i.e. they must
+match whole words, not parts of a word) if
+`org-agenda-search-view-force-full-words' is set (default is nil).</p>
+<p>
+Boolean search snippets enclosed by curly braces are interpreted as
+regular expressions that must or (when preceded with "-") must not
+match in the entry.  Snippets enclosed into double quotes will be taken
+as a whole, to include whitespace.</p>
+<p>
+- If the search string starts with an asterisk, search only in headlines.
+- If (possibly after the leading star) the search string starts with an
+  exclamation mark, this also means to look at TODO entries only, an effect
+  that can also be achieved with a prefix argument.
+- If (possibly after star and exclamation mark) the search string starts
+  with a colon, this will mean that the (non-regexp) snippets of the
+  Boolean search must match as full words.</p>
+<p>
+This command searches the agenda files, and in addition the files listed
+in `org-agenda-text-search-extra-files'.</p>
+<p>
+(fn &optional TODO-ONLY STRING EDIT-AT)</p>

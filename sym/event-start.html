@@ -1,0 +1,15 @@
+<h3>Function: event-start</h3>
+<p>
+Return the starting position of EVENT.
+EVENT should be a click, drag, or key press event.
+If it is a key press event, the return value has the form
+    (WINDOW POS (0 . 0) 0)
+If it is a click or drag event, it has the form
+   (WINDOW AREA-OR-POS (X . Y) TIMESTAMP OBJECT POS (COL . ROW)
+    IMAGE (DX . DY) (WIDTH . HEIGHT))
+The `posn-' functions access elements of such lists.
+For more information, see Info node `(elisp)Click Events'.</p>
+<p>
+If EVENT is a mouse or key press or a mouse click, this is the
+position of the event.  If EVENT is a drag, this is the starting
+position of the drag.</p>

@@ -1,0 +1,8 @@
+<h3>Variable: defun-declarations-alist</h3>
+<p>
+List associating function properties to their macro expansion.
+Each element of the list takes the form (PROP FUN) where FUN is
+a function.  For each (PROP . VALUES) in a function's declaration,
+the FUN corresponding to PROP is called with the function name,
+the function's arglist, and the VALUES and should return the code to use
+to set this property.</p>

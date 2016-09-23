@@ -1,0 +1,15 @@
+<h3>Function: progress-reporter-update</h3>
+<p>
+Report progress of an operation in the echo area.
+REPORTER should be the result of a call to `make-progress-reporter'.</p>
+<p>
+If REPORTER is a numerical progress reporter---i.e. if it was
+ made using non-nil MIN-VALUE and MAX-VALUE arguments to
+ `make-progress-reporter'---then VALUE should be a number between
+ MIN-VALUE and MAX-VALUE.</p>
+<p>
+If REPORTER is a non-numerical reporter, VALUE should be nil.</p>
+<p>
+This function is relatively inexpensive.  If the change since
+last update is too small or insufficient time has passed, it does
+nothing.</p>

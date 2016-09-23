@@ -1,0 +1,15 @@
+<h3>Variable: minibuffer-frame-alist</h3>
+<p>
+Alist of parameters for the initial minibuffer frame.
+This is the minibuffer frame created if `initial-frame-alist'
+calls for a frame without a minibuffer.  The parameters specified
+here supersede those given in `default-frame-alist', for the
+initial minibuffer frame.</p>
+<p>
+You can set this in your init file; for example,</p>
+<p>
+ (setq minibuffer-frame-alist
+       '((top . 1) (left . 1) (width . 80) (height . 2)))</p>
+<p>
+It is not necessary to include (minibuffer . only); that is
+appended when the minibuffer frame is created.</p>

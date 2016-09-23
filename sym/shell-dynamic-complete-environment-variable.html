@@ -1,0 +1,16 @@
+<h3>Function: shell-dynamic-complete-environment-variable</h3>
+<p>
+Dynamically complete the environment variable at point.
+Completes if after a variable, i.e., if it starts with a "$".</p>
+<p>
+This function is similar to `comint-dynamic-complete-filename', except that it
+searches `process-environment' for completion candidates.  Note that this may
+not be the same as the interpreter's idea of variable names.  The main problem
+with this type of completion is that `process-environment' is the environment
+which Emacs started with.  Emacs does not track changes to the environment made
+by the interpreter.  Perhaps it would be more accurate if this function was
+called `shell-dynamic-complete-process-environment-variable'.</p>
+<p>
+Returns non-nil if successful.</p>
+<p>
+(fn)</p>

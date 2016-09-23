@@ -1,0 +1,14 @@
+<h3>Function: string-to-multibyte</h3>
+<p>
+Return a multibyte string with the same individual chars as STRING.
+If STRING is multibyte, the result is STRING itself.
+Otherwise it is a newly created string, with no text properties.</p>
+<p>
+If STRING is unibyte and contains an 8-bit byte, it is converted to
+the corresponding multibyte character of charset `eight-bit'.</p>
+<p>
+This differs from `string-as-multibyte' by converting each byte of a correct
+utf-8 sequence to an eight-bit character, not just bytes that don't form a
+correct sequence.</p>
+<p>
+(fn STRING)</p>

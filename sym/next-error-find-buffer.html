@@ -1,0 +1,14 @@
+<h3>Function: next-error-find-buffer</h3>
+<p>
+Return a `next-error' capable buffer.</p>
+<p>
+If AVOID-CURRENT is non-nil, treat the current buffer
+as an absolute last resort only.</p>
+<p>
+The function EXTRA-TEST-INCLUSIVE, if non-nil, is called in each buffer
+that normally would not qualify.  If it returns t, the buffer
+in question is treated as usable.</p>
+<p>
+The function EXTRA-TEST-EXCLUSIVE, if non-nil, is called in each buffer
+that would normally be considered usable.  If it returns nil,
+that buffer is rejected.</p>

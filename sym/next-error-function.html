@@ -1,0 +1,10 @@
+<h3>Variable: next-error-function</h3>
+<p>
+Function to use to find the next error in the current buffer.
+The function is called with 2 parameters:
+ARG is an integer specifying by how many errors to move.
+RESET is a boolean which, if non-nil, says to go back to the beginning
+of the errors before moving.
+Major modes providing compile-like functionality should set this variable
+to indicate to `next-error' that this is a candidate buffer and how
+to navigate in it.</p>

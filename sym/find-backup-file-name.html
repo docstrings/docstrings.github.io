@@ -1,0 +1,8 @@
+<h3>Function: find-backup-file-name</h3>
+<p>
+Find a file name for a backup file FN, and suggestions for deletions.
+Value is a list whose car is the name for the backup file
+and whose cdr is a list of old versions to consider deleting now.
+If the value is nil, don't make a backup.
+Uses `backup-directory-alist' in the same way as does
+`make-backup-file-name'.</p>

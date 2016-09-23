@@ -1,0 +1,17 @@
+<h3>Function: comment-add</h3>
+<p>
+Compute the number of extra comment starter characters.
+(Extra semicolons in Lisp mode, extra stars in C mode, etc.)
+If ARG is non-nil, just follow ARG.
+If the comment starter is multi-char, just follow ARG.
+Otherwise obey `comment-add'.</p>
+<p>
+(fn ARG)</p>
+<h3>Variable: comment-add</h3>
+<p>
+How many more comment chars should be inserted by `comment-region'.
+This determines the default value of the numeric argument of `comment-region'.
+The `plain' comment style doubles this value.</p>
+<p>
+This should generally stay 0, except for a few modes like Lisp where
+it is 1 so that regions are commented with two or three semi-colons.</p>

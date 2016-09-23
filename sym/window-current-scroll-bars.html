@@ -1,0 +1,14 @@
+<h3>Function: window-current-scroll-bars</h3>
+<p>
+Return the current scroll bar settings for WINDOW.
+WINDOW must be a live window and defaults to the selected one.</p>
+<p>
+The return value is a cons cell (VERTICAL . HORIZONTAL) where
+VERTICAL specifies the current location of the vertical scroll
+bars (`left', `right', or nil), and HORIZONTAL specifies the
+current location of the horizontal scroll bars (`top', `bottom',
+or nil).</p>
+<p>
+Unlike `window-scroll-bars', this function reports the scroll bar
+type actually used, once frame defaults and `scroll-bar-mode' are
+taken into account.</p>

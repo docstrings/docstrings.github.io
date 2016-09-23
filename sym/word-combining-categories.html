@@ -1,0 +1,36 @@
+<h3>Variable: word-combining-categories</h3>
+<p>
+List of pair (cons) of categories to determine word boundary.</p>
+<p>
+Emacs treats a sequence of word constituent characters as a single
+word (i.e. finds no word boundary between them) only if they belong to
+the same script.  But, exceptions are allowed in the following cases.</p>
+<p>
+(1) The case that characters are in different scripts is controlled
+by the variable `word-combining-categories'.</p>
+<p>
+Emacs finds no word boundary between characters of different scripts
+if they have categories matching some element of this list.</p>
+<p>
+More precisely, if an element of this list is a cons of category CAT1
+and CAT2, and a multibyte character C1 which has CAT1 is followed by
+C2 which has CAT2, there's no word boundary between C1 and C2.</p>
+<p>
+For instance, to tell that Han characters followed by Hiragana
+characters can form a single word, the element `(?C . ?H)' should be
+in this list.</p>
+<p>
+(2) The case that character are in the same script is controlled by
+the variable `word-separating-categories'.</p>
+<p>
+Emacs finds a word boundary between characters of the same script
+if they have categories matching some element of this list.</p>
+<p>
+More precisely, if an element of this list is a cons of category CAT1
+and CAT2, and a multibyte character C1 which has CAT1 but not CAT2 is
+followed by C2 which has CAT2 but not CAT1, there's a word boundary
+between C1 and C2.</p>
+<p>
+For instance, to tell that there's a word boundary between Hiragana
+and Katakana (both are in the same script `kana'),
+the element `(?H . ?K) should be in this list.</p>

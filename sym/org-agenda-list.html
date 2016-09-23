@@ -1,0 +1,14 @@
+<h3>Function: org-agenda-list</h3>
+<p>
+Produce a daily/weekly view from all files in variable `org-agenda-files'.
+The view will be for the current day or week, but from the overview buffer
+you will be able to go to other days/weeks.</p>
+<p>
+With a numeric prefix argument in an interactive call, the agenda will
+span ARG days.  Lisp programs should instead specify SPAN to change
+the number of days.  SPAN defaults to `org-agenda-span'.</p>
+<p>
+START-DAY defaults to TODAY, or to the most recent match for the weekday
+given in `org-agenda-start-on-weekday'.</p>
+<p>
+(fn &optional ARG START-DAY SPAN)</p>

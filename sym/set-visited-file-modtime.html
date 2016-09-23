@@ -1,0 +1,10 @@
+<h3>Function: set-visited-file-modtime</h3>
+<p>
+Update buffer's recorded modification time from the visited file's time.
+Useful if the buffer was not read from the file normally
+or if the file itself has been changed for some known benign reason.
+An argument specifies the modification time value to use
+(instead of that of the visited file), in the form of a list
+(HIGH LOW USEC PSEC) as returned by `current-time'.</p>
+<p>
+(fn &optional TIME-LIST)</p>

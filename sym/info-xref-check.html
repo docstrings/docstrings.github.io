@@ -1,0 +1,28 @@
+<h3>Function: info-xref-check</h3>
+<p>
+Check external references in FILENAME, an info document.
+Interactively from an `Info-mode' or `texinfo-mode' buffer the
+current info file is the default.</p>
+<p>
+Results are shown in a `compilation-mode' buffer.  The format is
+a bit rough, but there shouldn't be many problems normally.  The
+file:line:column: is the info document, but of course normally
+any correction should be made in the original .texi file.
+Finding the right place in the .texi is a manual process.</p>
+<p>
+When a target info file doesn't exist there's obviously no way to
+validate node references within it.  A message is given for
+missing target files once per source document.  It could be
+simply that you don't have the target installed, or it could be a
+mistake in the reference.</p>
+<p>
+Indirect info files are understood, just pass the top-level
+foo.info to `info-xref-check' and it traverses all sub-files.
+Compressed info files are accepted too as usual for `Info-mode'.</p>
+<p>
+"makeinfo" checks references internal to an info document, but
+not external references, which makes it rather easy for mistakes
+to creep in or node name changes to go unnoticed.
+`Info-validate' doesn't check external references either.</p>
+<p>
+(fn FILENAME)</p>

@@ -1,0 +1,15 @@
+<h3>Function: find-variable</h3>
+<p>
+Find the definition of the VARIABLE at or before point.</p>
+<p>
+Finds the library containing the definition of the variable
+near point (selected by `variable-at-point') in a buffer and
+places point before the definition.</p>
+<p>
+Set mark before moving, if the buffer already existed.</p>
+<p>
+The library where VARIABLE is defined is searched for in
+`find-function-source-path', if non-nil, otherwise in `load-path'.
+See also `find-function-recenter-line' and `find-function-after-hook'.</p>
+<p>
+(fn VARIABLE)</p>

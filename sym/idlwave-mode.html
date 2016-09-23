@@ -1,0 +1,124 @@
+<h3>Function: idlwave-mode</h3>
+<p>
+Major mode for editing IDL source files (version 6.1_em22).</p>
+<p>
+The main features of this mode are</p>
+<p>
+1. Indentation and Formatting
+   --------------------------
+   Like other Emacs programming modes, C-j inserts a newline and indents.
+   TAB is used for explicit indentation of the current line.</p>
+<p>
+   To start a continuation line, use M-x idlwave-split-line.  This
+   function can also be used in the middle of a line to split the line
+   at that point.  When used inside a long constant string, the string
+   is split at that point with the `+' concatenation operator.</p>
+<p>
+   Comments are indented as follows:</p>
+<p>
+   `;;;' Indentation remains unchanged.
+   `;;'  Indent like the surrounding code
+   `;'   Indent to a minimum column.</p>
+<p>
+   The indentation of comments starting in column 0 is never changed.</p>
+<p>
+   Use M-x idlwave-fill-paragraph to refill a paragraph inside a
+   comment.  The indentation of the second line of the paragraph
+   relative to the first will be retained.  Use
+   M-x idlwave-auto-fill-mode to toggle auto-fill mode for these
+   comments.  When the variable `idlwave-fill-comment-line-only' is
+   nil, code can also be auto-filled and auto-indented.</p>
+<p>
+   To convert pre-existing IDL code to your formatting style, mark the
+   entire buffer with C-x h and execute
+   M-x idlwave-expand-region-abbrevs.  Then mark the entire buffer
+   again followed by C-M-\ (`indent-region').</p>
+<p>
+2. Routine Info
+   ------------
+   IDLWAVE displays information about the calling sequence and the
+   accepted keyword parameters of a procedure or function with
+   M-x idlwave-routine-info.  M-x idlwave-find-module jumps to the
+   source file of a module.  These commands know about system
+   routines, all routines in idlwave-mode buffers and (when the
+   idlwave-shell is active) about all modules currently compiled under
+   this shell.  It also makes use of pre-compiled or custom-scanned
+   user and library catalogs many popular libraries ship with by
+   default.  Use M-x idlwave-update-routine-info to update this
+   information, which is also used for completion (see item 4).</p>
+<p>
+3. Online IDL Help
+   ---------------</p>
+<p>
+   M-x idlwave-context-help displays the IDL documentation relevant
+   for the system variable, keyword, or routines at point.  A single
+   key stroke gets you directly to the right place in the docs.  See
+   the manual to configure where and how the HTML help is displayed.</p>
+<p>
+4. Completion
+   ----------
+   M-x idlwave-complete completes the names of procedures, functions
+   class names, keyword parameters, system variables and tags, class
+   tags, structure tags, filenames and much more.  It is context
+   sensitive and figures out what is expected at point.  Lower case
+   strings are completed in lower case, other strings in mixed or
+   upper case.</p>
+<p>
+5. Code Templates and Abbreviations
+   --------------------------------
+   Many Abbreviations are predefined to expand to code fragments and templates.
+   The abbreviations start generally with a `\`.  Some examples:</p>
+<p>
+   \pr        PROCEDURE template
+   \fu        FUNCTION template
+   \c         CASE statement template
+   \sw        SWITCH statement template
+   \f         FOR loop template
+   \r         REPEAT Loop template
+   \w         WHILE loop template
+   \i         IF statement template
+   \elif      IF-ELSE statement template
+   \b         BEGIN</p>
+<p>
+   For a full list, use M-x idlwave-list-abbrevs.  Some templates also
+   have direct keybindings - see the list of keybindings below.</p>
+<p>
+   M-x idlwave-doc-header inserts a documentation header at the
+   beginning of the current program unit (pro, function or main).
+   Change log entries can be added to the current program unit with
+   M-x idlwave-doc-modification.</p>
+<p>
+6. Automatic Case Conversion
+   -------------------------
+   The case of reserved words and some abbrevs is controlled by
+   `idlwave-reserved-word-upcase' and `idlwave-abbrev-change-case'.</p>
+<p>
+7. Automatic END completion
+   ------------------------
+   If the variable `idlwave-expand-generic-end' is non-nil, each END typed
+   will be converted to the specific version, like ENDIF, ENDFOR, etc.</p>
+<p>
+8. Hooks
+   -----
+   Loading idlwave.el runs `idlwave-load-hook'.
+   Turning on `idlwave-mode' runs `idlwave-mode-hook'.</p>
+<p>
+9. Documentation and Customization
+   -------------------------------
+   Info documentation for this package is available.  Use
+   M-x idlwave-info to display (complain to your sysadmin if that does
+   not work).  For Postscript, PDF, and HTML versions of the
+   documentation, check IDLWAVE's homepage at URL `http://idlwave.org'.
+   IDLWAVE has customize support - see the group `idlwave'.</p>
+<p>
+10.Keybindings
+   -----------
+   Here is a list of all keybindings of this mode.
+   If some of the key bindings below show with ??, use C-h k
+   followed by the key sequence to see what the key sequence does.</p>
+<p>
+
+Uses keymap `idlwave-mode-map', which is not currently defined.</p>
+<p>
+
+(fn)</p>

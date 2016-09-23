@@ -1,0 +1,9 @@
+<h3>Function: last-buffer</h3>
+<p>
+Return the last buffer in FRAME's buffer list.
+If BUFFER is the last buffer, return the preceding buffer
+instead.  Buffers not visible in windows are preferred to visible
+buffers, unless optional argument VISIBLE-OK is non-nil.
+Optional third argument FRAME nil or omitted means use the
+selected frame's buffer list.  If no such buffer exists, return
+the buffer `*scratch*', creating it if necessary.</p>

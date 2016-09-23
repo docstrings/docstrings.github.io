@@ -1,0 +1,20 @@
+<h3>Function: replace-regexp-in-string</h3>
+<p>
+Replace all matches for REGEXP with REP in STRING.</p>
+<p>
+Return a new string containing the replacements.</p>
+<p>
+Optional arguments FIXEDCASE, LITERAL and SUBEXP are like the
+arguments with the same names of function `replace-match'.  If START
+is non-nil, start replacements at that index in STRING.</p>
+<p>
+REP is either a string used as the NEWTEXT arg of `replace-match' or a
+function.  If it is a function, it is called with the actual text of each
+match, and its value is used as the replacement text.  When REP is called,
+the match data are the result of matching REGEXP against a substring
+of STRING.</p>
+<p>
+To replace only the first match (if any), make REGEXP match up to \'
+and replace a sub-expression, e.g.
+  (replace-regexp-in-string "\\(foo\\).*\\'" "bar" " foo foo" nil nil 1)
+    => " bar foo"</p>

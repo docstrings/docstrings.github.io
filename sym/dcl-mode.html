@@ -1,0 +1,123 @@
+<h3>Function: dcl-mode</h3>
+<p>
+Major mode for editing DCL-files.</p>
+<p>
+This mode indents command lines in blocks.  (A block is commands between
+THEN-ELSE-ENDIF and between lines matching dcl-block-begin-regexp and
+dcl-block-end-regexp.)</p>
+<p>
+Labels are indented to a fixed position unless they begin or end a block.
+Whole-line comments (matching dcl-comment-line-regexp) are not indented.
+Data lines are not indented.</p>
+<p>
+Key bindings:</p>
+<p>
+
+Uses keymap `dcl-mode-map', which is not currently defined.</p>
+<p>
+Commands not usually bound to keys:</p>
+<p>
+M-x dcl-save-nondefault-options		Save changed options
+M-x dcl-save-all-options		Save all options
+M-x dcl-save-option			Save any option
+M-x dcl-save-mode			Save buffer mode</p>
+<p>
+Variables controlling indentation style and extra features:</p>
+<p>
+ dcl-basic-offset
+    Extra indentation within blocks.</p>
+<p>
+ dcl-continuation-offset
+    Extra indentation for continued lines.</p>
+<p>
+ dcl-margin-offset
+    Indentation for the first command line in a file or SUBROUTINE.</p>
+<p>
+ dcl-margin-label-offset
+    Indentation for a label.</p>
+<p>
+ dcl-comment-line-regexp
+    Lines matching this regexp will not be indented.</p>
+<p>
+ dcl-block-begin-regexp
+ dcl-block-end-regexp
+    Regexps that match command lines that begin and end, respectively,
+    a block of command lines that will be given extra indentation.
+    Command lines between THEN-ELSE-ENDIF are always indented; these variables
+    make it possible to define other places to indent.
+    Set to nil to disable this feature.</p>
+<p>
+ dcl-calc-command-indent-function
+    Can be set to a function that customizes indentation for command lines.
+    Two such functions are included in the package:
+	dcl-calc-command-indent-multiple
+	dcl-calc-command-indent-hang</p>
+<p>
+ dcl-calc-cont-indent-function
+    Can be set to a function that customizes indentation for continued lines.
+    One such function is included in the package:
+	dcl-calc-cont-indent-relative    (set by default)</p>
+<p>
+ dcl-tab-always-indent
+    If t, pressing TAB always indents the current line.
+    If nil, pressing TAB indents the current line if point is at the left
+    margin.</p>
+<p>
+ dcl-electric-characters
+    Non-nil causes lines to be indented at once when a label, ELSE or ENDIF is
+    typed.</p>
+<p>
+ dcl-electric-reindent-regexps
+    Use this variable and function dcl-electric-character to customize
+    which words trigger electric indentation.</p>
+<p>
+ dcl-tempo-comma
+ dcl-tempo-left-paren
+ dcl-tempo-right-paren
+    These variables control the look of expanded templates.</p>
+<p>
+ dcl-imenu-generic-expression
+    Default value for imenu-generic-expression.  The default includes
+    SUBROUTINE labels in the main listing and sub-listings for
+    other labels, CALL, GOTO and GOSUB statements.</p>
+<p>
+ dcl-imenu-label-labels
+ dcl-imenu-label-goto
+ dcl-imenu-label-gosub
+ dcl-imenu-label-call
+    Change the text that is used as sub-listing labels in imenu.</p>
+<p>
+Loading this package calls the value of the variable
+`dcl-mode-load-hook' with no args, if that value is non-nil.
+Turning on DCL mode calls the value of the variable `dcl-mode-hook'
+with no args, if that value is non-nil.</p>
+<p>
+
+The following example uses the default values for all variables:</p>
+<p>
+$! This is a comment line that is not indented (it matches
+$! dcl-comment-line-regexp)
+$! Next follows the first command line.  It is indented dcl-margin-offset.
+$       i = 1
+$       ! Other comments are indented like command lines.
+$       ! A margin label indented dcl-margin-label-offset:
+$ label:
+$       if i.eq.1
+$       then
+$           ! Lines between THEN-ELSE and ELSE-ENDIF are
+$           ! indented dcl-basic-offset
+$           loop1: ! This matches dcl-block-begin-regexp...
+$               ! ...so this line is indented dcl-basic-offset
+$               text = "This " + - ! is a continued line
+                       "lined up with the command line"
+$               type sys$input
+Data lines are not indented at all.
+$           endloop1: ! This matches dcl-block-end-regexp
+$       endif
+$</p>
+<p>
+
+There is some minimal font-lock support (see vars
+`dcl-font-lock-defaults' and `dcl-font-lock-keywords').</p>
+<p>
+(fn)</p>

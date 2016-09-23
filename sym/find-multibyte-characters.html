@@ -1,0 +1,12 @@
+<h3>Function: find-multibyte-characters</h3>
+<p>
+Find multibyte characters in the region specified by FROM and TO.
+If FROM is a string, find multibyte characters in the string.
+The return value is an alist of the following format:
+  ((CHARSET COUNT CHAR ...) ...)
+where
+  CHARSET is a character set,
+  COUNT is a number of characters,
+  CHARs are the characters found from the character set.
+Optional 3rd arg MAXCOUNT limits how many CHARs are put in the above list.
+Optional 4th arg EXCLUDES is a list of character sets to be ignored.</p>

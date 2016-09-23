@@ -1,0 +1,13 @@
+<h3>Function: tags-loop-continue</h3>
+<p>
+Continue last M-x tags-search or M-x tags-query-replace command.
+Used noninteractively with non-nil argument to begin such a command (the
+argument is passed to `next-file', which see).</p>
+<p>
+Two variables control the processing we do on each file: the value of
+`tags-loop-scan' is a form to be executed on each file to see if it is
+interesting (it returns non-nil if so) and `tags-loop-operate' is a form to
+evaluate to operate on an interesting file.  If the latter evaluates to
+nil, we exit; otherwise we scan the next file.</p>
+<p>
+(fn &optional FIRST-TIME)</p>

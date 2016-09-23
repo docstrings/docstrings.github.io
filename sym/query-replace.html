@@ -1,0 +1,31 @@
+<h3>Function: query-replace</h3>
+<p>
+Replace some occurrences of FROM-STRING with TO-STRING.
+As each match is found, the user must type a character saying
+what to do with it.  For directions, type C-h at that time.</p>
+<p>
+In Transient Mark mode, if the mark is active, operate on the contents
+of the region.  Otherwise, operate from point to the end of the buffer.</p>
+<p>
+Use M-n to pull the last incremental search string to the minibuffer
+that reads FROM-STRING, or invoke replacements from
+incremental search with a key sequence like `C-s C-s M-%'
+to use its current search string as the string to replace.</p>
+<p>
+Matching is independent of case if `case-fold-search' is non-nil and
+FROM-STRING has no uppercase letters.  Replacement transfers the case
+pattern of the old text to the new text, if `case-replace' and
+`case-fold-search' are non-nil and FROM-STRING has no uppercase
+letters.  (Transferring the case pattern means that if the old text
+matched is all caps, or capitalized, then its replacement is upcased
+or capitalized.)</p>
+<p>
+If `replace-lax-whitespace' is non-nil, a space or spaces in the string
+to be replaced will match a sequence of whitespace chars defined by the
+regexp in `search-whitespace-regexp'.</p>
+<p>
+Third arg DELIMITED (prefix arg if interactive), if non-nil, means replace
+only matches surrounded by word boundaries.
+Fourth and fifth arg START and END specify the region to operate on.</p>
+<p>
+To customize possible responses, change the "bindings" in `query-replace-map'.</p>

@@ -1,0 +1,21 @@
+<h3>Function: pkg-info-version-info</h3>
+<p>
+Obtain complete version info for LIBRARY and PACKAGE.</p>
+<p>
+LIBRARY is a symbol denoting a named feature, or a library name
+as string.  PACKAGE is a symbol denoting an ELPA package.  If
+omitted or nil, default to LIBRARY.</p>
+<p>
+If SHOW is non-nil, show the version in the minibuffer.</p>
+<p>
+When called interactively, prompt for LIBRARY.  When called
+interactively with prefix argument, prompt for PACKAGE as well.</p>
+<p>
+Return a string with complete version information for LIBRARY.
+This version information contains the version from the headers of
+LIBRARY, and the version of the installed PACKAGE, the LIBRARY is
+part of.  If PACKAGE is not installed, or if the PACKAGE version
+is the same as the LIBRARY version, do not include a package
+version.</p>
+<p>
+(fn LIBRARY &optional PACKAGE SHOW)</p>

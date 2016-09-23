@@ -1,0 +1,116 @@
+<h3>Function: blackbox</h3>
+<p>
+Play blackbox.
+Optional prefix argument is the number of balls; the default is 4.</p>
+<p>
+What is blackbox?</p>
+<p>
+Blackbox is a game of hide and seek played on an 8 by 8 grid (the
+Blackbox).  Your opponent (Emacs, in this case) has hidden several
+balls (usually 4) within this box.  By shooting rays into the box and
+observing where they emerge it is possible to deduce the positions of
+the hidden balls.  The fewer rays you use to find the balls, the lower
+your score.</p>
+<p>
+Overview of play:</p>
+<p>
+
+Uses keymap `blackbox-mode-map', which is not currently defined.
+To play blackbox, type M-x blackbox.  An optional prefix argument
+specifies the number of balls to be hidden in the box; the default is
+four.</p>
+<p>
+The cursor can be moved around the box with the standard cursor
+movement keys.</p>
+<p>
+To shoot a ray, move the cursor to the edge of the box and press SPC.
+The result will be determined and the playfield updated.</p>
+<p>
+You may place or remove balls in the box by moving the cursor into the
+box and pressing M-x bb-romp.</p>
+<p>
+When you think the configuration of balls you have placed is correct,
+press M-x bb-done.  You will be informed whether you are correct or
+not, and be given your score.  Your score is the number of letters and
+numbers around the outside of the box plus five for each incorrectly
+placed ball.  If you placed any balls incorrectly, they will be
+indicated with `x', and their actual positions indicated with `o'.</p>
+<p>
+Details:</p>
+<p>
+There are three possible outcomes for each ray you send into the box:</p>
+<p>
+	Detour: the ray is deflected and emerges somewhere other than
+		where you sent it in.  On the playfield, detours are
+		denoted by matching pairs of numbers -- one where the
+		ray went in, and the other where it came out.</p>
+<p>
+	Reflection: the ray is reflected and emerges in the same place
+		it was sent in.  On the playfield, reflections are
+		denoted by the letter `R'.</p>
+<p>
+	Hit:	the ray strikes a ball directly and is absorbed.  It does
+		not emerge from the box.  On the playfield, hits are
+		denoted by the letter `H'.</p>
+<p>
+The rules for how balls deflect rays are simple and are best shown by
+example.</p>
+<p>
+As a ray approaches a ball it is deflected ninety degrees.  Rays can
+be deflected multiple times.  In the diagrams below, the dashes
+represent empty box locations and the letter `O' represents a ball.
+The entrance and exit points of each ray are marked with numbers as
+described under "Detour" above.  Note that the entrance and exit
+points are always interchangeable.  `*' denotes the path taken by the
+ray.</p>
+<p>
+Note carefully the relative positions of the ball and the ninety
+degree deflection it causes.</p>
+<p>
+    1
+  - * - - - - - -         - - - - - - - -         - - - - - - - -
+  - * - - - - - -         - - - - - - - -         - - - - - - - -
+1 * * - - - - - -         - - - - - - - -         - O - - - - O -
+  - - O - - - - -         - - O - - - - -         - - * * * * - -
+  - - - - - - - -         - - - * * * * * 2     3 * * * - - * - -
+  - - - - - - - -         - - - * - - - -         - - - O - * - -
+  - - - - - - - -         - - - * - - - -         - - - - * * - -
+  - - - - - - - -         - - - * - - - -         - - - - * - O -
+                                2                         3</p>
+<p>
+As mentioned above, a reflection occurs when a ray emerges from the same point
+it was sent in.  This can happen in several ways:</p>
+<p>
+
+  - - - - - - - -         - - - - - - - -          - - - - - - - -
+  - - - - O - - -         - - O - O - - -          - - - - - - - -
+R * * * * - - - -         - - - * - - - -          O - - - - - - -
+  - - - - O - - -         - - - * - - - -        R - - - - - - - -
+  - - - - - - - -         - - - * - - - -          - - - - - - - -
+  - - - - - - - -         - - - * - - - -          - - - - - - - -
+  - - - - - - - -       R * * * * - - - -          - - - - - - - -
+  - - - - - - - -         - - - - O - - -          - - - - - - - -</p>
+<p>
+In the first example, the ray is deflected downwards by the upper
+ball, then left by the lower ball, and finally retraces its path to
+its point of origin.  The second example is similar.  The third
+example is a bit anomalous but can be rationalized by realizing the
+ray never gets a chance to get into the box.  Alternatively, the ray
+can be thought of as being deflected downwards and immediately
+emerging from the box.</p>
+<p>
+A hit occurs when a ray runs straight into a ball:</p>
+<p>
+  - - - - - - - -         - - - - - - - -          - - - - - - - -
+  - - - - - - - -         - - - - - - - -          - - - - O - - -
+  - - - - - - - -         - - - - O - - -        H * * * * - - - -
+  - - - - - - - -       H * * * * O - - -          - - - * - - - -
+  - - - - - - - -         - - - - O - - -          - - - O - - - -
+H * * * O - - - -         - - - - - - - -          - - - - - - - -
+  - - - - - - - -         - - - - - - - -          - - - - - - - -
+  - - - - - - - -         - - - - - - - -          - - - - - - - -</p>
+<p>
+Be sure to compare the second example of a hit with the first example of
+a reflection.</p>
+<p>
+(fn NUM)</p>

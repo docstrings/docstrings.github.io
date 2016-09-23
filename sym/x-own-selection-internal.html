@@ -1,0 +1,14 @@
+<h3>Function: x-own-selection-internal</h3>
+<p>
+Assert an X selection of the type SELECTION with and value VALUE.
+SELECTION is a symbol, typically `PRIMARY', `SECONDARY', or `CLIPBOARD'.
+(Those are literal upper-case symbol names, since that's what X expects.)
+VALUE is typically a string, or a cons of two markers, but may be
+anything that the functions on `selection-converter-alist' know about.</p>
+<p>
+FRAME should be a frame that should own the selection.  If omitted or
+nil, it defaults to the selected frame.</p>
+<p>
+On Nextstep, FRAME is unused.</p>
+<p>
+(fn SELECTION VALUE &optional FRAME)</p>

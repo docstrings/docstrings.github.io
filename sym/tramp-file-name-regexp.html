@@ -1,0 +1,16 @@
+<h3>Variable: tramp-file-name-regexp</h3>
+<p>
+Regular expression matching file names handled by Tramp.
+This regexp should match Tramp file names but no other file names.
+When tramp.el is loaded, this regular expression is prepended to
+`file-name-handler-alist', and that is searched sequentially.  Thus,
+if the Tramp entry appears rather early in the `file-name-handler-alist'
+and is a bit too general, then some files might be considered Tramp
+files which are not really Tramp files.</p>
+<p>
+Please note that the entry in `file-name-handler-alist' is made when
+this file (tramp.el) is loaded.  This means that this variable must be set
+before loading tramp.el.  Alternatively, `file-name-handler-alist' can be
+updated after changing this variable.</p>
+<p>
+Also see `tramp-file-name-structure'.</p>

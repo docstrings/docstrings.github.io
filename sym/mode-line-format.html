@@ -1,0 +1,62 @@
+<h3>Variable: mode-line-format</h3>
+<p>
+Template for displaying mode line for current buffer.</p>
+<p>
+The value may be nil, a string, a symbol or a list.</p>
+<p>
+A value of nil means don't display a mode line.</p>
+<p>
+For any symbol other than t or nil, the symbol's value is processed as
+ a mode line construct.  As a special exception, if that value is a
+ string, the string is processed verbatim, without handling any
+ %-constructs (see below).  Also, unless the symbol has a non-nil
+ `risky-local-variable' property, all properties in any strings, as
+ well as all :eval and :propertize forms in the value, are ignored.</p>
+<p>
+A list whose car is a string or list is processed by processing each
+ of the list elements recursively, as separate mode line constructs,
+ and concatenating the results.</p>
+<p>
+A list of the form `(:eval FORM)' is processed by evaluating FORM and
+ using the result as a mode line construct.  Be careful--FORM should
+ not load any files, because that can cause an infinite recursion.</p>
+<p>
+A list of the form `(:propertize ELT PROPS...)' is processed by
+ processing ELT as the mode line construct, and adding the text
+ properties PROPS to the result.</p>
+<p>
+A list whose car is a symbol is processed by examining the symbol's
+ value, and, if that value is non-nil, processing the cadr of the list
+ recursively; and if that value is nil, processing the caddr of the
+ list recursively.</p>
+<p>
+A list whose car is an integer is processed by processing the cadr of
+ the list, and padding (if the number is positive) or truncating (if
+ negative) to the width specified by that number.</p>
+<p>
+A string is printed verbatim in the mode line except for %-constructs:
+  %b -- print buffer name.      %f -- print visited file name.
+  %F -- print frame name.
+  %* -- print %, * or hyphen.   %+ -- print *, % or hyphen.
+	%& is like %*, but ignore read-only-ness.
+	% means buffer is read-only and * means it is modified.
+	For a modified read-only buffer, %* gives % and %+ gives *.
+  %s -- print process status.   %l -- print the current line number.
+  %c -- print the current column number (this makes editing slower).
+        To make the column number update correctly in all cases,
+	`column-number-mode' must be non-nil.
+  %i -- print the size of the buffer.
+  %I -- like %i, but use k, M, G, etc., to abbreviate.
+  %p -- print percent of buffer above top of window, or Top, Bot or All.
+  %P -- print percent of buffer above bottom of window, perhaps plus Top,
+        or print Bottom or All.
+  %n -- print Narrow if appropriate.
+  %t -- visited file is text or binary (if OS supports this distinction).
+  %z -- print mnemonics of keyboard, terminal, and buffer coding systems.
+  %Z -- like %z, but including the end-of-line format.
+  %e -- print error message about full memory.
+  %@ -- print @ or hyphen.  @ means that default-directory is on a
+        remote machine.
+  %[ -- print one [ for each recursive editing level.  %] similar.
+  %% -- print %.   %- -- print infinitely many dashes.
+Decimal digits after the % specify field width to which to pad.</p>

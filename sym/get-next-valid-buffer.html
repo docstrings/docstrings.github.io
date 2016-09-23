@@ -1,0 +1,10 @@
+<h3>Function: get-next-valid-buffer</h3>
+<p>
+Search LIST for a valid buffer to display in FRAME.
+Return nil when all buffers in LIST are undesirable for display,
+otherwise return the first suitable buffer in LIST.</p>
+<p>
+Buffers not visible in windows are preferred to visible buffers,
+unless VISIBLE-OK is non-nil.
+If the optional argument FRAME is nil, it defaults to the selected frame.
+If BUFFER is non-nil, ignore occurrences of that buffer in LIST.</p>

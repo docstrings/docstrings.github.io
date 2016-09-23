@@ -1,0 +1,17 @@
+<h3>Function: sort-columns</h3>
+<p>
+Sort lines in region alphabetically by a certain range of columns.
+For the purpose of this command, the region BEG...END includes
+the entire line that point is in and the entire line the mark is in.
+The column positions of point and mark bound the range of columns to sort on.
+A prefix argument means sort into REVERSE order.
+The variable `sort-fold-case' determines whether alphabetic case affects
+the sort order.</p>
+<p>
+Note that `sort-columns' rejects text that contains tabs,
+because tabs could be split across the specified columns
+and it doesn't know how to handle that.  Also, when possible,
+it uses the `sort' utility program, which doesn't understand tabs.
+Use M-x untabify to convert tabs to spaces before sorting.</p>
+<p>
+(fn REVERSE &optional BEG END)</p>

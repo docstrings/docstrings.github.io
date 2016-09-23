@@ -1,0 +1,14 @@
+<h3>Variable: shell-prompt-pattern</h3>
+<p>
+Regexp to match prompts in the inferior shell.
+Defaults to "^[^#$%>\n]*[#$%>] *", which works pretty well.
+This variable is used to initialize `comint-prompt-regexp' in the
+shell buffer.</p>
+<p>
+If `comint-use-prompt-regexp' is nil, then this variable is only used
+to determine paragraph boundaries.  See Info node `Shell Prompts' for
+how Shell mode treats paragraphs.</p>
+<p>
+The pattern should probably not match more than one line.  If it does,
+Shell mode may become confused trying to distinguish prompt from input
+on lines which don't start with a prompt.</p>

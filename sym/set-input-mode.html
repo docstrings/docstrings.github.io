@@ -1,0 +1,14 @@
+<h3>Function: set-input-mode</h3>
+<p>
+Set mode of reading keyboard input.
+First arg INTERRUPT non-nil means use input interrupts;
+ nil means use CBREAK mode.
+Second arg FLOW non-nil means use ^S/^Q flow control for output to terminal
+ (no effect except in CBREAK mode).
+Third arg META t means accept 8-bit input (for a Meta key).
+ META nil means ignore the top bit, on the assumption it is parity.
+ Otherwise, accept 8-bit input and don't use the top bit for Meta.
+Optional fourth arg QUIT if non-nil specifies character to use for quitting.
+See also `current-input-mode'.</p>
+<p>
+(fn INTERRUPT FLOW META &optional QUIT)</p>

@@ -1,0 +1,17 @@
+<h3>Function: display-call-tree</h3>
+<p>
+Display a call graph of a specified file.
+This lists which functions have been called, what functions called
+them, and what functions they call.  The list includes all functions
+whose definitions have been compiled in this Emacs session, as well as
+all functions called by those functions.</p>
+<p>
+The call graph does not include macros, inline functions, or
+primitives that the byte-code interpreter knows about directly (eq,
+cons, etc.).</p>
+<p>
+The call tree also lists those functions which are not known to be called
+(that is, to which no calls have been compiled), and which cannot be
+invoked interactively.</p>
+<p>
+(fn &optional FILENAME)</p>

@@ -1,0 +1,10 @@
+<h3>Variable: magic-fallback-mode-alist</h3>
+<p>
+Like `magic-mode-alist' but has lower priority than `auto-mode-alist'.
+Each element looks like (REGEXP . FUNCTION) or (MATCH-FUNCTION . FUNCTION).
+After visiting a file, if REGEXP matches the text at the beginning of the
+buffer, or calling MATCH-FUNCTION returns non-nil, `normal-mode' will
+call FUNCTION, provided that `magic-mode-alist' and `auto-mode-alist'
+have not specified a mode for this file.</p>
+<p>
+If FUNCTION is nil, then it is not called.</p>

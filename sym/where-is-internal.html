@@ -1,0 +1,33 @@
+<h3>Function: where-is-internal</h3>
+<p>
+Return list of keys that invoke DEFINITION.
+If KEYMAP is a keymap, search only KEYMAP and the global keymap.
+If KEYMAP is nil, search all the currently active keymaps, except
+ for `overriding-local-map' (which is ignored).
+If KEYMAP is a list of keymaps, search only those keymaps.</p>
+<p>
+If optional 3rd arg FIRSTONLY is non-nil, return the first key sequence found,
+rather than a list of all possible key sequences.
+If FIRSTONLY is the symbol `non-ascii', return the first binding found,
+no matter what it is.
+If FIRSTONLY has another non-nil value, prefer bindings
+that use the modifier key specified in `where-is-preferred-modifier'
+(or their meta variants) and entirely reject menu bindings.</p>
+<p>
+If optional 4th arg NOINDIRECT is non-nil, don't follow indirections
+to other keymaps or slots.  This makes it possible to search for an
+indirect definition itself.</p>
+<p>
+The optional 5th arg NO-REMAP alters how command remapping is handled:</p>
+<p>
+- If another command OTHER-COMMAND is remapped to DEFINITION, normally
+  search for the bindings of OTHER-COMMAND and include them in the
+  returned list.  But if NO-REMAP is non-nil, include the vector
+  [remap OTHER-COMMAND] in the returned list instead, without
+  searching for those other bindings.</p>
+<p>
+- If DEFINITION is remapped to OTHER-COMMAND, normally return the
+  bindings for OTHER-COMMAND.  But if NO-REMAP is non-nil, return the
+  bindings for DEFINITION instead, ignoring its remapping.</p>
+<p>
+(fn DEFINITION &optional KEYMAP FIRSTONLY NOINDIRECT NO-REMAP)</p>

@@ -1,0 +1,13 @@
+<h3>Function: locate-file-internal</h3>
+<p>
+Search for FILENAME through PATH.
+Returns the file's name in absolute form, or nil if not found.
+If SUFFIXES is non-nil, it should be a list of suffixes to append to
+file name when searching.
+If non-nil, PREDICATE is used instead of `file-readable-p'.
+PREDICATE can also be an integer to pass to the access(2) function,
+in which case file-name-handlers are ignored.
+This function will normally skip directories, so if you want it to find
+directories, make sure the PREDICATE function returns `dir-ok' for them.</p>
+<p>
+(fn FILENAME PATH &optional SUFFIXES PREDICATE)</p>

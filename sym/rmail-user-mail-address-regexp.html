@@ -1,0 +1,14 @@
+<h3>Variable: rmail-user-mail-address-regexp</h3>
+<p>
+Regexp matching user mail addresses.
+If non-nil, this variable is used to identify the correspondent
+when receiving new mail.  If it matches the address of the sender,
+the recipient is taken as correspondent of a mail.
+If nil (default value), your `user-login-name' and `user-mail-address'
+are used to exclude yourself as correspondent.</p>
+<p>
+Usually you don't have to set this variable, except if you collect mails
+sent by you under different user names.
+Then it should be a regexp matching your mail addresses.</p>
+<p>
+Setting this variable has an effect only before reading a mail.</p>

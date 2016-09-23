@@ -1,0 +1,14 @@
+<h3>Function: handle-save-session</h3>
+<p>
+Handle the save_yourself event from a session manager.
+A session manager can tell Emacs that the window system is shutting down
+by sending Emacs a save_yourself message.  Emacs executes this function when
+such an event occurs.  This function then executes `emacs-session-save'.
+After that, this function informs the session manager that it can continue
+or abort shutting down the window system depending on the return value
+from `emacs-session-save'  If the return value is non-nil the session manager
+is told to abort the window system shutdown.</p>
+<p>
+Do not call this function yourself.</p>
+<p>
+(fn EVENT)</p>

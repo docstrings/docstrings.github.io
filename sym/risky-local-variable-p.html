@@ -1,0 +1,11 @@
+<h3>Function: risky-local-variable-p</h3>
+<p>
+Non-nil if SYM could be dangerous as a file-local variable.
+It is dangerous if either of these conditions are met:</p>
+<p>
+ * Its `risky-local-variable' property is non-nil.</p>
+<p>
+ * Its name ends with "hook(s)", "function(s)", "form(s)", "map",
+   "program", "command(s)", "predicate(s)", "frame-alist",
+   "mode-alist", "font-lock-(syntactic-)keyword*",
+   "map-alist", or "bindat-spec".</p>

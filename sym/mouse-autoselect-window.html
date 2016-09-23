@@ -1,0 +1,19 @@
+<h3>Variable: mouse-autoselect-window</h3>
+<p>
+Non-nil means autoselect window with mouse pointer.
+If nil, do not autoselect windows.
+A positive number means delay autoselection by that many seconds: a
+window is autoselected only after the mouse has remained in that
+window for the duration of the delay.
+A negative number has a similar effect, but causes windows to be
+autoselected only after the mouse has stopped moving.  (Because of
+the way Emacs compares mouse events, you will occasionally wait twice
+that time before the window gets selected.)
+Any other value means to autoselect window instantaneously when the
+mouse pointer enters it.</p>
+<p>
+Autoselection selects the minibuffer only if it is active, and never
+unselects the minibuffer if it is active.</p>
+<p>
+When customizing this variable make sure that the actual value of
+`focus-follows-mouse' matches the behavior of your window manager.</p>

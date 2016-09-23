@@ -1,0 +1,27 @@
+<h3>Function: mh-send-letter</h3>
+<p>
+Save draft and send message.</p>
+<p>
+When you are all through editing a message, you send it with this
+command. You can give a prefix argument ARG to monitor the first stage
+of the delivery; this output can be found in a buffer called "*MH-E
+Mail Delivery*".</p>
+<p>
+The hook `mh-before-send-letter-hook' is run at the beginning of
+this command. For example, if you want to check your spelling in
+your message before sending, add the function `ispell-message'.</p>
+<p>
+Unless `mh-insert-auto-fields' had previously been called
+manually, the function `mh-insert-auto-fields' is called to
+insert fields based upon the recipients. If fields are added, you
+are given a chance to see and to confirm these fields before the
+message is actually sent. You can do away with this confirmation
+by turning off the option `mh-auto-fields-prompt-flag'.</p>
+<p>
+In case the MH "send" program is installed under a different name,
+use `mh-send-prog' to tell MH-E the name.</p>
+<p>
+The hook `mh-annotate-msg-hook' is run after annotating the
+message and scan line.</p>
+<p>
+(fn &optional ARG)</p>

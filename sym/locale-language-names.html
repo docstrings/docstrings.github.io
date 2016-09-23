@@ -1,0 +1,12 @@
+<h3>Variable: locale-language-names</h3>
+<p>
+Alist of locale regexps vs the corresponding languages and coding systems.
+Each element has this form:
+  (LOCALE-REGEXP LANG-ENV CODING-SYSTEM)
+The first element whose LOCALE-REGEXP matches the start of a
+downcased locale specifies the LANG-ENV (language environment)
+and CODING-SYSTEM corresponding to that locale.  If there is no
+appropriate language environment, the element may have this form:
+  (LOCALE-REGEXP . LANG-ENV)
+In this case, LANG-ENV is one of generic language environments for an
+specific encoding such as "Latin-1" and "UTF-8".</p>

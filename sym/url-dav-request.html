@@ -1,0 +1,18 @@
+<h3>Function: url-dav-request</h3>
+<p>
+Perform WebDAV operation METHOD on URL.  Return the parsed responses.
+Automatically creates an XML request body if TAG is non-nil.
+BODY is the XML document fragment to be enclosed by <TAG></TAG>.</p>
+<p>
+DEPTH is how deep the request should propagate.  Default is 0, meaning
+it should apply only to URL.  A negative number means to use
+`Infinity' for the depth.  Not all WebDAV servers support this depth
+though.</p>
+<p>
+HEADERS is an assoc list of extra headers to send in the request.</p>
+<p>
+NAMESPACES is an assoc list of (NAMESPACE . EXPANSION), and these are
+added to the <TAG> element.  The DAV=DAV: namespace is automatically
+added to this list, so most requests can just pass in nil.</p>
+<p>
+(fn URL METHOD TAG BODY &optional DEPTH HEADERS NAMESPACES)</p>

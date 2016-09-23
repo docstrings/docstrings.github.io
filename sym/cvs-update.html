@@ -1,0 +1,11 @@
+<h3>Function: cvs-update</h3>
+<p>
+Run a `cvs update' in the current working DIRECTORY.
+Feed the output to a *cvs* buffer and run `cvs-mode' on it.
+With a C-u prefix argument, prompt for a directory to use.
+A prefix arg >8 (ex: C-u C-u),
+  prevents reuse of an existing *cvs* buffer.
+The prefix is also passed to `cvs-flags-query' to select the FLAGS
+  passed to cvs.</p>
+<p>
+(fn DIRECTORY FLAGS)</p>

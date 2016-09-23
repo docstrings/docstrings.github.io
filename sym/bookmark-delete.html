@@ -1,0 +1,12 @@
+<h3>Function: bookmark-delete</h3>
+<p>
+Delete BOOKMARK-NAME from the bookmark list.</p>
+<p>
+Removes only the first instance of a bookmark with that name.  If
+there are one or more other bookmarks with the same name, they will
+not be deleted.  Defaults to the "current" bookmark (that is, the
+one most recently used in this file, if any).
+Optional second arg BATCH means don't update the bookmark list buffer,
+probably because we were called from there.</p>
+<p>
+(fn BOOKMARK-NAME &optional BATCH)</p>

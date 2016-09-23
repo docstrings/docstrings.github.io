@@ -1,0 +1,17 @@
+<h3>Function: auto-lower-mode</h3>
+<p>
+Toggle whether or not the selected frame should auto-lower.
+With a prefix argument ARG, enable Auto Lower mode if ARG is
+positive, and disable it otherwise.  If called from Lisp, enable
+the mode if ARG is omitted or nil.</p>
+<p>
+Auto Lower mode does nothing under most window managers, which
+switch focus on mouse clicks.  It only has an effect if your
+window manager switches focus on mouse movement (in which case
+you should also change `focus-follows-mouse' to t).  Then,
+enabling Auto Lower Mode causes any graphical Emacs frame which
+loses focus to be automatically lowered.</p>
+<p>
+Note that this minor mode controls Emacs's own auto-lower
+feature.  Window managers that switch focus on mouse movement
+often have their own features for raising or lowering frames.</p>

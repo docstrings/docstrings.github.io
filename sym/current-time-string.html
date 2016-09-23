@@ -1,0 +1,17 @@
+<h3>Function: current-time-string</h3>
+<p>
+Return the current local time, as a human-readable string.
+Programs can use this function to decode a time,
+since the number of columns in each field is fixed
+if the year is in the range 1000-9999.
+The format is `Sun Sep 16 01:03:52 1973'.
+However, see also the functions `decode-time' and `format-time-string'
+which provide a much more powerful and general facility.</p>
+<p>
+If SPECIFIED-TIME is given, it is a time to format instead of the
+current time.  The argument should have the form (HIGH LOW . IGNORED).
+Thus, you can use times obtained from `current-time' and from
+`file-attributes'.  SPECIFIED-TIME can also have the form (HIGH . LOW),
+but this is considered obsolete.</p>
+<p>
+(fn &optional SPECIFIED-TIME)</p>
