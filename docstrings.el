@@ -6,15 +6,17 @@
   (when (documentation-property sym kind)
     (insert (format "<h3>%s: %s</h3>\n"
 		    (get kind 'doc-name) (symbol-name sym)))
+    (insert "<p>\n")
     (insert (documentation-property sym 'variable-documentation))
-    (insert "\n")))
+    (insert "</p>\n")))
 
 (defun insert-all-docstrings (sym)
   (insert (format "<a name=\"%s\"></a>\n" (symbol-name sym)))
   (when (and (functionp sym) (documentation sym))
     (insert (format "<h3>Function: %s</h3>\n" (symbol-name sym)))
+    (insert "<p>\n")
     (insert (documentation sym))
-    (insert "\n"))
+    (insert "</p>\n"))
   (insert-docstring sym 'variable-documentation))
 
 (defun fix-formatting ()
