@@ -1,5 +1,7 @@
 (require 'cl)
 
+(defvar *all-symbols* nil)
+
 (put 'variable-documentation 'doc-name "Variable")
 
 (defun insert-docstring (sym kind)
@@ -33,30 +35,53 @@
 	  (fix-formatting)
 	  (write-region (point-min) (point-max)
 			(format "sym/%s.html" (escape-filename (symbol-name sym))))
+	  (push sym *all-symbols*)
 	  (kill-buffer))))))
 
-(defun insert-header ()
+(defun insert-header (title more)
   (insert "<!DOCTYPE html>\n")
-  (insert "<html><head><title>Emacs docstrings</title></head>\n")
+  (insert (format "<html><head><title>%s</title></head>\n" title))
   (insert "<body>\n")
-  (insert "<h1>Emacs docstrings</h1>\n")
+  (insert (format "<h1>%s</h1>\n" title))
   (insert (format "<p>Generated from Emacs version %s.</p>\n"
 		  emacs-version))
-  (let ((url "http://github.com/docstrings/docstrings.github.io/"))
-    (insert (format "<p>See <a href=\"%s\">%s</a>.</p>\n" url url))))
+  (insert more))
+
+(defun insert-index (sym)
+  (insert (format "<a href=\"sym/%s.html\">%s</a><br>\n"
+		  (escape-filename (symbol-name sym)) (symbol-name sym))))
 
 (defun fix-formatting ()
   (goto-char (point-min))
   (while (re-search-forward "\n\n" nil t)
     (replace-match "</p>\n<p>\n")))
 
+(defun write-index (syms)
+  (with-temp-buffer
+    (find-file "list.html")
+    (erase-buffer)
+    (insert-header "Alphabetical symbol list" "")
+    (dolist (sym syms)
+      (insert-index sym))
+    (goto-char (point-max))
+    (insert "</body></html>\n")
+    (save-buffer)
+    (kill-buffer)))
+
 (defun docstrings ()
   (with-temp-buffer
     (find-file "index.html")
     (erase-buffer)
-    (insert-header)
-    (mapatoms #'insert-all-docstrings)
+    (let ((url "http://github.com/docstrings/docstrings.github.io"))
+      (insert-header "Emacs docstrings"
+		     (format "<p>%s</p><p>Source: <a href=\"%s\">%s</a>.</p>\n"
+			     "<a href=\"list.html\">Alphabetical list</a>"
+			     url url)))
+    (let ((*all-symbols* nil))
+      (mapatoms #'insert-all-docstrings)
+      (write-index (sort *all-symbols* #'string<)))
     (fix-formatting)
     (goto-char (point-max))
     (insert "</body></html>\n")
-    (save-buffer)))
+    (save-buffer)
+    (kill-buffer)))
