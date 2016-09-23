@@ -1,1 +1,2 @@
-Extract all Emacs docstrings.
+Emacs docstrings:  
+https://docstrings.github.io/
