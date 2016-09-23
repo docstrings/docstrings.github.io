@@ -19,6 +19,16 @@
     (insert "</p>\n"))
   (insert-docstring sym 'variable-documentation))
 
+(defun insert-header ()
+  (insert "<!DOCTYPE html>\n")
+  (insert "<html><head><title>Emacs docstrings</title></head>\n")
+  (insert "<body>\n")
+  (insert "<h1>Emacs docstrings</h1>\n")
+  (insert (format "<p>Generated from Emacs version %s.</p>\n"
+		  emacs-version))
+  (let ((url "http://github.com/docstrings/docstrings.github.io/"))
+    (insert (format "<p>See <a href=\"%s\">%s</a>.</p>\n" url url))))
+
 (defun fix-formatting ()
   (goto-char (point-min))
   (while (re-search-forward "\n\n" nil t)
@@ -28,10 +38,7 @@
   (with-temp-buffer
     (find-file "index.html")
     (erase-buffer)
-    (insert "<!DOCTYPE html>\n")
-    (insert "<html><head><title>Emacs docstrings</title></head>\n")
-    (insert "<body>\n")
-    (insert "<h1>Emacs docstrings</h1>\n")
+    (insert-header)
     (mapatoms #'insert-all-docstrings)
     (fix-formatting)
     (goto-char (point-max))
