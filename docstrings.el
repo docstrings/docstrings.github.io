@@ -5,11 +5,14 @@
 (defun fn-doc (sym)
   (and (functionp sym) (documentation sym)))
 
+(defun face-doc (sym)
+  (face-documentation sym))
+
 (defun var-doc (sym)
   (documentation-property sym 'variable-documentation))
 
-(defun face-doc (sym)
-  (face-documentation sym))
+(defun group-doc (sym)
+  (documentation-property sym 'group-documentation))
 
 (defun insert-docstring (sym fn type)
   (let ((doc (funcall fn sym)))
@@ -32,6 +35,7 @@
     (insert-docstring sym 'fn-doc "Function")
     (insert-docstring sym 'var-doc "Variable")
     (insert-docstring sym 'face-doc "Face")
+    ;;(insert-docstring sym 'group-doc "Customization Group")
     (let ((copy (buffer-substring start (point))))
       (when (plusp (length copy))
 	(with-temp-buffer
